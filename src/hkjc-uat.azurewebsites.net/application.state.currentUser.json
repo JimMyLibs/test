@@ -1,0 +1,17 @@
+{
+    "id": "",
+    "language": "en_GB",
+    "state": 0,
+    "balances": {
+        "CURRENT": {
+            "currency": "HKD",
+            "amount": 0
+        }
+    },
+    "preferences": {
+        "sportsbook": {
+            "favouriteEvents": [],
+            "favouriteMarketTypes": []
+        }
+    }
+}
