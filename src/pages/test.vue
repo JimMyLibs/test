@@ -13,7 +13,11 @@ export default {
         }
     },
     mounted () {
-             
+        this.$post('/test',{
+            mock:{
+                name:'cname'
+            }
+        })
     },
     methods:{
         
@@ -24,6 +28,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .pages_test{
-  
+    color: #212121;
 }
 </style>

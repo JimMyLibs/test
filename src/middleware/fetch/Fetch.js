@@ -6,9 +6,8 @@ import FetchBase from './FetchBase'
 import devApiInfo from '../config/devApiInfo'
 import { ISDEV, mockUrl } from '../config/project'
 
-import { fetchApiInfo } from 'comm/business/commApi'
-import { user } from 'comm/business/user'
-import { deepAssign, isEmpty, p } from 'comm/js/utils/utils'
+import { fetchApiInfo, getToken } from '../utils/commApi'
+import { deepAssign, isEmpty, p } from '../utils/utils'
 
 
 // 特殊接口参数
@@ -168,7 +167,7 @@ export default class Http extends FetchBase {
     // 未设置Content-type， 则设置默认Content-type
     // 默认为： 'Content-type': 'application/json; charset=UTF-8'
     mixHeaders(headers = {}) {
-        let { token } = user()
+        let { token } = getToken()
         let isHadContentType = Object.keys(headers).some(item => item.toLocaleLowerCase() === 'content-type')
         if (!isHadContentType) {
             headers = {

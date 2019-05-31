@@ -1,9 +1,6 @@
 
 
-import {getProjectInfo} from 'comm/business/projectInfo'
-
-
-const {ISDEV} = getProjectInfo()
+import { ISDEV } from '../config/project'
 
 
 // 生成不重复签名
