@@ -14,12 +14,8 @@ export default {
     },
     mounted() {
         this.$post("/test?t=" + new Date().getSeconds(), {
-            // headers:{
-            //     token:'123'
-            // },
-            // apiType: 'web',
-            body:{
-                
+            mock:{
+                code: '0001'
             }
         });
     },

@@ -3,7 +3,7 @@
  */
 
 import FetchBase from './FetchBase'
-import devApiInfo from '../config/devApiInfo'
+import apiUrls from '../config/apiUrls'
 import { ISDEV, mockUrl, apiType as projectType } from '../config/project'
 
 import { fetchApiInfo, getToken } from '../utils/commApi'
@@ -79,12 +79,13 @@ export default class Http extends FetchBase {
                 reqUrl = `${mockUrl}/${url}`
             } else { // not use mock
                 if (isEmpty(apiInfo)) {
-                    reqUrl = this.getUrl(url, devApiInfo, apiType)
+                    reqUrl = this.getUrl(url, apiUrls.dev, apiType)
                 }
             }
             return this[method](reqUrl, { headers, body })
         } else {
             return fetchApiInfo().then(res => {
+                console.log(100,url, res, apiType)
                 reqUrl = this.getUrl(url, res, apiType)
                 return this[method](reqUrl, { headers, body })
             })
