@@ -1,7 +1,36 @@
 /**
- * [fetch 请求封装]
+ * 
+ * @api {post} /path title
+ * @apiName apiName
+ * @apiGroup group
+ * @apiVersion 0.0.1
+ * 
+ * 
+ * @apiParam {String} paramName description
+ * 
+ * @apiParamExample {type} Request-Example:
+ * {
+ *     property : value
+ * }
+ * 
+ * 
+ * @apiSuccess (200) {type} name description
+ * 
+ * @apiSuccessExample {type} Success-Response:
+ * {
+ *     resCode : 0000
+ *     message : success
+ *     data : {
+ *          property : value
+ *     }
+ * @apiSampleRequest http://mock.91525.net:35001/pro_app/
+ * 
+ * 
  */
 
+/**
+ * [fetch 请求封装]
+ */
 import FetchBase from './FetchBase'
 import apiUrls from '../config/apiUrls'
 import { ISDEV, mockUrl, apiType as projectType } from '../config/project'
