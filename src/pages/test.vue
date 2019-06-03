@@ -6,28 +6,30 @@
 
 <script>
 export default {
-    name: 'pages_test',
-    data () {
+    name: "pages_test",
+    data() {
         return {
-            pageName: 'pages_test'
-        }
+            pageName: "pages_test"
+        };
     },
-    mounted () {
-        this.$post('/test',{
-            mock:{
-                name:'cname'
+    mounted() {
+        this.$post("/test?t=" + new Date().getSeconds(), {
+            // headers:{
+            //     token:'123'
+            // },
+            // apiType: 'web',
+            body:{
+                
             }
-        })
+        });
     },
-    methods:{
-        
-    }
-}
+    methods: {}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.pages_test{
+.pages_test {
     color: #212121;
 }
 </style>

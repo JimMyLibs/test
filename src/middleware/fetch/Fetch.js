@@ -4,21 +4,21 @@
 
 import FetchBase from './FetchBase'
 import devApiInfo from '../config/devApiInfo'
-import { ISDEV, mockUrl } from '../config/project'
+import { ISDEV, mockUrl, apiType as projectType } from '../config/project'
 
 import { fetchApiInfo, getToken } from '../utils/commApi'
-import { deepAssign, isEmpty, p } from '../utils/utils'
+import { deepAssign, isEmpty } from '../utils/utils'
 
 
 // 特殊接口参数
 const specialKeys = ['apiType', 'headers', 'body', 'apiInfo', 'method', 'timeout']
 
 /**
- * [options 请求全局配置]
+ * [options 请求全局配置]: 主要用于upload请求
  * @example
  * {
  *  apiInfo: {},
- *  apiType: 'product',
+ *  apiType: 'app',
  *  body: {},
  *  headers: {}
  * }
@@ -99,32 +99,22 @@ export default class Http extends FetchBase {
      */
     getFetchOptions(options, isMixHeaders = true) {
         let { publicApiInfo, publicOptions } = this
-        let { apiInfo = {}, ...currentOptions } = this.formatOptions(options)
-
-        let mixApiInfo = deepAssign(publicApiInfo, apiInfo)
+        let { curApiInfo = {}, ...currentOptions } = this.formatOptions(options)
+        let mixApiInfo = deepAssign(publicApiInfo, curApiInfo)
         let mixOptions = deepAssign(publicOptions, currentOptions)
-
-        let {
-            headers = {},
-            apiType,
-            body
-        } = mixOptions
+        let { headers = {}, apiType, body } = mixOptions
 
         return {
             apiType,
-            apiInfo: {
-                ...mixApiInfo
-            },
-            headers: isMixHeaders
-                ? this.mixHeaders(headers)
-                : headers,
+            headers: isMixHeaders ? this.mixHeaders(headers) : headers,
             body,
+            apiInfo: { ...mixApiInfo },
         }
     }
 
     /**
      * [getUrl description]
-     * @param  {string}  url       [接口地址]
+     * @param  {string} url       [接口地址]
      * @param  {string} mixApiInfo [混合后的接口信息]
      * @param  {string} apiType    [接口类型]
      * @return {string}            [完整接口地址]
@@ -134,7 +124,7 @@ export default class Http extends FetchBase {
         if (url.search(/^https?/) > -1) {
             return url
         }
-        apiType = apiType
+        apiType = apiType || projectType
         url = url.replace(/^\/+/, '')
         mixApiInfo = mixApiInfo || apiInfo
         let typeUrl = mixApiInfo[apiType]
