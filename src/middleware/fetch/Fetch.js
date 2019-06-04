@@ -1,34 +1,4 @@
 /**
- * 
- * @api {post} /path title
- * @apiName apiName
- * @apiGroup group
- * @apiVersion 0.0.1
- * 
- * 
- * @apiParam {String} paramName description
- * 
- * @apiParamExample {type} Request-Example:
- * {
- *     property : value
- * }
- * 
- * 
- * @apiSuccess (200) {type} name description
- * 
- * @apiSuccessExample {type} Success-Response:
- * {
- *     resCode : 0000
- *     message : success
- *     data : {
- *          property : value
- *     }
- * @apiSampleRequest http://mock.91525.net:35001/pro_app/
- * 
- * 
- */
-
-/**
  * [fetch 请求封装]
  */
 import FetchBase from './FetchBase'
@@ -114,7 +84,6 @@ export default class Http extends FetchBase {
             return this[method](reqUrl, { headers, body })
         } else {
             return fetchApiInfo().then(res => {
-                console.log(100,url, res, apiType)
                 reqUrl = this.getUrl(url, res, apiType)
                 return this[method](reqUrl, { headers, body })
             })

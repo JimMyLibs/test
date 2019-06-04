@@ -2,7 +2,7 @@
 export default {
     dev:{
         // 版本类型接口前缀
-        app: 'http://mock.91525.net:35001/dev_app',
+        app: 'http://json.jc.com/',
     
         // 神盾类型接口前缀
         web: 'http://mock.91525.net:35001/dev_web',

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { testMock, betslip } from '../middleware/api/test'
 export default {
     name: "pages_test",
     data() {
@@ -13,11 +14,8 @@ export default {
         };
     },
     mounted() {
-        this.$post("/test?t=" + new Date().getSeconds(), {
-            mock:{
-                code: '0001'
-            }
-        });
+        testMock();
+        betslip(1);
     },
     methods: {}
 };
