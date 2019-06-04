@@ -4,6 +4,7 @@
     "description": "ApiDoc for SZHKJC",
     "title": "ApiDoc for SZHKJC V0.0.1",
     "url" : "http://mock.91525.net:35001/dev_app",
+    "sampleUrl" : "http://mock.91525.net:35001/dev_app",
     "template": {
         "withCompare": true,
         "withGenerator": true

@@ -14,8 +14,12 @@ export default {
         };
     },
     mounted() {
-        testMock();
-        betslip(1);
+        betslip().then(res=>{
+            console.log(100,res);
+            return testMock();
+        }).then(res=>{
+            console.log(101,res)
+        })
     },
     methods: {}
 };
