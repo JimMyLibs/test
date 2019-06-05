@@ -3,8 +3,8 @@
     "version": "0.0.1",
     "description": "ApiDoc for SZHKJC",
     "title": "ApiDoc for SZHKJC V0.0.1",
-    "url" : "http://mock.91525.net:35001/dev_app",
-    "sampleUrl" : "http://mock.91525.net:35001/dev_app",
+    "url" : "http://json.jc.com/",
+    "sampleUrl" : "http://json.jc.com/",
     "template": {
         "withCompare": true,
         "withGenerator": true

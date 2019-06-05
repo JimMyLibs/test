@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { testMock, betslip } from '../middleware/api/test'
+import api from '../middleware/api/test'
 export default {
     name: "pages_test",
     data() {
@@ -14,11 +14,21 @@ export default {
         };
     },
     mounted() {
-        betslip().then(res=>{
+        Promise.resolve(1).then(res=>{
             console.log(100,res);
-            return testMock();
+            return api.betslip();
         }).then(res=>{
             console.log(101,res)
+            return api.currentUser();
+        }).then(res=>{
+            console.log(102,res)
+            return api.sportsbook();
+        }).then(res=>{
+            console.log(103,res)
+            return api.versions();
+        }).then(res=>{
+            console.log(104,res)
+            return '完成';
         })
     },
     methods: {}
