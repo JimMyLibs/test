@@ -12,7 +12,7 @@
  * 
  * @apiSuccess (Reponse 200) {Number} resCode 200
  * @apiSuccess (Reponse 200) {String} message='success'
- * @apiSuccess (Reponse 200) {Object} data 数据
+ * @apiSuccess (Reponse 200) {Object} data='{}' 
  * 
  * @apiSuccess (Reponse 200) {Object} data.betLegSelections 下注选择
  * @apiSuccess (Reponse 200) {Object} data.betLegSelections.idNO 彩种

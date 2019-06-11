@@ -3,8 +3,8 @@
     "version": "0.0.1",
     "description": "ApiDoc for SZHKJC",
     "title": "ApiDoc for SZHKJC V0.0.1",
-    "url" : "http://json.jc.com/",
-    "sampleUrl" : "http://json.jc.com/",
+    "url" : "http://json.jc.com",
+    "sampleUrl" : "http://json.jc.com",
     "template": {
         "withCompare": true,
         "withGenerator": true
