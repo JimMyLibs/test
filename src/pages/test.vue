@@ -1,6 +1,14 @@
 <template>
     <div class="pages_test">
-        <h1>{{ pageName }}</h1>
+        <div class="events">
+            <ul class="list">
+                <li class="item" v-for="(item,index) in events" :key="index">
+                    <div class="id">id:{{item.eventFeedId}};</div>
+                    <div class="time">time:{{item.startTimeUtc}};</div>    
+                    <div class="isInPlay">isInPlay:{{item.isInPlay}};</div>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -10,34 +18,33 @@ export default {
     name: "pages_test",
     data() {
         return {
-            pageName: "pages_test"
+            pageName: "pages_test",
+            events:{},
         };
     },
     mounted() {
-        Promise.resolve(1).then(res=>{
-            console.log(100,res);
-            return api.betslip();
-        }).then(res=>{
-            console.log(101,res)
-            return api.currentUser();
-        }).then(res=>{
-            console.log(102,res)
-            return api.sportsbook();
-        }).then(res=>{
-            console.log(103,res)
-            return api.versions();
-        }).then(res=>{
-            console.log(104,res)
-            return '完成';
-        })
+        
     },
-    methods: {}
+    methods: {
+        async getEvents() {
+            this.events = await api.getEvents();
+        },
+    }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang='scss' scoped>
 .pages_test {
-    color: #212121;
+    .events{
+        .list{
+            .item{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .flex{
+        display: flex;
+    }
 }
 </style>

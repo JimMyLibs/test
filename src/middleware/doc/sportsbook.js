@@ -26,7 +26,7 @@
  * 
  * @apiSuccess (Reponse 200) {Object} data.competitors 竞争对手
  * 
- * @apiSuccess (Reponse 200) {Object} data.events 事件 
+ * @apiSuccess (Reponse 200) {Object} data.events 事件(首页列表)
  * @apiSuccess (Reponse 200) {Object} data.events.FB128296 事件 
  * @apiSuccess (Reponse 200) {Number} data.events.FB128296.categories 类别
  * @apiSuccess (Reponse 200) {String} data.events.FB128296.eventFeedId 事件反馈ID
@@ -37,11 +37,12 @@
  * @apiSuccess (Reponse 200) {String[]} data.events.FB128296.markets 市场
  * @apiSuccess (Reponse 200) {Date} data.events.FB128296.startTimeUtc 开始时间UTC
  * @apiSuccess (Reponse 200) {String[]} data.events.FB128296.teams 团队
- * @apiSuccess (Reponse 200) {Object} data.events.FBxxx 28个同上
+ * @apiSuccess (Reponse 200) {Object} data.events.FBxxx 104个同上
  * 
  * @apiSuccess (Reponse 200) {Object} data.markets 市场
  * @apiSuccess (Reponse 200) {Object} data.markets.mar_0a963e12 
  * @apiSuccess (Reponse 200) {Boolean} data.markets.mar_0a963e12.isInPlay 是否进行中
+ * @apiSuccess (Reponse 200) {String} data.markets.mar_0a963e12.marketBand 市场波段
  * @apiSuccess (Reponse 200) {String} data.markets.mar_0a963e12.marketFeedId 市场反馈ID
  * @apiSuccess (Reponse 200) {String} data.markets.mar_0a963e12.marketName 市场名称
  * @apiSuccess (Reponse 200) {Number} data.markets.mar_0a963e12.marketStatus 市场状况
