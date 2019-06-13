@@ -4,6 +4,8 @@
 
 // 引入json数据转换queryString方法
 import { jsonToParams } from '../utils/url'
+// XML转JSON
+import fxp from 'fast-xml-parser'
 
 
 /**
@@ -221,10 +223,15 @@ export default class Http {
         let { conf } = this
         let { timeout = 10000 } = conf
         return Promise.race([
-            fetch(url, reqConf).then(data => {
+            fetch(url, reqConf).then(async data => {
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
                 if (data.ok || data.status === 200) {
-                    return data.json()
+                    const result = await data.text()
+                    if(fxp.validate(result)){// XML
+                        return fxp.parse(result);
+                    }else{// JSON
+                        return data.json();
+                    }
                 } else {
                     // 未正常返回数据，则抛出异常
                     throw new Error(`响应数据异常，错误码：${data.status}`)
