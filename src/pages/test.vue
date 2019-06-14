@@ -1,33 +1,70 @@
 <template>
     <div class="pages_test">
-        <div class="events">
-            <ul class="list">
-                <li class="item" v-for="(item,index) in events" :key="index">
-                    <div class="id">id:{{item.eventFeedId}};</div>
-                    <div class="time">time:{{item.startTimeUtc}};</div>    
-                    <div class="isInPlay">isInPlay:{{item.isInPlay}};</div>
-                </li>
-            </ul>
+        <div class="prePage">
+
         </div>
+        <div class="preCode">
+            <pre contenteditable="true" v-html="resFormat"></pre>
+        </div>        
     </div>
 </template>
 
 <script>
-import api from '../middleware/api/test'
+import api from "../middleware/api/test1";
 export default {
     name: "pages_test",
     data() {
         return {
             pageName: "pages_test",
-            events:{},
+            resData: {}
         };
     },
+    computed:{
+        resFormat() {
+            return this.syntaxHighlight(this.resData)
+        }
+    },
     mounted() {
-        
+        this.FB_GetInfo_chi();
     },
     methods: {
-        async getEvents() {
-            this.events = await api.getEvents();
+        async FB_GetInfo_chi() {
+            // if(localStorage.getItem('FB_GetInfo_chi')){
+            //     this.resData = JSON.parse(localStorage.getItem('FB_GetInfo_chi'))
+            // }else{
+                this.resData = await api.FB_GetInfo_chi();
+                // localStorage.setItem('FB_GetInfo_chi',JSON.stringify(this.resData));
+            // }
+        },
+        jsonFormat(json) {
+            return JSON.stringify(json, undefined, 4);
+        },
+        syntaxHighlight(json) {
+            if (typeof json != "string") {
+                json = this.jsonFormat(json);
+            }
+            json = json
+                .replace(/&/g, "&")
+                .replace(/</g, "<")
+                .replace(/>/g, ">");
+            return json.replace(
+                /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+                function(match) {
+                    var cls = "number";
+                    if (/^"/.test(match)) {
+                        if (/:$/.test(match)) {
+                            cls = "key";
+                        } else {
+                            cls = "string";
+                        }
+                    } else if (/true|false/.test(match)) {
+                        cls = "boolean";
+                    } else if (/null/.test(match)) {
+                        cls = "null";
+                    }
+                    return '<span class="' + cls + '">' + match + "</span>";
+                }
+            );
         },
     }
 };
@@ -36,14 +73,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
 .pages_test {
-    .events{
-        .list{
-            .item{
+    .events {
+        .list {
+            .item {
                 margin-bottom: 10px;
             }
         }
     }
-    .flex{
+    .flex {
         display: flex;
     }
 }
