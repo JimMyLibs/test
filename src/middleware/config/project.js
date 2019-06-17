@@ -1,8 +1,8 @@
 
-exports.projectType = 'app';
+export const projectType = 'app';
 
-exports.ISDEV = process.env.NODE_ENV !== 'production';
+export const ISDEV = process.env.NODE_ENV !== 'production';
 
-exports.apiUrl = ``;// 生产环境api地址: `${location.origin}/api.v1.json`
+export const apiUrl = ``;// 生产环境api地址: `${location.origin}/api.v1.json`
 
-exports.mockUrl = 'http://mock.91525.net:35001/';
+export const mockUrl = 'http://mock.91525.net:35001/';

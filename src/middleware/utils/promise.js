@@ -1,4 +1,4 @@
-module.exports.chainCall = ()=>{    
+export const chainCall = ()=>{    
     const block = '■■■■■■■■■■■■■■■■■■■■■■■■';
     Promise.resolve(true).then(res=>{
         console.log('开始',block);

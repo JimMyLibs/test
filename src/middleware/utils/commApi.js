@@ -1,9 +1,9 @@
 // 其他公共api
 
-const FetchBase = require('../fetch/FetchBase')
-const { ISDEV, apiUrl } = require('../config/project')
-const apiUrls = require('../config/apiUrls')
-const { successCondition, loginInvalidCondition, msgKeys } = require('../config/fetchConf')
+import FetchBase from '../fetch/FetchBase'
+import { ISDEV, apiUrl } from '../config/project'
+import apiUrls from '../config/apiUrls'
+import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetchConf'
 
 const http = new FetchBase()
 
@@ -11,11 +11,11 @@ const http = new FetchBase()
 const apiInfoSessionId = '__apiInfoSessionId__'
 
 // 获取token
-exports.getToken = () => {
+export function getToken() {
     return 'token:123465789';
 }
 // 同步获取api地址信息
-exports.getApiInfo = () => {
+export function getApiInfo() {
     if (ISDEV) {// 开发环境调用devApiInfo
         return apiUrls['dev']
     } else if (!apiUrl) {// 生产环境apiUrl为空时调用
@@ -24,12 +24,12 @@ exports.getApiInfo = () => {
     return JSON.parse(sessionStorage.getItem(apiInfoSessionId))
 }
 // 保存api地址信息
-exports.setApiInfo = (info) => {
+export function setApiInfo(info) {
     sessionStorage.setItem(apiInfoSessionId, JSON.stringify(info))
 }
 // 异步获取api地址信息
-exports.fetchApiInfo = () => {
-    let currentInfo = this.getApiInfo()
+export function fetchApiInfo() {
+    let currentInfo = getApiInfo()
     return new Promise((resolve, reject) => {
         if (ISDEV) {
             resolve(apiUrls['dev'])
@@ -38,7 +38,7 @@ exports.fetchApiInfo = () => {
                 resolve(currentInfo)
             } else {
                 http.toGet(apiUrl).then(res => {
-                    this.setApiInfo(res)
+                    setApiInfo(res)
                     resolve(res)
                 }).catch(err => {
                     reject(err)
@@ -53,7 +53,7 @@ exports.fetchApiInfo = () => {
  * @param  {Boolean} [isTip=true] [是否自动处理错误，如登陆失效后自动跳转到登陆页]
  * @return {object}               [判断结果对象]
  */
-exports.checkResponse = (res) => {
+export function checkResponse(res) {
     let isCorrect = true
     let msg = '系统异常，请稍后重试！'
     if (typeof res === 'object') {

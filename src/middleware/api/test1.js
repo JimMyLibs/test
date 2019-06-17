@@ -1,7 +1,7 @@
-const { $post, $get } = require('../fetch/Http')
+import { $post, $get } from '../fetch/Http'
 
 const reqDates = ['0530', '0612', 'xml'];
-const curDate = reqDates[2];
+export const curDate = reqDates[2];
 
 class Api {
     constructor() {
@@ -25,7 +25,7 @@ class Api {
         try{
             const reult = await this.getData('FB_GetInfo_chi.xml');
             const { Coupons, TournamentPools } = reult.AOSBS_XML;
-            debugger;
+            
             return Coupons;
         }catch(err){
             throw err;
@@ -33,4 +33,4 @@ class Api {
     }
 
 }
-module.exports = new Api()
+export default new Api()
