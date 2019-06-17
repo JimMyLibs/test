@@ -29,26 +29,20 @@ export default {
     },
     methods: {
         async FB_GetInfo_chi() {
-            // if(localStorage.getItem('FB_GetInfo_chi')){
-            //     this.resData = JSON.parse(localStorage.getItem('FB_GetInfo_chi'))
-            // }else{
-                this.resData = await api.FB_GetInfo_chi();
-                // localStorage.setItem('FB_GetInfo_chi',JSON.stringify(this.resData));
-            // }
-        },
-        jsonFormat(json) {
-            return JSON.stringify(json, undefined, 4);
+            console.time('FB_GetInfo_chi');
+            this.resData = await api.FB_GetInfo_chi();
+            console.timeEnd('FB_GetInfo_chi');
         },
         syntaxHighlight(json) {
             if (typeof json != "string") {
-                json = this.jsonFormat(json);
+                json = JSON.stringify(json, undefined, 4);
             }
             json = json
                 .replace(/&/g, "&")
                 .replace(/</g, "<")
                 .replace(/>/g, ">");
             return json.replace(
-                /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+                /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
                 function(match) {
                     var cls = "number";
                     if (/^"/.test(match)) {

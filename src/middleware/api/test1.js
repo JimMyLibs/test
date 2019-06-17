@@ -7,25 +7,29 @@ class Api {
     constructor() {
         
     }
-    FB_GetInfo_chi() {// 2.2.4.7
-        return $get(`${curDate}/FB_GetInfo_chi.xml`).then(res=>{
-            console.log('FB_GetInfo_chi_res',res,res.AOSBS_XML.Coupons.CouponInfo[0].Matches.MatchInfo[0]);
-
-            const { Coupons, TournamentPools } = res.AOSBS_XML;
-
-            return Coupons;
-        }).catch(err=>{
-            return err;
-        })
+    async getData(name) {
+        try{
+            const LSdata = localStorage.getItem(name);
+            if(LSdata){
+                return JSON.parse(LSdata);// 100ms
+            }else{
+                const reult = await $get(`${curDate}/${name}`);// 300ms
+                localStorage.setItem(name,JSON.stringify(reult));
+                return reult;
+            }
+        }catch(err){
+            throw err;
+        }
     }
-    FB_GetInfo_eng() {// 2.2.4.7
-        return $get(`${curDate}/FB_GetInfo_eng.xml`).then(res=>{
-            // console.log('FB_GetInfo_eng_res',res,res.AOSBS_XML.Coupons.CouponInfo[0].Matches.MatchInfo[0]);
-            console.log('FB_GetInfo_eng_res',JSON.stringify(res));
-
+    async FB_GetInfo_chi() {// 2.2.4.7
+        try{
+            const reult = await this.getData('FB_GetInfo_chi.xml');
+            const { Coupons, TournamentPools } = reult.AOSBS_XML;
             
-            return res;
-        })
+            return Coupons;
+        }catch(err){
+            throw err;
+        }
     }
 
 }
