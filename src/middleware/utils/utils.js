@@ -1,17 +1,17 @@
 
 
-import { ISDEV } from '../config/project'
+const { ISDEV } = require('../config/project')
 
 
 // 生成不重复签名
-export function createRandomId() {
+exports.createRandomId = () => {
   function S4() {
     return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
   }
   return S4() + S4() + S4() + S4()
 }
 
-export function getUUID() {
+exports.getUUID = () => {
   let d = Date.now()
   let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
     let r = (d + Math.random() * 16) % 16 | 0
@@ -25,14 +25,14 @@ export function getUUID() {
 }
 
 // 非生产环境下console才生效
-export function p(...info) {
+exports.p = (...info) => {
   if (ISDEV && window.console) {
     console.log(...info)
   }
 }
 
 // 判断变量，字符串，数组，对象是否为空
-export function isEmpty(obj) {
+exports.isEmpty = (obj) => {
   if (typeof obj === 'undefined') {
     return true
   }
@@ -62,16 +62,16 @@ export function isEmpty(obj) {
  * deepCopy 深拷贝对象或数组
  * @param {object|array} 对象或数组
  */
-export function deepCopy(obj) {
+exports.deepCopy = (obj) => {
   if (Array.isArray(obj)) {
     return obj.reduce((pre, next) => {
-      pre.push(deepCopy(next))
+      pre.push(this.deepCopy(next))
       return pre
     }, [])
   } else if (typeof obj === 'object') {
     return Object.keys(obj).reduce((pre, next) => {
       if (obj.hasOwnProperty(next)) { // 过滤继承属性
-        pre[next] = deepCopy(obj[next])
+        pre[next] = this.deepCopy(obj[next])
       }
       return pre
     }, {})
@@ -84,7 +84,7 @@ export function deepCopy(obj) {
  * deepAssign 合并多个对象
  * @param  {...object} 一个或多个对象
  */
-export function deepAssign(...objs) {
+exports.deepAssign = (...objs) => {
   return objs.reduce((pre, next) => {
     Object.keys(next).forEach(key => {
       let nextValue = next[key]
@@ -92,17 +92,17 @@ export function deepAssign(...objs) {
         let preValue = pre[key]
         if (typeof preValue === typeof nextValue) {
           if (Array.isArray(nextValue)) { // array replace
-            pre[key] = deepCopy(nextValue)
+            pre[key] = this.deepCopy(nextValue)
           } else if (typeof nextValue === 'object') {
-            pre[key] = deepAssign(preValue, nextValue)
+            pre[key] = this.deepAssign(preValue, nextValue)
           } else {
             pre[key] = nextValue
           }
         } else {
-          pre[key] = deepCopy(nextValue)
+          pre[key] = this.deepCopy(nextValue)
         }
       } else {
-        pre[key] = deepCopy(nextValue)
+        pre[key] = this.deepCopy(nextValue)
       }
     })
     return pre
@@ -110,7 +110,7 @@ export function deepAssign(...objs) {
 }
 
 // 动态创建script标签，creatScript().then(do something)
-export function creatScript(url) {
+exports.creatScript = (url) => {
   return new Promise((resolve, reject) => {
     let head = document.getElementsByTagName('head')[0]
     let script = document.createElement('script')
@@ -120,6 +120,6 @@ export function creatScript(url) {
     script.src = url
     head.appendChild(script)
   }).catch(err => {
-    p(`创建${url}失败,error:${err}`)
+    this.p(`创建${url}失败,error:${err}`)
   })
 }

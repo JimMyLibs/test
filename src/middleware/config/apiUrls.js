@@ -1,5 +1,5 @@
 
-export default {
+module.exports = {
     dev:{
         // 版本类型接口前缀
         app: 'http://json.jc.com/',

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import api from "../middleware/api/test1";
+const api = require("../middleware/api/test1")
 export default {
     name: "pages_test",
     data() {

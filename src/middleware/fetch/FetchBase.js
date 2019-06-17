@@ -3,9 +3,9 @@
  */
 
 // 引入json数据转换queryString方法
-import { jsonToParams } from '../utils/url'
+const { jsonToParams } = require('../utils/url')
 // XML转JSON
-import fxp from 'fast-xml-parser'
+const fxp = require('fast-xml-parser')
 
 const fxpOpt = {
     attributeNamePrefix: '',// 将给定字符串添加到属性名称以进行标识
@@ -28,7 +28,7 @@ const fxpOpt = {
 /**
  * Http fetch请求基类型
  */
-export default class Http {
+module.exports = class Http {
 
     // 初始化
     constructor(options = {}) {

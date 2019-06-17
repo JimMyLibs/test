@@ -1,7 +1,7 @@
-import { $post, $get } from '../fetch/Http'
+const { $post, $get } = require('../fetch/Http')
 
 const reqDates = ['0530', '0612', 'xml'];
-export const curDate = reqDates[2];
+const curDate = reqDates[2];
 
 class Api {
     constructor() {
@@ -40,4 +40,4 @@ class Api {
     }
 
 }
-export default new Api()
+module.exports = new Api()

@@ -1,12 +1,12 @@
 /**
  * [fetch 请求封装]
  */
-import FetchBase from './FetchBase'
-import apiUrls from '../config/apiUrls'
-import { ISDEV, mockUrl, apiType as projectType } from '../config/project'
+const FetchBase = require('./FetchBase')
+const apiUrls = require('../config/apiUrls')
+const { ISDEV, mockUrl, projectType } = require('../config/project')
 
-import { fetchApiInfo, getToken } from '../utils/commApi'
-import { deepAssign, isEmpty } from '../utils/utils'
+const { fetchApiInfo, getToken } = require('../utils/commApi')
+const { deepAssign, isEmpty } = require('../utils/utils')
 
 
 // 特殊接口参数
@@ -23,7 +23,7 @@ const specialKeys = ['apiType', 'headers', 'body', 'apiInfo', 'method', 'timeout
  * }
  * @type {Object}
  */
-export default class Http extends FetchBase {
+module.exports = class Http extends FetchBase {
     constructor(options = {}) {
         super(options)
 

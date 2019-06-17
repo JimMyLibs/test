@@ -1,5 +1,5 @@
-import Http from './Fetch'
-import { checkResponse } from '../utils/commApi'
+const Http = require('./Fetch')
+const { checkResponse } = require('../utils/commApi')
 
 const http = new Http()
 
@@ -21,13 +21,13 @@ const $fetch = (api, data = {}, method = 'post', options) => {
         })
     })
 }
-export const $get = (api, data) => {
+exports.$get = (api, data) => {
     return $fetch(api, data, 'get')
 }
-export const $post = (api, data) => {
+exports.$post = (api, data) => {
     return $fetch(api, data)
 }
-export const $upload = (api, data, options) => {
+exports.$upload = (api, data, options) => {
     // options [其他请求配置，如apiType，headers，params等]
     return $fetch(api, data, 'upload', options)
 }
