@@ -1,10 +1,8 @@
 <template>
     <div class="pages_test">
-        <div class="prePage">
-
-        </div>
-        <div class="preCode">
-            <pre contenteditable="true" v-html="resFormat"></pre>
+        <div class="preCode flex">
+            <pre contenteditable="true" v-html="result"></pre>
+            <pre contenteditable="true" v-html="CouponInfo"></pre>
         </div>        
     </div>
 </template>
@@ -16,13 +14,19 @@ export default {
     data() {
         return {
             pageName: "pages_test",
-            resData: {}
+            resData: {
+                result:{},
+                CouponInfo:{},
+            }
         };
     },
     computed:{
-        resFormat() {
-            return this.syntaxHighlight(this.resData)
-        }
+        result() {
+            return this.syntaxHighlight(this.resData.result)
+        },
+        CouponInfo() {
+            return this.syntaxHighlight(this.resData.CouponInfo)
+        },
     },
     mounted() {
         this.FB_GetInfo_chi();
@@ -31,6 +35,7 @@ export default {
         async FB_GetInfo_chi() {
             console.time('FB_GetInfo_chi');
             this.resData = await api.FB_GetInfo_chi();
+            console.log(110,this.resData)
             console.timeEnd('FB_GetInfo_chi');
         },
         syntaxHighlight(json) {
@@ -67,11 +72,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
 .pages_test {
-    .events {
-        .list {
-            .item {
-                margin-bottom: 10px;
-            }
+    pre{
+        padding: 10px;
+        &:not(:last-of-type){
+            border-right: 2px solid #444;
         }
     }
     .flex {
