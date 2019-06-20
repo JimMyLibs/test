@@ -2,7 +2,8 @@
 export default {
     dev:{
         // 版本类型接口前缀
-        app: 'http://json.jc.com/',
+        // app: 'http://json.jc.com:8081/',
+        app: 'http://169.254.222.170:8081/',
     
         // 神盾类型接口前缀
         web: 'http://mock.91525.net:35001/dev_web',

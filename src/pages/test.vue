@@ -1,41 +1,65 @@
 <template>
     <div class="pages_test">
+        <select @change="changeMatche" v-model="Matche.selected">
+            <option v-for="(item,index) in menu" :key="item" :value="index">{{index}}={{item}}</option>
+        </select>
         <div class="preCode flex">
-            <pre contenteditable="true" v-html="result"></pre>
+            <pre contenteditable="true" v-html="listFilter"></pre>
+            <pre contenteditable="true" v-html="listAll"></pre>
             <pre contenteditable="true" v-html="CouponInfo"></pre>
         </div>        
     </div>
 </template>
 
 <script>
-import api from "../middleware/api/test1";
+import api from "../middleware/api/index";
 export default {
     name: "pages_test",
     data() {
         return {
             pageName: "pages_test",
-            resData: {
-                result:{},
+            FB_GetInfo_data: {
+                listFilter:{},
+                listAll:{},
                 CouponInfo:{},
-            }
+            },
+            Matche:{
+                selected:''
+            },
         };
     },
     computed:{
-        result() {
-            return this.syntaxHighlight(this.resData.result)
+        listFilter() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.listFilter)
+        },
+        listAll() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.listAll)
         },
         CouponInfo() {
-            return this.syntaxHighlight(this.resData.CouponInfo)
+            return this.syntaxHighlight(this.FB_GetInfo_data.CouponInfo)
+        },
+        menu() {
+            return api.menu;
+        },
+        menuHtml() {
+            return this.syntaxHighlight(api.menu);
         },
     },
     mounted() {
         this.FB_GetInfo_chi();
     },
     methods: {
+        async changeMatche() {
+            console.time('changeMatche');
+            const result = await api.getMatches(this.Matche.selected);
+            this.FB_GetInfo_data.listFilter = result;
+            console.timeEnd('changeMatche');
+        },
         async FB_GetInfo_chi() {
             console.time('FB_GetInfo_chi');
-            this.resData = await api.FB_GetInfo_chi();
-            console.log(110,this.resData)
+            this.FB_GetInfo_data.listAll = await api.FB_GetInfo_chi();
+            this.FB_GetInfo_data.CouponInfo = api.tmp.CouponInfo;
+            // console.log(110,this.FB_GetInfo_data)
             console.timeEnd('FB_GetInfo_chi');
         },
         syntaxHighlight(json) {
