@@ -2,6 +2,9 @@ import { $post, $get } from '../../fetch/Http'
 import { obj2Arr } from '../../utils/utils'
 import menu from './menu'
 
+// 本地调试，临时导入json
+import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
+
 const reqDates = ['0530', '0612', 'xml'];
 export const curDate = reqDates[2];
 
@@ -12,13 +15,17 @@ class Api {
     }
     async getData(name) {
         try {
-            const LSdata = window.localStorage?localStorage.getItem(name):false;
-            if (LSdata) {
-                return JSON.parse(LSdata);// 100ms
-            } else {
-                const resData = await $get(`${curDate}/${name}`);// 300ms
-                window.localStorage&&localStorage.setItem(name, JSON.stringify(resData));
-                return resData;
+            if(json_FB_GetInfo_chi){
+                return json_FB_GetInfo_chi;
+            }else{
+                const LSdata = window.localStorage?localStorage.getItem(name):false;
+                if (LSdata) {
+                    return JSON.parse(LSdata);// 100ms
+                } else {
+                    const resData = await $get(`${curDate}/${name}`);// 300ms
+                    window.localStorage&&localStorage.setItem(name, JSON.stringify(resData));
+                    return resData;
+                }                
             }
         } catch (err) {
             throw err;
