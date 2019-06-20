@@ -54,24 +54,7 @@ class Api {
                                 getPoolInfo(item3.LegInfo, 'HFMP');
                             }else{// 普通类型
                                 let d_d_item = {};
-                                // 处理赔率（三级）
-                                item3.OddsSet = obj2Arr(item3.OddsSet);
-                                // console.log(index1+'_'+index2+'_'+index3,PoolType||item3.Pool,item3.OddsSet)
-                                item3.OddsSet.map((item4,index4)=>{
-                                    d_d_item.rate1_title = '';
-                                    d_d_item.rate2_title = '';
-                                    d_d_item.rate3_title = '';
-                                    d_d_item.rate1_num = '';
-                                    d_d_item.rate2_num = '';
-                                    d_d_item.rate3_num = '';
 
-                                    d_d_item[item3.Pool + '_title' + (index4+1)] = item4.Tag;
-
-                                    d_d_item.pool = PoolType || item3.Pool;
-                                    d_d_item.corner = item2.Progress.Corner;
-                                    d_d_item.tab_title = '';
-                                    d_d_item.tab_num = '';
-                                })
                                 // 处理玩法（二级）
                                 d_d_item.div = item2.League;
                                 d_d_item.team1 = item2.Home;
@@ -79,6 +62,42 @@ class Api {
                                 d_d_item.score1 = item2.Progress.Result.split(':')[0];
                                 d_d_item.score2 = item2.Progress.Result.split(':')[1];
                                 d_d_item.timing = item2.MatchPoolCloseTime + ' ' + item2.MatchPoolCloseDate;
+                                // 未知字段
+                                d_d_item.rate1_title = '';
+                                d_d_item.rate2_title = '';
+                                d_d_item.rate3_title = '';
+                                d_d_item.rate1_num = '';
+                                d_d_item.rate2_num = '';
+                                d_d_item.rate3_num = '';
+
+                                // 处理赔率（三级）
+                                let pool = PoolType||item3.Pool;
+                                item3.OddsSet = obj2Arr(item3.OddsSet);
+                                item3.OddsSet.map((item4,index4)=>{
+                                    // 每个pool单独处理
+                                    if(pool=='HAD'){
+                                        item4.OddsInfo.map((item6,index6)=>{
+                                            if(item6.Number==1){// Home
+                                                d_d_item[pool + '_title1'] = 'H';
+                                                d_d_item[pool + '_rate1'] = item6.Odds;
+                                            }else if(item6.Number=='X'){// D
+                                                d_d_item[pool + '_title2'] = 'D';
+                                                d_d_item[pool + '_rate2'] = item6.Odds;
+                                            }else if(item6.Number==2){// Away
+                                                d_d_item[pool + '_title3'] = 'A';
+                                                d_d_item[pool + '_rate3'] = item6.Odds;
+                                            }
+                                        })
+                                        console.log(index1+'_'+index2+'_'+index3+'_'+index4,d_d_item)
+                                    }
+                                })
+                                // console.log(index1+'_'+index2+'_'+index3,pool,d_d_item)
+
+                                d_d_item.pool = PoolType || item3.Pool;
+                                d_d_item.corner = item2.Progress.Corner;
+                                d_d_item.tab_title = '';
+                                d_d_item.tab_num = '';
+
                                 result.dat[index1].data.push(d_d_item);
                             }
                         })                        
