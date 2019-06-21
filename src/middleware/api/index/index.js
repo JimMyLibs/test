@@ -1,6 +1,6 @@
 import { $post, $get } from '../../fetch/Http'
 import { obj2Arr } from '../../utils/utils'
-import menu from './menu'
+import poolList from './poolList'
 
 // 本地调试，临时导入json
 import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
@@ -8,7 +8,7 @@ import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
 
 class Api {
     constructor() {
-        this.menu = menu;
+        this.poolList = poolList;
         this.tmp = {};
     }
     async getData(name) {
@@ -40,13 +40,12 @@ class Api {
                 MatchInfo = obj2Arr(MatchInfo);
                 // get title
                 let d_item = {};
-                result.dat[index1] = d_item;
                 d_item.title = `${MatchInfo[0] ? MatchInfo[0].Date : ''}(${item1.NameShort})`;
                 d_item.data = [];            
                 // console.log(index1,item1)
                 MatchInfo.map((item2, index2) => {
                     // console.log(index1+'_'+index2, item2.Pools.PoolInfo)
-                    const getPoolInfo = (PoolInfo, PoolType='')=>{
+                    const getPoolInfo = (PoolInfo, poolType='')=>{
                         PoolInfo.map((item3, index3) => {
                             if(item3.Pool == 'HFMP'){// 6宝半全场
                                 getPoolInfo(item3.LegInfo, 'HFMP');
@@ -69,7 +68,7 @@ class Api {
                                 d_d_item.rate3_num = '';
 
                                 // 处理赔率（三级）
-                                let pool = PoolType||item3.Pool;
+                                let pool = poolType||item3.Pool;
                                 item3.OddsSet = obj2Arr(item3.OddsSet);
                                 item3.OddsSet.map((item4,index4)=>{
                                     // 每个pool单独处理
@@ -86,13 +85,23 @@ class Api {
                                                 d_d_item[pool + '_rate3'] = item6.Odds;
                                             }
                                         })
-                                        console.log(pool,index1+'_'+index2+'_'+index3+'_'+index4,d_d_item)
+                                        // console.log(pool,index1+'_'+index2+'_'+index3+'_'+index4,d_d_item)
                                     }else if(pool=='FHAD'){// 预测一场球赛的上半场赛果
-
+                                        // no data
                                     }else if(pool=='HHAD'){// 较强之球队让球于较弱之球队
-
+                                        // no data
                                     }else if(pool=='HDC'){// 投注经让球调整后之赛果
-
+                                        item4.OddsInfo.map((item6,index6)=>{
+                                            if(item6.Number==1){// 
+                                                d_d_item[pool + '_title1'] = 'H';
+                                                d_d_item[pool + '_rate1'] = item6.Odds;
+                                            }else if(item6.Number==2){// 
+                                                d_d_item[pool + '_title3'] = 'C';
+                                                d_d_item[pool + '_rate3'] = item6.Odds;
+                                            }
+                                        })
+                                        d_d_item[pool + '_title2'] = 'D';
+                                        d_d_item[pool + '_rate2'] = 0;
                                     }else if(pool=='HFT'){// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
 
                                     }else if(pool=='TQL'){// 在指定赛事，投注哪队能晋级下一场赛事
@@ -129,20 +138,23 @@ class Api {
 
                                     }else if(pool=='6FH'){// 6宝半全场
 
-                                    }                                })
+                                    }                                
+                                })
                                 // console.log(index1+'_'+index2+'_'+index3,pool,d_d_item)
 
-                                d_d_item.pool = PoolType || item3.Pool;
+                                d_d_item.poolType = pool;
+                                d_d_item.pool = PoolInfo.length;
                                 d_d_item.corner = item2.Progress.Corner;
                                 d_d_item.tab_title = '';
                                 d_d_item.tab_num = '';
 
-                                result.dat[index1].data.push(d_d_item);
+                                d_item.data.push(d_d_item);
                             }
                         })                        
                     }
                     getPoolInfo(item2.Pools.PoolInfo);
                 })
+                result.dat.push(d_item);
             })
 
             this.tmp.CouponInfo = CouponInfo;
@@ -152,7 +164,7 @@ class Api {
             return err.message;
         }
     }
-    async getMatches(type) {
+    async filterMatches(type) {
         const FB_GetInfo_chi = await this.FB_GetInfo_chi();
         const result = {
             dat:FB_GetInfo_chi.dat.map((item1,index1)=>{
@@ -160,7 +172,7 @@ class Api {
                     title:item1.title,
                     data:item1.data.filter((item2,index2)=>{
                         // console.log(index1+'_'+index2,item2.pool,type,item2.pool==type)
-                        return item2.pool==type;
+                        return item2.poolType==type;
                     }),
                 }
             }),
