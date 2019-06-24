@@ -167,7 +167,19 @@ class Api {
         // 一级分组：时间，二级分组：pool
         let dataTmp = FB_GetInfo_chi.data.map(item1=>{  
             poolAll.map(item2=>{
-                item1[item2] = item1.coupons.filter(item3=>item2==item3.pool)
+                let curPoolData = item1.coupons.filter(item3=>item2==item3.pool);
+                let tmp = {};
+                curPoolData.map(item3=>{// 同国家同开场时间的分为一组，此方法可推广其他相关业务
+                    tmp[item3.league + '_' + item3.matchDateTime] = tmp[item3.league + '_' + item3.matchDateTime] || [];
+                    tmp[item3.league + '_' + item3.matchDateTime].push(item3)
+                })
+                console.log('tmp',tmp)
+                let matches = [];
+                for(let key in tmp){
+                    matches.push(tmp[key])
+                }
+
+                item1[item2] = matches;
             })
             delete item1.coupons;
             return item1;
