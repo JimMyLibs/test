@@ -21,13 +21,14 @@
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.away 客队 (team2)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.score_Home 主队比分 (score1)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.score_Away 客队比分 (score2)
- * @apiSuccess (Reponse 200) {String} data.coupons.matches.closeTime 结束时间 (timing)
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.matchDateTime 结束时间 (timing)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.pool 投注类型
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.poolNum 投注类型总数 (pool)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.corner 角球 (corner)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.inplay Inplay
  * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.pools 投注池
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.enabled
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.oddsUpdateTime 赔率更新时间
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.stopSell 停售时间
  * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.pools.oddsSets 赔率列表
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.oddsSets.name 赔率标识
@@ -48,7 +49,7 @@
  *                              away: '巴西',               // 客队 (team2)
  *                              score_Home: '1',            // 主队比分 (score1)
  *                              score_Away: '2',            // 客队比分 (score2)
- *                              closeTime: '19:00,21/06',   // 结束时间 (timing)
+ *                              matchDateTime: '19:00,21/06',   // 结束时间 (timing)
  *                              pool: 'HDA',                // 投注类型 (新增)
  *                              poolNum: '3',               // 投注类型总数 (pool)
  *                              corner: '0',                // 角球 (corner)

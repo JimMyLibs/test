@@ -51,15 +51,15 @@ export default {
     methods: {
         async changeMatche() {
             console.time('changeMatche');
-            const result = await api.getMatches(this.Matche.selected);
+            const result = await api.filterMatches(this.Matche.selected);
             this.FB_GetInfo_data.listFilter = result;
             console.timeEnd('changeMatche');
         },
         async FB_GetInfo_chi() {
             console.time('FB_GetInfo_chi');
-            this.FB_GetInfo_data.listAll = await api.FB_GetInfo_chi();
-            this.FB_GetInfo_data.CouponInfo = api.tmp.CouponInfo;
-            // console.log(110,this.FB_GetInfo_data)
+            this.FB_GetInfo_data.listAll = await api.datePools();
+            this.FB_GetInfo_data.CouponInfo = await api.FB_GetInfo_chi();
+            console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
             console.timeEnd('FB_GetInfo_chi');
         },
         syntaxHighlight(json) {
