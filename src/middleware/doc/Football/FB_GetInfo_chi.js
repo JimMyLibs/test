@@ -7,9 +7,12 @@
  * @apiParam {String} [type='HAD'] 投注类型
  * @apiParamExample {json} Request:
  * {
- *      import api from "../middleware/api/index";
+ *      import api from '../middleware/api/index'
  * 
- *      const result = await api.getMatches('HAD');
+ *      // 获取筛选菜单
+ *      const poolsList = api.poolsList;
+ *      // 筛选数据
+ *      const result = await api.filterMatches('HAD');
  * }
  * 
  * @apiSuccess (Reponse 200) {Object[]} data
@@ -26,13 +29,13 @@
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.poolNum 投注类型总数 (pool)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.corner 角球 (corner)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.inplay Inplay
- * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.pools 投注池
- * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.enabled
- * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.oddsUpdateTime 赔率更新时间
- * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.stopSell 停售时间
- * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.pools.oddsSets 赔率列表
- * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.oddsSets.name 赔率标识
- * @apiSuccess (Reponse 200) {String} data.coupons.matches.pools.oddsSets.odds 赔率值
+ * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.oddsSet 投注池
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.enabled
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.oddsUpdateTime 赔率更新时间
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.stopSell 停售时间
+ * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.oddsSet.oddsInfo 赔率列表
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.oddsInfo.name 赔率标识
+ * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.oddsInfo.odds 赔率值
  * 
  * @apiSuccessExample {json} Success-Response: 
  * HTTP/1.1 200 OK
@@ -54,11 +57,11 @@
  *                              poolNum: '3',               // 投注类型总数 (pool)
  *                              corner: '0',                // 角球 (corner)
  *                              inplay: '0',
- *                              pools : [            // 投注池
+ *                              oddsSet : [            // 投注池
  *                                  {
  *                                      enabled: '0',
  *                                      stopSell: '08/10 10:30', // 停售时间
- *                                      oddsSets: [              // 赔率列表
+ *                                      oddsInfo: [              // 赔率列表
  *                                          {
  *                                              name: 'H',              // 赔率标识
  *                                              odds: '1.2',            // 赔率值

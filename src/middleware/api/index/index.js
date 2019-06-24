@@ -1,6 +1,6 @@
 import { $post, $get } from '../../fetch/Http'
 import { obj2Arr } from '../../utils/utils'
-import poolList from './poolList'
+import poolsList from './poolsList'
 
 // 本地调试，临时导入json
 import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
@@ -8,7 +8,7 @@ import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
 
 class Api {
     constructor() {
-        this.poolList = poolList;
+        this.poolsList = poolsList;
         this.tmp = {};
     }
     async getData(name) {
@@ -66,7 +66,7 @@ class Api {
                                 matches_item.poolNum = PoolInfo.length;
                                 matches_item.corner = item2.Progress.Corner;
                                 matches_item.inplay = item2.Inplay;
-                                matches_item.OddsSet = [];// 每场比赛的投注池
+                                matches_item.oddsSet = [];// 每场比赛的投注池
 
                                 item3.OddsSet = obj2Arr(item3.OddsSet);
                                 item3.OddsSet.map((item4, index4) => {
@@ -140,7 +140,7 @@ class Api {
                                         }
                                         pools_item.oddsInfo.push(oddsInfo_item);
                                     })
-                                    matches_item.OddsSet.push(pools_item);
+                                    matches_item.oddsSet.push(pools_item);
                                 })
 
                                 dataPerDay.coupons.push(matches_item);// 拆散polls扁平到coupons层级
@@ -210,7 +210,7 @@ class Api {
             console.log(type, item[type], item)
             result.data.push({
                 date: item.date,
-                list: item[type] || [],
+                coupons: item[type] || [],
             })
         })
 

@@ -39,10 +39,10 @@ export default {
             return this.syntaxHighlight(this.FB_GetInfo_data.CouponInfo)
         },
         menu() {
-            return api.poolList;
+            return api.poolsList;
         },
         menuHtml() {
-            return this.syntaxHighlight(api.poolList);
+            return this.syntaxHighlight(api.poolsList);
         },
     },
     mounted() {
