@@ -42,6 +42,10 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
     list-style-image: none;
     resize: none;
 }
+html,body,#app{
+    width: 100%;
+    height: 100%;
+}
 /*********************** global ***********************/
 pre {
     .string {

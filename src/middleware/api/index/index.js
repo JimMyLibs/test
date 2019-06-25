@@ -29,7 +29,7 @@ class Api {
             throw err;
         }
     }
-    async FB_GetInfo_chi() {// 2.2.4.7
+    async FB_GetInfo_chi() {// 2.2.4.7  // 获取并编排所有数据
         const resData = await this.getData('/xml/index/FB_GetInfo_chi.xml');
         const { Coupons: { CouponInfo }, TournamentPools } = resData.AOSBS_XML;
         let result = { data: [] };
@@ -94,13 +94,14 @@ class Api {
                                         } else if (pool == 'HHAD') {// 较强之球队让球于较弱之球队
                                             // no data
                                         } else if (pool == 'HDC') {// 投注经让球调整后之赛果
-                                            if (item6.Number == 1) {// 
-                                                matches_item[pool + '_title1'] = 'H';
-                                                matches_item[pool + '_rate1'] = item6.Odds;
-                                            } else if (item6.Number == 2) {// 
-                                                matches_item[pool + '_title3'] = 'C';
-                                                matches_item[pool + '_rate3'] = item6.Odds;
+                                            if (item6.Number == 1) {
+                                                oddsInfo_item.name = 'H';
+                                            } else if (item6.Number == 'X') {
+                                                oddsInfo_item.name = 'D';
+                                            } else if (item6.Number == 2) {
+                                                oddsInfo_item.name = 'C';
                                             }
+                                            oddsInfo_item.odds = item6.Odds;
                                         } else if (pool == 'HFT') {// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
 
                                         } else if (pool == 'TQL') {// 在指定赛事，投注哪队能晋级下一场赛事
@@ -159,11 +160,11 @@ class Api {
             return err.message;
         }
     }
-    async datePools() {
+    async datePools() {// 根据date{pool:[matches]}划分数据
         const FB_GetInfo_chi = await this.FB_GetInfo_chi();
         // 获取所有的pool
         let poolAll = Array.from(new Set(FB_GetInfo_chi.data.reduce((a,b)=>a.concat(b.coupons.map(item=>item.pool)),[])));
-        console.log('poolAll',poolAll)
+        // console.log('poolAll',poolAll)
         // 一级分组：时间，二级分组：pool
         let dataTmp = FB_GetInfo_chi.data.map(item1=>{  
             poolAll.map(item2=>{
@@ -174,7 +175,7 @@ class Api {
                     tmp[item3.league + '_' + item3.matchDateTime].league = item3.league;
                     tmp[item3.league + '_' + item3.matchDateTime].matches.push(item3)
                 })
-                console.log('tmp',tmp)
+                // console.log('tmp',tmp)
                 let matches = [];
                 for(let key in tmp){
                     matches.push(tmp[key])
@@ -190,7 +191,7 @@ class Api {
             data: dataTmp
         };
     }
-    async poolDate() {
+    async poolDate() {// 根据pool{date:[matches]}划分数据: 未使用，待优化
         const FB_GetInfo_chi = await this.FB_GetInfo_chi();
         // 获取所有的pool
         let poolAll = Array.from(new Set(FB_GetInfo_chi.data.reduce((sum,item)=>sum.concat(item.coupons.map(item2=>item2.pool)),[])));
@@ -216,7 +217,7 @@ class Api {
         })
         return poolData;
     }
-    async filterMatches(type) {
+    async filterMatches(type) {// 筛选数据
         const datePools = await this.datePools();
         const result = {data:[]};
         datePools.data.filter(item=>{

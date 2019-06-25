@@ -1,17 +1,33 @@
 <template>
     <div class="pages_test">
-        <select @change="changeMatche" v-model="Matche.selected">
-            <option v-for="(item,index) in menu" :key="item" :value="index">{{index}}={{item}}</option>
-        </select>
         <div class="preCode flex">
-            <pre contenteditable="true" v-html="listFilter"></pre>
-            <pre contenteditable="true" v-html="listAll"></pre>
-            <pre contenteditable="true" v-html="CouponInfo"></pre>
+            <div class="preBox" v-if="show.listFilter">
+                <select class="changeMatche" @change="changeMatche" v-model="Matche.selected">
+                    <option v-for="(item,index) in menu" :key="item" :value="index">{{index}}={{item}}</option>
+                </select>
+                <pre v-html="listFilter"></pre>
+            </div>
+            <div class="preBox">
+                <div class="preTitle" @click="show.datePools=!show.datePools">日期玩法:{{show.datePools?'开':'关'}}</div>
+                <pre v-if="show.datePools" v-html="datePools"></pre>
+                <!-- <loading /> -->
+            </div>
+            <div class="preBox">
+                <div class="preTitle" @click="show.FB_GetInfo_chi=!show.FB_GetInfo_chi">初始化字段:{{show.FB_GetInfo_chi?'开':'关'}}</div>
+                <pre v-if="show.FB_GetInfo_chi" v-html="FB_GetInfo_chi"></pre>
+                <!-- <loading /> -->
+            </div>
+            <div class="preBox">
+                <div class="preTitle" @click="show.CouponInfo=!show.CouponInfo">原始数据:{{show.CouponInfo?'开':'关'}}</div>
+                <pre v-if="show.CouponInfo" v-html="CouponInfo"></pre>
+                <!-- <loading /> -->
+            </div>
         </div>        
     </div>
 </template>
 
 <script>
+import loading from './loading'
 import api from "../middleware/api/index";
 export default {
     name: "pages_test",
@@ -19,34 +35,44 @@ export default {
         return {
             pageName: "pages_test",
             FB_GetInfo_data: {
-                listFilter:{},
-                listAll:{},
                 CouponInfo:{},
+                FB_GetInfo_chi:{},
+                datePools:{},
+                listFilter:{},
             },
             Matche:{
                 selected:''
             },
+            show:{
+                listFilter: 1,
+                datePools: 1,
+                FB_GetInfo_chi: 0,
+                CouponInfo: 0,
+            }
         };
     },
     computed:{
-        listFilter() {
-            return this.syntaxHighlight(this.FB_GetInfo_data.listFilter)
-        },
-        listAll() {
-            return this.syntaxHighlight(this.FB_GetInfo_data.listAll)
-        },
         CouponInfo() {
             return this.syntaxHighlight(this.FB_GetInfo_data.CouponInfo)
+        },
+        FB_GetInfo_chi() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.FB_GetInfo_chi)
+        },
+        datePools() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.datePools)
+        },
+        listFilter() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.listFilter)
         },
         menu() {
             return api.poolsList;
         },
-        menuHtml() {
-            return this.syntaxHighlight(api.poolsList);
-        },
+    },
+    components:{
+        // loading
     },
     mounted() {
-        this.FB_GetInfo_chi();
+        this.init();
     },
     methods: {
         async changeMatche() {
@@ -55,10 +81,11 @@ export default {
             this.FB_GetInfo_data.listFilter = result;
             console.timeEnd('changeMatche');
         },
-        async FB_GetInfo_chi() {
+        async init() {
             console.time('FB_GetInfo_chi');
-            this.FB_GetInfo_data.listAll = await api.datePools();
-            this.FB_GetInfo_data.CouponInfo = await api.FB_GetInfo_chi();
+            this.FB_GetInfo_data.FB_GetInfo_chi = await api.FB_GetInfo_chi();
+            this.FB_GetInfo_data.datePools = await api.datePools();
+            this.FB_GetInfo_data.CouponInfo = api.tmp.CouponInfo;
             console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
             console.timeEnd('FB_GetInfo_chi');
         },
@@ -96,10 +123,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
 .pages_test {
-    pre{
-        padding: 10px;
-        &:not(:last-of-type){
-            border-right: 2px solid #444;
+    height: 100%;
+    .preCode{
+        height: 100%;
+        .preBox{
+            padding: 10px;
+            max-width: 500px;
+            max-height: 100%;
+            overflow: auto;
+            .changeMatche{
+                width: 100px;
+            }
+            .preTitle{
+                text-align: center;
+            }
+            &:not(:last-of-type){
+                border-right: 2px solid #444;
+            }
         }
     }
     .flex {

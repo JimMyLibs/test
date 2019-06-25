@@ -33,7 +33,7 @@
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.poolNum 投注类型总数 (pool)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.corner 角球 (corner)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.inplay Inplay
- * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.oddsSet 投注池
+ * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches.oddsSet 赔率列表
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.enabled
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.oddsUpdateTime 赔率更新时间
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.oddsSet.stopSell 停售时间
