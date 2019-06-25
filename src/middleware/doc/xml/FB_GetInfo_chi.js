@@ -1,5 +1,5 @@
 /**
- * @api {get} /FB_GetInfo_chi_ByMe FB_GetInfo_chi_ByMe
+ * @@api {get} /FB_GetInfo_chi_ByMe FB_GetInfo_chi_ByMe
  * @apiGroup xml
  * @apiVersion 0.0.1
  * @apiDescription description

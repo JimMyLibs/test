@@ -1,11 +1,15 @@
 /**
- * @api {get} index/FB_GetInfo_chi.json FB_GetInfo_chi
- * @apiGroup index
+ * @apiDefine apiGroupName 首页
+ */
+
+/**
+ * @api {get} index/FB_GetInfo_chi.json 比赛列表
+ * @apiGroup apiGroupName
  * @apiVersion 0.0.1
  * @apiDescription 首页列表
  * 
  * @apiParam {String} [type='HAD'] 投注类型
- * @apiParamExample {json} Request:
+ * @apiParamExample {json} 使用方法:
  * {
  *      import api from '../middleware/api/index'
  * 
@@ -16,10 +20,10 @@
  * }
  * 
  * @apiSuccess (Reponse 200) {Object[]} data
- * @apiSuccess (Reponse 200) {String} data.date 比赛日期 (title)
- * @apiSuccess (Reponse 200) {Object[]} data.coupons 比赛列表
+ * @apiSuccess (Reponse 200) {String} data.date 赛事日期 (title)
+ * @apiSuccess (Reponse 200) {Object[]} data.coupons 赛事列表
  * @apiSuccess (Reponse 200) {String} data.coupons.league 国家 (div)
- * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches 投注类型
+ * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches 比赛类型
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.home 主队 (team1)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.away 客队 (team2)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.score_Home 主队比分 (score1)
@@ -42,11 +46,11 @@
  * {
  *     data: [
  *          {
- *              date: '08/10 (THU)',    // 比赛日期 (title)
- *              coupons: [              // 比赛列表
+ *              date: '08/10 (THU)',    // 赛事日期 (title)
+ *              coupons: [              // 赛事列表
  *                  {
  *                      league: '歐洲國家盃',        // 国家 (div)
- *                      matches:[
+ *                      matches:[                   // 比赛列表
  *                          {
  *                              home: '中国',               // 主队 (team1)
  *                              away: '巴西',               // 客队 (team2)

@@ -170,8 +170,9 @@ class Api {
                 let curPoolData = item1.coupons.filter(item3=>item2==item3.pool);
                 let tmp = {};
                 curPoolData.map(item3=>{// 同国家同开场时间的分为一组，此方法可推广其他相关业务
-                    tmp[item3.league + '_' + item3.matchDateTime] = tmp[item3.league + '_' + item3.matchDateTime] || [];
-                    tmp[item3.league + '_' + item3.matchDateTime].push(item3)
+                    tmp[item3.league + '_' + item3.matchDateTime] = tmp[item3.league + '_' + item3.matchDateTime] || {league:'',matches:[]};
+                    tmp[item3.league + '_' + item3.matchDateTime].league = item3.league;
+                    tmp[item3.league + '_' + item3.matchDateTime].matches.push(item3)
                 })
                 console.log('tmp',tmp)
                 let matches = [];
