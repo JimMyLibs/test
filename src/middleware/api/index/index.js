@@ -88,11 +88,6 @@ class Api {
                                                 oddsInfo_item.name = 'A';
                                             }
                                             oddsInfo_item.odds = item6.Odds;
-                                            // console.log(pool,index1+'_'+index2+'_'+index3+'_'+index4,matches_item)
-                                        } else if (pool == 'FHAD') {// 预测一场球赛的上半场赛果
-                                            // no data
-                                        } else if (pool == 'HHAD') {// 较强之球队让球于较弱之球队
-                                            // no data
                                         } else if (pool == 'HDC') {// 投注经让球调整后之赛果
                                             if (item6.Number == 1) {
                                                 oddsInfo_item.name = 'H';
@@ -103,41 +98,56 @@ class Api {
                                             }
                                             oddsInfo_item.odds = item6.Odds;
                                         } else if (pool == 'HFT') {// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
-
-                                        } else if (pool == 'TQL') {// 在指定赛事，投注哪队能晋级下一场赛事
-
-                                        } else if (pool == 'CRS') {// 预测球赛的正式比分
-
-                                        } else if (pool == 'FCS') {// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
-
-                                        } else if (pool == 'TTG') {// 预测球赛中两队的入球个数
-
-                                        } else if (pool == 'OOE') {// 预测球赛中两队的入球个数为单数或双数
-
+                                            if (item6.Number == '1-1') {// Home
+                                                oddsInfo_item.name = 'H';
+                                            } else if (item6.Number == 'X-1') {// D
+                                                oddsInfo_item.name = 'D';
+                                            } else if (item6.Number == '2-1') {// Away
+                                                oddsInfo_item.name = 'A';
+                                            }
+                                            oddsInfo_item.odds = item6.Odds;
+                                        } else if (pool == 'FHAD') {// 预测一场球赛的上半场赛果
+                                            // no data
+                                        } else if (pool == 'HHAD') {// 较强之球队让球于较弱之球队
+                                            // no data
                                         } else if (pool == 'HILO') {// 投注者可就一场球赛的入球个数高于或低于预判者所指定的数目(中位球数)下注
-
-                                        } else if (pool == 'FHL') {// 投注一场球赛的上半场入球个数，多于或少于指定的球数
-
+                                            // no data
                                         } else if (pool == 'CHLO') {// 投注于指定球赛中，两队合共开出的角球个数*多于或少于指定的角球数
-
+                                            // no data
                                         } else if (pool == 'PS') {// 不包括加时或互射12码后的赛果
-
+                                            // no data
                                         } else if (pool == 'GPW') {// 投注分组阶段小组首名出线队伍
-
+                                            // 分组
                                         } else if (pool == 'GPF') {// 投注分组阶段小组的顺序首、次出线队伍
-
+                                            // 分组
                                         } else if (pool == 'TPS') {// 投注整个锦标赛射入最多入球的球员
-
-                                        } else if (pool == 'FGS') {// 投注一场球赛中最先射入对方球门得分的球员
-
-                                        } else if (pool == 'FTS') {// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
-
+                                            // 分组
                                         } else if (pool == 'CP') {// 在指定赛事，投注哪队能赢得冠军
-
+                                            // no data
                                         } else if (pool == 'DHCP') {// 预测两场球赛中板厂(45分钟)及全场(90分钟)的正式比分
-
+                                            // no data
                                         } else if (pool == '6FH') {// 6宝半全场
+                                            // no data
+                                        }else{// 普通类型
+                                            if (pool == 'TQL') {// 在指定赛事，投注哪队能晋级下一场赛事
+                                                
+                                            } else if (pool == 'CRS') {// 预测球赛的正式比分
+                                                
+                                            } else if (pool == 'FCS') {// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
+                                                
+                                            } else if (pool == 'TTG') {// 预测球赛中两队的入球个数
+                                                
+                                            } else if (pool == 'OOE') {// 预测球赛中两队的入球个数为单数或双数
+    
+                                            } else if (pool == 'FHL') {// 投注一场球赛的上半场入球个数，多于或少于指定的球数
 
+                                            } else if (pool == 'FGS') {// 投注一场球赛中最先射入对方球门得分的球员
+
+                                            } else if (pool == 'FTS') {// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
+    
+                                            }
+                                            oddsInfo_item.name = item6.Number;
+                                            oddsInfo_item.odds = item6.Odds;
                                         }
                                         pools_item.oddsInfo.push(oddsInfo_item);
                                     })

@@ -45,8 +45,8 @@ export default {
             },
             show:{
                 listFilter: 1,
-                datePools: 0,
-                FB_GetInfo_chi: 0,
+                datePools: 1,
+                FB_GetInfo_chi: 1,
                 CouponInfo: 0,
             }
         };
@@ -139,6 +139,10 @@ export default {
             }
             &:not(:last-of-type){
                 border-right: 2px solid #444;
+            }
+            pre{
+                background: linear-gradient(90deg,rgba(0, 0, 0, 0.1) 50%,transparent 0), linear-gradient(rgba(0, 0, 0,0) 50%,transparent 0);
+                background-size: 4em 4em;
             }
         }
     }
