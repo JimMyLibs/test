@@ -31,7 +31,7 @@ class Api {
     }
     async FB_GetInfo_chi() {// 2.2.4.7  // 获取并编排所有数据
         const resData = await this.getData('/xml/index/FB_GetInfo_chi.xml');
-        const { Coupons: { CouponInfo }, TournamentPools } = resData.AOSBS_XML;
+        const { Coupons: { CouponInfo }, TournamentPools: { TournamentPoolInfo } } = resData.AOSBS_XML;
         let result = { data: [] };
         try {
             CouponInfo.map((item1, index1) => {
@@ -129,22 +129,24 @@ class Api {
                                         } else if (pool == '6FH') {// 6宝半全场
                                             // no data
                                         }else{// 普通类型
-                                            if (pool == 'TQL') {// 在指定赛事，投注哪队能晋级下一场赛事
-                                                
-                                            } else if (pool == 'CRS') {// 预测球赛的正式比分
-                                                
-                                            } else if (pool == 'FCS') {// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
-                                                
-                                            } else if (pool == 'TTG') {// 预测球赛中两队的入球个数
-                                                
-                                            } else if (pool == 'OOE') {// 预测球赛中两队的入球个数为单数或双数
-    
-                                            } else if (pool == 'FHL') {// 投注一场球赛的上半场入球个数，多于或少于指定的球数
+                                            {
+                                                if (pool == 'TQL') {// 在指定赛事，投注哪队能晋级下一场赛事
+                                                    
+                                                } else if (pool == 'CRS') {// 预测球赛的正式比分
+                                                    
+                                                } else if (pool == 'FCS') {// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
+                                                    
+                                                } else if (pool == 'TTG') {// 预测球赛中两队的入球个数
+                                                    
+                                                } else if (pool == 'OOE') {// 预测球赛中两队的入球个数为单数或双数
+        
+                                                } else if (pool == 'FHL') {// 投注一场球赛的上半场入球个数，多于或少于指定的球数
 
-                                            } else if (pool == 'FGS') {// 投注一场球赛中最先射入对方球门得分的球员
+                                                } else if (pool == 'FGS') {// 投注一场球赛中最先射入对方球门得分的球员
 
-                                            } else if (pool == 'FTS') {// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
-    
+                                                } else if (pool == 'FTS') {// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
+        
+                                                }
                                             }
                                             oddsInfo_item.name = item6.Number;
                                             oddsInfo_item.odds = item6.Odds;

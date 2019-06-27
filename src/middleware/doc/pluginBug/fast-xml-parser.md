@@ -11,3 +11,15 @@ if(obj != Array){
 }
 ```
 
+
+### 中英文双语
+```
+    let versions = document.querySelectorAll('.dropdown-toggle strong')
+    [...versions].map(item=>{
+        if(item.innerText=='0.0.1'){
+            item.innerText = '中文'
+        }else if(item.innerText=='0.0.2'){
+            item.innerText = 'English'
+        }
+    })
+```
