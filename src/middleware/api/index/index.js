@@ -65,7 +65,7 @@ class Api {
                                 matches_item.pool = pool;// 投注类型
                                 matches_item.poolNum = PoolInfo.length;
                                 matches_item.corner = item2.Progress.Corner;
-                                matches_item.inplay = item2.Inplay;
+                                matches_item.inPlay = item2.Inplay;
                                 matches_item.oddsSet = [];// 每场比赛的投注池
 
                                 item3.OddsSet = obj2Arr(item3.OddsSet);
