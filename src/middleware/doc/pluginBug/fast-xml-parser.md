@@ -14,12 +14,33 @@ if(obj != Array){
 
 ### 中英文双语
 ```
-    let versions = document.querySelectorAll('.dropdown-toggle strong')
-    [...versions].map(item=>{
-        if(item.innerText=='0.0.1'){
-            item.innerText = '中文'
-        }else if(item.innerText=='0.0.2'){
-            item.innerText = 'English'
-        }
-    })
+<script>
+    // Jim@2019-06-28 08:44: 中英文双语，切换版本还是逃不过version类型验证
+    window.onload=()=>{
+        let i = 0;
+        let timer = setInterval(()=>{
+            i++;
+            let versions_btn = document.querySelectorAll('.dropdown-toggle strong')
+            let versions_ul = document.querySelectorAll('.dropdown-menu .version a')
+            if(versions_btn.length&&versions_ul.length){
+                versions_btn.forEach(item=>{
+                    if(item.innerText=='0.0.1'){
+                        item.innerText = '中文'
+                    }else if(item.innerText=='0.0.2'){
+                        item.innerText = 'English'
+                    }
+                })
+                versions_ul.forEach(item=>{
+                    if(item.innerText=='0.0.1'){
+                        item.innerText = '中文'
+                    }else if(item.innerText=='0.0.2'){
+                        item.innerText = 'English'
+                    }
+                })
+                console.log(i,versions_btn,versions_ul)
+                clearInterval(timer);
+            }
+        },100)
+    }
+</script>
 ```
