@@ -15,7 +15,7 @@ if(obj != Array){
 ### 中英文双语
 ```
 <script>
-    // Jim@2019-06-28 08:44: 中英文双语，切换版本还是逃不过version类型验证
+    // Jim@2019-06-28 08:44: 中英文双语
     window.onload=()=>{
         let i = 0;
         let timer = setInterval(()=>{
@@ -25,16 +25,18 @@ if(obj != Array){
             if(versions_btn.length&&versions_ul.length){
                 versions_btn.forEach(item=>{
                     if(item.innerText=='0.0.1'){
-                        item.innerText = '中文'
+                        console.log('item1',item)
+                        item.outerHTML = `<strong>0.0.1</strong><sapn class='lang'>中文</span>`
+                        console.log('item2',item)
                     }else if(item.innerText=='0.0.2'){
-                        item.innerText = 'English'
+                        item.outerHTML = `<strong>0.0.2</strong><sapn class='lang'>English</span>`
                     }
                 })
                 versions_ul.forEach(item=>{
                     if(item.innerText=='0.0.1'){
-                        item.innerText = '中文'
+                        item.outerHTML = `<a href="#">0.0.1</a><sapn class='lang'>中文</span>`
                     }else if(item.innerText=='0.0.2'){
-                        item.innerText = 'English'
+                        item.outerHTML = `<a href="#">0.0.2</a><sapn class='lang'>English</span>`
                     }
                 })
                 console.log(i,versions_btn,versions_ul)
