@@ -17,6 +17,9 @@
  *      const poolsList = api.poolsList;
  *      // 筛选数据
  *      const result = await api.filterMatches('HAD');
+ *      
+ *      // 目前已有数据的poll
+ *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS
  * }
  * 
  * @apiSuccess (Reponse 200) {Object[]} data

@@ -8,12 +8,12 @@
                 <pre v-html="listFilter"></pre>
             </div>
             <div class="preBox">
-                <div class="preTitle" @click="show.datePools=!show.datePools">日期玩法:{{show.datePools?'开':'关'}}</div>
+                <div class="preTitle" @click="show.datePools=!show.datePools">日期-玩法:{{show.datePools?'开':'关'}}</div>
                 <pre v-if="show.datePools" v-html="datePools"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div class="preTitle" @click="show.FB_GetInfo_chi=!show.FB_GetInfo_chi">初始化字段:{{show.FB_GetInfo_chi?'开':'关'}}</div>
+                <div class="preTitle" @click="show.FB_GetInfo_chi=!show.FB_GetInfo_chi">过滤字段:{{show.FB_GetInfo_chi?'开':'关'}}</div>
                 <pre v-if="show.FB_GetInfo_chi" v-html="FB_GetInfo_chi"></pre>
                 <!-- <loading /> -->
             </div>
@@ -46,8 +46,8 @@ export default {
             show:{
                 listFilter: 1,
                 datePools: 1,
-                FB_GetInfo_chi: 1,
-                CouponInfo: 0,
+                FB_GetInfo_chi: 0,
+                CouponInfo: 1,
             }
         };
     },

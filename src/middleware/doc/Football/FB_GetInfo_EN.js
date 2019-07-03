@@ -17,6 +17,9 @@
  *      const poolsList = api.poolsList;
  *      // Filter data
  *      const result = await api.filterMatches('HAD');
+ *      
+ *      // Pool of existing data
+ *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS
  * }
  * 
  * @apiSuccess (Reponse 200) {Object[]} data

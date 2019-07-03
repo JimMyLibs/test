@@ -69,6 +69,20 @@ class Api {
                                 matches_item.oddsSet = [];// 每场比赛的投注池
 
                                 item3.OddsSet = obj2Arr(item3.OddsSet);
+                                // 个别类型的OddsInfo需要提前处理一下
+                                if (pool == 'HIL000') {// 投注者可就一场球赛的入球个数高于或低于预判者所指定的数目(中位球数)下注
+                                    item3.OddsSet.map((item4, index4)=>{                                            
+                                        item4.OddsInfo = obj2Arr(item4.OddsInfo);
+                                        const lineObj = {
+                                            "Number": "I",
+                                            "Odds": item4.MainLine*1+0.5,
+                                            "Enabled": "",
+                                            "Condition": "",
+                                            "Value": ""
+                                        }
+                                        item4.OddsInfo.push(lineObj);
+                                    })
+                                }
                                 item3.OddsSet.map((item4, index4) => {
                                     let pools_item = {};// 每个投注项
                                     pools_item.enabled = item3.Enabled;
@@ -79,7 +93,7 @@ class Api {
                                     item4.OddsInfo = obj2Arr(item4.OddsInfo);
                                     item4.OddsInfo.map((item6, index6) => {
                                         let oddsInfo_item = {};// 每种赔率详情
-                                        if (pool == 'HAD') {// 主客和
+                                        if (pool == 'HAD' || pool == 'FHA' || pool == 'HHA') {// 主客和 || 上半场主客和 || 让球主客和
                                             if (item6.Number == 1) {// Home
                                                 oddsInfo_item.name = 'H';
                                             } else if (item6.Number == 'X') {// D
@@ -106,14 +120,9 @@ class Api {
                                                 oddsInfo_item.name = 'A';
                                             }
                                             oddsInfo_item.odds = item6.Odds;
-                                        } else if (pool == 'FHAD') {// 预测一场球赛的上半场赛果
-                                            // no data
-                                        } else if (pool == 'HHAD') {// 较强之球队让球于较弱之球队
-                                            // no data
-                                        } else if (pool == 'HILO') {// 投注者可就一场球赛的入球个数高于或低于预判者所指定的数目(中位球数)下注
-                                            // no data
-                                        } else if (pool == 'CHLO') {// 投注于指定球赛中，两队合共开出的角球个数*多于或少于指定的角球数
-                                            // no data
+                                        }else if(pool == 'HIL' || pool == 'FHL' || pool == 'CHL'){// High Low : OddsInfo.length==2
+                                            oddsInfo_item.name = item6.Number;
+                                            oddsInfo_item.odds = item6.Odds;
                                         } else if (pool == 'PS') {// 不包括加时或互射12码后的赛果
                                             // no data
                                         } else if (pool == 'GPW') {// 投注分组阶段小组首名出线队伍
@@ -140,8 +149,6 @@ class Api {
                                                     
                                                 } else if (pool == 'OOE') {// 预测球赛中两队的入球个数为单数或双数
         
-                                                } else if (pool == 'FHL') {// 投注一场球赛的上半场入球个数，多于或少于指定的球数
-
                                                 } else if (pool == 'FGS') {// 投注一场球赛中最先射入对方球门得分的球员
 
                                                 } else if (pool == 'FTS') {// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
@@ -183,8 +190,21 @@ class Api {
                 let curPoolData = item1.coupons.filter(item3=>item2==item3.pool);
                 let tmp = {};
                 curPoolData.map(item3=>{// 同国家同开场时间的分为一组，此方法可推广其他相关业务
-                    tmp[item3.league + '_' + item3.matchDateTime] = tmp[item3.league + '_' + item3.matchDateTime] || {league:'',matches:[]};
+                    tmp[item3.league + '_' + item3.matchDateTime] = tmp[item3.league + '_' + item3.matchDateTime] || {league:'',oddsNames:[],matches:[]};
                     tmp[item3.league + '_' + item3.matchDateTime].league = item3.league;
+                    const oddsNames = ()=>{
+                        if(item3.oddsSet.length){
+                            if(item3.oddsSet[0].oddsInfo.length<4){
+                                return item3.oddsSet[0].oddsInfo.map(item=>item.name);
+                            }else{
+                                return []
+                            }
+                        }else{
+                            return []
+                        }
+                    }
+                    console.log('oddsNames',item3,oddsNames())
+                    tmp[item3.league + '_' + item3.matchDateTime].oddsNames = oddsNames();
                     tmp[item3.league + '_' + item3.matchDateTime].matches.push(item3)
                 })
                 // console.log('tmp',tmp)
