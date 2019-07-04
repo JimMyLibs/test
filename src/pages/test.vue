@@ -48,7 +48,8 @@ export default {
                 datePools: 1,
                 FB_GetInfo_chi: 0,
                 CouponInfo: 1,
-            }
+            },
+            createTime: 0,
         };
     },
     computed:{
@@ -71,6 +72,9 @@ export default {
     components:{
         // loading
     },
+    beforeCreate() {
+        this.createTime = new Date();
+    },
     mounted() {
         this.init();
     },
@@ -88,6 +92,9 @@ export default {
             this.FB_GetInfo_data.CouponInfo = api.tmp.CouponInfo;
             console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
             console.timeEnd('FB_GetInfo_chi');
+
+            const renderTime = new Date((new Date() - this.createTime)).getMilliseconds();
+            console.log('渲染时间',renderTime,'ms')
         },
         syntaxHighlight(json) {
             if (typeof json != "string") {

@@ -69,20 +69,6 @@ class Api {
                                 matches_item.oddsSet = [];// 每场比赛的投注池
 
                                 item3.OddsSet = obj2Arr(item3.OddsSet);
-                                // 个别类型的OddsInfo需要提前处理一下
-                                if (pool == 'HIL000') {// 投注者可就一场球赛的入球个数高于或低于预判者所指定的数目(中位球数)下注
-                                    item3.OddsSet.map((item4, index4)=>{                                            
-                                        item4.OddsInfo = obj2Arr(item4.OddsInfo);
-                                        const lineObj = {
-                                            "Number": "I",
-                                            "Odds": item4.MainLine*1+0.5,
-                                            "Enabled": "",
-                                            "Condition": "",
-                                            "Value": ""
-                                        }
-                                        item4.OddsInfo.push(lineObj);
-                                    })
-                                }
                                 item3.OddsSet.map((item4, index4) => {
                                     let pools_item = {};// 每个投注项
                                     pools_item.enabled = item3.Enabled;
@@ -91,6 +77,17 @@ class Api {
                                     pools_item.oddsInfo = [];// 每个投注项的赔率列表
 
                                     item4.OddsInfo = obj2Arr(item4.OddsInfo);
+                                    // 个别类型的OddsInfo需要提前处理一下
+                                    if (pool == 'HIL' || pool == 'FHL' || pool == 'CHL') {// 投注者可就一场球赛的入球个数高于或低于预判者所指定的数目(中位球数)下注
+                                        const lineObj = {
+                                            "Number": "I",
+                                            "Odds": item4.MainLine*1+0.5,
+                                            "Enabled": "",
+                                            "Condition": "",
+                                            "Value": ""
+                                        }
+                                        item4.OddsInfo[2] = lineObj;
+                                    }
                                     item4.OddsInfo.map((item6, index6) => {
                                         let oddsInfo_item = {};// 每种赔率详情
                                         if (pool == 'HAD' || pool == 'FHA' || pool == 'HHA') {// 主客和 || 上半场主客和 || 让球主客和
@@ -160,6 +157,8 @@ class Api {
                                         }
                                         pools_item.oddsInfo.push(oddsInfo_item);
                                     })
+                                    // console.log(index4,'pools_item.oddsInfo',pools_item.oddsInfo)
+                                    pools_item.oddsInfo = this.oddsInfoSort(pools_item.oddsInfo);// 排序
                                     matches_item.oddsSet.push(pools_item);
                                 })
 
@@ -178,6 +177,12 @@ class Api {
             console.error(err);
             return err.message;
         }
+    }
+    oddsInfoSort(arr) {
+        const rule = {H:50,D:60,A:70,I:80,L:90};
+        return arr.sort((a,b)=>{
+            return rule[a.name] - rule[b.name];
+        })
     }
     async datePools() {// 根据date{pool:[matches]}划分数据
         const FB_GetInfo_chi = await this.FB_GetInfo_chi();
@@ -203,7 +208,6 @@ class Api {
                             return []
                         }
                     }
-                    console.log('oddsNames',item3,oddsNames())
                     tmp[item3.league + '_' + item3.matchDateTime].oddsNames = oddsNames();
                     tmp[item3.league + '_' + item3.matchDateTime].matches.push(item3)
                 })
