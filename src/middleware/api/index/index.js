@@ -9,7 +9,10 @@ import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
 class Api {
     constructor() {
         this.poolsList = poolsList;
-        this.tmp = {};
+        this.tmp = {
+            CouponInfo: {},// 原始数据
+            datePools: '',// datePools数据
+        };
     }
     async getData(name) {
         try {
@@ -178,7 +181,7 @@ class Api {
             return err.message;
         }
     }
-    oddsInfoSort(arr) {
+    oddsInfoSort(arr) {// 赔率类型排序
         const rule = {H:50,D:60,A:70,I:80,L:90};
         return arr.sort((a,b)=>{
             return rule[a.name] - rule[b.name];
@@ -254,10 +257,16 @@ class Api {
         return poolData;
     }
     async filterMatches(type) {// 筛选数据
-        const datePools = await this.datePools();
+        let datePools = {};
+        if(this.tmp.datePools){// 读取变量缓存数据
+            datePools = this.tmp.datePools;
+        }else{// 首次获取数据
+            datePools = await this.datePools();
+            this.tmp.datePools = datePools;            
+        }
         const result = {data:[]};
         datePools.data.filter(item=>{
-            console.log(type, item[type], item)
+            // console.log(type, item[type], item)
             result.data.push({
                 date: item.date,
                 coupons: item[type] || [],

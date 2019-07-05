@@ -19,13 +19,14 @@
  *      const result = await api.filterMatches('HAD');
  *      
  *      // Pool of existing data
- *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS
+ *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS/HIL/FHL/CHL
  * }
  * 
  * @apiSuccess (Reponse 200) {Object[]} data
  * @apiSuccess (Reponse 200) {String} data.date Event date (title)
  * @apiSuccess (Reponse 200) {Object[]} data.coupons Tour list
  * @apiSuccess (Reponse 200) {String} data.coupons.league country (div)
+ * @apiSuccess (Reponse 200) {String} data.coupons.oddsNames odds type
  * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches Match type
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.home Home team (team1)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.away Away team (team2)
@@ -53,6 +54,7 @@
  *              coupons: [              // Tour list
  *                  {
  *                      league: 'European Nations Cup',        // country (div)
+ *                      league: ['H','D','A'],        // odds type
  *                      matches:[                   // Match list
  *                          {
  *                              home: 'China',               // Home team (team1)

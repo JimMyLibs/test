@@ -80,18 +80,18 @@ export default {
     },
     methods: {
         async changeMatche() {
-            console.time('changeMatche');
+            console.time('筛选changeMatche:');
             const result = await api.filterMatches(this.Matche.selected);
             this.FB_GetInfo_data.listFilter = result;
-            console.timeEnd('changeMatche');
+            console.timeEnd('筛选changeMatche:');
         },
         async init() {
-            console.time('FB_GetInfo_chi');
+            console.time('初始化FB_GetInfo_chi:');
             this.FB_GetInfo_data.FB_GetInfo_chi = await api.FB_GetInfo_chi();
             this.FB_GetInfo_data.datePools = await api.datePools();
             this.FB_GetInfo_data.CouponInfo = api.tmp.CouponInfo;
             console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
-            console.timeEnd('FB_GetInfo_chi');
+            console.timeEnd('初始化FB_GetInfo_chi:');
 
             const renderTime = new Date((new Date() - this.createTime)).getMilliseconds();
             console.log('渲染时间',renderTime,'ms')

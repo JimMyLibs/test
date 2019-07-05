@@ -19,13 +19,14 @@
  *      const result = await api.filterMatches('HAD');
  *      
  *      // 目前已有数据的poll
- *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS
+ *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS/HIL/FHL/CHL
  * }
  * 
  * @apiSuccess (Reponse 200) {Object[]} data
  * @apiSuccess (Reponse 200) {String} data.date 赛事日期 (title)
  * @apiSuccess (Reponse 200) {Object[]} data.coupons 赛事列表
  * @apiSuccess (Reponse 200) {String} data.coupons.league 国家 (div)
+ * @apiSuccess (Reponse 200) {String} data.coupons.oddsNames 赔率类型
  * @apiSuccess (Reponse 200) {Object[]} data.coupons.matches 比赛类型
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.home 主队 (team1)
  * @apiSuccess (Reponse 200) {String} data.coupons.matches.away 客队 (team2)
@@ -53,6 +54,7 @@
  *              coupons: [              // 赛事列表
  *                  {
  *                      league: '歐洲國家盃',        // 国家 (div)
+ *                      league: ['H','D','A'],        // 赔率类型
  *                      matches:[                   // 比赛列表
  *                          {
  *                              home: '中国',               // 主队 (team1)

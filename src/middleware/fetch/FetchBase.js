@@ -90,8 +90,8 @@ export default class Http {
         let contentIndex = Object.keys(headers).findIndex(item => item.toLocaleLowerCase() === 'content-type')
         if (contentIndex === -1 && isSetContentType) {
             headers['Content-type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
-            fetConf.headers = headers
         }
+        fetConf.headers = headers
 
         let formBody = new FormData()
         if (typeof body === 'object' && body !== null) {
