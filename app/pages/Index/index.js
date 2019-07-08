@@ -2,12 +2,12 @@ import React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 
-import HeaderRight from '../../components/HeaderRight'
+import ModelMenu from '../../components/ModelMenu'
 
 class HomeScreen extends React.Component {
     static navigationOptions = {
         title: 'Home',
-        headerRight: (<HeaderRight />),
+        headerRight: (<ModelMenu />),
     };
 
     goToPage = (name) => () => {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     page_home: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     }
 });
 
