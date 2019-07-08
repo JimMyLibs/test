@@ -255,6 +255,8 @@ export default class Http {
                 }
             }).then(data => {
                 return data
+            }).catch(err=>{
+                return err;
             }),
             new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -262,7 +264,10 @@ export default class Http {
                     if (controller) {
                         controller.abort()
                     }
-                    reject('请求超时')
+                    reject({
+                        errCode: 10086,
+                        errMsg: '请求超时'
+                    })
                 }, timeout)
             })
         ])
