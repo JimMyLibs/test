@@ -1,10 +1,7 @@
-/**
- * @apiDefine apiGroupName 首页
- */
 
 /**
  * @api {get} index/FB_GetInfo_chi.json 比赛列表
- * @apiGroup apiGroupName
+ * @apiGroup groupName_home
  * @apiVersion 0.0.1
  * @apiDescription 首页列表
  * 

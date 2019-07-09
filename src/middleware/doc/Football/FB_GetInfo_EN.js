@@ -1,10 +1,7 @@
-/**
- * @apiDefine apiGroupName Home
- */
 
 /**
  * @api {get} index/FB_GetInfo_chi.json Match list
- * @apiGroup apiGroupName
+ * @apiGroup groupName_home
  * @apiVersion 0.0.2
  * @apiDescription Home list
  * 

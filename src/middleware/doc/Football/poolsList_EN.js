@@ -1,10 +1,7 @@
-/**
- * @apiDefine apiGroupName Home
- */
 
 /**
  * @api {get} index/poolsList.json Filter menu
- * @apiGroup apiGroupName
+ * @apiGroup groupName_home
  * @apiVersion 0.0.2
  * @apiDescription Filter menu
  * 

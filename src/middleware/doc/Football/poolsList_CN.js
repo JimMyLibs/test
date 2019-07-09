@@ -1,10 +1,7 @@
-/**
- * @apiDefine apiGroupName 首页
- */
 
 /**
  * @api {get} index/poolsList.json 筛选菜单
- * @apiGroup apiGroupName
+ * @apiGroup groupName_home
  * @apiVersion 0.0.1
  * @apiDescription 筛选菜单
  * 
