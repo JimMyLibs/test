@@ -1,7 +1,7 @@
 
 /**
  * @api {get} index/poolsList.json Filter menu
- * @apiGroup groupName_home
+ * @apiGroup GroupName_Home
  * @apiVersion 0.0.2
  * @apiDescription Filter menu
  * 

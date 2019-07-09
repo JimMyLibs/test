@@ -1,7 +1,7 @@
 
 /**
  * @api {get} index/poolsList.json 筛选菜单
- * @apiGroup groupName_home
+ * @apiGroup GroupName_Home
  * @apiVersion 0.0.1
  * @apiDescription 筛选菜单
  * 
