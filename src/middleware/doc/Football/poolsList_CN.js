@@ -1,16 +1,16 @@
 
 /**
  * @api {get} index/poolsList.json 筛选菜单
- * @apiGroup GroupName_Home
+ * @apiGroup Home
  * @apiVersion 0.0.1
  * @apiDescription 筛选菜单
  * 
  * @apiParamExample {json} 使用方法:
  * {
- *      import api from '../middleware/api/index'
+ *      import api from '../middleware/api'
  * 
  *      // 获取筛选菜单
- *      const poolsList = api.poolsList;
+ *      const poolsList = api.Pools.list;
  * }
  * 
  * @apiSuccess (Reponse 200) {String} HAD='Home/Away/Draw' 主客和

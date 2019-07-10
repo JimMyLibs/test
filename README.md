@@ -37,3 +37,11 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
+### 目录树
+```
+pdir ./ -o ./out.txt -m 5
+```

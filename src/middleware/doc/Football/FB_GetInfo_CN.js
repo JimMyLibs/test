@@ -1,19 +1,17 @@
 
 /**
  * @api {get} index/FB_GetInfo_chi.json 比赛列表
- * @apiGroup GroupName_Home
+ * @apiGroup Home
  * @apiVersion 0.0.1
  * @apiDescription 首页列表
  * 
  * @apiParam {String} [type='HAD'] 投注类型
  * @apiParamExample {json} 使用方法:
  * {
- *      import api from '../middleware/api/index'
+ *      import api from '../middleware/api'
  * 
- *      // 获取筛选菜单
- *      const poolsList = api.poolsList;
  *      // 筛选数据
- *      const result = await api.filterMatches('HAD');
+ *      const result = await api.Matches.filter('HAD');
  *      
  *      // 目前已有数据的poll
  *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS/HIL/FHL/CHL

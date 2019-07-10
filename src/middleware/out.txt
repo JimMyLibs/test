@@ -1,0 +1,72 @@
+middleware/
+├── api/
+│   ├── index.js
+│   ├── Matches/
+│   │   └── index.js
+│   └── pools/
+│       ├── index.js
+│       └── list.js
+├── config/
+│   ├── apiUrls.js
+│   ├── fetchConf.js
+│   └── project.js
+├── doc/
+│   ├── apiDefine/
+│   │   ├── apiHeader.js
+│   │   ├── apiParam.js
+│   │   ├── apiReponse.js
+│   │   └── groupName.js
+│   ├── apidoc.json
+│   ├── dataFormat/
+│   │   ├── base_CN.js
+│   │   └── base_EN.js
+│   ├── Football/
+│   │   ├── FB_GetInfo_CN.js
+│   │   ├── FB_GetInfo_EN.js
+│   │   ├── poolsList_CN.js
+│   │   └── poolsList_EN.js
+│   ├── footer.md
+│   ├── header.md
+│   ├── pluginBug/
+│   │   └── fast-xml-parser.md
+│   └── README.MD
+├── fetch/
+│   ├── Fetch.js
+│   ├── FetchBase.js
+│   └── Http.js
+├── out.txt
+├── README.MD
+├── test/
+│   └── index/
+│       ├── filterMatches.test.js
+│       └── poolsList.test.js
+├── utils/
+│   ├── commApi.js
+│   ├── promise.js
+│   ├── url.js
+│   └── utils.js
+└── xml/
+    ├── error/
+    │   ├── 400.html
+    │   ├── 403.html
+    │   ├── 404.html
+    │   ├── 500.html
+    │   ├── 501.html
+    │   ├── 502.html
+    │   ├── 503.html
+    │   ├── 504.html
+    │   ├── 505.html
+    │   ├── 506.html
+    │   ├── 507.html
+    │   ├── 509.html
+    │   ├── 510.html
+    │   ├── ApacheIndex.html
+    │   └── index.html
+    └── index/
+        ├── FB_GetInfo_chi.json
+        ├── FB_GetInfo_chi.min.xml
+        ├── FB_GetInfo_chi.xml
+        ├── FB_GetInfo_eng.min.xml
+        ├── FB_GetInfo_eng.xml
+        └── poolsList.json
+16 directories, 54 files.

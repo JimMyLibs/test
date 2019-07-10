@@ -28,7 +28,8 @@
 
 <script>
 import loading from './loading'
-import api from "../middleware/api/index";
+import api from "../middleware/api";
+import { FB_GetInfo_chi } from '../middleware/api/Matches/FB_GetInfo_chi'
 export default {
     name: "pages_test",
     data() {
@@ -66,7 +67,7 @@ export default {
             return this.syntaxHighlight(this.FB_GetInfo_data.listFilter)
         },
         menu() {
-            return api.poolsList;
+            return api.Pools.list;
         },
     },
     components:{
@@ -81,15 +82,15 @@ export default {
     methods: {
         async changeMatche() {
             console.time('筛选changeMatche:');
-            const result = await api.filterMatches(this.Matche.selected);
+            const result = await api.Matches.filter(this.Matche.selected);
             this.FB_GetInfo_data.listFilter = result;
             console.timeEnd('筛选changeMatche:');
         },
         async init() {
             console.time('初始化FB_GetInfo_chi:');
-            this.FB_GetInfo_data.FB_GetInfo_chi = await api.FB_GetInfo_chi();
-            this.FB_GetInfo_data.datePools = await api.datePools();
-            this.FB_GetInfo_data.CouponInfo = api.tmp.CouponInfo;
+            this.FB_GetInfo_data.FB_GetInfo_chi = await FB_GetInfo_chi();
+            this.FB_GetInfo_data.datePools = await api.Matches.datePools();
+            this.FB_GetInfo_data.CouponInfo = api.Matches.tmp.CouponInfo;
             console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
             console.timeEnd('初始化FB_GetInfo_chi:');
 

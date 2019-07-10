@@ -1,19 +1,17 @@
 
 /**
  * @api {get} index/FB_GetInfo_chi.json Match list
- * @apiGroup GroupName_Home
+ * @apiGroup Home
  * @apiVersion 0.0.2
  * @apiDescription Home list
  * 
  * @apiParam {String} [type='HAD'] Bet type
  * @apiParamExample {json} Instructions:
  * {
- *      import api from '../middleware/api/index'
+ *      import api from '../middleware/api'
  * 
- *      // Get the filter menu
- *      const poolsList = api.poolsList;
  *      // Filter data
- *      const result = await api.filterMatches('HAD');
+ *      const result = await api.Matches.filter('HAD');
  *      
  *      // Pool of existing data
  *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS/HIL/FHL/CHL

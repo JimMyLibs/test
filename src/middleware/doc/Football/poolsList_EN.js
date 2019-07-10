@@ -1,16 +1,16 @@
 
 /**
  * @api {get} index/poolsList.json Filter menu
- * @apiGroup GroupName_Home
+ * @apiGroup Home
  * @apiVersion 0.0.2
  * @apiDescription Filter menu
  * 
  * @apiParamExample {json} Instructions:
  * {
- *      import api from '../middleware/api/index'
+ *      import api from '../middleware/api'
  * 
  *      // Get the filter menu
- *      const poolsList = api.poolsList;
+ *      const poolsList = api.Pools.list;
  * }
  * 
  * @apiSuccess (Reponse 200) {String} HAD='Home/Away/Draw' Host and guest

@@ -1,7 +1,7 @@
 
 /**
  * @api {post} /dataBase 数据格式
- * @apiGroup GroupName_DataBase
+ * @apiGroup DataBase
  * @apiVersion 0.0.1
  * @apiDescription 数据格式
  * 

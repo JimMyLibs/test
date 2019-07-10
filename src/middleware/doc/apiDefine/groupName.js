@@ -1,7 +1,7 @@
 /**
- * @apiDefine GroupName_DataBase 标准规范
+ * @apiDefine DataBase Standard
  */
 
  /**
- * @apiDefine GroupName_Home 首页
+ * @apiDefine Home Home
  */

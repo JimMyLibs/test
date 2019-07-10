@@ -1,0 +1,21 @@
+{
+    "name": "SZHKJC",
+    "version": "0.0.2",
+    "description": "ApiDoc for SZHKJC",
+    "title": "ApiDoc for SZHKJC V0.0.1",
+    "url": "http://json.jc.com",
+    "sampleUrl": "http://169.254.222.170:8803/",
+    "header": {
+        "title": "Instructions",
+        "filename": "./src/middleware/doc/header.md"
+    },
+    "footer": {
+        "title": "suggestions",
+        "filename": "./src/middleware/doc/footer.md"
+    },
+    "template": {
+        "forceLanguage": "en",
+        "withCompare": true,
+        "withGenerator": true
+    }
+}

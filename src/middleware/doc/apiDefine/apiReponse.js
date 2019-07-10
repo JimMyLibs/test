@@ -22,7 +22,7 @@
 
 /** 
  * @apiDefine CODE_200
- * @apiSuccess1 (Reponse 200) {number} code 状态码 200
+ * @apiSuccess1 (Reponse 200) {number} code status 200
  * @apiSuccess1 (Reponse 200) {json} [data='""'] 如果有数据返回
  * @apiSuccessExample {json} 200
  *   HTTP/1.1 200 OK
@@ -34,7 +34,7 @@
 
  /**
  * @apiDefine CODE_500
- * @apiSuccess1 (Response 500) {number} code 状态码 500
+ * @apiSuccess1 (Response 500) {number} code status 500
  * @apiSuccess1 (Response 500) {string} [message] error description
  * @apiSuccessExample {json} 500
  *   HTTP/1.1 500 Internal Server Error
