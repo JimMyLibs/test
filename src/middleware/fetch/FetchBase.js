@@ -1,7 +1,7 @@
 /**
  * fetch请求基础封装，可基于该类扩展所需fetch请求类
  */
-
+import { ISDEBUG } from '../config/project'
 // 引入json数据转换queryString方法
 import { jsonToParams } from '../utils/url'
 // XML转JSON
@@ -238,9 +238,10 @@ export default class Http {
             reqConf.signal = signal
         }
         let { conf } = this
-        let { timeout = 10000 } = conf
+        let { timeout = 60000 } = conf
         return Promise.race([
             fetch(url, reqConf).then(async data => {
+                ISDEBUG&&console.log('——————————【 fetch 】——————————',{url,...reqConf})
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
                 if (data.ok || data.status === 200) {
                     const result = await data.text()

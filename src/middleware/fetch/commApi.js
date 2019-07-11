@@ -2,7 +2,7 @@
 
 import FetchBase from './FetchBase'
 import Cache from '../utils/cache'
-import { ISDEV, serverJsonUrl } from '../config/project'
+import { ISDEV, serverOriginUrl, serverPathUrl } from '../config/project'
 import apiUrls from '../config/apiUrls'
 import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetchConf'
 
@@ -19,34 +19,36 @@ export function getToken() {
 export function getApiInfo() {
     if (ISDEV) {// 开发环境调用apiUrls['dev']
         return apiUrls['dev']
-    } else if (!serverJsonUrl) {// 生产环境apiUrl为空时调用apiUrls['pro']
+    } else if (!serverOriginUrl) {// 生产环境apiUrl为空时调用apiUrls['pro']
         return apiUrls['pro']
     }
     return Cache.get(apiInfoSessionId)
 }
 // 保存api地址信息
 export function setApiInfo(info) {
-    Cache.set(apiInfoSessionId, JSON.stringify(info))
+    Cache.set(apiInfoSessionId, info)
 }
 // 异步获取api地址信息
 export function fetchApiInfo() {
     let currentInfo = getApiInfo()
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         if (ISDEV) {
             resolve(apiUrls['dev'])
         } else {
             if (currentInfo) {
                 resolve(currentInfo)
             } else {
-                http.toGet(serverJsonUrl).then(res => {
-                    setApiInfo(res)
-                    resolve(res)
-                }).catch(err => {
-                    reject(err)
-                })
+                const ApiOriginPath = await getApiOriginPath();
+                return ApiOriginPath;
             }
         }
     })
+}
+const getApiOriginPath = async () => {    
+    const serverOrigin = await http.toGet(serverOriginUrl);
+    const serverPath = await http.toGet(serverPathUrl);
+    console.log('server',{serverOrigin,serverPath})
+    setApiInfo({serverOrigin,serverPath})
 }
 /**
  * [checkResponse fetch请求结果是否正确判断处理]

@@ -9,7 +9,7 @@ class Matches {
         }
     }
     async datePools() {// 根据date{pool:[matches]}划分数据
-        const { result:FB_GetInfo_chi_res } = await FB_GetInfo_chi();
+        const { result:FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = await FB_GetInfo_chi();
         // 获取所有的pool
         let poolAll = Array.from(new Set(FB_GetInfo_chi_res.data.reduce((a,b)=>a.concat(b.coupons.map(item=>item.pool)),[])));
         // console.log('poolAll',poolAll)
@@ -48,7 +48,10 @@ class Matches {
         })
 
         return {
-            data: dataTmp
+            data: dataTmp,
+            FB_GetInfo_chi_res,
+            CouponInfo,
+            TournamentPoolInfo,
         };
     }
     async poolsDate() {// 根据pool{date:[matches]}划分数据: 未使用，待优化

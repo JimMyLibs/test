@@ -1,6 +1,3 @@
-// 项目目录名
-const PROJECT_DIR_NAME = process.env.PROJECT_DIR_NAME
-
 // 获取url参数
 export function getQueryString(name, url = location.href) {
   let queryJson = {}
@@ -86,7 +83,7 @@ export function getChangeUrl(options) {
  * @param  {[string]} [dirname=PROJECT_DIR_NAME.split('/'] [需要获取到某个目录名，默认为当前项目名]
  * @return {[string]}                                       获取失败则返回空
  */
-export function getUrlDir(dirname = PROJECT_DIR_NAME.split('/')[1], url=location.href) {
+export function getUrlDir(dirname = '', url=location.href) {
   let reg = new RegExp(`.+\\/${dirname}\\/`)
   let match = url.match(reg)
   return match ? match[0] : `${location.origin}/`

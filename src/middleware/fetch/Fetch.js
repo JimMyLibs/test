@@ -3,7 +3,7 @@
  */
 import FetchBase from './FetchBase'
 import apiUrls from '../config/apiUrls'
-import { ISDEV, mockUrl, projectType } from '../config/project'
+import { ISDEV, mockUrl, fetchType } from '../config/project'
 
 import { fetchApiInfo, getToken } from './commApi'
 import { deepAssign, isEmpty } from '../utils/utils'
@@ -26,7 +26,6 @@ const specialKeys = ['apiType', 'headers', 'body', 'apiInfo', 'method', 'timeout
 export default class Http extends FetchBase {
     constructor(options = {}) {
         super(options)
-
         let { apiInfo = {}, ...other } = options
 
         // 全局接口信息
@@ -123,7 +122,7 @@ export default class Http extends FetchBase {
         if (url.search(/^https?/) > -1) {
             return url
         }
-        apiType = apiType || projectType
+        apiType = apiType || fetchType
         url = url.replace(/^\/+/, '')
         mixApiInfo = mixApiInfo || apiInfo
         let typeUrl = mixApiInfo[apiType]

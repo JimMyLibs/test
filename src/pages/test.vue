@@ -1,6 +1,6 @@
 <template>
     <div class="pages_test">
-        <div class="preCode flex">
+        <div class="preCode flex" v-if='show.all || 0'>
             <div class="preBox" v-if="show.listFilter">
                 <select class="changeMatche" @change="changeMatche" v-model="Matche.selected">
                     <option v-for="(item,index) in menu" :key="item" :value="index">{{index}}={{item}}</option>
@@ -18,12 +18,12 @@
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div class="preTitle" @click="show.CouponInfo=!show.CouponInfo">原始数据:{{show.CouponInfo?'开':'关'}}</div>
+                <div class="preTitle" @click="show.CouponInfo=!show.CouponInfo">原始数据CouponInfo:{{show.CouponInfo?'开':'关'}}</div>
                 <pre contenteditable="true" v-if="show.CouponInfo" v-html="CouponInfo"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div class="preTitle" @click="show.TournamentPoolInfo=!show.TournamentPoolInfo">原始数据:{{show.TournamentPoolInfo?'开':'关'}}</div>
+                <div class="preTitle" @click="show.TournamentPoolInfo=!show.TournamentPoolInfo">原始数据TournamentPoolInfo:{{show.TournamentPoolInfo?'开':'关'}}</div>
                 <pre contenteditable="true" v-if="show.TournamentPoolInfo" v-html="TournamentPoolInfo"></pre>
                 <!-- <loading /> -->
             </div>
@@ -51,6 +51,7 @@ export default {
                 selected:''
             },
             show:{
+                all: location.hostname == '169.254.222.170',
                 listFilter: 1,
                 datePools: 1,
                 FB_GetInfo_chi: 0,
@@ -98,16 +99,13 @@ export default {
         },
         async init() {
             console.time('初始化FB_GetInfo_chi:');
-            const { CouponInfo, result:FB_GetInfo_chi_res, TournamentPoolInfo } = await FB_GetInfo_chi();
+            const { data, FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = await api.Matches.datePools();
+            this.FB_GetInfo_data.datePools = data;
             this.FB_GetInfo_data.FB_GetInfo_chi = FB_GetInfo_chi_res;
             this.FB_GetInfo_data.CouponInfo = CouponInfo;
             this.FB_GetInfo_data.TournamentPoolInfo = TournamentPoolInfo;
-            console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
             console.timeEnd('初始化FB_GetInfo_chi:');
-
-            console.time('处理数据datePools:');
-            this.FB_GetInfo_data.datePools = await api.Matches.datePools();
-            console.timeEnd('处理数据datePools:');
+            console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
 
             const renderTime = new Date((new Date() - this.createTime)).getMilliseconds();
             console.log('渲染时间',renderTime,'ms')

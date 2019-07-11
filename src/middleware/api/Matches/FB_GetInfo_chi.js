@@ -101,7 +101,7 @@ const particularAddLine = (pool,item4)=>{// 个别玩法添加均线
     }
 }
 export const FB_GetInfo_chi = async ()=> {// 2.2.4.7  // 获取并编排所有数据
-    const resData = await fetchData('/xml/index/FB_GetInfo_chi.xml');
+    const resData = await fetchData('/index/FB_GetInfo_chi.xml');
     const { Coupons: { CouponInfo }, TournamentPools: { TournamentPoolInfo } } = resData.AOSBS_XML;
     let result = { data: [] };
     try {
@@ -172,7 +172,7 @@ export const FB_GetInfo_chi = async ()=> {// 2.2.4.7  // 获取并编排所有�
         return {
             result,
             CouponInfo,
-            TournamentPoolInfo,
+            TournamentPoolInfo
             // result：初始化FB_GetInfo_chi:: 89ms && 处理数据datePools:: 90ms
             // result&&CouponInfo&&TournamentPoolInfo: 初始化FB_GetInfo_chi:: 169ms && 处理数据datePools:: 580ms
         };

@@ -4,30 +4,34 @@ class Cache {
 
     }
     get(key) {
-        if(window){// web端
-            if(window.localStorage){
-                this.webGet(key);
+        if (window) {// web端
+            if (window.localStorage) {
+                return this.webGet(key);
             }
         }
     }
-    set(key,info) {
-        if(window){// web端
-            if(window.localStorage){
-                this.webSet(key, info);
+    set(key, info) {
+        if (window) {// web端
+            if (window.localStorage) {
+                return this.webSet(key, info);
             }
         }
     }
     webGet(key) {
-        let currentInfo = JSON.parse(localStorage.getItem(key)) || {};
-        return currentInfo
+        let curInfo = JSON.parse(localStorage.getItem(key) || '{}');// LS值为空时，JSON.parse会报错，所以返回'{}'
+        if (JSON.stringify(curInfo) === '{}' || curInfo === 'undefined' || curInfo === 'null'){// 特殊值返回''，方便业务层非空判断
+            return '';
+        }else{
+            return curInfo;
+        }
     }
     webSet(key, info) {
-        let currentInfo = JSON.parse(localStorage.getItem(key)) || {};
-        if (typeof info === 'undefined') {// 获取信息
-            return currentInfo
+        let curInfo = JSON.parse(localStorage.getItem(key)) || {};
+        if (info === undefined) {// 获取信息
+            return curInfo;
         }
         // 存储/更新用户信息
-        let mixInfo = JSON.stringify(Object.assign({}, currentInfo, info))
+        let mixInfo = JSON.stringify(Object.assign({}, curInfo, info))
         localStorage.setItem(key, mixInfo)
     }
     rnGet() {
