@@ -5,21 +5,26 @@
                 <select class="changeMatche" @change="changeMatche" v-model="Matche.selected">
                     <option v-for="(item,index) in menu" :key="item" :value="index">{{index}}={{item}}</option>
                 </select>
-                <pre v-html="listFilter"></pre>
+                <pre contenteditable="true" v-html="listFilter"></pre>
             </div>
             <div class="preBox">
                 <div class="preTitle" @click="show.datePools=!show.datePools">日期-玩法:{{show.datePools?'开':'关'}}</div>
-                <pre v-if="show.datePools" v-html="datePools"></pre>
+                <pre contenteditable="true" v-if="show.datePools" v-html="datePools"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
                 <div class="preTitle" @click="show.FB_GetInfo_chi=!show.FB_GetInfo_chi">过滤字段:{{show.FB_GetInfo_chi?'开':'关'}}</div>
-                <pre v-if="show.FB_GetInfo_chi" v-html="FB_GetInfo_chi"></pre>
+                <pre contenteditable="true" v-if="show.FB_GetInfo_chi" v-html="FB_GetInfo_chi"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
                 <div class="preTitle" @click="show.CouponInfo=!show.CouponInfo">原始数据:{{show.CouponInfo?'开':'关'}}</div>
-                <pre v-if="show.CouponInfo" v-html="CouponInfo"></pre>
+                <pre contenteditable="true" v-if="show.CouponInfo" v-html="CouponInfo"></pre>
+                <!-- <loading /> -->
+            </div>
+            <div class="preBox">
+                <div class="preTitle" @click="show.TournamentPoolInfo=!show.TournamentPoolInfo">原始数据:{{show.TournamentPoolInfo?'开':'关'}}</div>
+                <pre contenteditable="true" v-if="show.TournamentPoolInfo" v-html="TournamentPoolInfo"></pre>
                 <!-- <loading /> -->
             </div>
         </div>        
@@ -37,6 +42,7 @@ export default {
             pageName: "pages_test",
             FB_GetInfo_data: {
                 CouponInfo:{},
+                TournamentPoolInfo:{},
                 FB_GetInfo_chi:{},
                 datePools:{},
                 listFilter:{},
@@ -49,6 +55,7 @@ export default {
                 datePools: 1,
                 FB_GetInfo_chi: 0,
                 CouponInfo: 1,
+                TournamentPoolInfo: 1,
             },
             createTime: 0,
         };
@@ -56,6 +63,9 @@ export default {
     computed:{
         CouponInfo() {
             return this.syntaxHighlight(this.FB_GetInfo_data.CouponInfo)
+        },
+        TournamentPoolInfo() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.TournamentPoolInfo)
         },
         FB_GetInfo_chi() {
             return this.syntaxHighlight(this.FB_GetInfo_data.FB_GetInfo_chi)
@@ -88,11 +98,16 @@ export default {
         },
         async init() {
             console.time('初始化FB_GetInfo_chi:');
-            this.FB_GetInfo_data.FB_GetInfo_chi = await FB_GetInfo_chi();
-            this.FB_GetInfo_data.datePools = await api.Matches.datePools();
-            this.FB_GetInfo_data.CouponInfo = api.Matches.tmp.CouponInfo;
+            const { CouponInfo, result:FB_GetInfo_chi_res, TournamentPoolInfo } = await FB_GetInfo_chi();
+            this.FB_GetInfo_data.FB_GetInfo_chi = FB_GetInfo_chi_res;
+            this.FB_GetInfo_data.CouponInfo = CouponInfo;
+            this.FB_GetInfo_data.TournamentPoolInfo = TournamentPoolInfo;
             console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
             console.timeEnd('初始化FB_GetInfo_chi:');
+
+            console.time('处理数据datePools:');
+            this.FB_GetInfo_data.datePools = await api.Matches.datePools();
+            console.timeEnd('处理数据datePools:');
 
             const renderTime = new Date((new Date() - this.createTime)).getMilliseconds();
             console.log('渲染时间',renderTime,'ms')

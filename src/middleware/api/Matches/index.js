@@ -4,21 +4,17 @@ import { FB_GetInfo_chi } from './FB_GetInfo_chi'
 
 class Matches {
     constructor() {
-        this.tmp = {
-            CouponInfo: {},// 原始数据
-        };
         this.cache = {            
             datePools: '',// datePools数据
         }
     }
     async datePools() {// 根据date{pool:[matches]}划分数据
-        const { CouponInfo, result:FB_GetInfo_chi_res } = await FB_GetInfo_chi();
-        this.tmp.CouponInfo = CouponInfo;
+        const { result:FB_GetInfo_chi_res } = await FB_GetInfo_chi();
         // 获取所有的pool
         let poolAll = Array.from(new Set(FB_GetInfo_chi_res.data.reduce((a,b)=>a.concat(b.coupons.map(item=>item.pool)),[])));
         // console.log('poolAll',poolAll)
         // 一级分组：时间，二级分组：pool
-        let dataTmp = FB_GetInfo_chi_res.data.map(item1=>{  
+        let dataTmp = FB_GetInfo_chi_res.data.map(item1=>{
             poolAll.map(item2=>{
                 let curPoolData = item1.coupons.filter(item3=>item2==item3.pool);
                 let tmp = {};
@@ -37,7 +33,7 @@ class Matches {
                         }
                     }
                     tmp[item3.league + '_' + item3.matchDateTime].oddsNames = oddsNames();
-                    tmp[item3.league + '_' + item3.matchDateTime].matches.push(item3)
+                    tmp[item3.league + '_' + item3.matchDateTime].matches.push(item3);
                 })
                 // console.log('tmp',tmp)
                 let matches = [];
@@ -56,7 +52,7 @@ class Matches {
         };
     }
     async poolsDate() {// 根据pool{date:[matches]}划分数据: 未使用，待优化
-        const FB_GetInfo_chi = await FB_GetInfo_chi();
+        const { result:FB_GetInfo_chi_res } = await FB_GetInfo_chi();
         // 获取所有的pool
         let poolAll = Array.from(new Set(FB_GetInfo_chi_res.data.reduce((sum,item)=>sum.concat(item.coupons.map(item2=>item2.pool)),[])));
         let poolData = {};

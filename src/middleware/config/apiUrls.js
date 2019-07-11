@@ -2,7 +2,6 @@
 export default {
     dev:{
         // 版本类型接口前缀
-        // app: 'http://json.jc.com:8803/',
         app: 'http://169.254.222.170:8803/',
     
         // vm类型接口前缀

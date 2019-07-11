@@ -1,7 +1,8 @@
 // 其他公共api
 
-import FetchBase from '../fetch/FetchBase'
-import { ISDEV, apiUrl } from '../config/project'
+import FetchBase from './FetchBase'
+import Cache from '../utils/cache'
+import { ISDEV, serverJsonUrl } from '../config/project'
 import apiUrls from '../config/apiUrls'
 import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetchConf'
 
@@ -16,16 +17,16 @@ export function getToken() {
 }
 // 同步获取api地址信息
 export function getApiInfo() {
-    if (ISDEV) {// 开发环境调用devApiInfo
+    if (ISDEV) {// 开发环境调用apiUrls['dev']
         return apiUrls['dev']
-    } else if (!apiUrl) {// 生产环境apiUrl为空时调用
+    } else if (!serverJsonUrl) {// 生产环境apiUrl为空时调用apiUrls['pro']
         return apiUrls['pro']
     }
-    return JSON.parse(sessionStorage.getItem(apiInfoSessionId))
+    return Cache.get(apiInfoSessionId)
 }
 // 保存api地址信息
 export function setApiInfo(info) {
-    sessionStorage.setItem(apiInfoSessionId, JSON.stringify(info))
+    Cache.set(apiInfoSessionId, JSON.stringify(info))
 }
 // 异步获取api地址信息
 export function fetchApiInfo() {
@@ -37,7 +38,7 @@ export function fetchApiInfo() {
             if (currentInfo) {
                 resolve(currentInfo)
             } else {
-                http.toGet(apiUrl).then(res => {
+                http.toGet(serverJsonUrl).then(res => {
                     setApiInfo(res)
                     resolve(res)
                 }).catch(err => {

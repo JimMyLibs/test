@@ -5,7 +5,7 @@ import FetchBase from './FetchBase'
 import apiUrls from '../config/apiUrls'
 import { ISDEV, mockUrl, projectType } from '../config/project'
 
-import { fetchApiInfo, getToken } from '../utils/commApi'
+import { fetchApiInfo, getToken } from './commApi'
 import { deepAssign, isEmpty } from '../utils/utils'
 
 

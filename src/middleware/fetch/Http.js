@@ -1,5 +1,5 @@
 import Http from './Fetch'
-import { checkResponse } from '../utils/commApi'
+import { checkResponse } from './commApi'
 
 const http = new Http()
 
