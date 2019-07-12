@@ -5,13 +5,25 @@
  * @apiVersion 0.0.1
  * @apiDescription 首页列表
  * 
- * @apiParam {String} [type='HAD'] 投注类型
+ * @apiParam {String} type='HAD' 投注类型
+ * @apiParam {String} date='' 日期
+ * @apiParam {String} league='' 国家
  * @apiParamExample {json} 使用方法:
  * {
  *      import api from '../middleware/api'
  * 
- *      // 筛选数据
- *      const result = await api.Matches.filter('HAD');
+ *      // 筛选数据: 传空获取全部数据
+ *      const result = await api.Matches.filter({
+ *          pool: 'HAD',
+ *          date: '',
+ *          league: '',
+ *      });
+ *      // 玩法列表
+ *      const poolList = api.Matches.poolList;
+ *      // 日期列表
+ *      const dateList = api.Matches.dateList;
+ *      // 国家列表
+ *      const leagueList = api.Matches.leagueList;
  *      
  *      // 目前已有数据的poll
  *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS/HIL/FHL/CHL

@@ -8,7 +8,7 @@ export const fetchCache = 0;// 是否缓存请求
 
 export const ISAPP = fetchType !== 'web';
 
-export const ISDEV = getEnv()&&0;// 决定请求地址环境分类
+export const ISDEV = getEnv()&&1;// 决定请求地址环境分类
 
 export const ISDEBUG = 1;// 是否显示打印信息
 

@@ -5,13 +5,25 @@
  * @apiVersion 0.0.2
  * @apiDescription Home list
  * 
- * @apiParam {String} [type='HAD'] Bet type
+ * @apiParam {String} type='HAD' Bet type
+ * @apiParam {String} date='' date
+ * @apiParam {String} league='' country
  * @apiParamExample {json} Instructions:
  * {
  *      import api from '../middleware/api'
  * 
- *      // Filter data
- *      const result = await api.Matches.filter('HAD');
+ *      // Filter data: Get all the data by air
+ *      const result = await api.Matches.filter({
+ *          pool: 'HAD',
+ *          date: '',
+ *          league: '',
+ *      });
+ *      // pool list
+ *      const poolList = api.Matches.poolList;
+ *      // Date list
+ *      const dateList = api.Matches.dateList;
+ *      // Country list
+ *      const leagueList = api.Matches.leagueList;
  *      
  *      // Pool of existing data
  *      HAD/HDC/HFT/TQL/CRS/FCS/TTG/OOE/FHL/FGS/FTS/HIL/FHL/CHL

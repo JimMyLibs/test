@@ -138,7 +138,7 @@ export const FB_GetInfo_chi = async ()=> {// 2.2.4.7  // 获取并编排所有�
                             matches_item.poolNum = PoolInfo.length;
                             matches_item.corner = item2.Progress.Corner;
                             matches_item.inPlay = item2.Inplay;
-                            matches_item.webUrl = 'https://www.baidu.com/';
+                            matches_item.webUrl = ''
                             matches_item.oddsSet = [];// 每场比赛的投注池
 
                             item3.OddsSet = obj2Arr(item3.OddsSet);

@@ -1,9 +1,15 @@
 <template>
     <div class="pages_test">
-        <div class="preCode flex" v-if='show.all || 0'>
+        <div class="preCode flex" v-if='show.all || 1'>
             <div class="preBox" v-if="show.listFilter">
-                <select class="changeMatche" @change="changeMatche" v-model="Matche.selected">
-                    <option v-for="(item,index) in menu" :key="item" :value="index">{{index}}={{item}}</option>
+                <select class="changeMatche" @change="changeMatche" v-model="selected.pool">
+                    <option v-for="(item,index) in poolList" :key="item" :value="index">{{index}}={{item}}</option>
+                </select>
+                <select class="changeMatche" @change="changeMatche" v-model="selected.league">
+                    <option v-for="(item,index) in leagueList" :key="index" :value="item">{{item}}</option>
+                </select>
+                <select class="changeMatche" @change="changeMatche" v-model="selected.date">
+                    <option v-for="(item,index) in dateList" :key="index" :value="item">{{item}}</option>
                 </select>
                 <pre contenteditable="true" v-html="listFilter"></pre>
             </div>
@@ -47,18 +53,23 @@ export default {
                 datePools:{},
                 listFilter:{},
             },
-            Matche:{
-                selected:''
+            selected:{
+                pool:'HAD',
+                date: '',
+                league: '',
             },
             show:{
-                all: location.hostname == '169.254.222.170',
+                all: location.hostname === '169.254.222.170',
                 listFilter: 1,
                 datePools: 1,
                 FB_GetInfo_chi: 0,
-                CouponInfo: 1,
-                TournamentPoolInfo: 1,
+                CouponInfo: 0,
+                TournamentPoolInfo: 0,
             },
             createTime: 0,
+            poolList: [],
+            leagueList: [],
+            dateList: [],
         };
     },
     computed:{
@@ -89,19 +100,23 @@ export default {
     },
     mounted() {
         this.init();
+        this.changeMatche();
     },
     methods: {
         async changeMatche() {
             console.time('筛选changeMatche:');
-            const result = await api.Matches.filter(this.Matche.selected);
-            this.FB_GetInfo_data.listFilter = result;
+            const filterResult = await api.Matches.filter(this.selected);
+            this.FB_GetInfo_data.listFilter = filterResult;
+            this.poolList = api.Matches.poolList;
+            this.leagueList = api.Matches.leagueList;
+            this.dateList = api.Matches.dateList;
             console.timeEnd('筛选changeMatche:');
         },
         async init() {
             console.time('初始化FB_GetInfo_chi:');
-            const { data, FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = await api.Matches.datePools();
+            const { data, FB_GetInfo_chi_old, CouponInfo, TournamentPoolInfo } = await api.Matches.datePools();
             this.FB_GetInfo_data.datePools = data;
-            this.FB_GetInfo_data.FB_GetInfo_chi = FB_GetInfo_chi_res;
+            this.FB_GetInfo_data.FB_GetInfo_chi = FB_GetInfo_chi_old;
             this.FB_GetInfo_data.CouponInfo = CouponInfo;
             this.FB_GetInfo_data.TournamentPoolInfo = TournamentPoolInfo;
             console.timeEnd('初始化FB_GetInfo_chi:');

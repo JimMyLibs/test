@@ -1,9 +1,9 @@
 
 /**
- * @api {get} index/poolsList.json 筛选菜单
+ * @api {get} index/poolsList.json 玩法表格
  * @apiGroup Home
  * @apiVersion 0.0.1
- * @apiDescription 筛选菜单
+ * @apiDescription 玩法表格
  * 
  * @apiParamExample {json} 使用方法:
  * {
