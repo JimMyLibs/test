@@ -1,0 +1,1739 @@
+<AOSBS_XML Name="CO_ALLUPFORMULA" Timestamp="2015-08-12 15:38:39" Version="L1.18R0,L1.15R0" ID="313">
+  <Formulas>
+    <HorseRacing>
+      <FormulaPoolInfo Pool="WIN" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="PLA" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="QIN" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="TRI" MaxLegs="3" CrossPoolEnabled="0" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="QPL" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="W-P" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="QQP" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="CW" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="CWA" MaxLegs="6" CrossPoolEnabled="1" AllUpEnabled="1">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="CWB" MaxLegs="6" CrossPoolEnabled="0" AllUpEnabled="0">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo Pool="CWC" MaxLegs="6" CrossPoolEnabled="0" AllUpEnabled="0">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+    </HorseRacing>
+    <Football>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="HAD">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="HHA">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="FHA">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="HDC">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="6" Pool="HFT">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="HIL">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="CHL">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="FHL">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="OOE">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="6" Pool="CRS">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="6" Pool="FCS">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="TTG">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="6" Pool="FGS">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="False" AllUpEnabled="1" MaxLegs="8" Pool="GPW">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="False" AllUpEnabled="1" MaxLegs="8" Pool="GPF">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="FTS">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+      <FormulaPoolInfo CrossPoolEnabled="True" AllUpEnabled="1" MaxLegs="8" Pool="NTS">
+        <FormulaInfo Value="2X1" />
+        <FormulaInfo Value="2X3" />
+        <FormulaInfo Value="3X1" />
+        <FormulaInfo Value="3X3" />
+        <FormulaInfo Value="3X4" />
+        <FormulaInfo Value="3X6" />
+        <FormulaInfo Value="3X7" />
+        <FormulaInfo Value="4X1" />
+        <FormulaInfo Value="4X4" />
+        <FormulaInfo Value="4X5" />
+        <FormulaInfo Value="4X6" />
+        <FormulaInfo Value="4X10" />
+        <FormulaInfo Value="4X11" />
+        <FormulaInfo Value="4X14" />
+        <FormulaInfo Value="4X15" />
+        <FormulaInfo Value="5X1" />
+        <FormulaInfo Value="5X5" />
+        <FormulaInfo Value="5X6" />
+        <FormulaInfo Value="5X10" />
+        <FormulaInfo Value="5X15" />
+        <FormulaInfo Value="5X16" />
+        <FormulaInfo Value="5X20" />
+        <FormulaInfo Value="5X25" />
+        <FormulaInfo Value="5X26" />
+        <FormulaInfo Value="5X30" />
+        <FormulaInfo Value="5X31" />
+        <FormulaInfo Value="6X1" />
+        <FormulaInfo Value="6X6" />
+        <FormulaInfo Value="6X7" />
+        <FormulaInfo Value="6X15" />
+        <FormulaInfo Value="6X20" />
+        <FormulaInfo Value="6X21" />
+        <FormulaInfo Value="6X22" />
+        <FormulaInfo Value="6X35" />
+        <FormulaInfo Value="6X41" />
+        <FormulaInfo Value="6X42" />
+        <FormulaInfo Value="6X50" />
+        <FormulaInfo Value="6X56" />
+        <FormulaInfo Value="6X57" />
+        <FormulaInfo Value="6X62" />
+        <FormulaInfo Value="6X63" />
+        <FormulaInfo Value="7X1" />
+        <FormulaInfo Value="7X7" />
+        <FormulaInfo Value="7X8" />
+        <FormulaInfo Value="7X21" />
+        <FormulaInfo Value="7X35" />
+        <FormulaInfo Value="7X120" />
+        <FormulaInfo Value="7X127" />
+        <FormulaInfo Value="8X1" />
+        <FormulaInfo Value="8X8" />
+        <FormulaInfo Value="8X9" />
+        <FormulaInfo Value="8X28" />
+        <FormulaInfo Value="8X56" />
+        <FormulaInfo Value="8X70" />
+        <FormulaInfo Value="8X247" />
+        <FormulaInfo Value="8X255" />
+      </FormulaPoolInfo>
+    </Football>
+  </Formulas>
+  <UnitBetPara>
+    <HorseRacing>
+      <Add Key="W-P" Value="10,20,50,100,o" Default="10" />
+      <Add Key="QIN" Value="10,20,50,100,o" Default="10" />
+      <Add Key="QPL" Value="10,20,50,100,o" Default="10" />
+      <Add Key="QQP" Value="10,20,50,100,o" Default="10" />
+      <Add Key="IWN" Value="100,o" Default="100" />
+      <Add Key="CW" Value="10,20,50,100,o" Default="10" />
+      <Add Key="TCE" Value="1,2,5,10,20,o" Default="1" />
+      <Add Key="TRI" Value="1,2,5,10,20,o" Default="1" />
+      <Add Key="FF" Value="1,2,5,10,20,o" Default="1" />
+      <Add Key="QTT" Value="1,2,5,10,20,o" Default="1" />
+      <Add Key="QTT_QP" Value="24,120,360" Default="24" />
+      <Add Key="JKC" Value="10,20,50,100,o" Default="10" />
+      <Add Key="DBL" Value="10,20,50,100,o" Default="10" />
+      <Add Key="TBL" Value="1,2,5,10,20,o" Default="1" />
+      <Add Key="DT" Value="1,2,5,10,20,o" Default="1" />
+      <Add Key="TT" Value="2,5,10,20,o" Default="2" />
+      <Add Key="SIXUP" Value="2,5,10,20,o" Default="2" />
+      <Add Key="XALLUP" Value="1,2,5,10,20,o" Default="1" />
+    </HorseRacing>
+    <Football>
+      <Add Key="XALLUP" Value="10,20,50,100,o" Default="10" />
+      <Add Key="HAD" Value="10,20,50,100,o" Default="10" />
+      <Add Key="TQL" Value="10,20,50,100,o" Default="10" />
+      <Add Key="FHA" Value="10,20,50,100,o" Default="10" />
+      <Add Key="HHA" Value="10,20,50,100,o" Default="10" />
+      <Add Key="HDC" Value="10,20,50,100,o" Default="10" />
+      <Add Key="HIL" Value="10,20,50,100,o" Default="10" />
+      <Add Key="CHL" Value="10,20,50,100,o" Default="10" />
+      <Add Key="FHL" Value="10,20,50,100,o" Default="10" />
+      <Add Key="CRS" Value="10,20,50,100,o" Default="10" />
+      <Add Key="FCS" Value="10,20,50,100,o" Default="10" />
+      <Add Key="FTS" Value="10,20,50,100,o" Default="10" />
+      <Add Key="HFT" Value="10,20,50,100,o" Default="10" />
+      <Add Key="TTG" Value="10,20,50,100,o" Default="10" />
+      <Add Key="OOE" Value="10,20,50,100,o" Default="10" />
+      <Add Key="FGS" Value="10,20,50,100,o" Default="10" />
+      <Add Key="DHCP" Value="10,20,50,100,o" Default="10" />
+      <Add Key="HFMP" Value="10,20,50,100,o" Default="10" />
+      <Add Key="CHP" Value="10,20,50,100,o" Default="10" />
+      <Add Key="GPW" Value="10,20,50,100,o" Default="10" />
+      <Add Key="AGPW" Value="10,20,50,100,o" Default="10" />
+      <Add Key="GPF" Value="10,20,50,100,o" Default="10" />
+      <Add Key="AGPF" Value="10,20,50,100,o" Default="10" />
+      <Add Key="TPS" Value="10,20,50,100,o" Default="10" />
+      <Add Key="SPC" Value="10,20,50,100,o" Default="10" />
+      <Add Key="ALLODDS" Value="10,20,50,100,o" Default="10" />
+      <Add Key="INPLAY" Value="10,20,50,100,o" Default="10" />
+    </Football>
+  </UnitBetPara>
+  <Gears>
+    <Gear Code="B" NameE="Blinkers" NameC="戴眼罩" />
+    <Gear Code="BO" NameE="Blinker with one cowl only" NameC="只戴單邊眼罩" />
+    <Gear Code="E" NameE="Ear Plugs" NameC="戴耳塞" />
+    <Gear Code="H" NameE="Hood" NameC="戴頭罩" />
+    <Gear Code="P" NameE="Pacifier" NameC="戴防沙眼罩" />
+    <Gear Code="PC" NameE="Pacifier with cowls" NameC="戴半掩防沙眼罩" />
+    <Gear Code="PS" NameE="Pacifier with 1 cowl" NameC="戴單邊半掩防沙眼罩" />
+    <Gear Code="SR" NameE="Shadow Roll" NameC="鼻箍" />
+    <Gear Code="CP" NameE="Side Winkers" NameC="羊毛面箍" />
+    <Gear Code="TT" NameE="Tongue Tie" NameC="綁繫舌帶" />
+    <Gear Code="V" NameE="Visor" NameC="戴開縫眼罩" />
+    <Gear Code="SB" NameE="Sheepskin Browband" NameC="戴羊毛額箍" />
+    <Gear Code="CO" NameE="Side Winker 1 side" NameC="戴單邊羊毛面箍" />
+    <Gear Code="1" NameE="First time" NameC="首次" />
+    <Gear Code="2" NameE="Replaced" NameC="重戴" />
+    <Gear Code="-" NameE="Removed" NameC="除去" />
+    <Gear Code="CC" NameE="Cornell Collar" NameC="喉托" />
+    <Gear Code="XB" NameE="Crossed Nose Band" NameC="交叉鼻箍" />
+    <Gear Code="M" NameE="Muzzle" NameC="戴口罩" />
+  </Gears>
+  <Sexs>
+    <Sex Code="c" NameE="colt (upto 4yo)" NameC="稚齡雄馬（四歲或以下）" />
+    <Sex Code="f" NameE="filly (upto 4yo)" NameC="稚齡雌馬（四歲或以下）" />
+    <Sex Code="g" NameE="gelding" NameC="閹馬" />
+    <Sex Code="h" NameE="horse (5yo or above)" NameC="雄馬（五歲或以上）" />
+    <Sex Code="m" NameE="mare (5yo or above)" NameC="雌馬（五歲或以上）" />
+    <Sex Code="r" NameE="rig" NameC="隱睪" />
+  </Sexs>
+  <VersionSupported Enable="1" DisplayDays="10">1.23</VersionSupported>
+  <CWA ButtonEnable="1" LabelEnable="1" LabelColor="#FF0000">
+    <Label lang="en-us"><![CDATA[hello]]></Label>
+    <Label lang="zh-hk"><![CDATA[hello]]></Label>
+  </CWA>
+  <CWB ButtonEnable="1" LabelEnable="1" LabelColor="#FF0000">
+    <Label lang="en-us"><![CDATA[hello]]></Label>
+    <Label lang="zh-hk"><![CDATA[hello]]></Label>
+  </CWB>
+  <CWC ButtonEnable="1" LabelEnable="1" LabelColor="#FF0000">
+    <Label lang="en-us"><![CDATA[hello]]></Label>
+    <Label lang="zh-hk"><![CDATA[hello]]></Label>
+  </CWC>
+  <IWN ButtonEnable="1" LabelEnable="1" LabelColor="#FF0000">
+    <Label lang="en-us"><![CDATA[hello]]></Label>
+    <Label lang="zh-hk"><![CDATA[hello]]></Label>
+  </IWN>
+  <FBAllUpShortcut ButtonEnable="1" LabelEnable="1" LabelColor="#FF0000">
+    <Label lang="en-us"><![CDATA[ Enter ]]></Label>
+    <Label lang="zh-hk"><![CDATA[ 即按 ]]></Label>
+  </FBAllUpShortcut>
+  <HRAllUpShortcut ButtonEnable="1" LabelEnable="1" LabelColor="#FF0000">
+    <Label lang="en-us"><![CDATA[ Enter ]]></Label>
+    <Label lang="zh-hk"><![CDATA[ 即按 ]]></Label>
+  </HRAllUpShortcut>
+  <EnableQuickPathForFBInPlay>{True | False}</EnableQuickPathForFBInPlay>
+  <RaceReplayBarrierTrailButtonControl>0</RaceReplayBarrierTrailButtonControl>
+  <EnableMarkSixLiveTV>1</EnableMarkSixLiveTV>
+  <DisplayMainlineOnTop>1</DisplayMainlineOnTop>
+  <FingerprintFaceLogin Enabled="1" />
+  <eWallet Enabled="1" NewIconEnabled="1" AppAnalyticsEnabled="1" QRCodeTimeOutSec="15">
+    <OTP PeriodOfTimeSec="60" />
+    <BetQRCode AutoReGenerateEnabled="0" CheckStatusSec="5" CheckValidationSec="5" ExpiredLessThanSec="10" WaitingResultMin="5" IconPath="/Info/AOSBS/img/eWallet/QRCode/Bet.png" />
+    <TopUpQRCode AutoReGenerateEnabled="0" CheckStatusSec="5" CheckValidationSec="5" ExpiredLessThanSec="10" WaitingResultMin="5" IconPath="/Info/AOSBS/img/eWallet/QRCode/Top-Up.png" />
+    <CashWithDrawalQRCode AutoReGenerateEnabled="0" CheckStatusSec="5" CheckValidationSec="5" ExpiredLessThanSec="10" WaitingResultMin="5" IconPath="/Info/AOSBS/img/eWallet/QRCode/Cash-Withdrawal.png" />
+  </eWallet>
+  <FPS>
+    <BindBankAccountStatus>
+      <Status Name="Pending" IconPath="/Info/AOSBS/img/eWallet/FPS/FPS-pending.png" TextC="(待審批)" TextE="(pending for approval)" />
+      <Status Name="Failed" IconPath="/Info/AOSBS/img/eWallet/FPS/FPS-failed.png" TextC="(未能綁定)" TextE="(failed to link)" />
+      <Status Name="Available" IconPath="/Info/AOSBS/img/eWallet/FPS/FPS-available.png" TextC="(可綁定)" TextE="(available for linking)" />
+      <Status Name="Linked" IconPath="/Info/AOSBS/img/eWallet/FPS/FPS-bound.png" TextC="(已綁定)" TextE="(linked)" />
+    </BindBankAccountStatus>
+    <FPSBannerControl EnabledDisplay="1" StartTime="10-12-2018 09:00" EndTime="20-12-2018 18:00">
+      <Image Lang="en-us" Path="/Info/ParameterControl_OutputDir/AOSBS/Images/ImageLoaderEN.jpg" LoaderUrl="" EnableAppLink="1" InAppLinkControl="eWallet Landing" />
+      <Image Lang="zh-hk" Path="/Info/ParameterControl_OutputDir/AOSBS/Images/ImageLoaderTC.jpg" LoaderUrl="" EnableAppLink="1" InAppLinkControl="Online Deposit" />
+    </FPSBannerControl>
+  </FPS>
+  <Messages>
+    <Message Key="AccountUpgrade_Title">
+      <Value lang="en-us"><![CDATA[Upgrade To Full Betting Account]]></Value>
+      <Value lang="zh-hk"><![CDATA[升級至全面投注戶口]]></Value>
+    </Message>
+    <Message Key="eWallet_AccountUpgrade">
+      <Value lang="en-us"><![CDATA[Upgrade content ,this is a very long message]]></Value>
+      <Value lang="zh-hk"><![CDATA[升級內容，這是一個很長的消息]]></Value>
+    </Message>
+    <Message Key="AccountUpgrade_LaterBtn">
+      <Value lang="en-us"><![CDATA[Later]]></Value>
+      <Value lang="zh-hk"><![CDATA[稍後]]></Value>
+    </Message>
+    <Message Key="AccountUpgrade_UpgradeBtn">
+      <Value lang="en-us"><![CDATA[Upgrade Now]]></Value>
+      <Value lang="zh-hk"><![CDATA[立即升級]]></Value>
+    </Message>
+    <Message Key="eWallet_RaceCourseBranchAccHold">
+      <Value lang="en-us"><![CDATA[Your account is being used in another channel.  Please try again later.]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下的投注戶口正在其他投注渠道使用，請稍後再試。]]></Value>
+    </Message>
+    <Message Key="eWallet_CashWithDrawalResultAccHold">
+      <Value lang="en-us"><![CDATA[Your account is being used in another channel.  Please try again later.]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下的投注戶口正在其他投注渠道使用，請稍後再試。]]></Value>
+    </Message>
+    <Message Key="eWallet_Re_authenticateAccounts">
+      <Value lang="en-us"><![CDATA[If the mobile number is incorrect, please update it at Off-course Betting Branch.]]></Value>
+      <Value lang="zh-hk"><![CDATA[如手提電話號碼不正確，請前往場外投注處進行更新。]]></Value>
+    </Message>
+    <Message Key="eWallet_Re_authenticateFullBettingAccounts">
+      <Value lang="en-us"><![CDATA[If the mobile number is incorrect, please update it at HKJC Customer eCentre.]]></Value>
+      <Value lang="zh-hk"><![CDATA[如手提電話號碼不正確，請登入HKJC網上客戶中心進行更新。]]></Value>
+    </Message>
+    <Message Key="eWallet_OTPFailedTitle">
+      <Value lang="en-us"><![CDATA[Failed to deliver OTP]]></Value>
+      <Value lang="zh-hk"><![CDATA[無法傳送一次性驗證碼]]></Value>
+    </Message>
+    <Message Key="AcitveFingerPrint_OTPFailedSend">
+      <Value lang="en-us"><![CDATA[Fingerprint Authentication required OTP verification. We have failed to deliver an OTP to you as your registered mobile number is invalid.]]></Value>
+      <Value lang="zh-hk"><![CDATA[指紋認證啓動失敗。閣下登記的手提電話號碼已失效，一次性驗證碼無法傳送。]]></Value>
+    </Message>
+    <Message Key="AcitveFaceID_OTPFailedSend">
+      <Value lang="en-us"><![CDATA[Face ID Authentication required OTP verification. We have failed to deliver an OTP to you as your registered mobile number is invalid.]]></Value>
+      <Value lang="zh-hk"><![CDATA[Face ID 認證啓動失敗。閣下登記的手提電話號碼已失效，一次性驗證碼無法傳送。]]></Value>
+    </Message>
+    <Message Key="ActiveFIDO_Recommendation_AccountsUser">
+      <Value lang="en-us"><![CDATA[Please visit Off-course Betting Branch to update your mobile number.]]></Value>
+      <Value lang="zh-hk"><![CDATA[請親身前往場外投注處更新手提電話號碼。]]></Value>
+    </Message>
+    <Message Key="ActiveFIDO_Recommendation_FullBettingAccountsUser">
+      <Value lang="en-us"><![CDATA[Please login <a href="#">HKJC Customer eCentre</a> to update your mobile number.]]></Value>
+      <Value lang="zh-hk"><![CDATA[請登入<a href="#">HKJC 網上客戶中心</a>更新手提電話號碼。]]></Value>
+    </Message>
+    <Message Key="Button_Close">
+      <Value lang="en-us"><![CDATA[Close]]></Value>
+      <Value lang="zh-hk"><![CDATA[關閉]]></Value>
+    </Message>
+    <Message Key="eWallet_OTPFailedMobNumIsInvalid">
+      <Value lang="en-us"><![CDATA[We have failed to deliver an OTP to you as your registered mobile number is invalid, please visit Off-course Betting Branch to update your mobile number.]]></Value>
+      <Value lang="zh-hk"><![CDATA[由於閣下登記的手提電話號碼已失效，請親身前往場外投注處更新手提電話號碼。]]></Value>
+    </Message>
+    <Message Key="eWallet_OTPFailedMobNumIsInvalid_eCentre">
+      <Value lang="en-us"><![CDATA[We have failed to deliver an OTP to you as your registered mobile number is invalid, please login <a href="#">HKJC Customer eCentre</a> to update your mobile number.]]></Value>
+      <Value lang="zh-hk"><![CDATA[由於閣下登記的手提電話號碼已失效，請登入<a href="#">HKJC 網上客戶中心</a>更新手提電話號碼。]]></Value>
+    </Message>
+    <Message Key="FPS_ExceedMonthlyDepositLimit">
+      <Value lang="en-us"><![CDATA[Exceed Monthly Deposit Limit]]></Value>
+      <Value lang="zh-hk"><![CDATA[超出每月存款限額]]></Value>
+    </Message>
+    <Message Key="FPS_ExceedDailyWithdrawalLimit">
+      <Value lang="en-us"><![CDATA[Exceed Daily Withdrawal Limit]]></Value>
+      <Value lang="zh-hk"><![CDATA[超出每日提款限額]]></Value>
+    </Message>
+    <Message Key="FPS_BindBankNotAnyNominatedBankAcc">
+      <Value lang="en-us"><![CDATA[Currently you do not have any nominated bank account, please bring the ATM card that has your name printed on it and visit Off-course Betting Branch for registration. <a href="#">Please click here for FPS supported bank list.</a>]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下並沒有登記任何「指定轉賬銀行戶口」。請帶同印有閣下姓名的提款卡前往場外投注處登記。<a href="#">請按此查詢支援轉數快的銀行。</a>]]></Value>
+    </Message>
+    <Message Key="FPS_BindBankAccountNotSupportFPS">
+      <Value lang="en-us"><![CDATA[Your bank does not support Faster Payment System (FPS).  If you would like to use Electronic Funds Transfer service, please bring the ATM card that has your name printed on it and change your nominated bank account at Off-course Betting Branch. <a href="#">Please click here for supported bank list.</a>]]></Value>
+      <Value lang="zh-hk"><![CDATA[以上銀行並不支援轉數快。如需使用香港賽馬會電子轉賬服務，請帶同印有閣下姓名的提款卡前往場外投注處辦理更新手續。<a href="#">請按此查詢支援轉數快的銀行。</a>]]></Value>
+    </Message>
+    <Message Key="FPS_BindBankNotNominatedBankAccount2">
+      <Value lang="en-us"><![CDATA[You can register one more bank account for online deposit. Please bring the ATM card that has your name printed on it and visit Off-course Betting Branch for registration.]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下可再登記一個「指定轉賬銀行戶口」用於轉賬存款服務，請帶同印有閣下姓名的提款卡前往場外投注處登記。]]></Value>
+    </Message>
+    <Message Key="FPS_BindBankAccountUpdated">
+      <Value lang="en-us"><![CDATA[If the bank account numbers shown is not updated, please visit Off-course Betting Branch with the ATM card that have your name printed.]]></Value>
+      <Value lang="zh-hk"><![CDATA[如需更新銀行戶口資料，請帶同印有閣下姓名的提款卡前往場外投注處辦理手續。]]></Value>
+    </Message>
+    <Message Key="FPS_ApplicationDetails">
+      <Value lang="en-us"><![CDATA[To link your nominated bank account for Electronic Funds Transfer, please review the bank account information and accept the terms and conditions.]]></Value>
+      <Value lang="zh-hk"><![CDATA[請核對以下資料並接受相關的條款及細則。]]></Value>
+    </Message>
+    <Message Key="FPS_BindBankAccountNBA1">
+      <Value lang="en-us"><![CDATA[Your bank account has been link up with Electronic Funds Transfer service, you can now enjoy PIN free online deposit and withdrawal now.]]></Value>
+      <Value lang="zh-hk"><![CDATA[以下的「指定轉賬銀行戶口」已成功綁定香港賽馬會電子轉賬服務，閣下可即時享用轉賬存款及提款服務。]]></Value>
+    </Message>
+    <Message Key="FPS_BindBankAccountNBA2">
+      <Value lang="en-us"><![CDATA[Your bank account has been link up with Electronic Funds Transfer service, you can now enjoy PIN free online deposit now.]]></Value>
+      <Value lang="zh-hk"><![CDATA[以下的「指定轉賬銀行戶口」已成功綁定香港賽馬會電子轉賬服務，閣下可即時享用轉賬存款服務。]]></Value>
+    </Message>
+    <Message Key="FPS_InstantFailedFPSRejected">
+      <Value lang="en-us"><![CDATA[Please contact your bank or visit Off-course Betting Branch with the ATM card with your name printed for clarification.]]></Value>
+      <Value lang="zh-hk"><![CDATA[請聯絡有關銀行或帶同印有閣下姓名的提款卡前往場外投注處查詢詳情。]]></Value>
+    </Message>
+    <Message Key="FPS_BindingBankAccountFPSSuccessPending">
+      <Value lang="en-us"><![CDATA[Your bank will notify you when the application is approved. It may takes up to 5 working days from the application date. Please contact your bank for status enquiry. If you need to increase your daily deposit limit, please apply via your bank.]]></Value>
+      <Value lang="zh-hk"><![CDATA[從申請日計算，審批需時大概五個工作天。申請成功後，閣下會收到銀行的通知。如需增加每日存款限額或查詢審批進度，請與閣下之銀行聯絡。]]></Value>
+    </Message>
+    <Message Key="FPS_BindingBankAccountFPSFailPending">
+      <Value lang="en-us"><![CDATA[Your bank will notify you when the application is approved. It may takes up to 5 working days from the application date. Please contact your bank for status enquiry. If you need to increase your daily deposit limit, please apply via your bank.]]></Value>
+      <Value lang="zh-hk"><![CDATA[從申請日計算，審批需時大概五個工作天。申請成功後，閣下會收到銀行的通知。如需增加每日存款限額或查詢審批進度，請與閣下的銀行聯絡。]]></Value>
+    </Message>
+    <Message Key="FPS_ReviwBindStatusNBA1">
+      <Value lang="en-us"><![CDATA[The following bank account has been linked up with Electronic Funds Transfer service, you can now enjoy PIN free online deposit and withdrawal.]]></Value>
+      <Value lang="zh-hk"><![CDATA[以下的「指定轉賬銀行戶口」已成功綁定香港賽馬會電子轉賬服務，閣下可即時享用轉賬存款及提款服務。]]></Value>
+    </Message>
+    <Message Key="FPS_ReviewBindStatusNotNBA1">
+      <Value lang="en-us"><![CDATA[The following bank account has been linked up with Electronic Funds Transfer service, you can now enjoy PIN free online deposit.]]></Value>
+      <Value lang="zh-hk"><![CDATA[以下的「指定轉賬銀行戶口」已成功綁定香港賽馬會電子轉賬服務，閣下可即時享用轉賬存款服務。]]></Value>
+    </Message>
+    <Message Key="FPS_ReviewBindStatusPending">
+      <Value lang="en-us"><![CDATA[Your bank will notify you when the application is approved. It may takes up to 5 working days from the application date. Please contact your bank for status  enquiry. If you need to increase your daily deposit limit, please apply via your bank.]]></Value>
+      <Value lang="zh-hk"><![CDATA[從申請日計算，審批需時大概五個工作天。申請成功後，閣下會收到銀行的通知。如需增加每日存款限額或查詢審批進度，請與閣下的銀行聯絡。]]></Value>
+    </Message>
+    <Message Key="FPS_OnlineDepositEFTNoAccount">
+      <Value lang="en-us"><![CDATA[Currently you do not have any nominated bank account, please bring the ATM card that has your name printed on it and visit Off-course Betting Branch for registration.]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下並沒有登記任何「指定轉賬銀行戶口」。 請帶同印有閣下姓名的提款卡前往場外投注處登記。]]></Value>
+    </Message>
+    <Message Key="FPS_OnlineDepositFPS">
+      <Value lang="en-us"><![CDATA[Then, you can link up your bank account with Electronic Funds Transfer service under ‘Linking Bank Account’ section. <a href="#">Please click here for FPS supported bank list.</a>]]></Value>
+      <Value lang="zh-hk"><![CDATA[完成登記後，閣下可於「綁定銀行戶口」頁面綁定指定銀行戶口作香港賽馬會電子轉賬才用途。 <a href="#">請按此查詢支援轉數快的銀行。</a>]]></Value>
+    </Message>
+    <Message Key="FPS_OnlineDepositNoFPSOrEPSCO">
+      <Value lang="en-us"><![CDATA[You need to link up your nominated bank account with Electronic Funds Transfer service under ‘Linking Bank Account’ section first.]]></Value>
+      <Value lang="zh-hk"><![CDATA[如須使用網上存款服務，請先進行銀行戶口綁定。]]></Value>
+    </Message>
+    <Message Key="FPS_OnlineDepositFPSDisabled">
+      <Value lang="en-us"><![CDATA[Currently you do not have any nominated bank account, please bring the ATM card that has your name printed on it and visit Off-course Betting Branch for registration.]]></Value>
+      <Value lang="zh-hk"><![CDATA[此戶口並沒任何可作轉賬存款的「指定轉賬銀行戶口」。請帶同印有閣下姓名的提款卡前往場外投注處登記。]]></Value>
+    </Message>
+    <Message Key="FPS_OnlineDepositAmount">
+      <Value lang="en-us"><![CDATA[Deposit Amount]]></Value>
+      <Value lang="zh-hk"><![CDATA[存款金額]]></Value>
+    </Message>
+    <Message Key="FPS_ExceedLimit">
+      <Value lang="en-us"><![CDATA[You have exceeded the monthly transaction number limit, $%s service charge will be imposed to the current transaction.]]></Value>
+      <Value lang="zh-hk"><![CDATA[轉賬次數已超出每月上限，是次轉賬將會收取%s元手續費。]]></Value>
+    </Message>
+    <Message Key="FPS_ExceedLimitRejectedByBank">
+      <Value lang="en-us"><![CDATA[You have exceed the daily deposit limit.  If you want to increase the limit, please contact your bank.]]></Value>
+      <Value lang="zh-hk"><![CDATA[存款金額超出每日上限，如需增加每日存款限額，請透過閣下的銀行申請。]]></Value>
+    </Message>
+    <Message Key="FPS_OnLineWithdrawalRejected">
+      <Value lang="en-us"><![CDATA[Currently you do not have any nominated bank account, please bring the ATM card that has your name printed on it and visit Off-course Betting Branch for registration. Then, you can link up your bank account with Electronic Funds Transfer service under ‘Linking Bank Account’ section. <a href="#">Please click here for FPS supported bank list.</a>]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下並沒有登記任何「指定轉賬銀行戶口」。請帶同印有閣下姓名的提款卡前往場外投注處登記。完成 後，閣下可於「綁定銀行戶口」的頁面中綁定銀行戶口作香港賽馬會電子轉賬才用途。<a href="#">請按此查詢支援轉數快的銀行。</a>]]></Value>
+    </Message>
+    <Message Key="FPS_OnLineWithdrawalRejectedSwitchOn">
+      <Value lang="en-us"><![CDATA[Then, you can link up your bank account for Electronic Funds Transfer service under ‘Linking Bank Account’ section. <a href="#">Please click here for FPS supported bank list.</a>]]></Value>
+      <Value lang="zh-hk"><![CDATA[完成登記後，閣下可於「綁定銀行戶口」的頁面中綁定銀行戶口作香港賽馬會電子轉賬才用途。<a href="#">請按此查詢支援轉數快的銀行。</a>]]></Value>
+    </Message>
+    <Message Key="FPS_OnLineWithdrawalTransfer">
+      <Value lang="en-us"><![CDATA[Online withdrawal allows up to %s or %s times per day. Once exceeded, transaction will be processed via Autopay within %s working days.]]></Value>
+      <Value lang="zh-hk"><![CDATA[網上提款的交易次數為每日最多%s次，而每日提款上限合共為%s。若超過上限，該筆款項將經由自動轉賬處理，需時大約%s個工作天。]]></Value>
+    </Message>
+    <Message Key="FPS_OnLineWithdrawalAmountExceeded">
+      <Value lang="en-us"><![CDATA[The instant withdrawal amount has exceeded the daily limit. The transaction will be processed via Autopay and the amount would be credited to your bank account by next working day.  Would you like to continue with Autopay?]]></Value>
+      <Value lang="zh-hk"><![CDATA[即時提款金額已超出每日上限，該筆款項將改爲以自動轉賬方式存入閣下之銀行戶口，需時大約一個工作天。繼續使用自動轉賬嗎？]]></Value>
+    </Message>
+    <Message Key="FPS_OnLineWithdrawalCountExceeded">
+      <Value lang="en-us"><![CDATA[The number of request for instant withdrawal has exceeded the daily limit. The transaction will be processed via Autopay and the amount would be credited to your bank account by next working day. Would you like to continue with Autopay?]]></Value>
+      <Value lang="zh-hk"><![CDATA[即時提款次數已超出每日上限，該筆款項將改爲以自動轉賬方式存入閣下之銀行戶口，需時大約一個工作天。 繼續使用自動轉賬嗎？]]></Value>
+    </Message>
+    <Message Key="FPS_ReminderMessageFrontendTimeOut">
+      <Value lang="en-us"><![CDATA[To confirm whether the transaction is accepted, please check your account records later.]]></Value>
+      <Value lang="zh-hk"><![CDATA[如需確認轉賬是否已被接納，請於稍後檢查閣下的戶口紀錄。]]></Value>
+    </Message>
+    <Message Key="FPS_DepositReminderMessageBankTimeOut">
+      <Value lang="en-us"><![CDATA[Your bank is processing the deposit instruction, please check your account records later.]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下之銀行正在處理你的存款指示，請於稍後時間檢查閣下的戶口紀錄。]]></Value>
+    </Message>
+    <Message Key="FPS_WithdrawalReminderMessageBankTimeOut">
+      <Value lang="en-us"><![CDATA[Your bank is processing the withdrawal instruction, please check your account records later.]]></Value>
+      <Value lang="zh-hk"><![CDATA[閣下之銀行正在處理你的提款指示，請於稍後時間檢查閣下的戶口紀錄。]]></Value>
+    </Message>
+    <Message Key="FPS_DepositAmountMinimum">
+      <Value lang="en-us"><![CDATA[Minimum %s]]></Value>
+      <Value lang="zh-hk"><![CDATA[最低限額 %s]]></Value>
+    </Message>
+  </Messages>
+  <BlackList>
+    <Devices>
+      <Device>
+        <Model>HUAWEI</Model>
+      </Device>
+      <Device>
+        <Model>Mi</Model>
+      </Device>
+      <Device>
+        <Model>IPHONE</Model>
+      </Device>
+    </Devices>
+  </BlackList>
+  <EnableAutoDismissRGPPage AutoDismissTime="3" AutoDismissEnabled="1" RGPBackgroundColor_EN="#008f8f" RGPBackgroundColor_ZH="#008f8f" />
+</AOSBS_XML>

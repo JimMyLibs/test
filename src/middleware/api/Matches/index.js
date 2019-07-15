@@ -106,28 +106,33 @@ class Matches {
         const filterResult = [];
         datePools.data.map(item => {
             if (pool) {
-                // console.log(pool, item[pool], item)
-                item[pool] = item[pool].filter(item2 => {
+                const filterPoolData = item[pool].filter((item2,index2) => {
+                    item2.matches.map((item3,index3)=>{
+                        if((index2+index3)<3){
+                            item3.webUrl = 'https://wwww.baidu.com/'
+                        }
+                    })
                     return league ? item2.league == league : true;// league为空时取全部
                 })
+                console.log(pool, filterPoolData)
                 if (date) {
                     if (item.date == date) {
                         filterResult.push({
                             date: item.date,
-                            coupons: item[pool] || [],
+                            coupons: filterPoolData || [],
                         })
                     }
                 } else {// date为空时取全部
                     filterResult.push({
                         date: item.date,
-                        coupons: item[pool] || [],
+                        coupons: filterPoolData || [],
                     })
                 }
             } else {
                 return item;
             }
         })
-        console.log('过滤', params, filterResult)
+        console.log('过滤', {...params}, {...filterResult})
         return {
             data: filterResult,
         };

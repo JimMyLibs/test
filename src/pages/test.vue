@@ -4,12 +4,15 @@
             <div class="preBox" v-if="show.listFilter">
                 <select class="changeMatche" @change="changeMatche" v-model="selected.pool">
                     <option v-for="(item,index) in poolList" :key="item" :value="index">{{index}}={{item}}</option>
+                    <option value="">全部</option>
                 </select>
                 <select class="changeMatche" @change="changeMatche" v-model="selected.league">
                     <option v-for="(item,index) in leagueList" :key="index" :value="item">{{item}}</option>
+                    <option value="">全部</option>
                 </select>
                 <select class="changeMatche" @change="changeMatche" v-model="selected.date">
                     <option v-for="(item,index) in dateList" :key="index" :value="item">{{item}}</option>
+                    <option value="">全部</option>
                 </select>
                 <pre contenteditable="true" v-html="listFilter"></pre>
             </div>
