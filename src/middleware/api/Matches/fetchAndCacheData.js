@@ -12,7 +12,9 @@ export const fetchData = async (name) => {
         if (LSdata && fetchCache) {
             return LSdata;// 100ms
         } else {
-            const resData = await $get(name);// 300ms
+            const resData = await $get(name,{
+                apiType: 'FB_ODDS_ALL'
+            });// 300ms
             if (JSON.stringify(resData) !== '{}') {
                 Cache.set(name, resData);
             }

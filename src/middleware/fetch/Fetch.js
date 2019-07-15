@@ -83,6 +83,7 @@ export default class Http extends FetchBase {
             return this[method](reqUrl, { headers, body })
         } else {
             return fetchApiInfo().then(res => {
+                console.log('res',apiType,res)
                 reqUrl = this.getUrl(url, res, apiType)
                 return this[method](reqUrl, { headers, body })
             })
@@ -122,15 +123,36 @@ export default class Http extends FetchBase {
         if (url.search(/^https?/) > -1) {
             return url
         }
-        apiType = apiType || fetchType
+        // console.log('apiType',apiType,fetchType) 
         url = url.replace(/^\/+/, '')
         mixApiInfo = mixApiInfo || apiInfo
-        let typeUrl = mixApiInfo[apiType]
+        let typeUrl = mixApiInfo[fetchType]
+        typeUrl = this.getJcUrl(apiType,typeUrl);
+        console.log('typeUrl',typeUrl) 
         if (typeof typeUrl === 'undefined') {
             throw new Error('type is not in apiInfo')
         }
         typeUrl = `${typeUrl.replace(/\/+$/, '')}`
         return url ? `${typeUrl}/${url}` : typeUrl
+    }
+    // 转化为马会专用链接
+    getJcUrl(apiType,typeUrl){       
+        if (ISDEV) {
+            return typeUrl;
+        }else{
+            const urlObj = {};
+            typeUrl.Add.map(item=>{
+                urlObj[item.Key] = item;
+            })
+            console.log('urlObj',urlObj) 
+            const result = urlObj[apiType][this.getLanguage()];
+            return result;
+        }
+    }
+    // 获取语言
+    getLanguage() {
+        return 'Chi';
+        return 'Eng';
     }
 
     // 格式化options

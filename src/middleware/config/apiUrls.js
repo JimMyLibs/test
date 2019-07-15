@@ -1,11 +1,11 @@
 
 export default {
     dev:{
-        football: 'http://169.254.222.170:8803',  
-        racing: 'http://10.194.104.2:11698',
+        txn: 'http://iosbstxn.qcew.com:65443',  
+        info: 'http://iosbsinfo.qcew.com:65443',
     },
     pro:{
-        football: 'http://192.168.137.1:8803',
-         racing: 'http://mock.91525.net:35001/pro_vm',
+        txn: 'https://iosbstxn.qcew.com:65443',  
+        info: 'https://iosbsinfo.qcew.com:65443',
     }
 }

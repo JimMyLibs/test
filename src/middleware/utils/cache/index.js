@@ -6,14 +6,14 @@ class Cache {
     get(key) {
         if (window) {// web端
             if (window.localStorage) {
-                return this.webGet(key);
+                return this.webGet('__'+key+'__');
             }
         }
     }
     set(key, info) {
         if (window) {// web端
             if (window.localStorage) {
-                return this.webSet(key, info);
+                return this.webSet('__'+key+'__', info);
             }
         }
     }

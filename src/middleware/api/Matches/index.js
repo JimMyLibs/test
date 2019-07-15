@@ -7,14 +7,23 @@ class Matches {
     constructor() {
         this.cache = {
             datePools: '',// datePools数据
+            FB_GetInfo_chi: '',
         }
         this.poolList = {};
         this.dateList = [];
         this.leagueList = [];
     }
     async datePools() {// 根据date{pool:[matches]}划分数据
-        const { result: FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = await FB_GetInfo_chi();
+        let FB_GetInfo_chi_data = {};
+        if(this.cache.FB_GetInfo_chi){
+            FB_GetInfo_chi_data = this.cache.FB_GetInfo_chi;
+        }else{
+            FB_GetInfo_chi_data = await FB_GetInfo_chi();
+            this.cache.FB_GetInfo_chi = FB_GetInfo_chi_data;
+        }
+        const { result: FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = FB_GetInfo_chi_data;
         const FB_GetInfo_chi_old = JSON.parse(JSON.stringify(FB_GetInfo_chi_res));
+        this.cache.FB_GetInfo_chi = FB_GetInfo_chi_old;
         // 获取所有的date
         this.dateList = Array.from(new Set(FB_GetInfo_chi_res.data.map(item => item.date)));
         // 获取所有的league

@@ -9,7 +9,7 @@ import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetc
 const http = new FetchBase()
 
 // 存储api数据的sessionStorage标识
-const apiInfoSessionId = '__apiInfoSessionId__'
+const apiInfoSessionId = 'apiInfoSessionId'
 
 // 获取token
 export function getToken() {
@@ -30,13 +30,13 @@ export function setApiInfo(info) {
 }
 // 异步获取api地址信息
 export function fetchApiInfo() {
-    let currentInfo = getApiInfo()
+    let curInfo = getApiInfo()
     return new Promise(async (resolve, reject) => {
         if (ISDEV) {
             resolve(apiUrls['dev'])
         } else {
-            if (currentInfo) {
-                resolve(currentInfo)
+            if (curInfo) {
+                resolve(curInfo)
             } else {
                 const ApiOriginPath = await getApiOriginPath();
                 return ApiOriginPath;
@@ -44,11 +44,11 @@ export function fetchApiInfo() {
         }
     })
 }
-const getApiOriginPath = async () => {    
+const getApiOriginPath = async () => {
     const serverOrigin = await http.toGet(serverOriginUrl);
-    const serverPath = await http.toGet(serverPathUrl);
-    console.log('server',{serverOrigin,serverPath})
-    setApiInfo({serverOrigin,serverPath})
+    const serverPath = serverPathUrl && await http.toGet(serverPathUrl);
+    console.log('server', { serverOrigin, serverPath })
+    setApiInfo(serverOrigin.TXN_XML)
 }
 /**
  * [checkResponse fetch请求结果是否正确判断处理]
