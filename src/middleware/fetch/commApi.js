@@ -9,47 +9,53 @@ import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetc
 const http = new FetchBase()
 
 // 存储api数据的sessionStorage标识
-const apiInfoSessionId = 'apiInfoSessionId'
+const apiInfoDevSessionId = 'apiInfoDevSessionId'
+const apiInfoProSessionId = 'apiInfoProSessionId'
 
 // 获取token
 export function getToken() {
     return 'token:123465789';
 }
 // 同步获取api地址信息
-export function getApiInfo() {
-    if (ISDEV) {// 开发环境调用apiUrls['dev']
-        return apiUrls['dev']
-    } else if (!serverOriginUrl) {// 生产环境apiUrl为空时调用apiUrls['pro']
-        return apiUrls['pro']
-    }
-    return Cache.get(apiInfoSessionId)
+export function getApiInfo(key) {
+    return Cache.get(key)
 }
 // 保存api地址信息
-export function setApiInfo(info) {
-    Cache.set(apiInfoSessionId, info)
+export function setApiInfo(key,info) {
+    Cache.set(key, info)
 }
 // 异步获取api地址信息
 export function fetchApiInfo() {
     let curInfo = getApiInfo()
     return new Promise(async (resolve, reject) => {
-        if (ISDEV) {
-            resolve(apiUrls['dev'])
+        if (curInfo) {// 读取缓存
+            resolve(curInfo)
         } else {
-            if (curInfo) {
-                resolve(curInfo)
-            } else {
-                const ApiOriginPath = await getApiOriginPath();
+            if (ISDEV) {// 开发
+                const ApiOriginPath = getDevApiOriginPath();
+                resolve(ApiOriginPath);
+            } else {// 生产
+                const ApiOriginPath = await getProApiOriginPath();
                 resolve(ApiOriginPath);
             }
         }
     })
 }
-const getApiOriginPath = async () => {
-    const serverOrigin = await http.toGet(serverOriginUrl);
-    const serverPath = serverPathUrl && await http.toGet(serverPathUrl);
-    console.log('server', { serverOrigin, serverPath })
-    setApiInfo(serverOrigin.TXN_XML)
-    return serverOrigin.TXN_XML;
+const getDevApiOriginPath = () => {
+    const serverOrigin = {};
+    const serverPath = require('../xml/config/GetPara.json');
+    console.log('【dev-serverInfo】', { serverOrigin, serverPath })
+    const mixInfo = { serverOrigin, serverPath: serverPath.TXN_XML };
+    setApiInfo(apiInfoDevSessionId,mixInfo)
+    return mixInfo;
+}
+const getProApiOriginPath = async () => {
+    const serverOrigin = serverOriginUrl && await http.toGet(serverOriginUrl) || {};
+    const serverPath = await http.toGet(serverPathUrl);
+    console.log('【pro-serverInfo】', { serverOrigin, serverPath })
+    const mixInfo = { serverOrigin, serverPath: serverPath.TXN_XML };
+    setApiInfo(apiInfoProSessionId,mixInfo)
+    return mixInfo;
 }
 /**
  * [checkResponse fetch请求结果是否正确判断处理]

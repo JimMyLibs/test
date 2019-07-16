@@ -1,0 +1,2213 @@
+{
+    "TXN_XML":{
+        "ErrCode": "0",
+        "ErrMsg": "",
+        "ID": "307",
+        "Name": "GetPara",
+        "Timestamp": "2019-08-12 16:26:54",
+        "Version": "L1.18R0,L1.15R0",
+        "Env": {
+            "name": "dev",
+            "Channel": "AOSBS"
+        },
+        "AppInfomation": {
+            "Add": [
+                {
+                    "Key": "",
+                    "Value": "1",
+                    "Chi": "http://android.hkjc.com",
+                    "Eng": "http://android.hkjc.com/mobile/en/index.html"
+                },
+                {
+                    "Key": "MCJCURL",
+                    "Value": "1",
+                    "Chi": "http://www.hkjc.com/jctv/ch",
+                    "Eng": "http://www.hkjc.com/jctv/en"
+                },
+                {
+                    "Key": "GoogleMarketURL",
+                    "Value": "0",
+                    "Chi": "http://android.hkjc.com",
+                    "Eng": "http://android.hkjc.com/mobile/en/index.html"
+                },
+                {
+                    "Key": "SupportedVideoExtension",
+                    "Value": "mp4"
+                },
+                {
+                    "Key": "VersionSupported",
+                    "Value": "HKJC/1.8.0 build 4815"
+                },
+                {
+                    "Key": "NewBackButtonModel",
+                    "Value": "*"
+                },
+                {
+                    "Key": "NewMenuButton",
+                    "Value": "1"
+                },
+                {
+                    "Key": "BetResendDefaultChecked",
+                    "Value": "1"
+                },
+                {
+                    "Key": "BetResendEnable",
+                    "Value": "1"
+                }
+            ]
+        },
+        "Banner": {
+            "Add": [
+                {
+                    "Key": "Banner1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/promo/banner/ch/AOSBSupgradebanner_{R}.PNG",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/promo/banner/en/AOSBSupgradebanner_{R}.PNG"
+                },
+                {
+                    "Key": "Banner2",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/promo/banner/ch/AOSBSpromobanner_{R}.PNG",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/promo/banner/en/AOSBSpromobanner_{R}.PNG"
+                }
+            ]
+        },
+        "CustomerServices": {
+            "Add": {
+                "Key": "CSSPLogin",
+                "Title_CN": "HKJ客服中心",
+                "Title_EN": "HKJC Customer Centre",
+                "Value": "0",
+                "Chi": "https://cssp.iuww.com:60443",
+                "Eng": "https://cssp.iuww.com:60443"
+            }
+        },
+        "OddsRefreshInterval": {
+            "Add": [
+                {
+                    "Key": "HRLocalOddsRefreshInterval",
+                    "Value": "10"
+                },
+                {
+                    "Key": "HROverseaOddsRefreshInterval",
+                    "Value": "10"
+                },
+                {
+                    "Key": "FBOddsRefreshInterval",
+                    "Value": "60"
+                },
+                {
+                    "Key": "FBInplayOddsRefreshInterval",
+                    "Value": "20"
+                },
+                {
+                    "Key": "OddsRetentionPeriod",
+                    "Value": "30"
+                },
+                {
+                    "Key": "ManualRefreshDisableInterval",
+                    "Value": "10"
+                },
+                {
+                    "Key": "BannerRefreshInterval",
+                    "Value": "900"
+                },
+                {
+                    "Key": "TVIconExpire",
+                    "Value": "86400"
+                },
+                {
+                    "Key": "MaxRefreshInterval_FB",
+                    "Value": "10"
+                },
+                {
+                    "Key": "MaxRefreshInterval_HR",
+                    "Value": "10"
+                },
+                {
+                    "Key": "MaxRefreshInterval_MS",
+                    "Value": "10"
+                },
+                {
+                    "Key": "MaxRefreshInterval_CO",
+                    "Value": "10"
+                },
+                {
+                    "Key": "AutoRefreshWifiOnly",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FBInplayXml",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FBInplayXmlEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HRAutoOddsdRefresh",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FBAutoOddsdRefresh",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HRAutoOddsdRefreshLoginOnly",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FBAutoOddsdRefreshLoginOnly",
+                    "Value": "1"
+                }
+            ]
+        },
+        "ELVA": {
+            "Add": [
+                {
+                    "Key": "KeepAliveStreamInterval",
+                    "Value": "120"
+                },
+                {
+                    "Key": "VerifySessionInterval",
+                    "Value": "60"
+                },
+                {
+                    "Key": "ProgramScheduleInterval",
+                    "Value": "900"
+                },
+                {
+                    "Key": "login",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api?method=login"
+                },
+                {
+                    "Key": "logout",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api?method=logout"
+                },
+                {
+                    "Key": "keepalive",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api?method=keepalive"
+                },
+                {
+                    "Key": "useraction",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api?method=useraction"
+                },
+                {
+                    "Key": "logout_p2",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api2?method=logout"
+                },
+                {
+                    "Key": "keepalive_p2",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api2?method=keepalive"
+                },
+                {
+                    "Key": "useraction_p2",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api2?method=useraction"
+                },
+                {
+                    "Key": "getUrls_p2",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api2?method=getUrls"
+                },
+                {
+                    "Key": "authenticationRequest_p2",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api2?method=authenticationRequest"
+                },
+                {
+                    "Key": "programSchedule_p2",
+                    "Value": "https://npww.hkjcwebcast.com/dev/api2?method=programSchedule"
+                },
+                {
+                    "Key": "WebClient",
+                    "Value": "https://npww.hkjcwebcast.com/sit/web"
+                }
+            ]
+        },
+        "EAAS": {
+            "Add": {
+                "Key": "GetToken",
+                "Value": "http://116.48.143.224:444/api/SSOMobile/GetToken"
+            }
+        },
+        "MLC": {
+            "Add": [
+                {
+                    "Key": "MLCMobileURL",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html"
+                },
+                {
+                    "Key": "MLCMobileURL_A",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html"
+                },
+                {
+                    "Key": "MLCMobileURL_B",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html"
+                },
+                {
+                    "Key": "MLCMobileURL_C",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html"
+                },
+                {
+                    "Key": "MLCTabletURL",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html"
+                },
+                {
+                    "Key": "MLCTabletURL_A",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html"
+                },
+                {
+                    "Key": "MLCTabletURL_B",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html"
+                },
+                {
+                    "Key": "MLCTabletURL_C",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html"
+                },
+                {
+                    "Key": "MLCMatchListURL",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/matchlist"
+                },
+                {
+                    "Key": "MLCMatchListURL_A",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/matchlist"
+                },
+                {
+                    "Key": "MLCMatchListURL_B",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/matchlist"
+                },
+                {
+                    "Key": "MLCMatchListURL_C",
+                    "Value": "http://sat-replay-jclc.s3.amazonaws.com/matchlist"
+                },
+                {
+                    "Key": "MLCWebviewLoadingTimeout",
+                    "Value": "30"
+                },
+                {
+                    "Key": "MLCWebviewCloseTimeout",
+                    "Value": "5"
+                },
+                {
+                    "Key": "MLCMatchlistLoadingTimeout",
+                    "Value": "10"
+                },
+                {
+                    "Key": "MLCWebviewApiTimeout",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCUpdateMatchListCooldown",
+                    "Value": "60"
+                }
+            ]
+        },
+        "WIS": {
+            "Add": [
+                {
+                    "Key": "QTTQuery",
+                    "Value": "http://116.48.143.224:444/WISService.svc/opGetSingleQTTOdds"
+                },
+                {
+                    "Key": "MaxRefreshInterval_QTTQuery",
+                    "Value": "60"
+                },
+                {
+                    "Key": "Timeout_QTTQuery",
+                    "Value": "60"
+                }
+            ]
+        },
+        "Txn": {
+            "Add": [
+                {
+                    "#text": "/txnA/AOSBS/GetPara.ashx",
+                    "Key": "GetPara"
+                },
+                {
+                    "#text": "/txnA/AOSBS/GetParaAndSSO.ashx",
+                    "Key": "GetParaAndSSO"
+                },
+                {
+                    "#text": "/txnA/AOSBS/Translate.ashx",
+                    "Key": "Translate"
+                },
+                {
+                    "#text": "/txnA/AOSBS/Login.ashx",
+                    "Key": "Login"
+                },
+                {
+                    "#text": "/txnA/AOSBS/LoginQuestion.ashx",
+                    "Key": "LoginQuestion"
+                },
+                {
+                    "#text": "/txnA/AOSBS/AccountBalance.ashx",
+                    "Key": "AccountBalance"
+                },
+                {
+                    "#text": "/txnA/AOSBS/PreSendBet.ashx",
+                    "Key": "PreSendBet"
+                },
+                {
+                    "#text": "/txnAStm/AOSBS/AccountRecords.ashx",
+                    "Key": "AccountRecords"
+                },
+                {
+                    "#text": "/txnAStm/AOSBS/AccountRecordsIdx.ashx",
+                    "Key": "AccountRecordsIdx"
+                },
+                {
+                    "#text": "/txnAStm/AOSBS/TransactionRecords.ashx",
+                    "Key": "TransactionRecords"
+                },
+                {
+                    "#text": "/txnAStm/AOSBS/TransactionRecordsIdx.ashx",
+                    "Key": "TransactionRecordsIdx"
+                },
+                {
+                    "#text": "/txnA/AOSBS/EftDeposit.ashx",
+                    "Key": "EftDeposit"
+                },
+                {
+                    "#text": "/txnA/AOSBS/EftWithdrawal.ashx",
+                    "Key": "EftWithdrawal"
+                },
+                {
+                    "#text": "/txnA/AOSBS/EftBalance.ashx",
+                    "Key": "EftBalance"
+                },
+                {
+                    "#text": "/txnA/AOSBS/Logout.ashx",
+                    "Key": "Logout"
+                },
+                {
+                    "#text": "/txnA/AOSBS/VerifySession.ashx",
+                    "Key": "VerifySession"
+                },
+                {
+                    "#text": "/txnA/AOSBS/RegApn.ashx",
+                    "Key": "RegApn"
+                },
+                {
+                    "#text": "/txnA/AOSBS/ChangeSettingAndLang.ashx",
+                    "Key": "ChangeSettingAndLang"
+                },
+                {
+                    "#text": "/txnA/AOSBS/eWalletGenerateQRCode.ashx",
+                    "Key": "eWalletGenerateQRCode"
+                },
+                {
+                    "#text": "/txnA/AOSBS/eWalletQRCodeStatus.ashx",
+                    "Key": "eWalletQRCodeStatus"
+                },
+                {
+                    "#text": "/txnA/AOSBS/eWalletOTPCodeValidate.ashx",
+                    "Key": "eWalletOTPCodeValidate"
+                },
+                {
+                    "#text": "/txnA/AOSBS/eWalletOTPCode.ashx",
+                    "Key": "eWalletOTPCode"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FPSDeposit.ashx",
+                    "Key": "FPSDeposit"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FPSeDDASetup.ashx",
+                    "Key": "FPSeDDASetup"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FPSEnquiryBetAcc.ashx",
+                    "Key": "FPSEnquiryBetAcc"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FPSUpdateBetAcc.ashx",
+                    "Key": "FPSUpdateBetAcc"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FPSWithdrawal.ashx",
+                    "Key": "FPSWithdrawal"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FIDORegistration.ashx",
+                    "Key": "FIDORegistration"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FIDOEnroll.ashx",
+                    "Key": "FIDOEnroll"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FIDOAuthenticate.ashx",
+                    "Key": "FIDOAuthenticate"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FIDOValidateAuth.ashx",
+                    "Key": "FIDOValidateAuth"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FIDODeleteByDevice.ashx",
+                    "Key": "FIDODeleteByDevice"
+                },
+                {
+                    "#text": "/txnA/AOSBS/FIDOAuthenticatorStatus.ashx",
+                    "Key": "FIDOAuthenticatorStatus"
+                },
+                {
+                    "#text": "/txnA/AOSBS/Authentication.ashx",
+                    "Key": "Authentication"
+                },
+                {
+                    "#text": "/txnA/AOSBS/ReAuthentication.ashx",
+                    "Key": "ReAuthentication"
+                },
+                {
+                    "#text": "/txnA/AOSBS/RetrieveEKBAForAuthentication.ashx",
+                    "Key": "RetrieveEKBAForAuthentication"
+                }
+            ]
+        },
+        "Info": {
+            "Add": [
+                {
+                    "Key": "FB_ODDS_ALL",
+                    "Chi": "/index/FB_GetInfo_chi.xml",
+                    "Eng": "/index/FB_GetInfo_eng.xml"
+                },
+                {
+                    "Key": "HR_ODDS_ALL",
+                    "Chi": "/infoA/AOSBS/HR_GetInfo.ashx?QT=HR_ODDS_ALL&amp;Race=*&amp;Venue=*&amp;Result=1&amp;Dividend=1&amp;JTC=1&amp;JKC=1&amp;Lang=zh-HK",
+                    "Eng": "/infoA/AOSBS/HR_GetInfo.ashx?QT=HR_ODDS_ALL&amp;Race=*&amp;Venue=*&amp;Result=1&amp;Dividend=1&amp;JTC=1&amp;JKC=1&amp;Lang=en-US"
+                },
+                {
+                    "Key": "MS_INFO",
+                    "Chi": "/infoA/AOSBS/MS_GetInfo.ashx?QT=MS_INFO&amp;Lang=zh-HK",
+                    "Eng": "/infoA/AOSBS/MS_GetInfo.ashx?QT=MS_INFO&amp;Lang=en-US"
+                },
+                {
+                    "Key": "CO_ALLUPFORMULA",
+                    "Chi": "/infoA/AOSBS/GetInfo.ashx?QT=CO_ALLUPFORMULA",
+                    "Eng": "/infoA/AOSBS/GetInfo.ashx?QT=CO_ALLUPFORMULA"
+                },
+                {
+                    "Key": "FB_ODDS_INPLAY",
+                    "Chi": "/infoA/AOSBS/FB10_GetInfo.ashx?QT=FB_ODDS_INPLAY&amp;Lang=zh-HK",
+                    "Eng": "/infoA/AOSBS/FB10_GetInfo.ashx?QT=FB_ODDS_INPLAY&amp;Lang=en-US"
+                },
+                {
+                    "Key": "CO_PARA",
+                    "Chi": "/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA",
+                    "Eng": "/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA"
+                },
+                {
+                    "Key": "CO_ALLUP",
+                    "Chi": "/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA&amp;Allup=1",
+                    "Eng": "/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA&amp;Allup=1"
+                },
+                {
+                    "Key": "CO_CHECKSUM",
+                    "Chi": "/infoA/AOSBS/GetInfo.ashx?QT=CO_CHECKSUM",
+                    "Eng": "/infoA/AOSBS/GetInfo.ashx?QT=CO_CHECKSUM"
+                },
+                {
+                    "Key": "FIDO_PARA",
+                    "Chi": "/infoA/AOSBS/GetInfo.ashx?QT=FIDO_PARA",
+                    "Eng": "/infoA/AOSBS/GetInfo.ashx?QT=FIDO_PARA"
+                },
+                {
+                    "Key": "CO_MESSAGES",
+                    "Chi": "/infoA/AOSBS/GetInfo.ashx?QT=CO_Messages",
+                    "Eng": "/infoA/AOSBS/GetInfo.ashx?QT=CO_Messages"
+                }
+            ]
+        },
+        "WCIP_2019Aug": {
+            "Add": [
+                {
+                    "Key": "WebUserProfileMaintenance",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/loginform.aspx?UIC=zh-HK&amp;NTAL=BPU&amp;EP=BS",
+                    "Eng": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/loginform.aspx?UIC=en-US&amp;NTAL=BPU&amp;EP=BS"
+                },
+                {
+                    "Key": "RegisterAsWebUser",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/associateaccount.aspx?UIC=zh-HK&amp;EP=BS",
+                    "Eng": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/associateaccount.aspx?UIC=en-US&amp;EP=BS"
+                },
+                {
+                    "Key": "ChangePassword",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=2",
+                    "Eng": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=2"
+                },
+                {
+                    "Key": "ChangeMobileNumber",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=3",
+                    "Eng": "http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=3"
+                },
+                {
+                    "Key": "EnableMobileBettingService",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcip/Mobile/xxxxx.aspx?UIC=zh-HK&amp;Channel=Mobile",
+                    "Eng": "http://dev-ambs.cuww.com/wcip/Mobile/xxxxx.aspx?UIC=en-US&amp;Channel=Mobile"
+                }
+            ]
+        },
+        "WCIPweb": {
+            "Add": [
+                {
+                    "Key": "WebUserProfileMaintenance",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipA/AOSBS/loginform.aspx?UIC=zh-HK&amp;NTAL=BPU&amp;EP=BS",
+                    "Eng": "http://dev-ambs.cuww.com/wcipA/AOSBS/loginform.aspx?UIC=en-US&amp;NTAL=BPU&amp;EP=BS"
+                },
+                {
+                    "Key": "RegisterAsWebUser",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=zh-HK&amp;EP=BS",
+                    "Eng": "http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=en-US&amp;EP=BS"
+                },
+                {
+                    "Key": "ForgetWebPassword",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipA/AOSBS/inputaccoremail.aspx?UIC=zh-HK&amp;EP=BS",
+                    "Eng": "http://dev-ambs.cuww.com/wcipA/AOSBS/inputaccoremail.aspx?UIC=en-US&amp;EP=BS"
+                },
+                {
+                    "Key": "ChangePassword",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcipW/WEB/inputaccoremail.aspx?UIC=zh-HK&amp;EP=BS",
+                    "Eng": "http://dev-ambs.cuww.com/wcipW/WEB/inputaccoremail.aspx?UIC=en-US&amp;EP=BS"
+                },
+                {
+                    "Key": "EnableMobileBettingService",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/wcip/xxxxx.aspx?Channel=Mobile",
+                    "Eng": "http://dev-ambs.cuww.com/wcip/xxxxx.aspx?Channel=Mobile"
+                }
+            ]
+        },
+        "TV": {
+            "Add": {
+                "#text": "http://special.hkjc.com/root/football/info/en/images/common/icon_tv-{code}.gif",
+                "Key": "IconUrl",
+                "Value": "1"
+            }
+        },
+        "RacingInformationV1": {
+            "Version": {
+                "value": "1000",
+                "Add": [
+                    {
+                        "Key": "LiveRaceSchedule",
+                        "Title_CN": "賽馬直播時間表",
+                        "Title_EN": "Live Race Schedule",
+                        "Value": "1",
+                        "Chi": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_hk.html",
+                        "Eng": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_en.html",
+                        "Chi_tablet": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_hk.html",
+                        "Eng_tablet": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_en.html"
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "Title_CN": "賽事重温／試閘片段",
+                        "Title_EN": "Race Replay/Barrier Trials",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "Calendar",
+                        "Title_CN": "匯入賽期表",
+                        "Title_EN": "Import Fixture Calendar",
+                        "Value": "0",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml"
+                    },
+                    {
+                        "Key": "PoolInformation",
+                        "Title_CN": "彩池資訊",
+                        "Title_EN": "Pool Information",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "RaceChanges",
+                        "Title_CN": "更易事項",
+                        "Title_EN": "Changes",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "ReferenceInfo",
+                        "Title_CN": "賽日資訊",
+                        "Title_EN": "General Information",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "Results",
+                        "Title_CN": "賽果及派彩",
+                        "Title_EN": "Results and Dividends",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "Statistics",
+                        "Title_CN": "統計資料",
+                        "Title_EN": "Statistics",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=zh-HK",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=en-US"
+                    }
+                ]
+            }
+        },
+        "RacingInformationV2": {
+            "Version": {
+                "value": "1000",
+                "Add": [
+                    {
+                        "Key": "LiveRaceSchedule",
+                        "Title_CN": "賽馬直播時間表",
+                        "Title_EN": "Live Race Schedule",
+                        "Value": "1",
+                        "Chi": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_hk.html",
+                        "Eng": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_en.html",
+                        "Chi_tablet": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_hk.html",
+                        "Eng_tablet": "http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_en.html"
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "1",
+                        "Title_CN": "賽事重温／試閘片段",
+                        "Title_EN": "Race Replay/Barrier Trials",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "2",
+                        "Title_CN": "賽事重温",
+                        "Title_EN": "Race Replay",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1&amp;Display=Replay",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1&amp;Display=Replay"
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "2",
+                        "Title_CN": "試閘片段",
+                        "Title_EN": "Barrier Trials",
+                        "Value": "1",
+                        "Chi": "com.hkjc.footballchannel.",
+                        "Eng": "com.hkjc.footballchannel."
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "3",
+                        "Title_CN": "賽事重温",
+                        "Title_EN": "Race Replay",
+                        "Value": "1",
+                        "Chi": "com.hkjc.footballchannel.",
+                        "Eng": "com.hkjc.footballchannel."
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "3",
+                        "Title_CN": "試閘片段",
+                        "Title_EN": "Barrier Trials",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1&amp;Display=Barrier",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1&amp;Display=Barrier"
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "4",
+                        "Title_CN": "賽事重温",
+                        "Title_EN": "Race Replay",
+                        "Value": "1",
+                        "Chi": "com.hkjc.footballchannel.",
+                        "Eng": "com.hkjc.footballchannel."
+                    },
+                    {
+                        "Key": "MultimediaShowcase",
+                        "RaceReplayBarrierTrailButtonControl": "4",
+                        "Title_CN": "試閘片段",
+                        "Title_EN": "Barrier Trials",
+                        "Value": "1",
+                        "Chi": "com.hkjc.footballchannel.",
+                        "Eng": "com.hkjc.footballchannel."
+                    },
+                    {
+                        "Key": "Calendar",
+                        "Title_CN": "匯入賽期表",
+                        "Title_EN": "Import Fixture Calendar",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml"
+                    },
+                    {
+                        "Key": "PoolInformation",
+                        "Title_CN": "彩池資訊",
+                        "Title_EN": "Pool Information",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "RaceChanges",
+                        "Title_CN": "更易事項",
+                        "Title_EN": "Changes",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "ReferenceInfo",
+                        "Title_CN": "賽日資訊",
+                        "Title_EN": "General Information",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "Results",
+                        "Title_CN": "賽果及派彩",
+                        "Title_EN": "Results and Dividends",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "Statistics",
+                        "Title_CN": "統計資料",
+                        "Title_EN": "Statistics",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=zh-HK",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=en-US"
+                    }
+                ]
+            }
+        },
+        "FootballInformationV1": {
+            "Version": {
+                "value": "1000",
+                "Add": [
+                    {
+                        "Key": "LiveCentre",
+                        "Title_CN": "即場直播",
+                        "Title_CN1": "HKJC TV",
+                        "Title_EN": "Live TV",
+                        "Title_EN1": "HKJC TV",
+                        "Value": "1",
+                        "Chi": "http://sports.i-cable.com/hkjc_mobo_app/index_phone.php",
+                        "Eng": "http://sports.i-cable.com/hkjc_mobo_app/index_phone.php",
+                        "Chi_tablet": "http://sports.i-cable.com/hkjc_mobo_app/index_tablet.php",
+                        "Eng_tablet": "http://sports.i-cable.com/hkjc_mobo_app/index_tablet.php"
+                    },
+                    {
+                        "Key": "ResultsAndDividends",
+                        "Title_CN": "賽果及派彩",
+                        "Title_EN": "Results and Dividends",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=zh-HK&amp;Html=1",
+                        "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=en-US&amp;Html=1"
+                    },
+                    {
+                        "Key": "HeadToHead",
+                        "Title_CN": "對賽往績",
+                        "Title_EN": "Head-to-Head",
+                        "Value": "1",
+                        "Chi": "http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_headtohead.asp",
+                        "Eng": "http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_headtohead.asp"
+                    },
+                    {
+                        "Key": "MatchPreview",
+                        "Title_CN": "賽前分析",
+                        "Title_EN": "Match Preview",
+                        "Value": "1",
+                        "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/FB02_GetInfo.ashx?QT=FB_PREVIEW&amp;Lang=zh-HK&amp;Html=1"
+                    },
+                    {
+                        "Key": "LeagueTable",
+                        "Title_CN": "聯賽積分榜",
+                        "Title_EN": "League Table",
+                        "Value": "1",
+                        "Chi": "http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_leaguetable.asp",
+                        "Eng": "http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_leaguetable.asp"
+                    }
+                ]
+            }
+        },
+        "RacingInformation": {
+            "Add": [
+                {
+                    "Key": "MultimediaShowcase",
+                    "Title_CN": "視聽播放區",
+                    "Title_EN": "Multimedia Showcase",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "Calendar",
+                    "Title_CN": "匯入賽期表",
+                    "Title_EN": "Import Fixture Calendar",
+                    "Value": "0",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml"
+                },
+                {
+                    "Key": "PoolInformation",
+                    "Title_CN": "彩池資訊",
+                    "Title_EN": "Pool Information",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "RaceChanges",
+                    "Title_CN": "更易事項",
+                    "Title_EN": "Changes",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "ReferenceInfo",
+                    "Title_CN": "賽日資訊",
+                    "Title_EN": "General Information",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "Results",
+                    "Title_CN": "賽果及派彩",
+                    "Title_EN": "Results and Dividends",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "Statistics",
+                    "Title_CN": "統計資料",
+                    "Title_EN": "Statistics",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=zh-HK",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=en-US"
+                }
+            ]
+        },
+        "FootballInformation": {
+            "Add": [
+                {
+                    "Key": "LiveCentre",
+                    "Title_CN": "即時戰報",
+                    "Title_EN": "Live Centre",
+                    "Value": "0",
+                    "Chi": "http://lsdev.betradar.com/ls/livescore/?/hkjc/zht/page/mobile/fixtures",
+                    "Eng": "http://lsdev.betradar.com/ls/livescore/?/hkjc/en/page/mobile/fixtures"
+                },
+                {
+                    "Key": "ResultsAndDividends",
+                    "Title_CN": "賽果及派彩",
+                    "Title_EN": "Results and Dividends",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "HeadToHead",
+                    "Title_CN": "對賽往績",
+                    "Title_EN": "Head-to-Head",
+                    "Value": "1",
+                    "Chi": "http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_headtohead.asp",
+                    "Eng": "http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_headtohead.asp"
+                },
+                {
+                    "Key": "MatchPreview",
+                    "Title_CN": "賽前分析",
+                    "Title_EN": "Match Preview",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/FB02_GetInfo.ashx?QT=FB_PREVIEW&amp;Lang=zh-HK&amp;Html=1"
+                },
+                {
+                    "Key": "LeagueTable",
+                    "Title_CN": "聯賽積分榜",
+                    "Title_EN": "League Table",
+                    "Value": "1",
+                    "Chi": "http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_leaguetable.asp",
+                    "Eng": "http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_leaguetable.asp"
+                }
+            ]
+        },
+        "MarkSixInformation": {
+            "Add": [
+                {
+                    "Key": "DrawFixtures",
+                    "Title_CN": "下期攪珠",
+                    "Title_EN": "Next Draw",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/MS01_GetInfo.ashx?QT=MS_INFO&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/MS01_GetInfo.ashx?QT=MS_INFO&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "ResultsAndDividends",
+                    "Title_CN": "攪珠結果及獎金",
+                    "Title_EN": "Draw Results and Prizes",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/MS02_GetInfo.ashx?QT=MS_RESULTSANDDIVIDENDS&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/MS02_GetInfo.ashx?QT=MS_RESULTSANDDIVIDENDS&amp;Lang=en-US&amp;Html=1"
+                },
+                {
+                    "Key": "ResultsChecking",
+                    "Title_CN": "核對中獎號碼",
+                    "Title_EN": "Drawn Number Checking",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/infoA/AOSBS/MS03_GetInfo.ashx?QT=MS_CHECKINGRESULT&amp;Lang=zh-HK&amp;Html=1",
+                    "Eng": "http://dev-ambs.cuww.com/infoA/AOSBS/MS03_GetInfo.ashx?QT=MS_CHECKINGRESULT&amp;Lang=en-US&amp;Html=1"
+                }
+            ]
+        },
+        "NoticeSettings": {
+            "Add": [
+                {
+                    "Key": "ResponsibleGamblingMessage",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/RGP_short.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/RGP_short.html"
+                },
+                {
+                    "Key": "TermsAndConditions",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/Terms_and_Conditions21.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/Terms_and_Conditions21.html"
+                },
+                {
+                    "Key": "ResponsibleGamblingImg",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/android.jpg",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/android.jpg"
+                },
+                {
+                    "Key": "TermsAndConditions_Aug2018",
+                    "Value": "1",
+                    "Chi": "/iscontent/AOSBS/info/ch/Terms_and_Conditions.html",
+                    "Eng": "/iscontent/AOSBS/info/en/Terms_and_Conditions.html"
+                },
+                {
+                    "Key": "TermsAndConditionsFingerprintLogin",
+                    "Value": "1",
+                    "Chi": "/iscontent/AOSBS/info/ch/TermsConditionFingerprintLoginChi.html",
+                    "Eng": "/iscontent/AOSBS/info/en/TermsConditionFingerprintLoginEng.html"
+                }
+            ]
+        },
+        "OCBLocator": {
+            "Add": {
+                "#text": "http://dev-ambs.cuww.com/AOSBS/OCB/Info/OCBB.xml",
+                "Key": "OCBLocator",
+                "Value": "1"
+            }
+        },
+        "Help": {
+            "Add": [
+                {
+                    "Key": "UsingThisApp",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/How_To_Use.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/How_To_Use.html"
+                },
+                {
+                    "Key": "HRBettingGuide",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/HR_Guide.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/HR_Guide.html"
+                },
+                {
+                    "Key": "ELVAFAQ",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/streaming_faq.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/streaming_faq.html"
+                },
+                {
+                    "Key": "FBBettingGuide",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/FB_Guide.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/FB_Guide.html"
+                },
+                {
+                    "Key": "MK6BettingGuide",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/MK6_Guide.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/MK6_Guide.html"
+                }
+            ]
+        },
+        "OtherHelp": {
+            "Add": [
+                {
+                    "Key": "LoginHelp",
+                    "Value": "1",
+                    "Chi": "http://hk.m.yahoo.com/yahoo/frontpage",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/Login_Help.html"
+                },
+                {
+                    "Key": "OddsRefreshSettingHelpHR",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/Odds_Refresh_Setting_Help.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/Odds_Refresh_Setting_Help.html"
+                },
+                {
+                    "Key": "OddsRefreshSettingHelpFB",
+                    "Value": "0",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/Odds_Refresh_Setting_Help.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/Odds_Refresh_Setting_Help.html"
+                },
+                {
+                    "Key": "RegisterHelp",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/Register_Help.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/Register_Help.html"
+                },
+                {
+                    "Key": "eKBAQuestionsAnswerHelp",
+                    "Value": "1",
+                    "Chi": "http://dev-ambs.cuww.com/AOSBS/help/ch/ekba_Help.html",
+                    "Eng": "http://dev-ambs.cuww.com/AOSBS/help/en/ekba_Help.html"
+                }
+            ]
+        },
+        "ResponsibleGambling": {
+            "Add": {
+                "Key": "ResponsibleGambling",
+                "Value": "1",
+                "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/RGP_long.html",
+                "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/RGP_long.html"
+            }
+        },
+        "TermsAndConditions": {
+            "Add": {
+                "Key": "TermsAndConditions",
+                "Value": "1",
+                "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/Terms_and_Conditions.html",
+                "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/Terms_and_Conditions.html"
+            }
+        },
+        "Disclaimer": {
+            "Add": {
+                "Key": "Disclaimer",
+                "Value": "1",
+                "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/Disclaimer.html",
+                "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/Disclaimer.html"
+            }
+        },
+        "AboutThisApp": {
+            "Add": {
+                "Key": "AboutThisApp",
+                "Value": "1",
+                "Chi": "",
+                "Eng": ""
+            }
+        },
+        "ApplePushNotification": {
+            "Add": {
+                "Key": "Enabled",
+                "Value": "0"
+            }
+        },
+        "OffSeasonMsg": {
+            "Add": {
+                "Key": "OffSeasonMsg",
+                "Value": "1",
+                "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/OffSeason_HR.txt",
+                "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/OffSeason_HR.txt"
+            }
+        },
+        "WinningBetSharing": {
+            "Add": {
+                "Key": "WinningBetSharingDisclaimer",
+                "Value": "1",
+                "Chi": "http://dev-ambs.cuww.com/AOSBS/info/ch/Winning_Bet_Sharing_Disclaimer.txt",
+                "Eng": "http://dev-ambs.cuww.com/AOSBS/info/en/Winning_Bet_Sharing_Disclaimer.txt"
+            }
+        },
+        "Parameters": {
+            "AppUpdateReminderPeriod": 1440,
+            "BetResendCheckbox": 0,
+            "YEKFAW": "8b00568bc10cebf5e345e761fb23a8f38e098be1de1399a95307220ee8d137ea"
+        },
+        "ChannelPara": {
+            "Add": [
+                {
+                    "Key": "FOXMLEnable",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ChannelID",
+                    "Value": "9"
+                },
+                {
+                    "Key": "OddsRefreshInterval",
+                    "Value": "60"
+                },
+                {
+                    "Key": "SessionIdleTime",
+                    "Value": "30"
+                },
+                {
+                    "Key": "winp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "plap",
+                    "Value": "1"
+                },
+                {
+                    "Key": "wpp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "qinp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "qplp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "qqpp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "trip",
+                    "Value": "1"
+                },
+                {
+                    "Key": "dblp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "tcep",
+                    "Value": "1"
+                },
+                {
+                    "Key": "dtp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ttp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "tblp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "sixupp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "mk6p",
+                    "Value": "1"
+                },
+                {
+                    "Key": "mt3p",
+                    "Value": "0"
+                },
+                {
+                    "Key": "exnp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "mhgp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "eocp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "ougp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "TBMinDeposit",
+                    "Value": "300"
+                },
+                {
+                    "Key": "TBMaxDeposit",
+                    "Value": "99999999"
+                },
+                {
+                    "Key": "TBMinWithdrawal",
+                    "Value": "500"
+                },
+                {
+                    "Key": "TBMaxWithdrawal",
+                    "Value": "99999999"
+                },
+                {
+                    "Key": "TBMinAutoWithdrawal",
+                    "Value": "1"
+                },
+                {
+                    "Key": "TBMaxAutoWithdrawal",
+                    "Value": "99999999"
+                },
+                {
+                    "Key": "MaxBetUnit",
+                    "Value": "666666"
+                },
+                {
+                    "Key": "CurrentMK6Max",
+                    "Value": "49"
+                },
+                {
+                    "Key": "AbsMK6Min",
+                    "Value": "47"
+                },
+                {
+                    "Key": "AbsMK6Max",
+                    "Value": "49"
+                },
+                {
+                    "Key": "CertExpiryWarningDays",
+                    "Value": "30"
+                },
+                {
+                    "Key": "BetReplyTimeout",
+                    "Value": "300"
+                },
+                {
+                    "Key": "EFTReplyTimeout",
+                    "Value": "300"
+                },
+                {
+                    "Key": "WarningTimeout",
+                    "Value": "2"
+                },
+                {
+                    "Key": "QPTTGame",
+                    "Value": "1"
+                },
+                {
+                    "Key": "GoldballGame",
+                    "Value": "0"
+                },
+                {
+                    "Key": "MaxPrimaryNo",
+                    "Value": "38"
+                },
+                {
+                    "Key": "MinGBNo",
+                    "Value": "61"
+                },
+                {
+                    "Key": "MaxGBNo",
+                    "Value": "88"
+                },
+                {
+                    "Key": "GBmt3p",
+                    "Value": "0"
+                },
+                {
+                    "Key": "GBexnp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "GBmhgp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "GBeocp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "GBougp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AllowRegistration",
+                    "Value": "1"
+                },
+                {
+                    "Key": "SBp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HADp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AHADp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "HDCp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "TTGp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "CRSPp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "HFTPp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "CRSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "SBRegisterIdx",
+                    "Value": "0"
+                },
+                {
+                    "Key": "ShutDownTime",
+                    "Value": "06:00"
+                },
+                {
+                    "Key": "MinutesAheadForAlert",
+                    "Value": "5"
+                },
+                {
+                    "Key": "ShowSBWelcomeMessage",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ShowHBWelcomeMessage",
+                    "Value": "1"
+                },
+                {
+                    "Key": "OnlineStatTimeFrame",
+                    "Value": "8"
+                },
+                {
+                    "Key": "HFTp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "OOEp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HILp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FGSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HCSPp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "THFPp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "HHAp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AHHAp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HFMP6p",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ACRSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AOOEp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AHILp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ATTGp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AHAFUp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "CHPp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "GPFp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AGPFp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FINPp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "CHPPp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "DHCPp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "SPCp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "TPSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "GPWp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "HFMP8p",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AGPWp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "CrossTourn",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AHDCp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XRace",
+                    "Value": "1"
+                },
+                {
+                    "Key": "cwp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XWINp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XPLAp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XQINp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XQPLp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XTRIp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XCWp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXQinQpl",
+                    "Value": "1"
+                },
+                {
+                    "Key": "STB",
+                    "Value": "0"
+                },
+                {
+                    "Key": "XFB",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XHADp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XHHADp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "XHDCp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "OnlineStmtRecPerPage",
+                    "Value": "15"
+                },
+                {
+                    "Key": "InPlay",
+                    "Value": "1"
+                },
+                {
+                    "Key": "InPlayDelaySec",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AXWinPla",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXTTGp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AXHILp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXHFTp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AXOOEp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "AXCRSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXFGSp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "MK6SBDraw",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AFGSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "InPlaySpecial",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FHADp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AFHADp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXFHADp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "NewUserDays",
+                    "Value": "90"
+                },
+                {
+                    "Key": "BetReplyXSellMsgOption",
+                    "Value": "0"
+                },
+                {
+                    "Key": "BetReplyXSellMsgTimeout",
+                    "Value": "5"
+                },
+                {
+                    "Key": "OnlineParaRefreshInterval",
+                    "Value": "60"
+                },
+                {
+                    "Key": "ffp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "B_Wp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "XB_Wp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "BWBp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "BWCp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "BWDp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "InterXBWp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "MK6MultipleDraw",
+                    "Value": "1"
+                },
+                {
+                    "Key": "QPTTGame20",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ToQualify",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MainPageLoadingTime",
+                    "Value": "0"
+                },
+                {
+                    "Key": "ExtraTime",
+                    "Value": "1"
+                },
+                {
+                    "Key": "NTSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FORp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "JKCp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_winp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_plap",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_wpp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_qinp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_qplp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_qqpp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_trip",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_dblp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_tcep",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_dtp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_ttp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_tblp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_sixupp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_qpttp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "FlexiBet_ffp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_alupp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "PLAoddsAsRange",
+                    "Value": "0"
+                },
+                {
+                    "Key": "BannerHyperlink",
+                    "Value": "1"
+                },
+                {
+                    "Key": "Mk6TotalBetSpend",
+                    "Value": "0"
+                },
+                {
+                    "Key": "Mk6ByProdMulti",
+                    "Value": "1"
+                },
+                {
+                    "Key": "Mk6ByProdBanker",
+                    "Value": "1"
+                },
+                {
+                    "Key": "Mk6DefaultUnitBetAmount",
+                    "Value": "10"
+                },
+                {
+                    "Key": "Mk6PartialUnitBetAmount",
+                    "Value": "5"
+                },
+                {
+                    "Key": "FTSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AFTSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXFTSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FHILp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AFHILp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXFHILp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ChHWp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AFCRSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FCRSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXFCRSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ANTSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXNTSp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "OnlineStatTimeFrame4SpeedBet",
+                    "Value": "60"
+                },
+                {
+                    "Key": "HROSp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "FaceBKp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "Twitterp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "Emailp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "WeiBop",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FaceBKOption",
+                    "Value": "2"
+                },
+                {
+                    "Key": "RCyclep",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MaxTransferLimit",
+                    "Value": "0.000000000000000e+000"
+                },
+                {
+                    "Key": "TransferLowerRange",
+                    "Value": "3.000000000000000e+002"
+                },
+                {
+                    "Key": "TransferUpperRange",
+                    "Value": "5.000000000000000e+004"
+                },
+                {
+                    "Key": "IsEnablePPSG",
+                    "Value": "1"
+                },
+                {
+                    "Key": "IsEnableProcessMR",
+                    "Value": "1"
+                },
+                {
+                    "Key": "Charge",
+                    "Value": "1.000000000000000e+000"
+                },
+                {
+                    "Key": "PPSTimeout",
+                    "Value": "300"
+                },
+                {
+                    "Key": "MaxTransactionLimit",
+                    "Value": "0"
+                },
+                {
+                    "Key": "GlobalMaxTransferLimit",
+                    "Value": "0.000000000000000e+000"
+                },
+                {
+                    "Key": "PreKey",
+                    "Value": "0024021110269184"
+                },
+                {
+                    "Key": "PreKeyGenDate",
+                    "Value": "2011-12-04T02:00:00.967"
+                },
+                {
+                    "Key": "CurKey",
+                    "Value": "00250211102679527"
+                },
+                {
+                    "Key": "CurKeyGenDate",
+                    "Value": "2011-12-05T02:00:00.287"
+                },
+                {
+                    "Key": "InitPageSetting",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AnchorsDisplaying",
+                    "Value": "0"
+                },
+                {
+                    "Key": "BetSuggestor",
+                    "Value": "0"
+                },
+                {
+                    "Key": "DDATransferLowerRange",
+                    "Value": "300"
+                },
+                {
+                    "Key": "DDATransferUpperRange",
+                    "Value": "50000"
+                },
+                {
+                    "Key": "IsEnabledDDA",
+                    "Value": "0"
+                },
+                {
+                    "Key": "RaceSimulator",
+                    "Value": "0"
+                },
+                {
+                    "Key": "ACHLp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "AXCHLp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "CHLp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FBAccountRecordsSharing",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ELVA",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FBRaceSimulatorSharing",
+                    "Value": "1"
+                },
+                {
+                    "Key": "qttp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_qttp",
+                    "Value": "0"
+                },
+                {
+                    "Key": "FlexiBet_cwp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ELVAButtons",
+                    "Value": "1"
+                },
+                {
+                    "Key": "ELVAMessageID",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCMainEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCSpecificMatchEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "LSCEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "LSCMainEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "LSCSpecificMatchEnabled",
+                    "Value": "0"
+                },
+                {
+                    "Key": "MLCRequireLogin",
+                    "Value": "0"
+                },
+                {
+                    "Key": "MLCBeforeKickOff",
+                    "Value": "15"
+                },
+                {
+                    "Key": "MLCAfterMatchEnd",
+                    "Value": "30"
+                },
+                {
+                    "Key": "MLCSoundAlertEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCSoundAlertUiAvailable",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCKeepAwakeEnabled",
+                    "Value": "1"
+                },
+                {
+                    "Key": "MLCKeepAwakeUiAvailable",
+                    "Value": "1"
+                },
+                {
+                    "Key": "CHJCIntegration",
+                    "Value": "2"
+                },
+                {
+                    "Key": "CHJCLCIntegration",
+                    "Value": "2"
+                },
+                {
+                    "Key": "iwnp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FlexiBet_iwnp",
+                    "Value": "1"
+                },
+                {
+                    "Key": "Speedmap",
+                    "Value": "1"
+                },
+                {
+                    "Key": "mightpay",
+                    "Value": "0"
+                },
+                {
+                    "Key": "EnableBetResend",
+                    "Value": "1"
+                },
+                {
+                    "Key": "FPSReplyTimeout",
+                    "Value": "30"
+                },
+                {
+                    "Value": "1",
+                    "Key": "EnabledFPS"
+                },
+                {
+                    "Value": "1",
+                    "Key": "EnabledPresetDeposit"
+                },
+                {
+                    "Value": "500,1000,3000,10000",
+                    "Key": "MaxDepositAmounts"
+                }
+            ]
+        },
+        "OnlinePara": {
+            "Value": "0\\\\\\0\\5\\2014-10-30 07:50\\10",
+            "Add": [
+                {
+                    "Key": "OOS Msg ID",
+                    "Value": "0"
+                },
+                {
+                    "Key": "OOS English Content",
+                    "Value": "OOS English Content"
+                },
+                {
+                    "Key": "OOS Chinese Content",
+                    "Value": "OOS Chinese Content"
+                },
+                {
+                    "Key": "Bet Reply XSell Msg Option",
+                    "Value": "0"
+                },
+                {
+                    "Key": "Bet Reply XSell MsgTimeout",
+                    "Value": "5"
+                }
+            ]
+        },
+        "ChannelMsg": {
+            "Add": [
+                {
+                    "Key": "1004",
+                    "Value": "1",
+                    "Chi": "http://bet.iuww.com",
+                    "Eng": "http://bet.iuww.com/?lang=en&amp;banner=1&amp;template=3",
+                    "VersionString": "1.6.0"
+                },
+                {
+                    "Key": "1003",
+                    "Value": "0",
+                    "Chi": "http://android.hkjc.com/ch/index.asp",
+                    "Eng": "http://bet.iuww.com?lang=en",
+                    "VersionString": "1.5.0,1.5.1"
+                }
+            ]
+        },
+        "eWinService": {
+            "Enable": "1",
+            "LastUpdate": "10/8/2010 5:26:10 PM",
+            "appIDList": {
+                "appIDList": "https://devcapfidoas01:8443/default/IdentityXServices/rest/facets/QTAzaP_GPW7ERxAyeM6ByXbAiQ"
+            },
+            "FPSParams": {
+                "dailyWdrMaxAmt": "10000",
+                "dailyWdrMaxCnt": "10",
+                "monthlyDepMaxCntChargeAmt": "3",
+                "monthlyDepMaxCntNoCharge": "5",
+                "perDepChargeAmt": "1",
+                "perDepMaxAmt": "1000",
+                "perDepMinAmt": "10",
+                "perWdrChargeAmt": "1",
+                "perWdrMaxAmt": "1000",
+                "perWdrMinAmt": "10",
+                "updateTime": "2018-11-16 17:19:12.356"
+            },
+            "FPSBanks": {
+                "updateTime": "2018-11-16 17:19:12.860",
+                "banks": [
+                    {
+                        "code": "001",
+                        "eDDADepositEnable": "1",
+                        "name": "BOC",
+                        "nameTC": "BOC",
+                        "updateTime": "2018-11-16 17:20:10.020",
+                        "withdrawalEnable": "1"
+                    },
+                    {
+                        "code": "002",
+                        "eDDADepositEnable": "1",
+                        "name": "SCB",
+                        "nameTC": "SCB",
+                        "updateTime": "2018-11-16 17:20:10.020",
+                        "withdrawalEnable": "1"
+                    }
+                ]
+            },
+            "FPSRejectReasons": {
+                "updateTime": "2018-11-16 17:19:12.861",
+                "errors": [
+                    {
+                        "code": "001",
+                        "message": "Zero Error",
+                        "subcode": "001",
+                        "type": "1",
+                        "updateTime": "2018-11-16 17:20:09.997",
+                        "userMessage": "Zero Error",
+                        "userMessageTC": "Zero Error"
+                    },
+                    {
+                        "code": "001",
+                        "message": "Zero Error2",
+                        "subcode": "001",
+                        "type": "2",
+                        "updateTime": "2018-11-16 17:20:09.997",
+                        "userMessage": "Zero Error",
+                        "userMessageTC": "Zero Error"
+                    },
+                    {
+                        "code": "002",
+                        "message": "Zero Error3",
+                        "subcode": "001",
+                        "type": "1",
+                        "updateTime": "2018-11-16 17:20:09.997",
+                        "userMessage": "Zero Error",
+                        "userMessageTC": "Zero Error"
+                    }
+                ]
+            }
+        }
+    }
+}
