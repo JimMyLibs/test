@@ -82,9 +82,9 @@ export default class Http extends FetchBase {
         if (isEmpty(apiInfo)) {
             return fetchApiInfo().then(res => {
                 const { serverOrigin, serverPath } = res;
-                console.log('【fetchApiInfo】',serverPath)
+                // console.log('【fetchApiInfo】',serverPath)
                 reqUrl = this.getUrl(url, serverPath, apiType, fetchType)
-                console.log('【完整地址：reqUrl】',reqUrl)
+                // console.log('【完整地址：reqUrl】',reqUrl)
                 return this[method](reqUrl, { headers, body })
             })
         } else {// 特殊api特殊处理

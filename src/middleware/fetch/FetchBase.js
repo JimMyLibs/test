@@ -33,6 +33,7 @@ export default class Http {
     // 初始化
     constructor(options = {}) {
         this.conf = { ...options }
+        this.history = {};
     }
 
     /**
@@ -219,15 +220,40 @@ export default class Http {
         return reqConf
     }
 
+    // 拦截高频请求
+    toFetch(url, reqConf) {
+        const pureUrl = url.split('t=')[0];
+        let fetchId = JSON.stringify({pureUrl, reqConf});// 同一个请求：url及参数都一样，视为一个请求
+        console.log('请求',this.history[fetchId])
+        if(this.history[fetchId]){
+            this.history[fetchId]++;            
+            console.log('拒绝请求',this.history[fetchId])
+        }else{
+            this.history[fetchId] = 1;
+            console.log('允许请求',this.history[fetchId])
+            return new Promise((resolve,reject)=>{
+                this.effectiveFetch(url, reqConf).then(res=>{
+                    console.log('请求成功',this.history[fetchId])
+                    this.history[fetchId] = 0;
+                    resolve(res);
+                }).catch(err=>{
+                    this.history[fetchId] = 0;
+                    reject(err);
+                })
+            })
+        }       
+
+    }
+
     /**
-     * toFetch fetch请求统一入口
+     * effectiveFetch fetch请求统一入口
      * @param {string} url 请求地址
      * @param {undefined | object} reqConf fetch请求配置，如：
      * @example
      * {method: 'POST', body: 'key1=value1&key2=value2'}
      * reqConf可不传， 或为包含headers的对象，body数据格式会根据headers中'Content-type'来转换
      */
-    toFetch(url, reqConf) {
+    effectiveFetch(url, reqConf) {
         if (typeof url !== 'string' || url.trim() === '') {
             throw new Error('fetch url is required and must be a string')
         }
@@ -241,7 +267,7 @@ export default class Http {
         let { timeout = 60000 } = conf
         return Promise.race([
             fetch(url, reqConf).then(async data => {
-                ISDEBUG&&console.log('——————————【 fetch 】——————————',{url,...reqConf})
+                // ISDEBUG&&console.log('——————————【 fetch 】——————————',{url,...reqConf})
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
                 if (data.ok || data.status === 200) {
                     const result = await data.text()

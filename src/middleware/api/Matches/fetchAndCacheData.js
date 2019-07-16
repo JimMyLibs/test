@@ -9,7 +9,7 @@ export const fetchData = async (url) => {
         // return json_FB_GetInfo_chi;
 
         const LSdata = Cache.get(url);
-        if (LSdata && fetchCache) {
+        if (!LSdata && fetchCache) {
             return LSdata;// 100ms
         } else {
             const resData = await $get('',{

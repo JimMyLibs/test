@@ -24,7 +24,7 @@ export const getEnv = ()=>{
         if(window){
             isDev = process.env.NODE_ENV !== 'production';
         }else{
-            isDev = jsGlobal.__DEV__;
+            isDev = __DEV__;
         }
     } catch (error) {
         console.warn('环境获取失败');

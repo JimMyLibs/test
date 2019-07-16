@@ -44,7 +44,7 @@ export function fetchApiInfo() {
 const getDevApiOriginPath = () => {
     const serverOrigin = {};
     const serverPath = require('../xml/config/GetPara.json');
-    console.log('【dev-serverInfo】', { serverOrigin, serverPath })
+    // console.log('【dev-serverInfo】', { serverOrigin, serverPath })
     const mixInfo = { serverOrigin, serverPath: serverPath.TXN_XML };
     setApiInfo(apiInfoDevSessionId,mixInfo)
     return mixInfo;

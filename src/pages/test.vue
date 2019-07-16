@@ -1,6 +1,7 @@
 <template>
     <div class="pages_test">
         <div class="preCode flex" v-if='show.all || 1'>
+            <div class="toFetch" @click="toFetch">高频请求</div>
             <div class="preBox" v-if="show.listFilter">
                 <select class="changeMatche" @change="changeMatche" v-model="selected.pool">
                     <option v-for="(item,index) in poolList" :key="item" :value="index">{{index}}={{item}}</option>
@@ -103,9 +104,21 @@ export default {
     },
     mounted() {
         // this.init();
-        this.changeMatche();
+        // this.changeMatche();
+        api.Matches.datePools() 
     },
     methods: {
+        toFetch() {
+            api.Matches.datePools();
+            let count = 0;
+            const timer = setInterval(()=>{
+                count++;
+                api.Matches.datePools() 
+                if(count>5){
+                    clearInterval(timer);
+                }
+            },100)
+        },
         async changeMatche() {
             console.time('筛选changeMatche:');
             const filterResult = await api.Matches.filter(this.selected);
