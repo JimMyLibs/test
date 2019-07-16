@@ -2,7 +2,7 @@ import { getAppName, getEnv } from './env'
 
 export const projectName = 'szhkjc';
 
-export const fetchType = 'Info';// 决定请求地址类型分类
+export const fetchType = 'publicFetchType';// 决定请求地址类型分类
 
 export const fetchCache = 0;// 是否缓存请求
 

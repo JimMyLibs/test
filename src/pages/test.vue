@@ -102,7 +102,7 @@ export default {
         this.createTime = new Date();
     },
     mounted() {
-        this.init();
+        // this.init();
         this.changeMatche();
     },
     methods: {

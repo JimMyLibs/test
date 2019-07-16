@@ -39,7 +39,7 @@ export function fetchApiInfo() {
                 resolve(curInfo)
             } else {
                 const ApiOriginPath = await getApiOriginPath();
-                return ApiOriginPath;
+                resolve(ApiOriginPath);
             }
         }
     })
@@ -49,6 +49,7 @@ const getApiOriginPath = async () => {
     const serverPath = serverPathUrl && await http.toGet(serverPathUrl);
     console.log('server', { serverOrigin, serverPath })
     setApiInfo(serverOrigin.TXN_XML)
+    return serverOrigin.TXN_XML;
 }
 /**
  * [checkResponse fetch请求结果是否正确判断处理]

@@ -3,21 +3,22 @@
  */
 import FetchBase from './FetchBase'
 import apiUrls from '../config/apiUrls'
-import { ISDEV, mockUrl, fetchType } from '../config/project'
+import { ISDEV, mockUrl, fetchType as publicFetchType } from '../config/project'
 
 import { fetchApiInfo, getToken } from './commApi'
 import { deepAssign, isEmpty } from '../utils/utils'
 
 
 // 特殊接口参数
-const specialKeys = ['apiType', 'headers', 'body', 'apiInfo', 'method', 'timeout']
+const specialKeys = ['apiType', 'fetchType', 'headers', 'body', 'apiInfo', 'method', 'timeout']
 
 /**
  * [options 请求全局配置]: 主要用于upload请求
  * @example
  * {
- *  apiInfo: {},
- *  apiType: 'app',
+ *  apiInfo: { },
+ *  apiType: 'FB_ODDS_ALL',
+ *  fetchType: 'Info',
  *  body: {},
  *  headers: {}
  * }
@@ -69,7 +70,7 @@ export default class Http extends FetchBase {
      * @return {function}                    [请求promise]
      */
     $fetch(url, options, method, isMixHeaders = true) {
-        let { apiInfo, headers, body, apiType } = this.getFetchOptions(options, isMixHeaders)
+        let { apiInfo, headers, body = {}, apiType, fetchType } = this.getFetchOptions(options, isMixHeaders)
         let reqUrl = ''
         if (ISDEV) {
             if (body.mock) {
@@ -77,14 +78,15 @@ export default class Http extends FetchBase {
                 reqUrl = `${mockUrl}/${url}`
             } else { // not use mock
                 if (isEmpty(apiInfo)) {
-                    reqUrl = this.getUrl(url, apiUrls.dev, apiType)
+                    reqUrl = this.getUrl(url, apiUrls.dev, apiType, fetchType)
                 }
             }
             return this[method](reqUrl, { headers, body })
         } else {
             return fetchApiInfo().then(res => {
-                console.log('res',apiType,res)
-                reqUrl = this.getUrl(url, res, apiType)
+                console.log('【fetchApiInfo】',res)
+                reqUrl = this.getUrl(url, res, apiType, fetchType)
+                console.log('【完整地址：reqUrl】',reqUrl)
                 return this[method](reqUrl, { headers, body })
             })
         }
@@ -101,10 +103,11 @@ export default class Http extends FetchBase {
         let { curApiInfo = {}, ...currentOptions } = this.formatOptions(options)
         let mixApiInfo = deepAssign(publicApiInfo, curApiInfo)
         let mixOptions = deepAssign(publicOptions, currentOptions)
-        let { headers = {}, apiType, body } = mixOptions
+        let { headers = {}, body, apiType, fetchType } = mixOptions
 
         return {
             apiType,
+            fetchType,
             headers: isMixHeaders ? this.mixHeaders(headers) : headers,
             body,
             apiInfo: { ...mixApiInfo },
@@ -116,19 +119,21 @@ export default class Http extends FetchBase {
      * @param  {string} url       [接口地址]
      * @param  {string} mixApiInfo [混合后的接口信息]
      * @param  {string} apiType    [接口类型]
+     * @param  {string} fetchType  [请求类型]
      * @return {string}            [完整接口地址]
      */
-    getUrl(url, mixApiInfo, apiType) {
+    getUrl(url, mixApiInfo, apiType, fetchType = publicFetchType) {
         let { apiInfo } = this
         if (url.search(/^https?/) > -1) {
             return url
         }
-        // console.log('apiType',apiType,fetchType) 
+        // console.log('【apiType】',apiType,'【fetchType】',fetchType,'【publicFetchType】',publicFetchType) 
         url = url.replace(/^\/+/, '')
         mixApiInfo = mixApiInfo || apiInfo
         let typeUrl = mixApiInfo[fetchType]
         typeUrl = this.getJcUrl(apiType,typeUrl);
-        console.log('typeUrl',typeUrl) 
+        console.log('【当前apiType地址】',typeUrl) 
+        // console.log('【客户端请求地址】',url) 
         if (typeof typeUrl === 'undefined') {
             throw new Error('type is not in apiInfo')
         }
@@ -144,7 +149,7 @@ export default class Http extends FetchBase {
             typeUrl.Add.map(item=>{
                 urlObj[item.Key] = item;
             })
-            console.log('urlObj',urlObj) 
+            // console.log('【马会当前fetchType所有地址】',urlObj) 
             const result = urlObj[apiType][this.getLanguage()];
             return result;
         }
@@ -152,7 +157,7 @@ export default class Http extends FetchBase {
     // 获取语言
     getLanguage() {
         return 'Chi';
-        return 'Eng';
+        // return 'Eng';
     }
 
     // 格式化options
