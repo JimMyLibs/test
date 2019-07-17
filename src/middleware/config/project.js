@@ -12,7 +12,7 @@ export const ISAPP = getAppName() !== 'web';
 
 export const ISDEV = getEnv()&&1;// 决定请求地址环境分类
 
-export const ISDEBUG = 1;// 是否显示打印信息
+export const ISDEBUG = 0;// 是否显示打印信息
 
 // 生产环境apiUrl为空时调用apiUrls['pro']
 export const serverOriginUrl = ``;// 获取API地址前缀
@@ -24,4 +24,4 @@ export const mockUrl = 'http://mock.91525.net:35001/';
 
 
 
-ISDEBUG&&console.log('——————————【 projectInfo 】——————————',{projectName,fetchType,ISAPP,ISDEV})
+// ISDEBUG&&console.log('——————————【 projectInfo 】——————————',{projectName,fetchType,ISAPP,ISDEV})

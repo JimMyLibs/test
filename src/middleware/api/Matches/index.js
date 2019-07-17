@@ -15,7 +15,7 @@ class Matches {
     async datePools() {// 根据date{pool:[matches]}划分数据
         let FB_GetInfo_chi_data = await FB_GetInfo_chi();
         const { result: FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = FB_GetInfo_chi_data;
-        console.log('FB_GetInfo_chi_res',FB_GetInfo_chi_data)
+        // console.log('FB_GetInfo_chi_res',FB_GetInfo_chi_data)
         // 获取所有的date
         this.dateList = Array.from(new Set(FB_GetInfo_chi_res.data.map(item => item.date)));
         // 获取所有的league
@@ -135,7 +135,7 @@ class Matches {
                 return item;
             }
         })
-        console.log('过滤', {...params}, {...filterResult})
+        // console.log('过滤', {...params}, {...filterResult})
         return {
             ErrCode: 0,
             ErrMsg: '',

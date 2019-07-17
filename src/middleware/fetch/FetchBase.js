@@ -6,7 +6,6 @@ import { ISDEBUG } from '../config/project'
 import { jsonToParams } from '../utils/url'
 // XML转JSON
 import fxp from 'fast-xml-parser'
-import he from 'he'
 
 const fxpOpt = {
     attributeNamePrefix: '',// 将给定字符串添加到属性名称以进行标识

@@ -126,7 +126,6 @@ export default {
             this.leagueList = api.Matches.leagueList;
             this.dateList = api.Matches.dateList;
             console.timeEnd('筛选changeMatche:');
-            console.log('changeMatche',filterResult)
         },
         async init() {
             console.time('初始化FB_GetInfo_chi:');

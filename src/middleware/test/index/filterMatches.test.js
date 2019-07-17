@@ -1,3 +1,4 @@
+global.fetch = require('node-fetch');
 import api from '../../api'
 
 
@@ -12,7 +13,12 @@ import api from '../../api'
 // });
 
 test('the data is poolsList', async () => {
-    const data = await api.Matches.poolList;
-    console.log('poolsList________________',data)
-    expect(data).toBe('2')
+    await api.Matches.filter({
+        pool: 'HAD',
+        date: '',
+        league: '',
+    });
+    const data = api.Matches.poolList;
+    // console.log('poolsList________________',data)
+    expect(data['HAD']).toBe('Home/Away/Draw')
 });
