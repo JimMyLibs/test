@@ -52,7 +52,7 @@ const getDevApiOriginPath = () => {
 const getProApiOriginPath = async () => {
     const serverOrigin = serverOriginUrl && await http.toGet(serverOriginUrl) || {};
     const serverPath = await http.toGet(serverPathUrl);
-    console.log('【pro-serverInfo】', { serverOrigin, serverPath })
+    // console.log('【pro-serverInfo】', { serverOrigin, serverPath })
     const mixInfo = { serverOrigin, serverPath: serverPath.TXN_XML };
     setApiInfo(apiInfoProSessionId,mixInfo)
     return mixInfo;

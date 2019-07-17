@@ -3,12 +3,12 @@
  */
 import FetchBase from './FetchBase'
 import apiUrls from '../config/apiUrls'
-import { ISDEV, mockUrl, fetchType as publicFetchType } from '../config/project'
+import { ISDEV, mockUrl, language, fetchType as publicFetchType } from '../config/project'
 
 import { fetchApiInfo, getToken } from './commApi'
 import { deepAssign, isEmpty } from '../utils/utils'
 
-const EVN = ISDEV?'dev':'pro'
+const EVN = ISDEV ? 'dev' : 'pro'
 
 // 特殊接口参数
 const specialKeys = ['apiType', 'fetchType', 'headers', 'body', 'apiInfo', 'method', 'timeout']
@@ -130,7 +130,7 @@ export default class Http extends FetchBase {
             return url
         }
         // 处理普通手写路径请求
-        if(!apiType){
+        if (!apiType) {
             url = url.replace(/^\/+/, '');// 删除接口路径开头的‘/’
             url = apiUrls[EVN][fetchType] + url;
             return url;
@@ -138,7 +138,7 @@ export default class Http extends FetchBase {
         // 处理云端获取的路径请求
         mixApiInfo = mixApiInfo || apiInfo
         let typeUrl = mixApiInfo[fetchType]
-        typeUrl = this.getJcUrl(apiType,typeUrl,fetchType);
+        typeUrl = this.getJcUrl(apiType, typeUrl, fetchType);
         // console.log('【当前apiType地址】',typeUrl,'\n','【请求接口路径】',url) 
         if (typeof typeUrl === 'undefined') {
             throw new Error('type is not in apiInfo')
@@ -147,22 +147,17 @@ export default class Http extends FetchBase {
         return url ? `${typeUrl}/${url}` : typeUrl
     }
     // 转化为马会专用链接
-    getJcUrl(apiType,typeUrl,fetchType){
+    getJcUrl(apiType, typeUrl, fetchType) {
         const urlObj = {};
-        typeUrl.Add.map(item=>{
+        typeUrl.Add.map(item => {
             urlObj[item.Key] = item;
         })
         // console.log('【马会当前fetchType所有地址】',urlObj) 
         const apiOrigin = apiUrls[EVN][fetchType];
-        let apiPath = urlObj[apiType][this.getLanguage()]
+        let apiPath = urlObj[apiType][language]
         apiPath = apiPath.replace(/^\/+/, '');// 删除接口路径开头的‘/’
         const result = apiOrigin + apiPath;
         return result;
-    }
-    // 获取语言
-    getLanguage() {
-        return 'Chi';
-        // return 'Eng';
     }
 
     // 格式化options

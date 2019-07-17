@@ -116,7 +116,7 @@ class Matches {
                     })
                     return league ? item2.league == league : true;// league为空时取全部
                 })
-                console.log(pool, filterPoolData)
+                // console.log(pool, filterPoolData)
                 if (date) {
                     if (item.date == date) {
                         filterResult.push({
@@ -136,6 +136,8 @@ class Matches {
         })
         console.log('过滤', {...params}, {...filterResult})
         return {
+            ErrCode: 0,
+            ErrMsg: '',
             data: filterResult,
         };
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="pages_test">
         <div class="preCode flex" v-if='show.all || 1'>
-            <div class="toFetch" @click="toFetch">高频请求</div>
+            <div class="testFetch" @click="testFetch">高频请求</div>
             <div class="preBox" v-if="show.listFilter">
                 <select class="changeMatche" @change="changeMatche" v-model="selected.pool">
                     <option v-for="(item,index) in poolList" :key="item" :value="index">{{index}}={{item}}</option>
@@ -104,11 +104,10 @@ export default {
     },
     mounted() {
         // this.init();
-        // this.changeMatche();
-        api.Matches.datePools() 
+        this.changeMatche();
     },
     methods: {
-        toFetch() {
+        testFetch() {
             api.Matches.datePools();
             let count = 0;
             const timer = setInterval(()=>{
@@ -127,6 +126,7 @@ export default {
             this.leagueList = api.Matches.leagueList;
             this.dateList = api.Matches.dateList;
             console.timeEnd('筛选changeMatche:');
+            console.log('changeMatche',filterResult)
         },
         async init() {
             console.time('初始化FB_GetInfo_chi:');

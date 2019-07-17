@@ -1,12 +1,14 @@
-import { getAppName, getEnv } from './env'
+import { getAppName, getEnv, getLanguage } from './env'
 
 export const projectName = 'szhkjc';
 
-export const fetchType = 'publicFetchType';// 决定请求地址origin
+export const fetchType = '';// 决定请求地址origin,多种type在Http实例化时订制
+
+export const language = getLanguage();// 决定请求地址origin,多种type在Http实例化时订制
 
 export const fetchCache = 0;// 是否缓存请求
 
-export const ISAPP = fetchType !== 'web';
+export const ISAPP = getAppName() !== 'web';
 
 export const ISDEV = getEnv()&&1;// 决定请求地址环境分类
 

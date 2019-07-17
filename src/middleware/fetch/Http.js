@@ -10,7 +10,7 @@ const $fetch = (api, data = {}, method = 'post', options) => {
     return new Promise((resolve, reject) => {
         http[`$${method}`](api, data, options).then(res => {
             // 判断fetch结果是否正确
-            let { isCorrect } = checkResponse(res)
+            let { isCorrect, msg } = checkResponse(res)
             if (isCorrect) {
                 resolve(res)
             } else {

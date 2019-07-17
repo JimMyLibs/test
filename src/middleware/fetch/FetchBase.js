@@ -6,6 +6,7 @@ import { ISDEBUG } from '../config/project'
 import { jsonToParams } from '../utils/url'
 // XML转JSON
 import fxp from 'fast-xml-parser'
+import he from'he'
 
 const fxpOpt = {
     attributeNamePrefix: '',// 将给定字符串添加到属性名称以进行标识
@@ -13,15 +14,15 @@ const fxpOpt = {
     ignoreAttributes: false,// 忽略要解析的属性。
     // ignoreNameSpace: false,// 从标记和属性名称中删除命名空间字符串
     // allowBooleanAttributes: false,// 标记可以包含没有任何值的属性
-    // parseNodeValue: false,// 将文本节点的值解析为float，integer或boolean。
-    // parseAttributeValue: false,// 将属性的值解析为float，integer或boolean。
+    parseNodeValue: true,// 将文本节点的值解析为float，integer或boolean。
+    parseAttributeValue: true,// 将属性的值解析为float，integer或boolean。
     // trimValues: true,// 修剪属性或节点的字符串值
     // cdataTagName: false,// 如果指定，解析器将CDATA解析为嵌套标记，而不是将其值添加到父标记。
     // cdataPositionChar: '\\c',// 它有助于将JSON转换回XML而不会丢失CDATA位置。
     // localeRange: true,// Parser将接受标记或属性名称中的非英语字符。查看＃87了解更多详情。例如localeRange: "a-zA-Zа-яёА-ЯЁ"
-    // parseTrueNumberOnly: true,// 如果为true，则“+123”或“0123”之类的值将不会被解析为数字。
-    // tagValueProcessor: false,// 转换期间的过程标记值。像HTML解码，单词大写等。仅适用于字符串。
-    // attrValueProcessor: false,// 转换期间的流程属性值。像HTML解码，单词大写等。仅适用于字符串。
+    parseTrueNumberOnly: true,// 如果为true，则“+123”或“0123”之类的值将不会被解析为数字。
+    // tagValueProcessor: a => he.decode(a, {isAttributeValue: true}),// 转换期间的过程标记值。像HTML解码，单词大写等。仅适用于字符串。
+    // attrValueProcessor: a => he.decode(a),// 转换期间的流程属性值。像HTML解码，单词大写等。仅适用于字符串。
 }
 
 
@@ -223,25 +224,25 @@ export default class Http {
     // 拦截高频请求
     toFetch(url, reqConf) {
         const pureUrl = url.split('t=')[0];
-        let fetchId = JSON.stringify({pureUrl, reqConf});// 同一个请求：url及参数都一样，视为一个请求
-        console.log('请求',this.history[fetchId])
-        if(this.history[fetchId]){
-            this.history[fetchId]++;            
-            console.log('拒绝请求',this.history[fetchId])
-        }else{
+        let fetchId = JSON.stringify({ pureUrl, reqConf });// 同一个请求：url及参数都一样，视为一个请求
+        // console.log('请求',this.history[fetchId])
+        if (this.history[fetchId]) {
+            this.history[fetchId]++;
+            // console.log('拒绝请求',this.history[fetchId])
+        } else {
             this.history[fetchId] = 1;
-            console.log('允许请求',this.history[fetchId])
-            return new Promise((resolve,reject)=>{
-                this.effectiveFetch(url, reqConf).then(res=>{
-                    console.log('请求成功',this.history[fetchId])
+            // console.log('允许请求',this.history[fetchId])
+            return new Promise((resolve, reject) => {
+                this.effectiveFetch(url, reqConf).then(res => {
+                    // console.log('请求成功',this.history[fetchId])
                     this.history[fetchId] = 0;
                     resolve(res);
-                }).catch(err=>{
+                }).catch(err => {
                     this.history[fetchId] = 0;
                     reject(err);
                 })
             })
-        }       
+        }
 
     }
 
@@ -282,8 +283,12 @@ export default class Http {
                 }
             }).then(data => {
                 return data
-            }).catch(err=>{
-                return err;
+            }).catch(err => {
+                return {
+                    ErrCode: 10001,
+                    ErrMsg: err.message,
+                    data: err,
+                };
             }),
             new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -291,9 +296,10 @@ export default class Http {
                     if (controller) {
                         controller.abort()
                     }
-                    reject({
-                        errCode: 10086,
-                        errMsg: '请求超时'
+                    resolve({
+                        ErrCode: 10086,
+                        ErrMsg: '请求超时',
+                        data: {},
                     })
                 }, timeout)
             })

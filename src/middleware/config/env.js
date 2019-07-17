@@ -24,10 +24,16 @@ export const getEnv = ()=>{
         if(window){
             isDev = process.env.NODE_ENV !== 'production';
         }else{
-            isDev = __DEV__;
+            isDev = jsGlobal.__DEV__;
         }
     } catch (error) {
         console.warn('环境获取失败');
     }
     return isDev;
+}
+
+// 获取语言
+export const getLanguage = ()=> {
+    return 'Chi';
+    // return 'Eng';
 }
