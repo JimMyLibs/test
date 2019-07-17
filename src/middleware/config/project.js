@@ -6,7 +6,7 @@ export const fetchType = '';// 决定请求地址origin,多种type在Http实例�
 
 export const language = getLanguage();// 决定请求地址origin,多种type在Http实例化时订制
 
-export const fetchCache = 0;// 是否缓存请求
+export const useFetfchCache = 0;// 是否缓存请求
 
 export const ISAPP = getAppName() !== 'web';
 

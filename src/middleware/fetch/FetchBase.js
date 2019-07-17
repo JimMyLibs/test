@@ -6,7 +6,7 @@ import { ISDEBUG } from '../config/project'
 import { jsonToParams } from '../utils/url'
 // XML转JSON
 import fxp from 'fast-xml-parser'
-import he from'he'
+import he from 'he'
 
 const fxpOpt = {
     attributeNamePrefix: '',// 将给定字符串添加到属性名称以进行标识
@@ -221,13 +221,33 @@ export default class Http {
         return reqConf
     }
 
-    // 拦截高频请求
     toFetch(url, reqConf) {
+        return this.waitFetch(url, reqConf);
+    }
+    /**
+     * @title 拦截高频请求：截前取后
+     * @des 每个一模一样的新请求都覆盖之前的旧请求
+     * @defect waste last fetch time
+     */
+    coverFetch(url, reqConf) {
+        
+    }
+    /**
+     * @title 拦截高频请求：截后等前
+     * @des 等第一个请求响应后，才允许发出第二个请求
+     * @defect 如果响应过慢，得到的可能是老数据
+     */
+    waitFetch(url, reqConf) {
         const pureUrl = url.split('t=')[0];
         let fetchId = JSON.stringify({ pureUrl, reqConf });// 同一个请求：url及参数都一样，视为一个请求
         // console.log('请求',this.history[fetchId])
         if (this.history[fetchId]) {
             this.history[fetchId]++;
+            return {
+                ErrCode: 10701,
+                ErrMsg: '请求过于频繁，请稍后再试',
+                data: {},
+            }
             // console.log('拒绝请求',this.history[fetchId])
         } else {
             this.history[fetchId] = 1;
@@ -243,7 +263,6 @@ export default class Http {
                 })
             })
         }
-
     }
 
     /**
@@ -268,7 +287,7 @@ export default class Http {
         let { timeout = 60000 } = conf
         return Promise.race([
             fetch(url, reqConf).then(async data => {
-                // ISDEBUG&&console.log('——————————【 fetch 】——————————',{url,...reqConf})
+                ISDEBUG && console.log('——————————【 fetch 】——————————', { url, ...reqConf })
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
                 if (data.ok || data.status === 200) {
                     const result = await data.text()
@@ -282,13 +301,21 @@ export default class Http {
                     throw new Error(`响应数据异常，错误码：${data.status}`)
                 }
             }).then(data => {
-                return data
+                let result = {
+                    ErrCode: 0,
+                    ErrMsg: '',
+                    data,
+                }
+                ISDEBUG && console.log('——————————【 fetch: success 】——————————', { ...result })
+                return result;
             }).catch(err => {
-                return {
+                let result = {
                     ErrCode: 10001,
                     ErrMsg: err.message,
                     data: err,
-                };
+                }
+                ISDEBUG && console.log('——————————【 fetch: fail 】——————————', { ...result })
+                return result;
             }),
             new Promise((resolve, reject) => {
                 setTimeout(() => {

@@ -7,7 +7,6 @@ class Matches {
     constructor() {
         this.cache = {
             datePools: '',// datePools数据
-            FB_GetInfo_chi: '',
         }
         this.poolList = {};
         this.dateList = [];
@@ -63,12 +62,14 @@ class Matches {
             return item1;
         })
 
-        return {
+        const result = {
             data: datePools_result,
             FB_GetInfo_chi_old: FB_GetInfo_chi_data,
             CouponInfo,
             TournamentPoolInfo,
-        };
+        }
+
+        return result;
     }
     async poolsDate() {// 根据pool{date:[matches]}划分数据: 未使用，待优化
         const { result: FB_GetInfo_chi_res } = await FB_GetInfo_chi();

@@ -1,26 +1,28 @@
 import { $post, $get } from '../../fetch/Http'
 import Cache from '../../utils/cache'
-import { fetchCache } from '../../config/project'
+import { useFetfchCache } from '../../config/project'
 // 本地调试，临时导入json
 import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
+const localResult = {
+    ErrCode: 0,
+    ErrMsg: '',
+    data: json_FB_GetInfo_chi,
+}
 
 export const fetchData = async (url) => {
-    try {
-        // return json_FB_GetInfo_chi;
 
-        const LSdata = Cache.get(url);
-        if (!LSdata && fetchCache) {
-            return LSdata;// 100ms
-        } else {
-            const resData = await $get('',{
-                apiType: 'FB_ODDS_ALL'
-            });// 300ms
-            if (JSON.stringify(resData) !== '{}') {
-                Cache.set(url, resData);
-            }
-            return resData;
+    // return localResult;// 临时调试，本地数据
+
+    const LSdata = Cache.get(url);
+    if (!LSdata && useFetfchCache) {
+        return LSdata;// 100ms
+    } else {
+        const resData = await $get('',{
+            apiType: 'FB_ODDS_ALL'
+        });// 300ms
+        if (JSON.stringify(resData) !== '{}') {
+            Cache.set(url, resData);
         }
-    } catch (err) {
-        throw err;
+        return resData;
     }
 }

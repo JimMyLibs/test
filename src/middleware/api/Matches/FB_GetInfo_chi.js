@@ -102,7 +102,7 @@ const particularAddLine = (pool,item4)=>{// 个别玩法添加均线
 }
 export const FB_GetInfo_chi = async ()=> {// 2.2.4.7  // 获取并编排所有数据
     const resData = await fetchData('FB_GetInfo_chi');
-    const { Coupons: { CouponInfo }, TournamentPools: { TournamentPoolInfo } } = resData.AOSBS_XML;
+    const { Coupons: { CouponInfo }, TournamentPools: { TournamentPoolInfo } } = resData.data.AOSBS_XML;
     let result = { data: [] };
     try {
         CouponInfo.map((item1, index1) => {
