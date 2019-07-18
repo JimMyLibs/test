@@ -1,9 +1,9 @@
 
 /**
- * @api {get} index/FB_GetInfo_chi.json 比赛列表
+ * @api {get} index/FB_GetInfo.json 获取比赛列表
  * @apiGroup Home
  * @apiVersion 0.0.1
- * @apiDescription 首页列表
+ * @apiDescription 获取比赛列表
  * 
  * @apiParam {String} type='HAD' 投注类型
  * @apiParam {String} date='' 日期
@@ -18,6 +18,7 @@
  *          date: '',
  *          league: '',
  *      });
+ *      const { matchList } = result.data;
  *      // 玩法列表
  *      const poolList = api.Matches.poolList;
  *      // 日期列表
@@ -55,6 +56,8 @@
  * @apiSuccessExample {json} Success-Response: 
  * HTTP/1.1 200 OK
  * {
+ *     ErrCode: 0,
+ *     ErrMsg: "",
  *     data: [
  *          {
  *              date: '08/10 (THU)',    // 赛事日期 (title)

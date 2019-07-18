@@ -1,9 +1,9 @@
 
 /**
- * @api {get} index/poolsList.json 玩法表格
+ * @api {get} index/poolsList.json 所有玩法
  * @apiGroup Home
  * @apiVersion 0.0.1
- * @apiDescription 玩法表格
+ * @apiDescription 所有玩法
  * 
  * @apiParamExample {json} 使用方法:
  * {

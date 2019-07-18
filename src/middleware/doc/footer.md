@@ -52,9 +52,9 @@ middleware/					// 中间件 | Middleware
 │   └── utils.js
 └── xml/						// 临时数据 | Temporary data
     └── index/
-        ├── FB_GetInfo_chi.json
-        ├── FB_GetInfo_chi.min.xml
-        ├── FB_GetInfo_chi.xml
+        ├── FB_GetInfo.json
+        ├── FB_GetInfo.min.xml
+        ├── FB_GetInfo.xml
         ├── FB_GetInfo_eng.min.xml
         ├── FB_GetInfo_eng.xml
         └── poolsList.json

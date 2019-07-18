@@ -1,35 +1,69 @@
 
 import Pools from '../pools'
-import { FB_GetInfo_chi } from './FB_GetInfo_chi'
+import { FB_GetInfo } from './FB_GetInfo'
 
 
 class Matches {
     constructor() {
         this.cache = {
-            datePools: '',// datePools数据
+            datePools: 0,// datePools数据
+            FB_GetInfo: 0,
         }
-        this.poolList = {};
-        this.dateList = [];
-        this.leagueList = [];
     }
-    async datePools() {// 根据date{pool:[matches]}划分数据
-        let FB_GetInfo_chi_data = await FB_GetInfo_chi();
-        const { result: FB_GetInfo_chi_res, CouponInfo, TournamentPoolInfo } = FB_GetInfo_chi_data;
-        // console.log('FB_GetInfo_chi_res',FB_GetInfo_chi_data)
+    async initFB_GetInfo() {
+        if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
+            this.cache.FB_GetInfo = await FB_GetInfo();
+        }
+        return this.cache.FB_GetInfo;
+    }
+    async getFilterList() {
+        let FB_GetInfo_data = await this.initFB_GetInfo();
+        const { result: FB_GetInfo_res } = FB_GetInfo_data;
         // 获取所有的date
-        this.dateList = Array.from(new Set(FB_GetInfo_chi_res.data.map(item => item.date)));
+        const dateList = Array.from(new Set(FB_GetInfo_res.data.map(item => item.date)));
         // 获取所有的league
-        this.leagueList = Array.from(new Set(FB_GetInfo_chi_res.data.reduce((a, b) => a.concat(b.coupons.map(item => item.league)), [])));
+        const leagueList = Array.from(new Set(FB_GetInfo_res.data.reduce((a, b) => {
+            return a.concat(b.coupons.map(item => item.league))
+        }, [])));
         // 获取所有的pool
-        let poolOfData = Array.from(new Set(FB_GetInfo_chi_res.data.reduce((a, b) => a.concat(b.coupons.map(item => item.pool)), [])));
-        poolOfData.map(item=>{
-            if(Pools.list[item]){
-                this.poolList[item] = Pools.list[item];
+        let poolList = {};
+        let poolOfData = Array.from(new Set(FB_GetInfo_res.data.reduce((a, b) => a.concat(b.coupons.map(item => item.pool)), [])));
+        poolOfData.map(item => {
+            if (Pools.list[item]) {
+                poolList[item] = Pools.list[item];
             }
         })
+        return {
+            ErrCode: 0,
+            ErrMsg: '',
+            data:{
+                poolList,
+                dateList,
+                leagueList,
+            }
+        }
+    }
+    async getOriginalData() {
+        let FB_GetInfo_data = await this.initFB_GetInfo();
+        const { result: FB_GetInfo_res, CouponInfo, TournamentPoolInfo } = FB_GetInfo_data;
+        return {
+            ErrCode: 0,
+            ErrMsg: '',
+            data:{
+                FB_GetInfo_res,
+                CouponInfo,
+                TournamentPoolInfo,
+            }
+        };
+    }
+    async datePools() {// 根据date{pool:[matches]}划分数据
+        let FB_GetInfo_data = await this.initFB_GetInfo();
+        const { result: FB_GetInfo_res, CouponInfo, TournamentPoolInfo } = FB_GetInfo_data;
+        const FB_GetInfo_replacement = JSON.parse(JSON.stringify(FB_GetInfo_res))
         // console.log('poolOfData',poolOfData)
         // 一级分组：时间，二级分组：pool
-        let datePools_result = FB_GetInfo_chi_res.data.map(item1 => {
+        let poolOfData = Array.from(new Set(FB_GetInfo_replacement.data.reduce((a, b) => a.concat(b.coupons.map(item => item.pool)), [])));
+        let datePools_res = FB_GetInfo_replacement.data.map(item1 => {
             poolOfData.map(item2 => {
                 let curPoolData = item1.coupons.filter(item3 => item2 == item3.pool);
                 let tmp = {};
@@ -61,26 +95,22 @@ class Matches {
             delete item1.coupons;
             return item1;
         })
-
-        const result = {
-            data: datePools_result,
-            FB_GetInfo_chi_old: FB_GetInfo_chi_data,
-            CouponInfo,
-            TournamentPoolInfo,
-        }
-
-        return result;
+        return {
+            ErrCode: 0,
+            ErrMsg: '',
+            data: datePools_res,
+        };
     }
     async poolsDate() {// 根据pool{date:[matches]}划分数据: 未使用，待优化
-        const { result: FB_GetInfo_chi_res } = await FB_GetInfo_chi();
+        const { result: FB_GetInfo_res } = await FB_GetInfo();
         // 获取所有的pool
-        let poolOfData = Array.from(new Set(FB_GetInfo_chi_res.data.reduce((sum, item) => sum.concat(item.coupons.map(item2 => item2.pool)), [])));
+        let poolOfData = Array.from(new Set(FB_GetInfo_res.data.reduce((sum, item) => sum.concat(item.coupons.map(item2 => item2.pool)), [])));
         let poolData = {};
         // 一级分组：时间，二级分组：pool
-        FB_GetInfo_chi_res.data.map(item1 => {
+        FB_GetInfo_res.data.map(item1 => {
             poolOfData.map(item2 => {
                 // 获取所有当前pool类型的Coupons
-                let curPoolCoupons = FB_GetInfo_chi_res.data.map(item3 => {
+                let curPoolCoupons = FB_GetInfo_res.data.map(item3 => {
                     return item3.coupons.filter(item4 => item2 == item4.pool);
                 })
                 // 二维数组转一维数组
@@ -99,19 +129,16 @@ class Matches {
     }
     async filter(params) {// 筛选数据
         const { pool, date, league } = params;
-        let datePools = {};
-        if (this.cache.datePools) {// 读取变量缓存数据
-            datePools = this.cache.datePools;
-        } else {// 首次获取数据
-            datePools = await this.datePools();
-            this.cache.datePools = datePools;
+        if (!this.cache.datePools) {// 读取变量缓存数据
+            this.cache.datePools = await this.datePools();
         }
+        const datePools = JSON.parse(JSON.stringify(this.cache.datePools))
         const filterResult = [];
         datePools.data.map(item => {
             if (pool) {
-                const filterPoolData = item[pool].filter((item2,index2) => {
-                    item2.matches.map((item3,index3)=>{
-                        if((index2+index3)<3){
+                const filterPoolData = item[pool].filter((item2, index2) => {
+                    item2.matches.map((item3, index3) => {
+                        if ((index2 + index3) < 3) {
                             item3.webUrl = 'https://wwww.baidu.com/'
                         }
                     })
@@ -139,7 +166,9 @@ class Matches {
         return {
             ErrCode: 0,
             ErrMsg: '',
-            data: filterResult,
+            data: {
+                matchList: filterResult
+            },
         };
     }
 

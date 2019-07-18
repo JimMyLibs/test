@@ -2,11 +2,11 @@ import { $post, $get } from '../../fetch/Http'
 import Cache from '../../utils/cache'
 import { useFetfchCache } from '../../config/project'
 // 本地调试，临时导入json
-import json_FB_GetInfo_chi from '../../xml/index/FB_GetInfo_chi.json'
+import json_FB_GetInfo from '../../xml/index/FB_GetInfo_chi.json'
 const localResult = {
     ErrCode: 0,
     ErrMsg: '',
-    data: json_FB_GetInfo_chi,
+    data: json_FB_GetInfo,
 }
 
 export const fetchData = async (url) => {

@@ -1,9 +1,9 @@
 
 /**
- * @api {get} index/poolsList.json pool table
+ * @api {get} index/poolsList.json all pools
  * @apiGroup Home
  * @apiVersion 0.0.2
- * @apiDescription pool table
+ * @apiDescription all pools
  * 
  * @apiParamExample {json} Instructions:
  * {

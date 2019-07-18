@@ -100,8 +100,8 @@ const particularAddLine = (pool,item4)=>{// 个别玩法添加均线
         item4.OddsInfo[2] = lineObj;
     }
 }
-export const FB_GetInfo_chi = async ()=> {// 2.2.4.7  // 获取并编排所有数据
-    const resData = await fetchData('FB_GetInfo_chi');
+export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
+    const resData = await fetchData('FB_GetInfo');
     const { Coupons: { CouponInfo }, TournamentPools: { TournamentPoolInfo } } = resData.data.AOSBS_XML;
     let result = { data: [] };
     try {
@@ -173,8 +173,8 @@ export const FB_GetInfo_chi = async ()=> {// 2.2.4.7  // 获取并编排所有�
             result,
             CouponInfo,
             TournamentPoolInfo
-            // result：初始化FB_GetInfo_chi:: 89ms && 处理数据datePools:: 90ms
-            // result&&CouponInfo&&TournamentPoolInfo: 初始化FB_GetInfo_chi:: 169ms && 处理数据datePools:: 580ms
+            // result：初始化FB_GetInfo:: 89ms && 处理数据datePools:: 90ms
+            // result&&CouponInfo&&TournamentPoolInfo: 初始化FB_GetInfo:: 169ms && 处理数据datePools:: 580ms
         };
     } catch (err) {
         console.error(err);

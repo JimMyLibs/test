@@ -1,9 +1,9 @@
 
 /**
- * @api {get} index/FB_GetInfo_chi.json Match list
+ * @api {get} index/FB_GetInfo.json getMatchlist
  * @apiGroup Home
  * @apiVersion 0.0.2
- * @apiDescription Home list
+ * @apiDescription getMatchlist
  * 
  * @apiParam {String} type='HAD' Bet type
  * @apiParam {String} date='' date
@@ -18,6 +18,7 @@
  *          date: '',
  *          league: '',
  *      });
+ *      const { matchList } = result.data;
  *      // pool list
  *      const poolList = api.Matches.poolList;
  *      // Date list
@@ -55,6 +56,8 @@
  * @apiSuccessExample {json} Success-Response: 
  * HTTP/1.1 200 OK
  * {
+ *     ErrCode: 0,
+ *     ErrMsg: "",
  *     data: [
  *          {
  *              date: '08/10 (THU)',    // Event date (title)

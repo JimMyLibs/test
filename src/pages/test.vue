@@ -23,8 +23,8 @@
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div class="preTitle" @click="show.FB_GetInfo_chi=!show.FB_GetInfo_chi">过滤字段:{{show.FB_GetInfo_chi?'开':'关'}}</div>
-                <pre contenteditable="true" v-if="show.FB_GetInfo_chi" v-html="FB_GetInfo_chi"></pre>
+                <div class="preTitle" @click="show.FB_GetInfo=!show.FB_GetInfo">过滤字段:{{show.FB_GetInfo?'开':'关'}}</div>
+                <pre contenteditable="true" v-if="show.FB_GetInfo" v-html="FB_GetInfo"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
@@ -44,7 +44,7 @@
 <script>
 import loading from './loading'
 import api from "../middleware/api";
-import { FB_GetInfo_chi } from '../middleware/api/Matches/FB_GetInfo_chi'
+import { FB_GetInfo } from '../middleware/api/Matches/FB_GetInfo'
 export default {
     name: "pages_test",
     data() {
@@ -53,7 +53,7 @@ export default {
             FB_GetInfo_data: {
                 CouponInfo:{},
                 TournamentPoolInfo:{},
-                FB_GetInfo_chi:{},
+                FB_GetInfo:{},
                 datePools:{},
                 listFilter:{},
             },
@@ -66,7 +66,7 @@ export default {
                 all: location.hostname === '169.254.222.170',
                 listFilter: 1,
                 datePools: 1,
-                FB_GetInfo_chi: 0,
+                FB_GetInfo: 0,
                 CouponInfo: 0,
                 TournamentPoolInfo: 0,
             },
@@ -83,8 +83,8 @@ export default {
         TournamentPoolInfo() {
             return this.syntaxHighlight(this.FB_GetInfo_data.TournamentPoolInfo)
         },
-        FB_GetInfo_chi() {
-            return this.syntaxHighlight(this.FB_GetInfo_data.FB_GetInfo_chi)
+        FB_GetInfo() {
+            return this.syntaxHighlight(this.FB_GetInfo_data.FB_GetInfo)
         },
         datePools() {
             return this.syntaxHighlight(this.FB_GetInfo_data.datePools)
@@ -103,8 +103,12 @@ export default {
         this.createTime = new Date();
     },
     mounted() {
-        // this.init();
-        this.changeMatche();
+        this.$nextTick(async ()=>{
+            await this.getOriginalData();
+            await this.getDatePools();
+            await this.getFilterList();
+            await this.changeMatche();
+        })
     },
     methods: {
         testFetch() {
@@ -118,24 +122,34 @@ export default {
                 }
             },100)
         },
+        async getFilterList() {
+            const { data: filterList } = await api.Matches.getFilterList();
+            console.log(filterList)
+            const { poolList, leagueList, dateList } = filterList;
+            this.poolList = poolList;
+            this.leagueList = leagueList;
+            this.dateList = dateList;
+        },
         async changeMatche() {
             console.time('筛选changeMatche:');
             const filterResult = await api.Matches.filter(this.selected);
             this.FB_GetInfo_data.listFilter = filterResult;
-            this.poolList = api.Matches.poolList;
-            this.leagueList = api.Matches.leagueList;
-            this.dateList = api.Matches.dateList;
             console.timeEnd('筛选changeMatche:');
         },
-        async init() {
-            console.time('初始化FB_GetInfo_chi:');
-            const { data, FB_GetInfo_chi_old, CouponInfo, TournamentPoolInfo } = await api.Matches.datePools();
-            this.FB_GetInfo_data.datePools = data;
-            this.FB_GetInfo_data.FB_GetInfo_chi = FB_GetInfo_chi_old;
+        async getOriginalData() {
+            console.time('原始数据getOriginalData:');
+            const { data: { FB_GetInfo_res, CouponInfo, TournamentPoolInfo} } = await api.Matches.getOriginalData();
+            this.FB_GetInfo_data.FB_GetInfo = FB_GetInfo_res;
             this.FB_GetInfo_data.CouponInfo = CouponInfo;
             this.FB_GetInfo_data.TournamentPoolInfo = TournamentPoolInfo;
-            console.timeEnd('初始化FB_GetInfo_chi:');
-            console.log('FB_GetInfo_chi',this.FB_GetInfo_data)
+            console.timeEnd('原始数据getOriginalData:');
+
+        },
+        async getDatePools() {
+            console.time('处理getDatePools:');
+            const { data } = await api.Matches.datePools();
+            this.FB_GetInfo_data.datePools = data;
+            console.timeEnd('处理getDatePools:');
 
             const renderTime = new Date((new Date() - this.createTime)).getMilliseconds();
             console.log('渲染时间',renderTime,'ms')
