@@ -104,8 +104,8 @@ export default {
     },
     mounted() {
         this.$nextTick(async ()=>{
-            await this.getOriginalData();
-            await this.getDatePools();
+            // await this.getOriginalData();
+            // await this.getDatePools();
             await this.getFilterList();
             await this.changeMatche();
         })

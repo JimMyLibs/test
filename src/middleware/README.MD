@@ -12,9 +12,9 @@
 ```
 
 ### 待办
-1. - [x] - 接口文档双语
+1. - [x] - rewrite the interface document to English-Chinese bilingual
 
-2. - [x] - HAD HIL 排序
+2. - [x] - sort out the oddsNames of each item of the matchList
 
 3. - [x] - 字段类型严格化，以便面向前后双端
 	1. 服务端因上游数据字段的不确定性和安全性，建议都用字符串类型，并且XML只支持字符串
@@ -42,4 +42,11 @@
 6. - [ ] - 多级多段缓存机制
 	1. fetch层缓存+业务端缓存
 
-7. - [ ] - 测试用例
+7. - [ ] - test case
+
+
+
+---
+
+### unfinished function
+fetch abort:  fetch/FetchBase.js > coverFetch()
