@@ -7,15 +7,17 @@ class ModelMenu extends Component {
     };
 
     setModalVisible(visible) {
-        console.warn('setModalVisible', visible)
+        // console.warn('setModalVisible', visible)
         this.setState({ modalVisible: visible });
     }
     selectMenu(item) {
-        console.warn('selectMenu', item)
+        // console.warn('selectMenu', item)
+        this.props.setPool(item)
+        this.setState({ modalVisible: false });
     }
 
     render() {
-        const page_menu = ['菜单一', '菜单二', '菜单三', '菜单四']
+        const page_menu = ['HAD', 'TQL', 'FHA', 'HHA']
         return (
             <View style={styles.ModelMenu}>
                 {/* 右上角菜单按钮 */}
@@ -56,8 +58,14 @@ const styles = StyleSheet.create({
     },
     mm_btnbox: {// 右上角菜单按钮
         width: 50,
-        height: '100%',
-        justifyContent: 'center',
+        // height: '100%',
+        // justifyContent: 'center',
+        position: 'absolute',
+        height: 20,
+        backgroundColor: '#D6F7E7',
+        borderColor: '#aaa',
+        borderWidth: 1,
+        zIndex: 9,
     },
     mm_btn: {// 右上角菜单按钮
         fontWeight: 'bold',
