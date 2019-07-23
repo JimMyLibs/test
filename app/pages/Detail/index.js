@@ -1,14 +1,28 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 
-class DetailsScreen extends React.Component {
+
+class MatchDetail extends React.Component {
+
     render() {
+        const matchItem = this.props.navigation.getParam('matchItem',{});
+
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Details Screen</Text>
+            <View style={styles.page}>
+                <Text>{JSON.stringify(matchItem)}</Text>
+                <Button title="MatchDetail" />
             </View>
         );
     }
 }
-export default DetailsScreen
+
+const styles = StyleSheet.create({
+    page: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+});
+
+export default MatchDetail

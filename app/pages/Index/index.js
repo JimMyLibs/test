@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 
 import MatchList from '../../components/MatchList'
+// import MatchList from '../../components/MatchListFlat'
 import ModelMenu from '../../components/ModelMenu'
 
 import api from '../../middleware/api'
@@ -12,6 +13,7 @@ class HomeScreen extends React.Component {
     static navigationOptions = {
         title: 'Home',
         // headerRight: (<ModelMenu/>),
+        header:null,
     };
     state = {
         matchList: []
@@ -42,9 +44,9 @@ class HomeScreen extends React.Component {
             <View style={styles.page_home}>     
                 <ModelMenu setPool={this.matchFilter}/>
 
-                <MatchList data={this.state.matchList}/>
-                {/* <Text>Home Screen</Text>
-                <Button title="Details" onPress={ this.goToPage('Details') } /> */}
+                <MatchList navigation={this.props.navigation} data={this.state.matchList}/>
+                <Text>Home Screen</Text>
+                <Button title="Details" onPress={ this.goToPage('Details') } />
             </View>
         );
     }

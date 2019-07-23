@@ -4,7 +4,7 @@ import { StyleSheet, Modal, Text, TouchableOpacity, View } from "react-native";
 class ModelMenu extends Component {
     state = {
         modalVisible: false
-    };
+    }
 
     setModalVisible(visible) {
         // console.warn('setModalVisible', visible)
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
         // height: '100%',
         // justifyContent: 'center',
         position: 'absolute',
+        right: 0,
         height: 20,
         backgroundColor: '#D6F7E7',
         borderColor: '#aaa',

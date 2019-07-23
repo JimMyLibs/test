@@ -1,41 +1,41 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
+import { StyleSheet, View, Text, Button, SectionList } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 
-import MatchItem from '../../components/MatchItem'
+import MatchItem from '../MatchItem'
 
 class MatchList extends React.PureComponent {
 
-    state = { selected: (new Map()) };
-
-    _keyExtractor = (item, index) => index;
-
-    _onPressItem = (id) => {
-        // updater functions are preferred for transactional updates
-        this.setState((state) => {
-            // copy the map rather than modifying state.
-            const selected = new Map(state.selected);
-            selected.set(id, !selected.get(id)); // toggle
-            return { selected };
-        });
+    state = {
+        selected: (new Map())
     };
 
-    _renderItem = ({ item, index }) => (
-        <MatchItem
-            id={item.id}
-            onPressItem={this._onPressItem}
-            selected={!!this.state.selected.get(item.id)}
-            data={item}
-        />
-    );
+    _keyExtractor = (item, index) => index.toString();
+
+    _renderItem = ({ item, index }) => {
+        return (
+            <MatchItem id={index} data={item} navigation={this.props.navigation} />
+        )
+    }
+    _renderSectionHeader = ({ section: { date } }) => (
+        <Text style={styles.page_date}>{date}</Text>
+    )
 
     render() {
+        const data = this.props.data.map((item, index) => {
+            return {
+                date: item.date,
+                data: item.coupons,
+            }
+        })
         return (
-            <FlatList
-                data={this.props.data}
-                extraData={this.state}
-                keyExtractor={this._keyExtractor}
+            <SectionList
+                style={styles.page}
+                stickySectionHeadersEnabled
                 renderItem={this._renderItem}
+                renderSectionHeader={this._renderSectionHeader}
+                sections={data}
+                keyExtractor={this._keyExtractor}
             />
         );
     }
@@ -44,6 +44,15 @@ class MatchList extends React.PureComponent {
 const styles = StyleSheet.create({
     page: {
         flex: 1,
+        width: '100%',
+    },
+    page_date: {
+        fontWeight: "bold",
+        fontSize: 16,
+        padding: 5,
+        backgroundColor: '#fff',
+        borderBottomColor: '#888',
+        borderBottomWidth: 1,
     }
 });
 
