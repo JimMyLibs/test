@@ -264,6 +264,12 @@ export default class Http {
         }
     }
 
+    repairXml(xml) {
+        // delete extra blank space
+        xml = xml.replace(/Key =/g,'Key=')
+        return xml;
+    }
+
     /**
      * effectiveFetch fetch请求统一入口
      * @param {string} url 请求地址
@@ -284,12 +290,13 @@ export default class Http {
         }
         let { conf } = this
         let { timeout = 60000 } = conf
+        ISDEBUG && console.warn('——————————【 fetch 】——————————', { url, ...reqConf })
         return Promise.race([
             fetch(url, reqConf).then(async data => {
-                ISDEBUG && console.warn('——————————【 fetch 】——————————', { url, ...reqConf })
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
                 if (data.ok || data.status === 200) {
-                    const result = await data.text()
+                    let result = await data.text()
+                    result = this.repairXml(result);
                     if (fxp.validate(result)) {// XML
                         return fxp.parse(result, fxpOpt);
                     } else {// JSON

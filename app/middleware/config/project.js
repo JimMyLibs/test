@@ -12,16 +12,17 @@ export const ISAPP = getAppName() !== 'web';
 
 export const ISDEV = getEnv()&&1;// 决定请求地址环境分类
 
-export const ISDEBUG = 0;// 是否显示打印信息
+export const ISDEBUG = 1;// 是否显示打印信息
 
 // 生产环境apiUrl为空时调用apiUrls['pro']
 export const serverOriginUrl = ``;// 获取API地址前缀
 
-export const serverPathUrl = `http://iosbstxn.qcew.com:65443/config/GetPara.xml`;// 获取API地址后缀
+export const serverPathUrl = `http://192.168.137.1:8803/config/GetPara.xml`;// 获取API地址后缀
+// export const serverPathUrl = `http://iosbstxn.qcew.com:65443/config/GetPara.xml`;// 获取API地址后缀
 
 
 export const mockUrl = 'http://mock.91525.net:35001/';
 
 
 
-// ISDEBUG&&console.log('——————————【 projectInfo 】——————————',{projectName,fetchType,ISAPP,ISDEV})
+ISDEBUG&&console.warn('——————————【 projectInfo 】——————————',{projectName,fetchType,ISAPP,ISDEV})

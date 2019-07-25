@@ -2,8 +2,13 @@ import React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 
+import ModelMenu from '../../components/ModelMenu'
 
 class MatchDetail extends React.Component {
+    static navigationOptions = {
+        title: 'Home',
+        headerRight: (<ModelMenu/>),
+    };
 
     render() {
         const matchItem = this.props.navigation.getParam('matchItem',{});

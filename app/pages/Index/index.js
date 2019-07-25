@@ -16,7 +16,8 @@ class HomeScreen extends React.Component {
         header:null,
     };
     state = {
-        matchList: []
+        matchList: [],
+        childLoading: 1,
     }
     matchFilter = async (pool='HAD')=>{
         // console.warn('matchFilter',pool);
@@ -28,11 +29,25 @@ class HomeScreen extends React.Component {
         const { matchList } = result.data;
         // console.warn('matchList',matchList)
         this.setState({
-            matchList
+            matchList,
+            childLoading: 0,
         })
+    }
+    loaddingTime() {
+        const timer = setInterval(()=>{
+            if(this.state.childLoading === 0){
+                console.warn('清除计时器',this.state.childLoading)
+                clearInterval(timer);
+            }else{
+                this.setState({
+                    childLoading: this.state.childLoading+1
+                })
+            }
+        },1)
     }
 
     componentDidMount() {
+        this.loaddingTime(); 
         this.matchFilter();
     }
 
@@ -41,12 +56,13 @@ class HomeScreen extends React.Component {
     }
     render() {
         return (
-            <View style={styles.page_home}>     
-                <ModelMenu setPool={this.matchFilter}/>
+            <View style={styles.page_home}>                    
+                <Button title={JSON.stringify(new Date())} onPress={ this.goToPage('Details') } /> 
 
-                <MatchList navigation={this.props.navigation} data={this.state.matchList}/>
-                <Text>Home Screen</Text>
-                <Button title="Details" onPress={ this.goToPage('Details') } />
+                <ModelMenu setPool={this.matchFilter}/>
+                <MatchList navigation={this.props.navigation} data={this.state.matchList} loading={this.state.childLoading}/>
+
+                <Button title={JSON.stringify(new Date())} onPress={ this.goToPage('Details') } />
             </View>
         );
     }
