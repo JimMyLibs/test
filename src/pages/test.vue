@@ -124,7 +124,6 @@ export default {
         },
         async getFilterList() {
             const { data: filterList } = await api.Matches.getFilterList();
-            console.log(filterList)
             const { poolList, leagueList, dateList } = filterList;
             this.poolList = poolList;
             this.leagueList = leagueList;

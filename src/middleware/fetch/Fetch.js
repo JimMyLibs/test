@@ -82,7 +82,7 @@ export default class Http extends FetchBase {
         if (isEmpty(apiInfo)) {
             return fetchApiInfo().then(res => {
                 const { serverOrigin, serverPath } = res;
-                // console.log('【fetchApiInfo】',serverPath)
+                // console.log('【fetchApiInfo】',res, serverPath)
                 reqUrl = this.getUrl(url, serverPath, apiType, fetchType)
                 // console.log('【完整地址：reqUrl】',reqUrl)
                 return this[method](reqUrl, { headers, body })
@@ -136,6 +136,7 @@ export default class Http extends FetchBase {
             return url;
         }
         // 处理云端获取的路径请求
+        // console.log('【mixApiInfo】',mixApiInfo,'【apiInfo】',apiInfo) 
         mixApiInfo = mixApiInfo || apiInfo
         let typeUrl = mixApiInfo[fetchType]
         typeUrl = this.getJcUrl(apiType, typeUrl, fetchType);
