@@ -7,7 +7,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "dev": "vue-cli-service serve",
+    "jest": "jest",
+    "doc": "apidoc -i src/middleware -o dist/apidoc"
   },
   "dependencies": {
     "core-js": "^2.6.5",

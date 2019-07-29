@@ -1,0 +1,857 @@
+<TXN_XML ErrCode="0" ErrMsg="" ID="307" Name="GetPara" Timestamp="2019-08-12 16:26:54" Version="L1.18R0,L1.15R0">
+    <Env name="dev" Channel="AOSBS" />
+    <AppInfomation>
+        <Add Key=" " Value="1">
+            <Chi>http://android.hkjc.com</Chi>
+            <Eng>http://android.hkjc.com/mobile/en/index.html</Eng>
+        </Add>
+        <Add Key="MCJCURL" Value="1">
+            <Chi>http://www.hkjc.com/jctv/ch</Chi>
+            <Eng>http://www.hkjc.com/jctv/en</Eng>
+        </Add>
+        <Add Key="GoogleMarketURL" Value="0">
+            <Chi>http://android.hkjc.com</Chi>
+            <Eng>http://android.hkjc.com/mobile/en/index.html</Eng>
+        </Add>
+        <Add Key="SupportedVideoExtension" Value="mp4" />
+        <Add Key="VersionSupported" Value="HKJC/1.8.0 build 4815" />
+        <Add Key="NewBackButtonModel" Value="*" />
+
+        <Add Key="NewMenuButton" Value="1" />
+        <Add Key="BetResendDefaultChecked" Value="1" />
+        <Add Key="BetResendEnable" Value="1" />
+    </AppInfomation>
+    <Banner>
+        <Add Key="Banner1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/promo/banner/ch/AOSBSupgradebanner_{R}.PNG</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/promo/banner/en/AOSBSupgradebanner_{R}.PNG</Eng>
+        </Add>
+        <Add Key="Banner2">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/promo/banner/ch/AOSBSpromobanner_{R}.PNG</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/promo/banner/en/AOSBSpromobanner_{R}.PNG</Eng>
+        </Add>
+    </Banner>
+    <CustomerServices>
+        <Add Key="CSSPLogin" Title_CN="HKJ客服中心" Title_EN="HKJC Customer Centre" Value="0">
+            <Chi>https://cssp.iuww.com:60443</Chi>
+            <Eng>https://cssp.iuww.com:60443</Eng>
+        </Add>
+    </CustomerServices>
+    <OddsRefreshInterval>
+        <Add Key="HRLocalOddsRefreshInterval" Value="10" />
+        <Add Key="HROverseaOddsRefreshInterval" Value="10" />
+        <Add Key="FBOddsRefreshInterval" Value="60" />
+        <Add Key="FBInplayOddsRefreshInterval" Value="20" />
+        <Add Key="OddsRetentionPeriod" Value="30" />
+        <Add Key="ManualRefreshDisableInterval" Value="10" />
+        <Add Key="BannerRefreshInterval" Value="900" />
+        <Add Key="TVIconExpire" Value="86400" />
+        <Add Key="MaxRefreshInterval_FB" Value="10" />
+        <Add Key="MaxRefreshInterval_HR" Value="10" />
+        <Add Key="MaxRefreshInterval_MS" Value="10" />
+        <Add Key="MaxRefreshInterval_CO" Value="10" />
+        <Add Key="AutoRefreshWifiOnly" Value="1" />
+        <Add Key="FBInplayXml" Value="1" />
+        <Add Key="FBInplayXmlEnabled" Value="1" />
+        <Add Key="HRAutoOddsdRefresh" Value="1" />
+        <Add Key="FBAutoOddsdRefresh" Value="1" />
+        <Add Key="HRAutoOddsdRefreshLoginOnly" Value="1" />
+        <Add Key="FBAutoOddsdRefreshLoginOnly" Value="1" />
+    </OddsRefreshInterval>
+    <ELVA>
+        <Add Key="KeepAliveStreamInterval" Value="120" />
+        <Add Key="VerifySessionInterval" Value="60" />
+        <Add Key="ProgramScheduleInterval" Value="900" />
+        <Add Key="login" Value="https://npww.hkjcwebcast.com/dev/api?method=login" />
+        <Add Key="logout" Value="https://npww.hkjcwebcast.com/dev/api?method=logout" />
+        <Add Key="keepalive" Value="https://npww.hkjcwebcast.com/dev/api?method=keepalive" />
+        <Add Key="useraction" Value="https://npww.hkjcwebcast.com/dev/api?method=useraction" />
+        <Add Key="logout_p2" Value="https://npww.hkjcwebcast.com/dev/api2?method=logout" />
+        <Add Key="keepalive_p2" Value="https://npww.hkjcwebcast.com/dev/api2?method=keepalive" />
+        <Add Key="useraction_p2" Value="https://npww.hkjcwebcast.com/dev/api2?method=useraction" />
+        <Add Key="getUrls_p2" Value="https://npww.hkjcwebcast.com/dev/api2?method=getUrls" />
+        <Add Key="authenticationRequest_p2"
+            Value="https://npww.hkjcwebcast.com/dev/api2?method=authenticationRequest" />
+        <Add Key="programSchedule_p2"
+            Value="https://npww.hkjcwebcast.com/dev/api2?method=programSchedule" />
+        <Add Key="WebClient" Value="https://npww.hkjcwebcast.com/sit/web" />
+    </ELVA>
+    <EAAS>
+        <Add Key="GetToken" Value="http://116.48.143.224:444/api/SSOMobile/GetToken" />
+    </EAAS>
+    <MLC>
+        <Add Key="MLCMobileURL"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html" />
+        <Add Key="MLCMobileURL_A"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html" />
+        <Add Key="MLCMobileURL_B"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html" />
+        <Add Key="MLCMobileURL_C"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/smartphone/index.html" />
+        <Add Key="MLCTabletURL" Value="http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html" />
+        <Add Key="MLCTabletURL_A"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html" />
+        <Add Key="MLCTabletURL_B"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html" />
+        <Add Key="MLCTabletURL_C"
+            Value="http://sat-replay-jclc.s3.amazonaws.com/tablet/index.html" />
+        <Add Key="MLCMatchListURL" Value="http://sat-replay-jclc.s3.amazonaws.com/matchlist" />
+        <Add Key="MLCMatchListURL_A" Value="http://sat-replay-jclc.s3.amazonaws.com/matchlist" />
+        <Add Key="MLCMatchListURL_B" Value="http://sat-replay-jclc.s3.amazonaws.com/matchlist" />
+        <Add Key="MLCMatchListURL_C" Value="http://sat-replay-jclc.s3.amazonaws.com/matchlist" />
+        <Add Key="MLCWebviewLoadingTimeout" Value="30" />
+        <Add Key="MLCWebviewCloseTimeout" Value="5" />
+        <Add Key="MLCMatchlistLoadingTimeout" Value="10" />
+        <Add Key="MLCWebviewApiTimeout" Value="1" />
+        <Add Key="MLCUpdateMatchListCooldown" Value="60" />
+    </MLC>
+    <WIS>
+        <Add Key="QTTQuery"
+            Value="http://116.48.143.224:444/WISService.svc/opGetSingleQTTOdds"></Add>
+        <Add Key="MaxRefreshInterval_QTTQuery" Value="60"></Add>
+        <Add Key="Timeout_QTTQuery" Value="60"></Add>
+    </WIS>
+    <Txn>
+        <Add Key="GetPara">/txnA/AOSBS/GetPara.ashx</Add>
+        <Add Key="GetParaAndSSO">/txnA/AOSBS/GetParaAndSSO.ashx</Add>
+        <Add Key="Translate">/txnA/AOSBS/Translate.ashx</Add>
+        <Add Key="Login">/txnA/AOSBS/Login.ashx</Add>
+        <Add Key="LoginQuestion">/txnA/AOSBS/LoginQuestion.ashx</Add>
+        <Add Key="AccountBalance">/txnA/AOSBS/AccountBalance.ashx</Add>
+        <Add Key="PreSendBet">/txnA/AOSBS/PreSendBet.ashx</Add>
+        <Add Key="AccountRecords">/txnAStm/AOSBS/AccountRecords.ashx</Add>
+        <Add Key="AccountRecordsIdx">/txnAStm/AOSBS/AccountRecordsIdx.ashx</Add>
+        <Add Key="TransactionRecords">/txnAStm/AOSBS/TransactionRecords.ashx</Add>
+        <Add Key="TransactionRecordsIdx">/txnAStm/AOSBS/TransactionRecordsIdx.ashx</Add>
+        <Add Key="EftDeposit">/txnA/AOSBS/EftDeposit.ashx</Add>
+        <Add Key="EftWithdrawal">/txnA/AOSBS/EftWithdrawal.ashx</Add>
+        <Add Key="EftBalance">/txnA/AOSBS/EftBalance.ashx</Add>
+        <Add Key="Logout">/txnA/AOSBS/Logout.ashx</Add>
+        <Add Key="VerifySession">/txnA/AOSBS/VerifySession.ashx</Add>
+        <Add Key="RegApn">/txnA/AOSBS/RegApn.ashx</Add>
+        <Add Key="ChangeSettingAndLang">/txnA/AOSBS/ChangeSettingAndLang.ashx</Add>
+        <Add Key="eWalletGenerateQRCode">/txnA/AOSBS/eWalletGenerateQRCode.ashx</Add>
+        <Add Key="eWalletQRCodeStatus">/txnA/AOSBS/eWalletQRCodeStatus.ashx</Add>
+        <Add Key="eWalletOTPCodeValidate">/txnA/AOSBS/eWalletOTPCodeValidate.ashx</Add>
+        <Add Key="eWalletOTPCode">/txnA/AOSBS/eWalletOTPCode.ashx</Add>
+        <Add Key="FPSDeposit">/txnA/AOSBS/FPSDeposit.ashx</Add>
+        <Add Key="FPSeDDASetup">/txnA/AOSBS/FPSeDDASetup.ashx</Add>
+        <Add Key="FPSEnquiryBetAcc">/txnA/AOSBS/FPSEnquiryBetAcc.ashx</Add>
+        <Add Key="FPSUpdateBetAcc">/txnA/AOSBS/FPSUpdateBetAcc.ashx</Add>
+        <Add Key="FPSWithdrawal">/txnA/AOSBS/FPSWithdrawal.ashx</Add>
+        <Add Key="FIDORegistration">/txnA/AOSBS/FIDORegistration.ashx</Add>
+        <Add Key="FIDOEnroll">/txnA/AOSBS/FIDOEnroll.ashx</Add>
+        <Add Key="FIDOAuthenticate">/txnA/AOSBS/FIDOAuthenticate.ashx</Add>
+        <Add Key="FIDOValidateAuth">/txnA/AOSBS/FIDOValidateAuth.ashx</Add>
+        <Add Key="FIDODeleteByDevice">/txnA/AOSBS/FIDODeleteByDevice.ashx</Add>
+        <Add Key="FIDOAuthenticatorStatus">/txnA/AOSBS/FIDOAuthenticatorStatus.ashx</Add>
+        <Add Key="Authentication">/txnA/AOSBS/Authentication.ashx</Add>
+        <Add Key="ReAuthentication">/txnA/AOSBS/ReAuthentication.ashx</Add>
+        <Add Key="RetrieveEKBAForAuthentication">/txnA/AOSBS/RetrieveEKBAForAuthentication.ashx</Add>
+    </Txn>
+    <Info>
+        <Add Key="FB_ODDS_ALL_TEST">
+            <Chi>/index/FB_GetInfo_chi.min.xml</Chi>
+            <Eng>/index/FB_GetInfo_eng.min.xml</Eng>
+        </Add>
+        <Add Key="FB_ODDS_ALL">
+            <Chi>/infoA/AOSBS/FB_GetInfo.ashx?QT=FB_ODDS_ALL&amp;CouponIndex=*&amp;Day=*&amp;Filter=*&amp;MatchNum=*&amp;TourID=*&amp;Lang=zh-HK</Chi>
+            <Eng>/infoA/AOSBS/FB_GetInfo.ashx?QT=FB_ODDS_ALL&amp;CouponIndex=*&amp;Day=*&amp;Filter=*&amp;MatchNum=*&amp;TourID=*&amp;Lang=en-US</Eng>
+        </Add>
+        <Add Key="HR_ODDS_ALL">
+            <Chi>/infoA/AOSBS/HR_GetInfo.ashx?QT=HR_ODDS_ALL&amp;Race=*&amp;Venue=*&amp;Result=1&amp;Dividend=1&amp;JTC=1&amp;JKC=1&amp;Lang=zh-HK</Chi>
+            <Eng>/infoA/AOSBS/HR_GetInfo.ashx?QT=HR_ODDS_ALL&amp;Race=*&amp;Venue=*&amp;Result=1&amp;Dividend=1&amp;JTC=1&amp;JKC=1&amp;Lang=en-US</Eng>
+        </Add>
+        <Add Key="MS_INFO">
+            <Chi>/infoA/AOSBS/MS_GetInfo.ashx?QT=MS_INFO&amp;Lang=zh-HK</Chi>
+            <Eng>/infoA/AOSBS/MS_GetInfo.ashx?QT=MS_INFO&amp;Lang=en-US</Eng>
+        </Add>
+        <Add Key="CO_ALLUPFORMULA">
+            <Chi>/infoA/AOSBS/GetInfo.ashx?QT=CO_ALLUPFORMULA</Chi>
+            <Eng>/infoA/AOSBS/GetInfo.ashx?QT=CO_ALLUPFORMULA</Eng>
+        </Add>
+        <Add Key="FB_ODDS_INPLAY">
+            <Chi>/infoA/AOSBS/FB10_GetInfo.ashx?QT=FB_ODDS_INPLAY&amp;Lang=zh-HK</Chi>
+            <Eng>/infoA/AOSBS/FB10_GetInfo.ashx?QT=FB_ODDS_INPLAY&amp;Lang=en-US</Eng>
+        </Add>
+        <Add Key="CO_PARA">
+            <Chi>/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA</Chi>
+            <Eng>/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA</Eng>
+        </Add>
+        <Add Key="CO_ALLUP">
+            <Chi>/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA&amp;Allup=1</Chi>
+            <Eng>/infoA/AOSBS/GetInfo.ashx?QT=CO_PARA&amp;Allup=1</Eng>
+        </Add>
+        <Add Key="CO_CHECKSUM">
+            <Chi>/infoA/AOSBS/GetInfo.ashx?QT=CO_CHECKSUM</Chi>
+            <Eng>/infoA/AOSBS/GetInfo.ashx?QT=CO_CHECKSUM</Eng>
+        </Add>
+        <Add Key="FIDO_PARA">
+            <Chi>/infoA/AOSBS/GetInfo.ashx?QT=FIDO_PARA</Chi>
+            <Eng>/infoA/AOSBS/GetInfo.ashx?QT=FIDO_PARA</Eng>
+        </Add>
+        <Add Key="CO_MESSAGES">
+            <Chi>/infoA/AOSBS/GetInfo.ashx?QT=CO_Messages</Chi>
+            <Eng>/infoA/AOSBS/GetInfo.ashx?QT=CO_Messages</Eng>
+        </Add>
+    </Info>
+    <WCIP_2019Aug>
+        <Add Key="WebUserProfileMaintenance" Value="1" >
+            <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/loginform.aspx?UIC=zh-HK&amp;NTAL=BPU&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/loginform.aspx?UIC=en-US&amp;NTAL=BPU&amp;EP=BS</Eng>
+        </Add>
+        <Add Key="RegisterAsWebUser" Value="1" >
+            <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/associateaccount.aspx?UIC=zh-HK&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/associateaccount.aspx?UIC=en-US&amp;EP=BS</Eng>
+        </Add>
+        <!--<Add Key="ForgetWebPassword" Value="1" >-->
+            <!--<Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=1</Chi>-->
+            <!--<Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=1</Eng>-->
+        <!--</Add>-->
+        <Add Key="ChangePassword" Value="1" >
+            <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=2</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=2</Eng>
+        </Add>
+        <Add Key="ChangeMobileNumber" Value="1" >
+            <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=3</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=3</Eng>
+        </Add>
+        <Add Key="EnableMobileBettingService" Value="1" >
+            <Chi>http://dev-ambs.cuww.com/wcip/Mobile/xxxxx.aspx?UIC=zh-HK&amp;Channel=Mobile</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcip/Mobile/xxxxx.aspx?UIC=en-US&amp;Channel=Mobile</Eng>
+        </Add>
+    </WCIP_2019Aug>
+    <WCIPweb>
+        <Add Key="WebUserProfileMaintenance" Value="1">
+            <Chi>http://dev-ambs.cuww.com/wcipA/AOSBS/loginform.aspx?UIC=zh-HK&amp;NTAL=BPU&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/loginform.aspx?UIC=en-US&amp;NTAL=BPU&amp;EP=BS</Eng>
+        </Add>
+        <Add Key="RegisterAsWebUser" Value="1">
+            <Chi>http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=zh-HK&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=en-US&amp;EP=BS</Eng>
+        </Add>
+        <Add Key="ForgetWebPassword" Value="1">
+            <Chi>http://dev-ambs.cuww.com/wcipA/AOSBS/inputaccoremail.aspx?UIC=zh-HK&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/inputaccoremail.aspx?UIC=en-US&amp;EP=BS</Eng>
+        </Add>
+        <Add Key="ChangePassword" Value="1">
+            <Chi>http://dev-ambs.cuww.com/wcipW/WEB/inputaccoremail.aspx?UIC=zh-HK&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipW/WEB/inputaccoremail.aspx?UIC=en-US&amp;EP=BS</Eng>
+        </Add>
+        <Add Key="EnableMobileBettingService" Value="1">
+            <Chi>http://dev-ambs.cuww.com/wcip/xxxxx.aspx?Channel=Mobile</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcip/xxxxx.aspx?Channel=Mobile</Eng>
+        </Add>
+    </WCIPweb>
+    <TV>
+        <Add Key="IconUrl" Value="1">
+            http://special.hkjc.com/root/football/info/en/images/common/icon_tv-{code}.gif
+        </Add>
+    </TV>
+    <RacingInformationV1>
+        <Version value="1000">
+            <Add Key="LiveRaceSchedule" Title_CN="賽馬直播時間表" Title_EN="Live Race Schedule" Value="1">
+                <Chi>http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_hk.html
+                </Chi>
+                <Eng>http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_en.html
+                </Eng>
+                <Chi_tablet>
+                    http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_hk.html
+                </Chi_tablet>
+                <Eng_tablet>
+                    http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_en.html
+                </Eng_tablet>
+            </Add>
+            <Add Key="MultimediaShowcase" Title_CN="賽事重温／試閘片段" Title_EN="Race Replay/Barrier Trials"
+                Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="Calendar" Title_CN="匯入賽期表" Title_EN="Import Fixture Calendar" Value="0">
+                <Chi>http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml</Eng>
+            </Add>
+            <Add Key="PoolInformation" Title_CN="彩池資訊" Title_EN="Pool Information" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="RaceChanges" Title_CN="更易事項" Title_EN="Changes" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="ReferenceInfo" Title_CN="賽日資訊" Title_EN="General Information" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="Results" Title_CN="賽果及派彩" Title_EN="Results and Dividends" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="Statistics" Title_CN="統計資料" Title_EN="Statistics" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=zh-HK</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=en-US</Eng>
+            </Add>
+        </Version>
+    </RacingInformationV1>
+    <RacingInformationV2>
+        <Version value="1000">
+            <Add Key="LiveRaceSchedule" Title_CN="賽馬直播時間表" Title_EN="Live Race Schedule" Value="1">
+                <Chi>http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_hk.html
+                </Chi>
+                <Eng>http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/smartphone_en.html
+                </Eng>
+                <Chi_tablet>
+                    http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_hk.html
+                </Chi_tablet>
+                <Eng_tablet>
+                    http://elvaws.s3-website-ap-southeast-1.amazonaws.com/dev/tablet_en.html
+                </Eng_tablet>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="1" Title_CN="賽事重温／試閘片段"
+                Title_EN="Race Replay/Barrier Trials" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="2" Title_CN="賽事重温" Title_EN="Race Replay"
+                Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1&amp;Display=Replay</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1&amp;Display=Replay</Eng>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="2" Title_CN="試閘片段" Title_EN="Barrier Trials"
+                Value="1">
+                <Chi>com.hkjc.footballchannel.</Chi>
+                <Eng>com.hkjc.footballchannel.</Eng>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="3" Title_CN="賽事重温" Title_EN="Race Replay"
+                Value="1">
+                <Chi>com.hkjc.footballchannel.</Chi>
+                <Eng>com.hkjc.footballchannel.</Eng>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="3" Title_CN="試閘片段" Title_EN="Barrier Trials"
+                Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1&amp;Display=Barrier</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1&amp;Display=Barrier</Eng>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="4" Title_CN="賽事重温" Title_EN="Race Replay"
+                Value="1">
+                <Chi>com.hkjc.footballchannel.</Chi>
+                <Eng>com.hkjc.footballchannel.</Eng>
+            </Add>
+            <Add Key="MultimediaShowcase" RaceReplayBarrierTrailButtonControl="4" Title_CN="試閘片段" Title_EN="Barrier Trials"
+                Value="1">
+                <Chi>com.hkjc.footballchannel.</Chi>
+                <Eng>com.hkjc.footballchannel.</Eng>
+            </Add>
+            <Add Key="Calendar" Title_CN="匯入賽期表" Title_EN="Import Fixture Calendar" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml</Eng>
+            </Add>
+            <Add Key="PoolInformation" Title_CN="彩池資訊" Title_EN="Pool Information" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="RaceChanges" Title_CN="更易事項" Title_EN="Changes" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="ReferenceInfo" Title_CN="賽日資訊" Title_EN="General Information" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="Results" Title_CN="賽果及派彩" Title_EN="Results and Dividends" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="Statistics" Title_CN="統計資料" Title_EN="Statistics" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=zh-HK</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=en-US</Eng>
+            </Add>
+        </Version>
+    </RacingInformationV2>
+    <FootballInformationV1>
+        <Version value="1000">
+            <Add Key="LiveCentre" Title_CN="即場直播" Title_CN1="HKJC TV" Title_EN="Live TV"
+                Title_EN1="HKJC TV" Value="1">
+                <Chi>http://sports.i-cable.com/hkjc_mobo_app/index_phone.php</Chi>
+                <Eng>http://sports.i-cable.com/hkjc_mobo_app/index_phone.php</Eng>
+                <Chi_tablet>http://sports.i-cable.com/hkjc_mobo_app/index_tablet.php</Chi_tablet>
+                <Eng_tablet>http://sports.i-cable.com/hkjc_mobo_app/index_tablet.php</Eng_tablet>
+            </Add>
+            <Add Key="ResultsAndDividends" Title_CN="賽果及派彩" Title_EN="Results and Dividends"
+                Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=zh-HK&amp;Html=1</Chi>
+                <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=en-US&amp;Html=1</Eng>
+            </Add>
+            <Add Key="HeadToHead" Title_CN="對賽往績" Title_EN="Head-to-Head" Value="1">
+                <Chi>http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_headtohead.asp</Chi>
+                <Eng>http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_headtohead.asp</Eng>
+            </Add>
+            <Add Key="MatchPreview" Title_CN="賽前分析" Title_EN="Match Preview" Value="1">
+                <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/FB02_GetInfo.ashx?QT=FB_PREVIEW&amp;Lang=zh-HK&amp;Html=1</Chi>
+            </Add>
+            <Add Key="LeagueTable" Title_CN="聯賽積分榜" Title_EN="League Table" Value="1">
+                <Chi>http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_leaguetable.asp</Chi>
+                <Eng>http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_leaguetable.asp</Eng>
+            </Add>
+        </Version>
+    </FootballInformationV1>
+    <RacingInformation>
+        <Add Key="MultimediaShowcase" Title_CN="視聽播放區" Title_EN="Multimedia Showcase" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR01_GetInfo.ashx?QT=HR_MULTIMEDIASHOWCASE&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="Calendar" Title_CN="匯入賽期表" Title_EN="Import Fixture Calendar" Value="0">
+            <Chi>http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/xml/RacingCalender.xml</Eng>
+        </Add>
+        <Add Key="PoolInformation" Title_CN="彩池資訊" Title_EN="Pool Information" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR02_GetInfo.ashx?QT=HR_POOLINFO&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="RaceChanges" Title_CN="更易事項" Title_EN="Changes" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR03_GetInfo.ashx?QT=HR_RACECHANGES&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="ReferenceInfo" Title_CN="賽日資訊" Title_EN="General Information" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR04_GetInfo.ashx?QT=HR_REFERENCEINFO&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="Results" Title_CN="賽果及派彩" Title_EN="Results and Dividends" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/HR05_GetInfo.ashx?QT=HR_RESULTS&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="Statistics" Title_CN="統計資料" Title_EN="Statistics" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=zh-HK</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/JMI/AOSBS/Draw.aspx?lang=en-US</Eng>
+        </Add>
+    </RacingInformation>
+    <FootballInformation>
+        <Add Key="LiveCentre" Title_CN="即時戰報" Title_EN="Live Centre" Value="0">
+            <Chi>http://lsdev.betradar.com/ls/livescore/?/hkjc/zht/page/mobile/fixtures</Chi>
+            <Eng>http://lsdev.betradar.com/ls/livescore/?/hkjc/en/page/mobile/fixtures</Eng>
+        </Add>
+        <Add Key="ResultsAndDividends" Title_CN="賽果及派彩" Title_EN="Results and Dividends" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/FB01_GetInfo.ashx?QT=FB_RESULTS&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="HeadToHead" Title_CN="對賽往績" Title_EN="Head-to-Head" Value="1">
+            <Chi>http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_headtohead.asp</Chi>
+            <Eng>http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_headtohead.asp</Eng>
+        </Add>
+        <Add Key="MatchPreview" Title_CN="賽前分析" Title_EN="Match Preview" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/FB02_GetInfo.ashx?QT=FB_PREVIEW&amp;Lang=zh-HK&amp;Html=1</Chi>
+        </Add>
+        <Add Key="LeagueTable" Title_CN="聯賽積分榜" Title_EN="League Table" Value="1">
+            <Chi>http://iosbsinfo.iuww.com/jmi/hk/chinese/wlpda/aos_leaguetable.asp</Chi>
+            <Eng>http://iosbsinfo.iuww.com/jmi/hk/english/wlpda/aos_leaguetable.asp</Eng>
+        </Add>
+    </FootballInformation>
+    <MarkSixInformation>
+        <Add Key="DrawFixtures" Title_CN="下期攪珠" Title_EN="Next Draw" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/MS01_GetInfo.ashx?QT=MS_INFO&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/MS01_GetInfo.ashx?QT=MS_INFO&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="ResultsAndDividends" Title_CN="攪珠結果及獎金" Title_EN="Draw Results and Prizes"
+            Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/MS02_GetInfo.ashx?QT=MS_RESULTSANDDIVIDENDS&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/MS02_GetInfo.ashx?QT=MS_RESULTSANDDIVIDENDS&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+        <Add Key="ResultsChecking" Title_CN="核對中獎號碼" Title_EN="Drawn Number Checking" Value="1">
+            <Chi>http://dev-ambs.cuww.com/infoA/AOSBS/MS03_GetInfo.ashx?QT=MS_CHECKINGRESULT&amp;Lang=zh-HK&amp;Html=1</Chi>
+            <Eng>http://dev-ambs.cuww.com/infoA/AOSBS/MS03_GetInfo.ashx?QT=MS_CHECKINGRESULT&amp;Lang=en-US&amp;Html=1</Eng>
+        </Add>
+    </MarkSixInformation>
+    <NoticeSettings>
+        <Add Key="ResponsibleGamblingMessage" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/RGP_short.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/RGP_short.html</Eng>
+        </Add>
+        <Add Key="TermsAndConditions" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/Terms_and_Conditions21.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/Terms_and_Conditions21.html</Eng>
+        </Add>
+        <Add Key="ResponsibleGamblingImg" Value="1">
+            <!--<Chi>/infoA/ParameterControl_OutputDir/General/RGP/Image/RGP_Image_ZH.jpg</Chi>
+            <Eng>/infoA/ParameterControl_OutputDir/General/RGP/Image/RGP_Image_EN.jpg</Eng>-->
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/android.jpg</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/android.jpg</Eng>
+        </Add>
+        <Add Key="TermsAndConditions_Aug2018" Value="1">
+            <Chi>/iscontent/AOSBS/info/ch/Terms_and_Conditions.html</Chi>
+            <Eng>/iscontent/AOSBS/info/en/Terms_and_Conditions.html</Eng>
+        </Add>
+        <Add Key="TermsAndConditionsFingerprintLogin" Value="1">
+            <Chi>/iscontent/AOSBS/info/ch/TermsConditionFingerprintLoginChi.html</Chi>
+            <Eng>/iscontent/AOSBS/info/en/TermsConditionFingerprintLoginEng.html</Eng>
+        </Add>
+    </NoticeSettings>
+    <OCBLocator>
+        <Add Key="OCBLocator" Value="1">http://dev-ambs.cuww.com/AOSBS/OCB/Info/OCBB.xml</Add>
+    </OCBLocator>
+    <Help>
+        <Add Key="UsingThisApp" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/How_To_Use.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/How_To_Use.html</Eng>
+        </Add>
+        <Add Key="HRBettingGuide" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/HR_Guide.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/HR_Guide.html</Eng>
+        </Add>
+        <Add Key="ELVAFAQ" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/streaming_faq.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/streaming_faq.html</Eng>
+        </Add>
+        <Add Key="FBBettingGuide" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/FB_Guide.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/FB_Guide.html</Eng>
+        </Add>
+        <Add Key="MK6BettingGuide" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/MK6_Guide.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/MK6_Guide.html</Eng>
+        </Add>
+    </Help>
+    <OtherHelp>
+        <Add Key="LoginHelp" Value="1">
+            <Chi>http://hk.m.yahoo.com/yahoo/frontpage</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/Login_Help.html</Eng>
+        </Add>
+        <Add Key="OddsRefreshSettingHelpHR" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/Odds_Refresh_Setting_Help.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/Odds_Refresh_Setting_Help.html</Eng>
+        </Add>
+        <Add Key="OddsRefreshSettingHelpFB" Value="0">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/Odds_Refresh_Setting_Help.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/Odds_Refresh_Setting_Help.html</Eng>
+        </Add>
+        <Add Key="RegisterHelp" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/Register_Help.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/Register_Help.html</Eng>
+        </Add>
+        <Add Key="eKBAQuestionsAnswerHelp" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/help/ch/ekba_Help.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/help/en/ekba_Help.html</Eng>
+        </Add>
+    </OtherHelp>
+    <ResponsibleGambling>
+        <Add Key="ResponsibleGambling" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/RGP_long.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/RGP_long.html</Eng>
+        </Add>
+    </ResponsibleGambling>
+    <TermsAndConditions>
+        <Add Key="TermsAndConditions" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/Terms_and_Conditions.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/Terms_and_Conditions.html</Eng>
+        </Add>
+    </TermsAndConditions>
+    <Disclaimer>
+        <Add Key="Disclaimer" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/Disclaimer.html</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/Disclaimer.html</Eng>
+        </Add>
+    </Disclaimer>
+    <AboutThisApp>
+        <Add Key="AboutThisApp" Value="1">
+            <Chi></Chi>
+            <Eng></Eng>
+        </Add>
+    </AboutThisApp>
+    <ApplePushNotification>
+        <Add Key="Enabled" Value="0" />
+    </ApplePushNotification>
+    <OffSeasonMsg>
+        <Add Key="OffSeasonMsg" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/OffSeason_HR.txt</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/OffSeason_HR.txt</Eng>
+        </Add>
+    </OffSeasonMsg>
+    <WinningBetSharing>
+        <Add Key="WinningBetSharingDisclaimer" Value="1">
+            <Chi>http://dev-ambs.cuww.com/AOSBS/info/ch/Winning_Bet_Sharing_Disclaimer.txt</Chi>
+            <Eng>http://dev-ambs.cuww.com/AOSBS/info/en/Winning_Bet_Sharing_Disclaimer.txt</Eng>
+        </Add>
+    </WinningBetSharing>
+    <Parameters>
+        <AppUpdateReminderPeriod>1440</AppUpdateReminderPeriod>
+        <BetResendCheckbox>0</BetResendCheckbox>
+        <!--in minute-->
+        <YEKFAW>
+            8b00568bc10cebf5e345e761fb23a8f38e098be1de1399a95307220ee8d137ea
+        </YEKFAW>
+    </Parameters>
+    <ChannelPara>
+        <Add Key="FOXMLEnable" Value="1" />
+        <Add Key="ChannelID" Value="9" />
+        <Add Key="OddsRefreshInterval" Value="60" />
+        <Add Key="SessionIdleTime" Value="30" />
+        <Add Key="winp" Value="1" />
+        <Add Key="plap" Value="1" />
+        <Add Key="wpp" Value="1" />
+        <Add Key="qinp" Value="1" />
+        <Add Key="qplp" Value="1" />
+        <Add Key="qqpp" Value="1" />
+        <Add Key="trip" Value="1" />
+        <Add Key="dblp" Value="1" />
+        <Add Key="tcep" Value="1" />
+        <Add Key="dtp" Value="1" />
+        <Add Key="ttp" Value="1" />
+        <Add Key="tblp" Value="1" />
+        <Add Key="sixupp" Value="1" />
+        <Add Key="mk6p" Value="1" />
+        <Add Key="mt3p" Value="0" />
+        <Add Key="exnp" Value="0" />
+        <Add Key="mhgp" Value="0" />
+        <Add Key="eocp" Value="0" />
+        <Add Key="ougp" Value="0" />
+        <Add Key="TBMinDeposit" Value="300" />
+        <Add Key="TBMaxDeposit" Value="99999999" />
+        <Add Key="TBMinWithdrawal" Value="500" />
+        <Add Key="TBMaxWithdrawal" Value="99999999" />
+        <Add Key="TBMinAutoWithdrawal" Value="1" />
+        <Add Key="TBMaxAutoWithdrawal" Value="99999999" />
+        <Add Key="MaxBetUnit" Value="666666" />
+        <Add Key="CurrentMK6Max" Value="49" />
+        <Add Key="AbsMK6Min" Value="47" />
+        <Add Key="AbsMK6Max" Value="49" />
+        <Add Key="CertExpiryWarningDays" Value="30" />
+        <Add Key="BetReplyTimeout" Value="300" />
+        <Add Key="EFTReplyTimeout" Value="300" />
+        <Add Key="WarningTimeout" Value="2" />
+        <Add Key="QPTTGame" Value="1" />
+        <Add Key="GoldballGame" Value="0" />
+        <Add Key="MaxPrimaryNo" Value="38" />
+        <Add Key="MinGBNo" Value="61" />
+        <Add Key="MaxGBNo" Value="88" />
+        <Add Key="GBmt3p" Value="0" />
+        <Add Key="GBexnp" Value="0" />
+        <Add Key="GBmhgp" Value="0" />
+        <Add Key="GBeocp" Value="0" />
+        <Add Key="GBougp" Value="0" />
+        <Add Key="AllowRegistration" Value="1" />
+        <Add Key="SBp" Value="1" />
+        <Add Key="HADp" Value="1" />
+        <Add Key="AHADp" Value="0" />
+        <Add Key="HDCp" Value="1" />
+        <Add Key="TTGp" Value="1" />
+        <Add Key="CRSPp" Value="0" />
+        <Add Key="HFTPp" Value="0" />
+        <Add Key="CRSp" Value="1" />
+        <Add Key="SBRegisterIdx" Value="0" />
+        <Add Key="ShutDownTime" Value="06:00" />
+        <Add Key="MinutesAheadForAlert" Value="5" />
+        <Add Key="ShowSBWelcomeMessage" Value="1" />
+        <Add Key="ShowHBWelcomeMessage" Value="1" />
+        <Add Key="OnlineStatTimeFrame" Value="8" />
+        <Add Key="HFTp" Value="1" />
+        <Add Key="OOEp" Value="1" />
+        <Add Key="HILp" Value="1" />
+        <Add Key="FGSp" Value="1" />
+        <Add Key="HCSPp" Value="0" />
+        <Add Key="THFPp" Value="0" />
+        <Add Key="HHAp" Value="1" />
+        <Add Key="AHHAp" Value="1" />
+        <Add Key="HFMP6p" Value="1" />
+        <Add Key="ACRSp" Value="1" />
+        <Add Key="AOOEp" Value="1" />
+        <Add Key="AHILp" Value="1" />
+        <Add Key="ATTGp" Value="1" />
+        <Add Key="AHAFUp" Value="1" />
+        <Add Key="CHPp" Value="1" />
+        <Add Key="GPFp" Value="1" />
+        <Add Key="AGPFp" Value="1" />
+        <Add Key="FINPp" Value="0" />
+        <Add Key="CHPPp" Value="0" />
+        <Add Key="DHCPp" Value="1" />
+        <Add Key="SPCp" Value="1" />
+        <Add Key="TPSp" Value="1" />
+        <Add Key="GPWp" Value="1" />
+        <Add Key="HFMP8p" Value="0" />
+        <Add Key="AGPWp" Value="1" />
+        <Add Key="CrossTourn" Value="0" />
+        <Add Key="AHDCp" Value="1" />
+        <Add Key="XRace" Value="1" />
+        <Add Key="cwp" Value="1" />
+
+        <Add Key="XWINp" Value="1" />
+        <Add Key="XPLAp" Value="1" />
+        <Add Key="XQINp" Value="1" />
+        <Add Key="XQPLp" Value="1" />
+        <Add Key="XTRIp" Value="1" />
+        <Add Key="XCWp" Value="1" />
+        <Add Key="AXQinQpl" Value="1" />
+
+        <Add Key="STB" Value="0" />
+        <Add Key="XFB" Value="1" />
+        <Add Key="XHADp" Value="1" />
+        <Add Key="XHHADp" Value="1" />
+        <Add Key="XHDCp" Value="1" />
+        <Add Key="OnlineStmtRecPerPage" Value="15" />
+        <Add Key="InPlay" Value="1" />
+        <Add Key="InPlayDelaySec" Value="0" />
+        <Add Key="AXWinPla" Value="1" />
+
+        <Add Key="AXTTGp" Value="0" />
+        <Add Key="AXHILp" Value="1" />
+        <Add Key="AXHFTp" Value="0" />
+        <Add Key="AXOOEp" Value="0" />
+        <Add Key="AXCRSp" Value="1" />
+        <Add Key="AXFGSp" Value="0" />
+        <Add Key="MK6SBDraw" Value="1" />
+        <Add Key="AFGSp" Value="1" />
+        <Add Key="InPlaySpecial" Value="1" />
+        <Add Key="FHADp" Value="1" />
+        <Add Key="AFHADp" Value="1" />
+        <Add Key="AXFHADp" Value="1" />
+        <Add Key="NewUserDays" Value="90" />
+        <Add Key="BetReplyXSellMsgOption" Value="0" />
+        <Add Key="BetReplyXSellMsgTimeout" Value="5" />
+        <Add Key="OnlineParaRefreshInterval" Value="60" />
+        <Add Key="ffp" Value="1" />
+        <Add Key="B_Wp" Value="0" />
+        <Add Key="XB_Wp" Value="0" />
+        <Add Key="BWBp" Value="0" />
+        <Add Key="BWCp" Value="0" />
+        <Add Key="BWDp" Value="0" />
+        <Add Key="InterXBWp" Value="0" />
+        <Add Key="MK6MultipleDraw" Value="1" />
+        <Add Key="QPTTGame20" Value="1" />
+        <Add Key="ToQualify" Value="1" />
+        <Add Key="MainPageLoadingTime" Value="0" />
+        <Add Key="ExtraTime" Value="1" />
+        <Add Key="NTSp" Value="1" />
+        <Add Key="FORp" Value="1" />
+        <Add Key="JKCp" Value="1" />
+        <Add Key="FlexiBet" Value="1" />
+        <Add Key="FlexiBet_winp" Value="1" />
+        <Add Key="FlexiBet_plap" Value="1" />
+        <Add Key="FlexiBet_wpp" Value="1" />
+        <Add Key="FlexiBet_qinp" Value="1" />
+        <Add Key="FlexiBet_qplp" Value="1" />
+        <Add Key="FlexiBet_qqpp" Value="1" />
+        <Add Key="FlexiBet_trip" Value="1" />
+        <Add Key="FlexiBet_dblp" Value="1" />
+        <Add Key="FlexiBet_tcep" Value="1" />
+        <Add Key="FlexiBet_dtp" Value="1" />
+        <Add Key="FlexiBet_ttp" Value="1" />
+        <Add Key="FlexiBet_tblp" Value="1" />
+        <Add Key="FlexiBet_sixupp" Value="1" />
+        <Add Key="FlexiBet_qpttp" Value="0" />
+        <Add Key="FlexiBet_ffp" Value="1" />
+        <Add Key="FlexiBet_alupp" Value="1" />
+        <Add Key="PLAoddsAsRange" Value="0" />
+        <Add Key="BannerHyperlink" Value="1" />
+        <Add Key="Mk6TotalBetSpend" Value="0" />
+        <Add Key="Mk6ByProdMulti" Value="1" />
+        <Add Key="Mk6ByProdBanker" Value="1" />
+        <Add Key="Mk6DefaultUnitBetAmount" Value="10" />
+        <Add Key="Mk6PartialUnitBetAmount" Value="5" />
+        <Add Key="FTSp" Value="1" />
+        <Add Key="AFTSp" Value="1" />
+        <Add Key="AXFTSp" Value="1" />
+        <Add Key="FHILp" Value="1" />
+        <Add Key="AFHILp" Value="1" />
+        <Add Key="AXFHILp" Value="1" />
+        <Add Key="ChHWp" Value="1" />
+        <Add Key="AFCRSp" Value="1" />
+        <Add Key="FCRSp" Value="1" />
+        <Add Key="AXFCRSp" Value="1" />
+        <Add Key="ANTSp" Value="1" />
+        <Add Key="AXNTSp" Value="1" />
+        <Add Key="OnlineStatTimeFrame4SpeedBet" Value="60" />
+        <Add Key="HROSp" Value="0" />
+        <Add Key="FaceBKp" Value="1" />
+        <Add Key="Twitterp" Value="0" />
+        <Add Key="Emailp" Value="0" />
+        <Add Key="WeiBop" Value="1" />
+        <Add Key="FaceBKOption" Value="2" />
+        <Add Key="RCyclep" Value="1" />
+        <Add Key="MaxTransferLimit" Value="0.000000000000000e+000" />
+        <Add Key="TransferLowerRange" Value="3.000000000000000e+002" />
+        <Add Key="TransferUpperRange" Value="5.000000000000000e+004" />
+        <Add Key="IsEnablePPSG" Value="1" />
+        <Add Key="IsEnableProcessMR" Value="1" />
+        <Add Key="Charge" Value="1.000000000000000e+000" />
+        <Add Key="PPSTimeout" Value="300" />
+        <Add Key="MaxTransactionLimit" Value="0" />
+        <Add Key="GlobalMaxTransferLimit" Value="0.000000000000000e+000" />
+        <Add Key="PreKey" Value="0024021110269184" />
+        <Add Key="PreKeyGenDate" Value="2011-12-04T02:00:00.967" />
+        <Add Key="CurKey" Value="00250211102679527" />
+        <Add Key="CurKeyGenDate" Value="2011-12-05T02:00:00.287" />
+        <Add Key="InitPageSetting" Value="1" />
+        <Add Key="AnchorsDisplaying" Value="0" />
+        <Add Key="BetSuggestor" Value="0" />
+        <Add Key="DDATransferLowerRange" Value="300" />
+        <Add Key="DDATransferUpperRange" Value="50000" />
+        <Add Key="IsEnabledDDA" Value="0" />
+        <Add Key="RaceSimulator" Value="0" />
+        <Add Key="ACHLp" Value="1" />
+        <Add Key="AXCHLp" Value="1" />
+        <Add Key="CHLp" Value="1" />
+        <Add Key="FBAccountRecordsSharing" Value="1" />
+        <Add Key="ELVA" Value="1" />
+        <Add Key="FBRaceSimulatorSharing" Value="1" />
+        <Add Key="qttp" Value="1" />
+        <Add Key="FlexiBet_qttp" Value="0" />
+
+        <Add Key="FlexiBet_cwp" Value="1" />
+        <Add Key="ELVAButtons" Value="1" />
+        <Add Key="ELVAMessageID" Value="1" />
+        <Add Key="MLCEnabled" Value="1" />
+        <Add Key="MLCMainEnabled" Value="1" />
+        <Add Key="MLCSpecificMatchEnabled" Value="1" />
+        <Add Key="LSCEnabled" Value="1" />
+        <Add Key="LSCMainEnabled" Value="1" />
+        <Add Key="LSCSpecificMatchEnabled" Value="0" />
+        <Add Key="MLCRequireLogin" Value="0" />
+        <Add Key="MLCBeforeKickOff" Value="15" />
+        <Add Key="MLCAfterMatchEnd" Value="30" />
+        <Add Key="MLCSoundAlertEnabled" Value="1" />
+        <Add Key="MLCSoundAlertUiAvailable" Value="1" />
+        <Add Key="MLCKeepAwakeEnabled" Value="1" />
+        <Add Key="MLCKeepAwakeUiAvailable" Value="1" />
+        <Add Key="CHJCIntegration" Value="2" />
+        <Add Key="CHJCLCIntegration" Value="2" />
+        <Add Key="iwnp" Value="1" />
+        <Add Key="FlexiBet_iwnp" Value="1" />
+        <Add Key="Speedmap" Value="1" />
+        <Add Key="mightpay" Value="0" />
+        <Add Key="EnableBetResend" Value="1" />
+        <Add Key="FPSReplyTimeout" Value="30" />
+        <Add Value="1" Key="EnabledFPS"/>
+        <Add Value="1" Key="EnabledPresetDeposit"/>
+        <Add Value="500,1000,3000,10000" Key="MaxDepositAmounts"/>
+    </ChannelPara>
+    <OnlinePara Value="0\\\0\5\2014-10-30 07:50\10">
+        <Add Key="OOS Msg ID" Value="0" />
+        <Add Key="OOS English Content" Value="OOS English Content" />
+        <Add Key="OOS Chinese Content" Value="OOS Chinese Content" />
+        <Add Key="Bet Reply XSell Msg Option" Value="0" />
+        <Add Key="Bet Reply XSell MsgTimeout" Value="5" />
+    </OnlinePara>
+    <ChannelMsg>
+        <Add Key="1004" Value="1">
+            <Chi>http://bet.iuww.com</Chi>
+            <Eng>http://bet.iuww.com/?lang=en&amp;banner=1&amp;template=3</Eng>
+            <VersionString>1.6.0</VersionString>
+        </Add>
+        <Add Key="1003" Value="0">
+            <Chi>http://android.hkjc.com/ch/index.asp</Chi>
+            <Eng>http://bet.iuww.com?lang=en</Eng>
+            <VersionString>1.5.0,1.5.1</VersionString>
+        </Add>
+    </ChannelMsg>
+    <eWinService Enable="1" LastUpdate="10/8/2010 5:26:10 PM">
+        <appIDList appIDList="https://devcapfidoas01:8443/default/IdentityXServices/rest/facets/QTAzaP_GPW7ERxAyeM6ByXbAiQ" />
+        <FPSParams dailyWdrMaxAmt= "10000" dailyWdrMaxCnt="10" monthlyDepMaxCntChargeAmt= "3" monthlyDepMaxCntNoCharge="5" perDepChargeAmt="1" perDepMaxAmt="1000" perDepMinAmt="10"  perWdrChargeAmt="1" perWdrMaxAmt="1000" perWdrMinAmt="10" updateTime="2018-11-16 17:19:12.356"/>
+        <FPSBanks updateTime="2018-11-16 17:19:12.860">
+            <banks code="001" eDDADepositEnable="1" name="BOC" nameTC="BOC" updateTime="2018-11-16 17:20:10.020" withdrawalEnable="1"/>
+            <banks code="002" eDDADepositEnable="1" name="SCB" nameTC="SCB" updateTime="2018-11-16 17:20:10.020" withdrawalEnable="1"/>
+        </FPSBanks>
+        <FPSRejectReasons updateTime="2018-11-16 17:19:12.861" >
+            <errors code="001" message="Zero Error" subcode="001" type="1" updateTime="2018-11-16 17:20:09.997" userMessage="Zero Error" userMessageTC="Zero Error"/>
+            <errors code="001" message="Zero Error2" subcode="001" type="2" updateTime="2018-11-16 17:20:09.997" userMessage="Zero Error" userMessageTC="Zero Error"/>
+            <errors code="002" message="Zero Error3" subcode="001" type="1" updateTime="2018-11-16 17:20:09.997" userMessage="Zero Error" userMessageTC="Zero Error"/>
+        </FPSRejectReasons>
+    </eWinService>
+</TXN_XML>
