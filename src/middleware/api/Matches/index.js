@@ -133,7 +133,7 @@ class Matches {
         return poolData;
     }
     async filter(params) {// 筛选数据
-        const { pool, date, league } = params;
+        const { pool = '', date = '', league = '' } = params;
         if(useCaseCache){
             if (!this.cache.datePools) {// 读取变量缓存数据
                 this.cache.datePools = await this.datePools();

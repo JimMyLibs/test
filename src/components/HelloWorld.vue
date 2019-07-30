@@ -1,18 +1,21 @@
 <template>
-    <div class="hello">{{name}}</div>
+    <div class="hello">{{pageName}}</div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import api from "../middleware/index";
+import api from "../middleware/api";
 
 @Component
 export default class HelloWorld extends Vue {
-    pageName: string = "HelloWorld";
+    pageName: string = "HelloWorld001";
     @Prop() private msg!: string;
     async getData() {
-        const filterMenu = await api.Matches.prototype.getFilterMenu();
+        const filterMenu = await api.Matches.filter({ pool: "HAD" });
         console.log("filterMenu", filterMenu);
+    }
+    mounted() {
+        this.getData();
     }
 }
 </script>

@@ -5,13 +5,13 @@ export const projectName = 'szhkjc';
 export const fetchType = '';// 决定请求地址origin,多种type在Http实例化时订制
 
 export const useFetfchCache = 0;// 是否启用请求缓存-硬盘
-export const useCaseCache = 1;// 是否启用实例缓存-内存
+export const useCaseCache = 0;// 是否启用实例缓存-内存
 
 export const ISAPP = getAppName() !== 'web';
 
-export const ISDEV = getEnv()&&0;// 决定请求地址环境分类
+export const ISDEV = getEnv();// 决定请求地址环境分类
 
-export const ISDEBUG = 1;// 是否显示打印信息
+export const ISDEBUG = 0;// 是否显示打印信息
 
 // 生产环境apiUrl为空时调用apiUrls['pro']
 export const serverOriginUrl = ``;// 获取API地址前缀
