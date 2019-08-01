@@ -5,6 +5,7 @@ import { StackActions, NavigationActions } from 'react-navigation'; // Version c
 import MatchList from '../../components/MatchList'
 // import MatchList from '../../components/MatchListFlat'
 import ModelMenu from '../../components/ModelMenu'
+import Loading from '../../components/Loading'
 
 import api from '../../middleware/api'
 
@@ -17,38 +18,38 @@ class HomeScreen extends React.Component {
     };
     state = {
         matchList: [],
-        childLoading: 1,
+        loading: 1,
     }
     matchFilter = async (pool='HAD')=>{
         // console.warn('matchFilter',pool);
-        const result = await api.Matches.filter({
+        api.Matches.filter({
             pool,
             date: '',
             league: '',
-        })
-        const { matchList } = result.data;
-        // console.warn('matchList',matchList)
-        this.setState({
-            matchList,
-            childLoading: 0,
+        }).then(res=>{
+            // console.warn('请求成功一次');
+            const { matchList } = res.data;
+            // console.warn('matchList',matchList)
+            this.setState({
+                matchList,
+                loading: 0,
+            })
+        }).catch(err=>{
+            console.warn('err',err)
+            this.setState({
+                loading: 0,
+            })
         })
     }
-    loaddingTime() {
-        const timer = setInterval(()=>{
-            if(this.state.childLoading === 0){
-                console.warn('清除计时器',this.state.childLoading)
-                clearInterval(timer);
-            }else{
-                this.setState({
-                    childLoading: this.state.childLoading+1
-                })
-            }
-        },1)
+    loopFetch() {
+        setInterval(()=>{
+            this.matchFilter();
+        },5000)
     }
 
     componentDidMount() {
-        this.loaddingTime(); 
         this.matchFilter();
+        // this.loopFetch();
     }
 
     goToPage = (name) => () => {
@@ -57,12 +58,16 @@ class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.page_home}>                    
-                <Button title={JSON.stringify(new Date())} onPress={ this.goToPage('Details') } /> 
+                <Button title={JSON.stringify(new Date())}/> 
 
                 <ModelMenu setPool={this.matchFilter}/>
-                <MatchList navigation={this.props.navigation} data={this.state.matchList} loading={this.state.childLoading}/>
+                {
+                    this.state.loading?
+                    <Loading />:
+                    <MatchList navigation={this.props.navigation} data={this.state.matchList}/>
 
-                <Button title={JSON.stringify(new Date())} onPress={ this.goToPage('Details') } />
+                }
+                <Button title={JSON.stringify(new Date())}/>
             </View>
         );
     }

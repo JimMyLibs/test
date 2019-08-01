@@ -3,7 +3,7 @@ import api from '../../api'
 
 let filterList = {};
 beforeAll(async () => {
-    const { data } = await api.Matches.getFilterList();
+    const { data } = await api.Matches.getFilterMenu();
     filterList = data;
     return filterList;
 });

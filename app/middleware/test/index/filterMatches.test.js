@@ -14,7 +14,7 @@ let params = {
 }
 let result = {};
 beforeAll(async () => {
-    const { data } = await api.Matches.getFilterList();
+    const { data } = await api.Matches.getFilterMenu();
     filterList.dateList = ['',...data.dateList];
     filterList.leagueList = ['',...data.leagueList];
     filterList.poolList = ['',...Object.keys(data.poolList)];

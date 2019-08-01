@@ -1,6 +1,7 @@
 
-import Pools from '../pools'
+import Pools from '../Pools'
 import { FB_GetInfo } from './FB_GetInfo'
+import { useCaseCache } from '../../config/project'
 
 
 class Matches {
@@ -11,12 +12,16 @@ class Matches {
         }
     }
     async initFB_GetInfo() {
-        if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
+        if(useCaseCache){
+            if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
+                this.cache.FB_GetInfo = await FB_GetInfo();
+            }
+        }else{
             this.cache.FB_GetInfo = await FB_GetInfo();
         }
         return this.cache.FB_GetInfo;
     }
-    async getFilterList() {
+    async getFilterMenu() {
         let FB_GetInfo_data = await this.initFB_GetInfo();
         const { result: FB_GetInfo_res } = FB_GetInfo_data;
         // 获取所有的date
@@ -128,8 +133,12 @@ class Matches {
         return poolData;
     }
     async filter(params) {// 筛选数据
-        const { pool, date, league } = params;
-        if (!this.cache.datePools) {// 读取变量缓存数据
+        const { pool = '', date = '', league = '' } = params;
+        if(useCaseCache){
+            if (!this.cache.datePools) {// 读取变量缓存数据
+                this.cache.datePools = await this.datePools();
+            }
+        }else{
             this.cache.datePools = await this.datePools();
         }
         const datePools = JSON.parse(JSON.stringify(this.cache.datePools))

@@ -1,18 +1,16 @@
-import { getAppName, getEnv, getLanguage } from './env'
+import { isRN, isDev } from './env'
 
 export const projectName = 'szhkjc';
 
 export const fetchType = '';// 决定请求地址origin,多种type在Http实例化时订制
 
-export const language = getLanguage();// 决定请求地址origin,多种type在Http实例化时订制
+export const useFetfchCache = 0;// 是否启用请求缓存-硬盘
+export const useCaseCache = 0;// 是否启用实例缓存-内存
 
-export const useFetfchCache = 0;// 是否缓存请求
+export const ISAPP = isRN();
 
-export const ISAPP = getAppName() !== 'web';
+export const ISDEV = isDev();// 决定请求地址环境分类
 
-export const ISDEV = getEnv()&&1;// 决定请求地址环境分类
-
-export const ISDEBUG = 1;// 是否显示打印信息
 
 // 生产环境apiUrl为空时调用apiUrls['pro']
 export const serverOriginUrl = ``;// 获取API地址前缀
@@ -20,9 +18,14 @@ export const serverOriginUrl = ``;// 获取API地址前缀
 export const serverPathUrl = `http://192.168.137.1:8803/config/GetPara.xml`;// 获取API地址后缀
 // export const serverPathUrl = `http://iosbstxn.qcew.com:65443/config/GetPara.xml`;// 获取API地址后缀
 
+/********************************** debug **************************** */
+
+export const ISDEBUG = 1;// 是否显示打印信息
+
+export const useJson = 1;
 
 export const mockUrl = 'http://mock.91525.net:35001/';
 
 
 
-ISDEBUG&&console.warn('——————————【 projectInfo 】——————————',{projectName,fetchType,ISAPP,ISDEV})
+// ISDEBUG&&console.log('——————————【 projectInfo 】——————————',{projectName,fetchType,ISAPP,ISDEV})

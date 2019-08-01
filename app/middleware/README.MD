@@ -40,9 +40,18 @@
     2. 或搭建本地临时服务
 
 6. - [ ] - 多级多段缓存机制
-	1. fetch层缓存+业务端缓存
+	1. fetch层缓存+业务端缓存+缓存统一控制
 
 7. - [x] - test case
+
+8. - [ ] - 数据范式化
+	1. 数据范式化，对比前后性能，及前端状态绑定难易度
+
+9. - [ ] - jest acount data
+	1. imitate it at location
+    2. test it at vm
+
+10. - [ ] - code the file about DefinitelyTyped
 
 
 

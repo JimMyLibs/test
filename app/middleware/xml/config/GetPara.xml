@@ -1,5 +1,4 @@
-<TXN_XML ErrCode="0" ErrMsg="" ID="307" Name="GetPara"
-    Timestamp="2019-08-12 16:26:54" Version="L1.18R0,L1.15R0">
+<TXN_XML ErrCode="0" ErrMsg="" ID="307" Name="GetPara" Timestamp="2019-08-12 16:26:54" Version="L1.18R0,L1.15R0">
     <Env name="dev" Channel="AOSBS" />
     <AppInfomation>
         <Add Key=" " Value="1">
@@ -151,6 +150,10 @@
         <Add Key="RetrieveEKBAForAuthentication">/txnA/AOSBS/RetrieveEKBAForAuthentication.ashx</Add>
     </Txn>
     <Info>
+        <Add Key="FB_ODDS_ALL_TEST">
+            <Chi>/index/FB_GetInfo_chi.min.xml</Chi>
+            <Eng>/index/FB_GetInfo_eng.min.xml</Eng>
+        </Add>
         <Add Key="FB_ODDS_ALL">
             <Chi>/infoA/AOSBS/FB_GetInfo.ashx?QT=FB_ODDS_ALL&amp;CouponIndex=*&amp;Day=*&amp;Filter=*&amp;MatchNum=*&amp;TourID=*&amp;Lang=zh-HK</Chi>
             <Eng>/infoA/AOSBS/FB_GetInfo.ashx?QT=FB_ODDS_ALL&amp;CouponIndex=*&amp;Day=*&amp;Filter=*&amp;MatchNum=*&amp;TourID=*&amp;Lang=en-US</Eng>
@@ -193,27 +196,27 @@
         </Add>
     </Info>
     <WCIP_2019Aug>
-        <Add Key ="WebUserProfileMaintenance" Value="1" >
+        <Add Key="WebUserProfileMaintenance" Value="1" >
             <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/loginform.aspx?UIC=zh-HK&amp;NTAL=BPU&amp;EP=BS</Chi>
             <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/loginform.aspx?UIC=en-US&amp;NTAL=BPU&amp;EP=BS</Eng>
         </Add>
-        <Add Key ="RegisterAsWebUser" Value="1" >
+        <Add Key="RegisterAsWebUser" Value="1" >
             <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/associateaccount.aspx?UIC=zh-HK&amp;EP=BS</Chi>
             <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/associateaccount.aspx?UIC=en-US&amp;EP=BS</Eng>
         </Add>
-        <!--<Add Key ="ForgetWebPassword" Value="1" >-->
+        <!--<Add Key="ForgetWebPassword" Value="1" >-->
             <!--<Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=1</Chi>-->
             <!--<Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=1</Eng>-->
         <!--</Add>-->
-        <Add Key ="ChangePassword" Value="1" >
+        <Add Key="ChangePassword" Value="1" >
             <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=2</Chi>
             <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=2</Eng>
         </Add>
-        <Add Key ="ChangeMobileNumber" Value="1" >
+        <Add Key="ChangeMobileNumber" Value="1" >
             <Chi>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=zh-HK&amp;EP=BS&amp;PageType=3</Chi>
             <Eng>http://dev-ambs.cuww.com/wcipW_2019Aug/WEB/authbetaccV2.aspx?UIC=en-US&amp;EP=BS&amp;PageType=3</Eng>
         </Add>
-        <Add Key ="EnableMobileBettingService" Value="1" >
+        <Add Key="EnableMobileBettingService" Value="1" >
             <Chi>http://dev-ambs.cuww.com/wcip/Mobile/xxxxx.aspx?UIC=zh-HK&amp;Channel=Mobile</Chi>
             <Eng>http://dev-ambs.cuww.com/wcip/Mobile/xxxxx.aspx?UIC=en-US&amp;Channel=Mobile</Eng>
         </Add>
@@ -224,20 +227,18 @@
             <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/loginform.aspx?UIC=en-US&amp;NTAL=BPU&amp;EP=BS</Eng>
         </Add>
         <Add Key="RegisterAsWebUser" Value="1">
-            <Chi>http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=zh-HK&amp;EP=BS
-            </Chi>
-            <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=en-US&amp;EP=BS
-            </Eng>
+            <Chi>http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=zh-HK&amp;EP=BS</Chi>
+            <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/associateaccount.aspx?UIC=en-US&amp;EP=BS</Eng>
         </Add>
         <Add Key="ForgetWebPassword" Value="1">
             <Chi>http://dev-ambs.cuww.com/wcipA/AOSBS/inputaccoremail.aspx?UIC=zh-HK&amp;EP=BS</Chi>
             <Eng>http://dev-ambs.cuww.com/wcipA/AOSBS/inputaccoremail.aspx?UIC=en-US&amp;EP=BS</Eng>
         </Add>
-        <Add Key ="ChangePassword" Value="1" >
+        <Add Key="ChangePassword" Value="1">
             <Chi>http://dev-ambs.cuww.com/wcipW/WEB/inputaccoremail.aspx?UIC=zh-HK&amp;EP=BS</Chi>
             <Eng>http://dev-ambs.cuww.com/wcipW/WEB/inputaccoremail.aspx?UIC=en-US&amp;EP=BS</Eng>
         </Add>
-        <Add Key ="EnableMobileBettingService" Value="1" >
+        <Add Key="EnableMobileBettingService" Value="1">
             <Chi>http://dev-ambs.cuww.com/wcip/xxxxx.aspx?Channel=Mobile</Chi>
             <Eng>http://dev-ambs.cuww.com/wcip/xxxxx.aspx?Channel=Mobile</Eng>
         </Add>

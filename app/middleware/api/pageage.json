@@ -1,0 +1,7 @@
+{
+    "name": "middleware",
+    "author": "szhkjc Jim",
+    "version": "1.0.0",
+    "main": "./api/index.js",
+    "types": "./index.d.ts"
+}

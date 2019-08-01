@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, Button, FlatList } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
 
-import MatchItem from '../../components/MatchItem'
+import MatchItem from '../../components/MatchItemFlat'
 
 class MatchList extends React.PureComponent {
 

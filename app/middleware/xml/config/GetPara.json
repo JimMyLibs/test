@@ -470,6 +470,11 @@
                     "Eng": "/index/FB_GetInfo_eng.xml"
                 },
                 {
+                    "Key": "FB_ODDS_ALL_TEST",
+                    "Chi": "/index/FB_GetInfo_chi.xml",
+                    "Eng": "/index/FB_GetInfo_eng.xml"
+                },
+                {
                     "Key": "HR_ODDS_ALL",
                     "Chi": "/infoA/AOSBS/HR_GetInfo.ashx?QT=HR_ODDS_ALL&amp;Race=*&amp;Venue=*&amp;Result=1&amp;Dividend=1&amp;JTC=1&amp;JKC=1&amp;Lang=zh-HK",
                     "Eng": "/infoA/AOSBS/HR_GetInfo.ashx?QT=HR_ODDS_ALL&amp;Race=*&amp;Venue=*&amp;Result=1&amp;Dividend=1&amp;JTC=1&amp;JKC=1&amp;Lang=en-US"

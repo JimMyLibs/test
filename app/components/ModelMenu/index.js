@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Modal, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Modal, Text, TouchableOpacity, View, AsyncStorage } from "react-native";
 
 class ModelMenu extends Component {
     state = {
@@ -10,14 +10,23 @@ class ModelMenu extends Component {
         // console.warn('setModalVisible', visible)
         this.setState({ modalVisible: visible });
     }
-    selectMenu(item) {
-        // console.warn('selectMenu', item)
-        this.props.setPool(item)
+    selectPool(item) {
+        // console.warn('selectPool', item)
         this.setState({ modalVisible: false });
+        if(['Chi', 'Eng'].includes(item)){
+            this.selectLanguage(item);
+        }else{
+            this.props.setPool(item)
+        }
+    }
+    selectLanguage(item) {
+        console.warn('selectLanguage', item)
+        this.setState({ modalVisible: false });
+        AsyncStorage.setItem('language', item);
     }
 
     render() {
-        const page_menu = ['HAD', 'TQL', 'FHA', 'HHA']
+        const page_menu = ['Chi', 'Eng', 'HAD', 'TQL', 'FHA', 'HHA']
         return (
             <View style={styles.ModelMenu}>
                 {/* 右上角菜单按钮 */}
@@ -31,13 +40,14 @@ class ModelMenu extends Component {
                     visible={this.state.modalVisible}
                     onRequestClose={() => { this.setModalVisible(false) }}
                 >
+                    {/* select pool */}
                     <View style={styles.mm_page}>
                         <View style={styles.page_menu}>
                             <View style={styles.menu_trangle}></View>
                             <View style={styles.menu_list}>
                                 {
                                     page_menu.map((item, index) =>
-                                        <TouchableOpacity key={index}  onPress={() => { this.selectMenu(item) }}>
+                                        <TouchableOpacity key={index}  onPress={() => { this.selectPool(item) }}>
                                             <Text style={styles.menu_text}>{item}</Text>
                                         </TouchableOpacity>
                                     )

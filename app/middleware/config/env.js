@@ -6,34 +6,54 @@ let jsGlobal = (typeof window !== 'undefined'
         ? global
         : this);
 
-export const getAppName = ()=>{
-    let appName = 'app'
+export const isRN = () => {
+    let isRN = true;
     try {
-        if(window){
-            appName = 'web'
-        }
+        const { product } = jsGlobal.navigator;
+        isRN = !!product && product === 'ReactNative';
     } catch (error) {
-        console.warn('客户端类型获取失败');
+        console.warn('环境获取失败');
     }
-    return appName;
+    return isRN;
 }
 
-export const getEnv = ()=>{
+export const isDev = () => {
     let isDev = true;
     try {
-        if(window){
-            isDev = process.env.NODE_ENV !== 'production';
-        }else{
-            isDev = jsGlobal.__DEV__;
-        }
+        isDev = jsGlobal.process.env.NODE_ENV !== 'production';
     } catch (error) {
         console.warn('环境获取失败');
     }
     return isDev;
 }
 
-// 获取语言
-export const getLanguage = ()=> {
-    return 'Chi';
-    // return 'Eng';
+export const getLanguage = async () => {
+    let RNLanguage = 'Eng';
+    try {
+        RNLanguage = await jsGlobal.getLanguage();        
+    } catch (error) {
+        console.warn('fail to getLanguage',error)
+    }
+    // console.warn('RNLanguage',RNLanguage)
+    return RNLanguage || 'Eng';
+}
+
+let switchLanguage = true;
+const autoSwitchLanguage = () => {
+    switchLanguage = !switchLanguage;
+    const curLanguage = switchLanguage ? 'Chi' : 'Eng'
+    return curLanguage;
+}
+
+const getRNGlobal = ()=>{
+    // console.warn('window == global', window == global)
+    // console.warn('process', jsGlobal.process)
+    // console.warn('navigator', jsGlobal.navigator)
+    // console.warn('__DEV__', jsGlobal.__DEV__)
+    // console.warn('Headers', jsGlobal.Headers)
+    // console.warn('URL', jsGlobal.URL)
+    // console.warn('jsGlobal',Object.keys(jsGlobal))
+    // Object.keys(jsGlobal).map(item=>{
+    //     console.warn('jsGlobal-',item,jsGlobal[item])
+    // })
 }

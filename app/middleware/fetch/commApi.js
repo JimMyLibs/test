@@ -3,14 +3,12 @@
 import FetchBase from './FetchBase'
 import Cache from '../utils/cache'
 import { ISDEV, serverOriginUrl, serverPathUrl } from '../config/project'
-import apiUrls from '../config/apiUrls'
 import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetchConf'
 
 const http = new FetchBase()
 
 // 存储api数据的sessionStorage标识
-const apiInfoDevSessionId = 'apiInfoDevSessionId'
-const apiInfoProSessionId = 'apiInfoProSessionId'
+const apiInfoSessionId = 'apiInfoSessionId' + ISDEV ? '_dev' : '_pro';
 
 // 获取token
 export function getToken() {
@@ -26,7 +24,7 @@ export function setApiInfo(key,info) {
 }
 // 异步获取api地址信息
 export function fetchApiInfo() {
-    let curInfo = getApiInfo()
+    let curInfo = getApiInfo(apiInfoSessionId)
     return new Promise(async (resolve, reject) => {
         if (curInfo) {// 读取缓存
             resolve(curInfo)
@@ -46,15 +44,15 @@ const getDevApiOriginPath = () => {
     const serverPath = require('../xml/config/GetPara.json');
     // console.log('【dev-serverInfo】', { serverOrigin, serverPath })
     const mixInfo = { serverOrigin, serverPath: serverPath.TXN_XML };
-    setApiInfo(apiInfoDevSessionId,mixInfo)
+    setApiInfo(apiInfoSessionId,mixInfo)
     return mixInfo;
 }
 const getProApiOriginPath = async () => {
     const serverOrigin = serverOriginUrl && await http.toGet(serverOriginUrl) || {};
     const serverPath = await http.toGet(serverPathUrl);
-    // console.warn('【pro-serverInfo】', { serverOrigin, serverPath })
+    // console.log('【pro-serverInfo】', { serverOrigin, serverPath })
     const mixInfo = { serverOrigin, serverPath: serverPath.data.TXN_XML };
-    setApiInfo(apiInfoProSessionId,mixInfo)
+    setApiInfo(apiInfoSessionId,mixInfo)
     return mixInfo;
 }
 /**

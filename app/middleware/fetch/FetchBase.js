@@ -7,6 +7,7 @@ import { jsonToParams } from '../utils/url'
 // XML转JSON
 import fxp from 'fast-xml-parser'
 
+
 const fxpOpt = {
     attributeNamePrefix: '',// 将给定字符串添加到属性名称以进行标识
     // attrNodeName: false,// (有效名称）将所有属性分组为给定名称的属性。
@@ -269,7 +270,6 @@ export default class Http {
         xml = xml.replace(/Key =/g,'Key=')
         return xml;
     }
-
     /**
      * effectiveFetch fetch请求统一入口
      * @param {string} url 请求地址
@@ -290,7 +290,8 @@ export default class Http {
         }
         let { conf } = this
         let { timeout = 60000 } = conf
-        ISDEBUG && console.warn('——————————【 fetch 】——————————', { url, ...reqConf })
+        const language = (url.includes('_eng') || url.includes('en-US'))?'English':'中文';
+        ISDEBUG && console.warn('—————【 fetch 】—————', { language,url, ...reqConf })
         return Promise.race([
             fetch(url, reqConf).then(async data => {
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
@@ -312,7 +313,7 @@ export default class Http {
                     ErrMsg: '',
                     data,
                 }
-                ISDEBUG && console.warn('——————————【 fetch: success 】——————————', { ...result })
+                // ISDEBUG && console.warn('—————【 fetch: success 】—————', { ...result })
                 return result;
             }).catch(err => {
                 let result = {
@@ -320,7 +321,7 @@ export default class Http {
                     ErrMsg: err.message,
                     data: err,
                 }
-                ISDEBUG && console.warn('——————————【 fetch: fail 】——————————', { ...result })
+                // ISDEBUG && console.warn('—————【 fetch: fail 】—————', { ...result })
                 return result;
             }),
             new Promise((resolve, reject) => {

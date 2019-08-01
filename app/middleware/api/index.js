@@ -1,9 +1,7 @@
 import Matches from './Matches'
-import Pools from './pools'
+import Pools from './Pools'
 
 export default {
-    // Matches
     Matches,
-    // pools
     Pools,
 }
