@@ -22,7 +22,9 @@ class ModelMenu extends Component {
     selectLanguage(item) {
         console.warn('selectLanguage', item)
         this.setState({ modalVisible: false });
-        AsyncStorage.setItem('language', item);
+        AsyncStorage.setItem('language', item).then(res=>{
+            this.props.setPool();
+        })
     }
 
     render() {
