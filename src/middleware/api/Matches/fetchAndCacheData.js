@@ -1,17 +1,25 @@
 import { $post, $get } from '../../fetch/Http'
 import Cache from '../../utils/cache'
-import { useFetfchCache } from '../../config/project'
-// 本地调试，临时导入json
-import json_FB_GetInfo from '../../xml/index/FB_GetInfo_chi.json'
-const localResult = {
-    ErrCode: 0,
-    ErrMsg: '',
-    data: json_FB_GetInfo,
-}
+import { useFetfchCache, useJson } from '../../config/project'
+import { getLanguage } from '../../config/env'
+
 
 export const fetchData = async (url) => {
 
-    // return localResult;// 临时调试，本地数据
+    if(useJson){// use location data
+        const language = await getLanguage();
+        let lcJson = null;
+        if(language=='Eng'){
+            lcJson = require(`../../xml/index/FB_GetInfo_eng.json`);
+        }else{
+            lcJson = require(`../../xml/index/FB_GetInfo_chi.json`);
+        }
+        return {
+            ErrCode: 0,
+            ErrMsg: '',
+            data: lcJson,
+        };
+    }    
 
     const LSdata = Cache.get(url);
     const getData = async ()=>{

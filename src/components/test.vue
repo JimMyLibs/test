@@ -137,7 +137,7 @@ export default class HelloWorld extends Vue {
         }, 100);
     }
     async getFilterMenu() {
-        const { data: filterList } = await api.Matches.getFilterMenu() as any;
+        const { data: filterList } = await api.Matches.getFilterMenu();
         const { poolList, leagueList, dateList } = filterList;
         this.poolList = poolList;
         this.leagueList = leagueList;
@@ -153,7 +153,7 @@ export default class HelloWorld extends Vue {
         console.time("原始数据getOriginalData:");
         const {
             data: { FB_GetInfo_res, CouponInfo, TournamentPoolInfo }
-        } = await api.Matches.getOriginalData() as any;
+        } = await api.Matches.getOriginalData();
         this.fbGetInfoData.FB_GetInfo = FB_GetInfo_res;
         this.fbGetInfoData.CouponInfo = CouponInfo;
         this.fbGetInfoData.TournamentPoolInfo = TournamentPoolInfo;
@@ -161,7 +161,7 @@ export default class HelloWorld extends Vue {
     }
     async getDatePools() {
         console.time("处理getDatePools:");
-        const { data } = await api.Matches.datePools() as any;
+        const { data } = await api.Matches.datePools();
         this.fbGetInfoData.datePools = data;
         console.timeEnd("处理getDatePools:");
 

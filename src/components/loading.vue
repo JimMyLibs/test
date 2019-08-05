@@ -12,8 +12,6 @@ export default {
             pageName: "pages_loading"
         };
     },
-    mounted() {},
-    methods: {}
 };
 </script>
 

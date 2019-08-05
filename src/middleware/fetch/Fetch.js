@@ -81,10 +81,10 @@ export default class Http extends FetchBase {
         }
 
         if (isEmpty(apiInfo)) {
-            return fetchApiInfo().then(res => {
+            return fetchApiInfo().then(async res => {
                 const { serverOrigin, serverPath } = res;
                 // console.log('【fetchApiInfo】',res, serverPath)
-                reqUrl = this.getUrl(url, serverPath, apiType, fetchType)
+                reqUrl = await this.getUrl(url, serverPath, apiType, fetchType)
                 // console.log('【完整地址：reqUrl】',reqUrl)
                 return this[method](reqUrl, { headers, body })
             })
@@ -123,7 +123,7 @@ export default class Http extends FetchBase {
      * @param  {string} fetchType  [请求类型:决定origin]
      * @return {string}            [完整接口地址]
      */
-    getUrl(url, mixApiInfo, apiType, fetchType = publicFetchType) {
+    async getUrl(url, mixApiInfo, apiType, fetchType = publicFetchType) {
         let { apiInfo } = this
         // console.log('【apiType】',apiType,'【fetchType】',fetchType,'【publicFetchType】',publicFetchType) 
         // 处理http/https开头的完整请求
@@ -140,7 +140,7 @@ export default class Http extends FetchBase {
         // console.log('【mixApiInfo】',mixApiInfo,'【apiInfo】',apiInfo) 
         mixApiInfo = mixApiInfo || apiInfo
         let typeUrl = mixApiInfo[fetchType]
-        typeUrl = this.getJcUrl(apiType, typeUrl, fetchType);
+        typeUrl = await this.getJcUrl(apiType, typeUrl, fetchType);
         // console.log('【当前apiType地址】',typeUrl,'\n','【请求接口路径】',url) 
         if (typeof typeUrl === 'undefined') {
             throw new Error('type is not in apiInfo')
@@ -149,14 +149,15 @@ export default class Http extends FetchBase {
         return url ? `${typeUrl}/${url}` : typeUrl
     }
     // 转化为马会专用链接
-    getJcUrl(apiType, typeUrl, fetchType) {
+    async getJcUrl(apiType, typeUrl, fetchType) {
         const urlObj = {};
         typeUrl.Add.map(item => {
             urlObj[item.Key] = item;
         })
         // console.log('【马会当前fetchType所有地址】',urlObj) 
         const apiOrigin = apiUrls[EVN][fetchType];
-        let apiPath = urlObj[apiType][getLanguage()]
+        const RNLanguage = await getLanguage();
+        let apiPath = urlObj[apiType][RNLanguage]
         apiPath = apiPath.replace(/^\/+/, '');// 删除接口路径开头的‘/’
         const result = apiOrigin + apiPath;
         return result;
