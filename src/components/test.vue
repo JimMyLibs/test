@@ -4,11 +4,7 @@
         <div class="preCode flex" v-if="show.all || 1">
             <div class="preBox" v-if="show.listFilter">
                 <select class="changeMatche" @change="changeMatche" v-model="selected.pool">
-                    <option
-                        v-for="(item,index) in poolList"
-                        :key="item"
-                        :value="index"
-                    >{{index}}={{item}}</option>
+                    <option v-for="(item,index) in poolList" :key="item" :value="index">{{index}}={{item}}</option>
                     <option value>全部</option>
                 </select>
                 <select class="changeMatche" @change="changeMatche" v-model="selected.league">
@@ -22,39 +18,23 @@
                 <pre contenteditable="true" v-html="listFilter"></pre>
             </div>
             <div class="preBox">
-                <div
-                    class="preTitle"
-                    @click="show.datePools=!show.datePools"
-                >日期-玩法:{{show.datePools?'开':'关'}}</div>
+                <div class="preTitle" @click="show.datePools=!show.datePools">日期-玩法:{{show.datePools?'开':'关'}}</div>
                 <pre contenteditable="true" v-if="show.datePools" v-html="datePools"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div
-                    class="preTitle"
-                    @click="show.FB_GetInfo=!show.FB_GetInfo"
-                >过滤字段:{{show.FB_GetInfo?'开':'关'}}</div>
+                <div class="preTitle" @click="show.FB_GetInfo=!show.FB_GetInfo">过滤字段:{{show.FB_GetInfo?'开':'关'}}</div>
                 <pre contenteditable="true" v-if="show.FB_GetInfo" v-html="FB_GetInfo"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div
-                    class="preTitle"
-                    @click="show.CouponInfo=!show.CouponInfo"
-                >原始数据CouponInfo:{{show.CouponInfo?'开':'关'}}</div>
+                <div class="preTitle" @click="show.CouponInfo=!show.CouponInfo">原始数据CouponInfo:{{show.CouponInfo?'开':'关'}}</div>
                 <pre contenteditable="true" v-if="show.CouponInfo" v-html="CouponInfo"></pre>
                 <!-- <loading /> -->
             </div>
             <div class="preBox">
-                <div
-                    class="preTitle"
-                    @click="show.TournamentPoolInfo=!show.TournamentPoolInfo"
-                >原始数据TournamentPoolInfo:{{show.TournamentPoolInfo?'开':'关'}}</div>
-                <pre
-                    contenteditable="true"
-                    v-if="show.TournamentPoolInfo"
-                    v-html="TournamentPoolInfo"
-                ></pre>
+                <div class="preTitle" @click="show.TournamentPoolInfo=!show.TournamentPoolInfo">原始数据TournamentPoolInfo:{{show.TournamentPoolInfo?'开':'关'}}</div>
+                <pre contenteditable="true" v-if="show.TournamentPoolInfo" v-html="TournamentPoolInfo"></pre>
                 <!-- <loading /> -->
             </div>
         </div>

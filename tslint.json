@@ -10,7 +10,7 @@
   ],
   "jsRules": {},
   "rules": {
-    "quotemark": [true, "single", "allow-escape", "avoid-template", "jsx-double"],
+    "quotemark": [true, "single", "allow-escape", "avoid-template"],
     "import-name": false,
     "ordered-imports": false,
     "member-ordering": false,
