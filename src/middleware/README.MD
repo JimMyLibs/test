@@ -47,7 +47,7 @@
 8. - [ ] - 数据范式化
 	1. 数据范式化，对比前后性能，及前端状态绑定难易度
 
-9. - [ ] - jest acount data
+9. - [x] - jest acount data
 	1. imitate it at location
     2. test it at vm
 
