@@ -3,6 +3,12 @@
   "extends": [
     "tslint:recommended"
   ],
+  "linterOptions": {
+    "exclude": [
+      "src/**/*.vue",
+      "node_modules/**"
+    ]
+  },
   "jsRules": {},
   "rules": {
     "quotemark": [true, "single", "allow-escape", "avoid-template"],
