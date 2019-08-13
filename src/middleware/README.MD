@@ -41,7 +41,7 @@
 
 6. - [ ] - 多级多段缓存机制
 	1. fetch层缓存+业务端缓存+缓存统一控制
-
+·
 7. - [x] - test case
 
 8. - [ ] - 数据范式化
@@ -59,3 +59,6 @@
 
 ### unfinished function
 fetch abort:  fetch/FetchBase.js > coverFetch()
+```
+
+```

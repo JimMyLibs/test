@@ -1,5 +1,5 @@
 <template>
-    <div class="pages_test">
+    <div class="Match_filter">
         <!-- <div class="testFetch" @click="testFetch">高频请求</div> -->
         <div class="preCode flex" v-if="show.all || 1">
             <div class="preBox" v-if="show.listFilter">
@@ -44,21 +44,21 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 // import loading from './loading'
-import api from "../middleware/api";
+import api from "../../middleware/api";
 
 @Component({
     components: {
         // loading
     }
 })
-export default class HelloWorld extends Vue {
-    pageName: string = "pages_test";
+export default class Match_filter extends Vue {
+    pageName: string = "Match_filter";
     fbGetInfoData: any = {
+        listFilter: {},
+        datePools: {},
+        FB_GetInfo: {},
         CouponInfo: {},
         TournamentPoolInfo: {},
-        FB_GetInfo: {},
-        datePools: {},
-        listFilter: {}
     };
     selected: any = {
         pool: "HAD",
@@ -69,7 +69,7 @@ export default class HelloWorld extends Vue {
         all: location.hostname === "169.254.222.170",
         listFilter: 1,
         datePools: 1,
-        FB_GetInfo: 0,
+        FB_GetInfo: 1,
         CouponInfo: 0,
         TournamentPoolInfo: 0
     };
@@ -102,8 +102,10 @@ export default class HelloWorld extends Vue {
         this.createTime = new Date().getTime();
     }
     async mounted() {
-        await this.getFilterMenu();
-        await this.changeMatche();
+        // await this.getFilterMenu();
+        // await this.changeMatche();
+        // await this.getDatePools();
+        await this.getOriginalData();
     }
     testFetch() {
         api.Matches.datePools();
@@ -182,7 +184,7 @@ export default class HelloWorld extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
-.pages_test {
+.Match_filter {
     height: 100%;
     .preCode {
         height: 100%;

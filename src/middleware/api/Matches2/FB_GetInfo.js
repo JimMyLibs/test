@@ -103,17 +103,16 @@ const particularAddLine = (pool,item4)=>{// 个别玩法添加均线
 export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
     const resData = await fetchData('FB_GetInfo');
     const { Coupons: { CouponInfo }, TournamentPools: { TournamentPoolInfo } } = resData.data.AOSBS_XML;
-    let result = { data: [] };
+    let result = { data: {} };
     try {
         CouponInfo.map((item1, index1) => {
             // Jim@2019-06-17 17:43:23：fix xml2json bug
             let { Matches: { MatchInfo } } = item1;
             MatchInfo = obj2Arr(MatchInfo);
 
-            let dataPerDay = {};// 每天赛事
             // 赛事日期
-            dataPerDay.date = `${MatchInfo[0] ? MatchInfo[0].Date : ''}(${item1.NameShort})`;
-            dataPerDay.coupons = [];// 赛事列表          
+            const date = `${MatchInfo[0] ? MatchInfo[0].Date : ''}(${item1.NameShort})`;
+            const coupons = {};// 赛事列表          
             // console.log(index1,item1)
             MatchInfo.map((item2, index2) => {
                 // console.log(index1+'_'+index2, item2.Pools.PoolInfo)
@@ -126,7 +125,7 @@ export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
                             let matches_item = {};// 每场比赛
 
                             let pool = poolType || item3.Pool;
-                            matches_item.key = item2.MatchID;// 比赛ID
+                            // matches_item.key = item2.MatchID;// 比赛ID
                             matches_item.league = item2.League;// 国家地区
                             matches_item.home = item2.Home;
                             matches_item.away = item2.Away;
@@ -139,7 +138,7 @@ export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
                             matches_item.corner = item2.Progress.Corner;
                             matches_item.inPlay = item2.Inplay;
                             matches_item.webUrl = ''
-                            matches_item.oddsSet = [];// 每场比赛的投注池
+                            matches_item.oddsSet = {};// 每场比赛的投注池
 
                             item3.OddsSet = obj2Arr(item3.OddsSet);
                             item3.OddsSet.map((item4, index4) => {
@@ -147,26 +146,27 @@ export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
                                 pools_item.enabled = item3.Enabled;
                                 pools_item.oddsUpdateTime = item3.OddsUpdateTime;// 更新时间
                                 pools_item.stopSell = item3.StopSell;// 停售时间
-                                pools_item.oddsInfo = [];// 每个投注项的赔率列表
+                                pools_item.oddsInfo = {};// 每个投注项的赔率列表
 
                                 item4.OddsInfo = obj2Arr(item4.OddsInfo);
                                 particularAddLine(pool,item4);// 个别玩法添加均线
                                 item4.OddsInfo.map((item6, index6) => {
                                     const oddsInfo_item = handleOddsInfo(pool,item6);// 处理oddsInfo
-                                    pools_item.oddsInfo.push(oddsInfo_item);
+                                    // pools_item.oddsInfo.push(oddsInfo_item);
+                                    pools_item.oddsInfo[oddsInfo_item.name] = oddsInfo_item.odds;
                                 })
                                 // console.log(index4,'pools_item.oddsInfo',pools_item.oddsInfo)
-                                pools_item.oddsInfo = oddsInfoSort(pools_item.oddsInfo);// 排序
-                                matches_item.oddsSet.push(pools_item);
+                                // pools_item.oddsInfo = oddsInfoSort(pools_item.oddsInfo);// 排序
+                                matches_item.oddsSet[index4] = pools_item;
                             })
-
-                            dataPerDay.coupons.push(matches_item);// 拆散polls扁平到coupons层级
+                            // console.log(item2.MatchID,matches_item.pool)
+                            coupons[index3+'_'+item2.MatchID] = matches_item;// 拆散polls扁平到coupons层级
                         }
                     })
                 }
                 getPoolInfo(item2.Pools.PoolInfo);
             })
-            result.data.push(dataPerDay);
+            result.data[date] = coupons;
         })
 
         return {

@@ -5,6 +5,9 @@ import store from './store';
 import './registerServiceWorker';
 
 Vue.config.productionTip = false;
+(window as any).getLanguage = (): string => {
+  return 'Eng';
+};
 
 new Vue({
   router,

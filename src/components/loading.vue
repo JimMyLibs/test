@@ -1,23 +1,24 @@
 <template>
-    <div class="pages_loading">
+    <div class="Page_Loading">
         <div class="spinner"></div>
     </div>
 </template>
 
-<script>
-export default {
-    name: "pages_loading",
-    data() {
-        return {
-            pageName: "pages_loading"
-        };
-    },
-};
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
+    components: {
+        
+    }
+})
+export default class Page_Loading extends Vue {
+    pageName: string = "Page_Loading";
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='scss' scoped>
-.pages_loading {
+<style lang='scss'>
+.Page_Loading {
     .spinner {
         width: 60px;
         height: 60px;

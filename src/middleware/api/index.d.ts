@@ -13,5 +13,12 @@ declare namespace api {
         static getOriginalData(): Promise<any> // 获取原始数据
         static datePools(): Promise<any> // 获取订制数据
     }
+    namespace User {
+        function check(): Promise<any>;
+        function statement(): Promise<any>;
+        function sell(): Promise<any>;
+        function login(): Promise<any>;
+    }
 }
 export default api
+

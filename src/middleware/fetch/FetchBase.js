@@ -313,9 +313,9 @@ export default class Http {
                     result = {ErrCode: res.result, ErrMsg: res.message, data: res.data || {} }
                 }else{
                     const { ErrCode, ErrMsg, ...others } = res;
-                    result = {ErrCode: res.ErrCode, ErrMsg: res.ErrMsg, data: others || {} }
+                    result = {ErrCode: res.ErrCode || 0, ErrMsg: res.ErrMsg || '', data: others || {} }
                 }
-                ISDEBUG && console.warn('—————【 fetch: success 】—————', { ...result })
+                ISDEBUG && console.warn('—————【 fetch: success 】—————', { url,...result })
                 return result;
             }).catch(err => {
                 let result = {
@@ -323,7 +323,7 @@ export default class Http {
                     ErrMsg: err.message,
                     data: err,
                 }
-                ISDEBUG && console.warn('—————【 fetch: fail 】—————', { ...result })
+                ISDEBUG && console.warn('—————【 fetch: fail 】—————', { url,...result })
                 return result;
             }),
             new Promise((resolve, reject) => {

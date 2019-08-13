@@ -1,21 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <div id="nav">
+            <router-link v-for="item in routers" :key="item.name" :to="item.path">{{item.name}} | </router-link>
+        </div>
+        <router-view />
     </div>
-    <router-view/>
-  </div>
 </template>
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
+    components: {
+        
+    }
+})
+export default class Page_app extends Vue {
+    pageName: string = "Page_app";
+    get routers(): object[] {
+        return (this as any).$router.options.routes;
+    }
+    mounted() {
+        
+    }
+}
+</script>
 
 
 <style lang='scss'>
-#nav *{
+#nav * {
     color: #fff;
 }
 /*********************** reset ***********************/
 body {
-    font-family: Consolas, "Courier New", monospace, "microsoft yahei", Helvetica, Arial, sans-serif;
+    font-family: Consolas, "Courier New", monospace, "microsoft yahei",        Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #fff;
@@ -27,7 +44,7 @@ body {
     outline: none;
 }
 button,input,select,textarea,pre {
-    font-family: Consolas, "Courier New", monospace,"Helvetica", "Microsoft Yahei";
+    font-family: Consolas, "Courier New", monospace, "Helvetica",        "Microsoft Yahei";
     tab-size: 4;
 }
 html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,a,p,blockquote,table,th,td,header,hgroup,nav,section,article,aside,footer,figure,figcaption,menu,button,img {
@@ -39,7 +56,7 @@ html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,
     list-style-image: none;
     resize: none;
 }
-html,body,#app{
+html,body,#app {
     width: 100%;
     height: 100%;
 }

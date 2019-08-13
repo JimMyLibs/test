@@ -12,7 +12,7 @@ export const isRN = () => {
         const { product } = jsGlobal.navigator;
         isRN = !!product && product === 'ReactNative';
     } catch (error) {
-        console.warn('环境获取失败');
+        console.warn('isRN获取失败');
     }
     return isRN;
 }
@@ -20,9 +20,9 @@ export const isRN = () => {
 export const isDev = () => {
     let isDev = true;
     try {
-        isDev = jsGlobal.process.env.NODE_ENV !== 'production';
+        isDev = process.env.NODE_ENV !== 'production';
     } catch (error) {
-        console.warn('环境获取失败');
+        console.warn('isDev获取失败');
     }
     return isDev;
 }
