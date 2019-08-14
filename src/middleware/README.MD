@@ -60,5 +60,4 @@
 ### unfinished function
 fetch abort:  fetch/FetchBase.js > coverFetch()
 ```
-
 ```

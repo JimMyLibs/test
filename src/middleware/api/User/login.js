@@ -1,15 +1,9 @@
-import { $upload } from '../../fetch/Http'
+import { $upload, $get } from '../../fetch/Http'
 
 export const login = ()=>{
-    console.log('login调用成功')
-    return $upload('https://iosbstxn01.qcew.com:65443/txn/IOSBS/Authentication.ashx', {
-        body: {
-            UserId: '20025850',
-            Password: 'D13149DE00848EB013CAD318D27829DB64B965D7',
-            Lang: 'zh-HK',
-            isEWallet: '1',
-            reAuthentication: '0'
-        }
+    return $get('', {
+        fetchType: 'Txn',
+        apiType: 'Authentication',
     })
 }
 

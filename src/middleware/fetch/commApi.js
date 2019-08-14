@@ -7,8 +7,9 @@ import { successCondition, loginInvalidCondition, msgKeys } from '../config/fetc
 
 const http = new FetchBase()
 
+const curEnv = ISDEV ? 'dev' : 'pro';
 // 存储api数据的sessionStorage标识
-const apiInfoSessionId = 'apiInfoSessionId' + ISDEV ? '_dev' : '_pro';
+const apiInfoSessionId = 'apiInfoSessionId' + '_' + curEnv;
 
 // 获取token
 export function getToken() {
@@ -25,31 +26,23 @@ export function setApiInfo(key,info) {
 // 异步获取api地址信息
 export function fetchApiInfo() {
     let curInfo = getApiInfo(apiInfoSessionId)
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise(async (resolve, reject) => {
-        if (curInfo) {// 读取缓存
-            resolve(curInfo)
-        } else {
-            if (ISDEV) {// 开发
-                const ApiOriginPath = getDevApiOriginPath();
+        try {
+            if (curInfo) {// 读取缓存
+                resolve(curInfo)
+            } else {
+                const ApiOriginPath = await getApiOriginPath();
                 resolve(ApiOriginPath);
-            } else {// 生产
-                const ApiOriginPath = await getProApiOriginPath();
-                resolve(ApiOriginPath);
-            }
+            }            
+        } catch (error) {
+            reject(error)
         }
     })
 }
-const getDevApiOriginPath = () => {
-    const serverOrigin = {};
-    const serverPath = require('../xml/config/GetPara.json');
-    // console.log('【dev-serverInfo】', { serverOrigin, serverPath })
-    const mixInfo = { serverOrigin, serverPath: serverPath.TXN_XML };
-    setApiInfo(apiInfoSessionId,mixInfo)
-    return mixInfo;
-}
-const getProApiOriginPath = async () => {
-    const serverOrigin = serverOriginUrl && await http.toGet(serverOriginUrl) || {};
-    const serverPath = await http.toGet(serverPathUrl);
+const getApiOriginPath = async () => {
+    const serverOrigin = serverOriginUrl[curEnv] && await http.toGet(serverOriginUrl[curEnv]) || {};
+    const serverPath = await http.toGet(serverPathUrl[curEnv]);
     // console.log('【pro-serverInfo】', { serverOrigin, serverPath })
     const mixInfo = { serverOrigin, serverPath: serverPath.data.TXN_XML };
     setApiInfo(apiInfoSessionId,mixInfo)

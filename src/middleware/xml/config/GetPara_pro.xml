@@ -150,10 +150,6 @@
         <Add Key="RetrieveEKBAForAuthentication">/txnA/AOSBS/RetrieveEKBAForAuthentication.ashx</Add>
     </Txn>
     <Info>
-        <Add Key="FB_ODDS_ALL_TEST">
-            <Chi>/index/FB_GetInfo_chi.min.xml</Chi>
-            <Eng>/index/FB_GetInfo_eng.min.xml</Eng>
-        </Add>
         <Add Key="FB_ODDS_ALL">
             <Chi>/infoA/AOSBS/FB_GetInfo.ashx?QT=FB_ODDS_ALL&amp;CouponIndex=*&amp;Day=*&amp;Filter=*&amp;MatchNum=*&amp;TourID=*&amp;Lang=zh-HK</Chi>
             <Eng>/infoA/AOSBS/FB_GetInfo.ashx?QT=FB_ODDS_ALL&amp;CouponIndex=*&amp;Day=*&amp;Filter=*&amp;MatchNum=*&amp;TourID=*&amp;Lang=en-US</Eng>

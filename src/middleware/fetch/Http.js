@@ -1,9 +1,7 @@
 import Http from './Fetch'
 import { checkResponse } from './commApi'
 
-const http = new Http({
-    fetchType: 'Info'
-})
+const http = new Http()
 
 
 const $fetch = (api, data = {}, method = 'post', options) => {

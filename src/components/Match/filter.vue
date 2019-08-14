@@ -152,40 +152,13 @@ export default class Match_filter extends Vue {
         ).getMilliseconds();
         console.log("渲染时间", renderTime, "ms");
     }
-    syntaxHighlight(json: object | string) {
-        if (typeof json !== "string") {
-            json = JSON.stringify(json, undefined, 4);
-        }
-        json = json
-            .replace(/&/g, "&")
-            .replace(/</g, "<")
-            .replace(/>/g, ">");
-        return json.replace(
-            /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
-            (match: string) => {
-                let cls = "number";
-                if (/^"/.test(match)) {
-                    if (/:$/.test(match)) {
-                        cls = "key";
-                    } else {
-                        cls = "string";
-                    }
-                } else if (/true|false/.test(match)) {
-                    cls = "boolean";
-                } else if (/null/.test(match)) {
-                    cls = "null";
-                }
-                return '<span class="' + cls + '">' + match + "</span>";
-            }
-        );
-    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
 .Match_filter {
-    height: 100%;
+    height: 98%;
     .preCode {
         height: 100%;
         .preBox {
@@ -202,19 +175,7 @@ export default class Match_filter extends Vue {
             &:not(:last-of-type) {
                 border-right: 2px solid #444;
             }
-            pre {
-                background: linear-gradient(
-                        90deg,
-                        rgba(0, 0, 0, 0.1) 50%,
-                        transparent 0
-                    ),
-                    linear-gradient(rgba(0, 0, 0, 0) 50%, transparent 0);
-                background-size: 4em 4em;
-            }
         }
-    }
-    .flex {
-        display: flex;
     }
 }
 </style>

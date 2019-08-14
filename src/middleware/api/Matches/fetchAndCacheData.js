@@ -10,9 +10,9 @@ export const fetchData = async (url) => {
         const language = await getLanguage();
         let lcJson = null;
         if(language=='Eng'){
-            lcJson = require(`../../xml/index/FB_GetInfo_eng.json`);
+            lcJson = require(`../../xml/infoA/AOSBS/FB_GetInfo_eng.json`);
         }else{
-            lcJson = require(`../../xml/index/FB_GetInfo_chi.json`);
+            lcJson = require(`../../xml/infoA/AOSBS/FB_GetInfo_chi.json`);
         }
         return {
             ErrCode: 0,
@@ -24,7 +24,8 @@ export const fetchData = async (url) => {
     const LSdata = Cache.get(url);
     const getData = async ()=>{
         const resData = await $get('',{
-            apiType: 'FB_ODDS_ALL_TEST'
+            fetchType: 'Info',
+            apiType: 'FB_ODDS_ALL'
         });// 300ms
         if (JSON.stringify(resData) !== '{}') {
             Cache.set(url, resData);

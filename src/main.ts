@@ -4,6 +4,9 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
+import vueMixin from './resource/vue/mixin';
+vueMixin();
+
 Vue.config.productionTip = false;
 (window as any).getLanguage = (): string => {
   return 'Eng';

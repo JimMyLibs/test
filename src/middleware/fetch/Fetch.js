@@ -77,7 +77,8 @@ export default class Http extends FetchBase {
         if (ISDEV && body.mock) {// mock数据
             url = url.replace(/^\/+/, '')
             reqUrl = `${mockUrl}/${url}`
-            return this[method](reqUrl, { headers, body })
+            return this['toPost'](reqUrl, { headers, body })// Currently, noly support the post method
+            // return this[method](reqUrl, { headers, body })
         }
 
         if (isEmpty(apiInfo)) {
@@ -156,8 +157,14 @@ export default class Http extends FetchBase {
         })
         // console.log('【马会当前fetchType所有地址】',urlObj) 
         const apiOrigin = apiUrls[EVN][fetchType];
-        const RNLanguage = await getLanguage();
-        let apiPath = urlObj[apiType][RNLanguage]
+        // jedge whether it supports Chinese and English
+        let apiPath = urlObj[apiType];
+        if(apiPath.hasOwnProperty('Chi')&&apiPath.hasOwnProperty('Eng')){
+            const RNLanguage = await getLanguage();
+            apiPath = apiPath[RNLanguage]            
+        }else{
+            apiPath = apiPath['#text']
+        }
         apiPath = apiPath.replace(/^\/+/, '');// 删除接口路径开头的‘/’
         const result = apiOrigin + apiPath;
         return result;

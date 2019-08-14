@@ -315,7 +315,7 @@ export default class Http {
                     const { ErrCode, ErrMsg, ...others } = res;
                     result = {ErrCode: res.ErrCode || 0, ErrMsg: res.ErrMsg || '', data: others || {} }
                 }
-                ISDEBUG && console.warn('—————【 fetch: success 】—————', { url,...result })
+                ISDEBUG && console.warn('—————【 fetch: success 】—————', { language,url,req:{...reqConf},res:{...result} })
                 return result;
             }).catch(err => {
                 let result = {
@@ -323,7 +323,7 @@ export default class Http {
                     ErrMsg: err.message,
                     data: err,
                 }
-                ISDEBUG && console.warn('—————【 fetch: fail 】—————', { url,...result })
+                ISDEBUG && console.warn('—————【 fetch: fail 】—————', { language,url,req:{...reqConf},res:{...result} })
                 return result;
             }),
             new Promise((resolve, reject) => {
