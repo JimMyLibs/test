@@ -7,13 +7,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Match',
+      name: 'match',
       component:  () => import('./pages/Match.vue'),
     },
     {
       path: '/user',
-      name: 'User',
+      name: 'user',
       component: () => import('./pages/User.vue'),
+    },
+    {
+      path: '/video',
+      name: 'video',
+      component: () => import('./pages/Video.vue'),
     },
   ],
 });

@@ -61,6 +61,9 @@ html,body,#app {
     height: 100%;
     .flex {
         display: flex;
+        .flex1 {
+            flex: 1
+        }
     }
 }
 /*********************** global ***********************/

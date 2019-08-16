@@ -19,6 +19,10 @@ declare namespace api {
         function sell(): Promise<any>;
         function login(): Promise<any>;
     }
+    class Video {
+        constructor() //构造函数
+        static barrage: any // 弹幕
+    }
 }
 export default api
 
