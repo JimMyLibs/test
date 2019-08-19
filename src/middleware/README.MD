@@ -51,8 +51,13 @@
 	1. imitate it at location
     2. test it at vm
 
-10. - [ ] - code the file about DefinitelyTyped
+10. - [x] - code the file about DefinitelyTyped
 
+11. - [ ] - joint debug barrage data width Navi
+
+12. - [ ] - joint debug the API about account width David
+
+13. - [ ] - fit the getJSON.json
 
 
 ---

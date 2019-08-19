@@ -128,6 +128,7 @@ export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
                             let pool = poolType || item3.Pool;
                             matches_item.key = item2.MatchID;// 比赛ID
                             matches_item.league = item2.League;// 国家地区
+                            matches_item.date = dataPerDay.date;// 国家地区
                             matches_item.home = item2.Home;
                             matches_item.away = item2.Away;
                             matches_item.score_Home = item2.Progress.Result.split(':')[0];

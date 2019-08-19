@@ -12,11 +12,11 @@ class Matches {
         }
     }
     async initFB_GetInfo() {
-        if(useCaseCache){
+        if (useCaseCache) {
             if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
                 this.cache.FB_GetInfo = await FB_GetInfo();
             }
-        }else{
+        } else {
             this.cache.FB_GetInfo = await FB_GetInfo();
         }
         return this.cache.FB_GetInfo;
@@ -41,7 +41,7 @@ class Matches {
         return {
             ErrCode: 0,
             ErrMsg: '',
-            data:{
+            data: {
                 poolList,
                 dateList,
                 leagueList,
@@ -54,7 +54,7 @@ class Matches {
         return {
             ErrCode: 0,
             ErrMsg: '',
-            data:{
+            data: {
                 FB_GetInfo_res,
                 CouponInfo,
                 TournamentPoolInfo,
@@ -133,45 +133,40 @@ class Matches {
         return poolData;
     }
     async filter(params) {// 筛选数据
-        const { pool = '', date = '', league = '' } = params;
-        if(useCaseCache){
+        const { pool = '', date = '', league = '', inPlay = '' } = params;
+        if (useCaseCache) {
             if (!this.cache.datePools) {// 读取变量缓存数据
                 this.cache.datePools = await this.datePools();
             }
-        }else{
+        } else {
             this.cache.datePools = await this.datePools();
         }
-        const datePools = JSON.parse(JSON.stringify(this.cache.datePools))
-        const filterResult = [];
-        datePools.data.map(item => {
+        const datePools = JSON.parse(JSON.stringify(this.cache.datePools));
+        let filterDate = datePools.data.filter(item => date ? (item.date === date) : true);
+
+        let filterResult = filterDate.map(item => {
             if (pool) {
-                const filterPoolData = item[pool].filter((item2, index2) => {
-                    item2.matches.map((item3, index3) => {
+                const filterPool = item[pool].filter((item2, index2) => {
+                    item2.matches = item2.matches.filter((item3, index3) => {
                         if ((index2 + index3) < 3) {
                             item3.webUrl = 'https://wwww.baidu.com/'
                         }
+                        const validateInPlay = inPlay !== '' ? item3.inPlay == inPlay : true;// inPlay为空时取全部,兼容0==false,1==true
+                        return validateInPlay;
                     })
-                    return league ? item2.league == league : true;// league为空时取全部
+                    const validateLeague = league ? item2.league == league : true;// league为空时取全部
+                    return validateLeague && item2.matches.length;// if matches.length==0, this item isn't return
                 })
-                // console.log(pool, filterPoolData)
-                if (date) {
-                    if (item.date == date) {
-                        filterResult.push({
-                            date: item.date,
-                            coupons: filterPoolData || [],
-                        })
-                    }
-                } else {// date为空时取全部
-                    filterResult.push({
-                        date: item.date,
-                        coupons: filterPoolData || [],
-                    })
+                return {
+                    date: item.date,
+                    coupons: filterPool || [],
                 }
             } else {
                 return item;
             }
         })
-        // console.log('过滤', {...params}, {...filterResult})
+        filterResult = filterResult.filter(item => item.coupons.length);
+        console.log('Filter', { ...params }, { ...filterResult })
         return {
             ErrCode: 0,
             ErrMsg: '',
