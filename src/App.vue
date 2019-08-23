@@ -1,7 +1,14 @@
 <template>
     <div id="app">
         <div id="nav">
-            <router-link v-for="item in routers" :key="item.name" :to="item.path">{{item.name}} | </router-link>
+            <router-link v-for="item in routers" :key="item.name" :to="item.path">
+                <template v-if="item.children">
+                    <router-link v-for="item2 in item.children" :key="item2.name" :to="item2.path">
+                        {{item2.name}} | 
+                    </router-link>
+                </template>
+                <template v-else>{{item.name}} | </template>                
+            </router-link>
         </div>
         <router-view />
     </div>
@@ -20,7 +27,7 @@ export default class Page_app extends Vue {
         return (this as any).$router.options.routes;
     }
     mounted() {
-        
+        // console.log('routers',this.routers)
     }
 }
 </script>

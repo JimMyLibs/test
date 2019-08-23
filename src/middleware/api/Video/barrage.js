@@ -18,7 +18,7 @@ class Barrage {
             }
         })
     }
-    set(params) {
+    shoot(params) {
         const { videoId, videoTime, value } = params;
         return $post('/barrage/set',{
             videoId,videoTime,value,

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Video_Barrage from "../components/Video/Barrage.vue";
+import Video_Barrage from "../../components/Video/Barrage.vue";
 
 @Component({
     components: {

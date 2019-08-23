@@ -1,7 +1,8 @@
 interface MatchesFilterParams {
     pool: string,
     date?: string,
-    league?: string
+    league?: string,
+    inPlay?: number
 }
 
 declare namespace api {
@@ -12,6 +13,13 @@ declare namespace api {
         static getFilterMenu(): Promise<any> // 获取筛选菜单
         static getOriginalData(): Promise<any> // 获取原始数据
         static datePools(): Promise<any> // 获取订制数据
+    }
+    class MatchByJson {
+        constructor() //构造函数
+        static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表
+        static getFilterMenu(): Promise<any> // 获取筛选菜单
+        static getOriginalData(): Promise<any> // 获取原始数据
+        static dateLeague(reverse: number): Promise<any> // 获取订制数据
     }
     namespace User {
         function check(): Promise<any>;

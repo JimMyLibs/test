@@ -243,11 +243,13 @@ export default class Http {
         // console.log('请求',this.history[fetchId])
         if (this.history[fetchId]) {
             this.history[fetchId]++;
-            return {
-                ErrCode: 10701,
-                ErrMsg: '请求过于频繁，请稍后再试',
-                data: {},
-            }
+            return new Promise((resolve, reject) => {
+                reject({
+                    ErrCode: 10701,
+                    ErrMsg: '请求过于频繁，请稍后再试',
+                    data: {},
+                })
+            })
             // console.log('拒绝请求',this.history[fetchId])
         } else {
             this.history[fetchId] = 1;

@@ -1,7 +1,3 @@
-// 获取当前主机本地ip地址，兼容windows及Unix
-
-const os = require('os')
-
 /**
  * [getIp 获取当前主机本地ip地址，兼容windows及Unix]
  * @param  {String} [ip='127.0.0.1'] [获取失败时返回的IP地址，默认值为'127.0.0.1']
@@ -9,6 +5,8 @@ const os = require('os')
  */
 export default function getIp(ip = '127.0.0.1'){
   try{
+    // 获取当前主机本地ip地址，兼容windows及Unix
+    const os = require('os')
     const emptyReg = /[\s\r\n]+/g
     // 去除属性名中可能存在的多余空格，如: " address" => "address"
     let network = JSON.parse(JSON.stringify(os.networkInterfaces()).replace(emptyReg, ''))

@@ -10,9 +10,9 @@ export const fetchData = async (url) => {
         const language = await getLanguage();
         let lcJson = null;
         if(language=='Eng'){
-            lcJson = require(`../../infoA/AOSBS/FB_GetInfo_eng.json`);
+            lcJson = require(`../../xml/infoA/AOSBS/FB_GetInfo_eng.json`);
         }else{
-            lcJson = require(`../../infoA/AOSBS/FB_GetInfo_chi.json`);
+            lcJson = require(`../../xml/infoA/AOSBS/FB_GetInfo_chi.json`);
         }
         return {
             ErrCode: 0,

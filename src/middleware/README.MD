@@ -53,11 +53,13 @@
 
 10. - [x] - code the file about DefinitelyTyped
 
-11. - [ ] - joint debug barrage data width Navi
+11. - [x] - support matches filter by inPlay, and realize no-empty judgment
 
-12. - [ ] - joint debug the API about account width David
+12. - [ ] - joint debug barrage data width Navi
 
-13. - [ ] - fit the getJSON.json
+13. - [ ] - joint debug the API about account width David
+
+14. - [ ] - fit the getJSON.json
 
 
 ---
@@ -65,5 +67,4 @@
 ### unfinished function
 fetch abort:  fetch/FetchBase.js > coverFetch()
 ```
-
 ```

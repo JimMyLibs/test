@@ -8,7 +8,7 @@
                 <div class="preTitle">barrage</div>
                 <div class="btn flex">
                     <button class="get flex1" @click="brgGet">获取</button>
-                    <input type="text" v-model="data.barrage.set" @keyup.enter="brgSet">
+                    <input type="text" v-model="data.barrage.shoot" @keyup.enter="brgSet">
                     <button class="get flex1" @click="brgSet">发送</button>
                 </div>
                 <pre contenteditable="true" v-html="json2html()"></pre>
@@ -32,7 +32,7 @@ export default class Video_Barrage extends Vue {
     barrage: any = null;
     data: any = {
         barrage: {
-            set:'弹幕',
+            shoot:'弹幕',
             list: []
         }
     };
@@ -40,7 +40,15 @@ export default class Video_Barrage extends Vue {
         return this.syntaxHighlight(this.data[name]);
     }
     async mounted() {
-        await this.brgGet();
+            // this.brgGet();
+        let count = 0;
+        const timer = setInterval(()=>{
+            this.brgGet();
+            count++;
+            if(count>1){
+                clearInterval(timer);
+            }
+        },10)
     }
     async brgGet() {
         const { data: { data : { list } } } = await api.Video.barrage.get({
@@ -51,12 +59,12 @@ export default class Video_Barrage extends Vue {
         this.play();
     }
     async brgSet() {
-        await api.Video.barrage.set({
+        await api.Video.barrage.shoot({
             videoId: 100,
             videoTime: 123456789,
-            value: this.data.barrage.set
+            value: this.data.barrage.shoot
         });        
-        this.barrage.shoot(this.data.barrage.set);
+        this.barrage.shoot(this.data.barrage.shoot);
     }
     play() {
         this.barrage = new Barrage('content');

@@ -74,14 +74,12 @@ export default class Http extends FetchBase {
     $fetch(url, options, method, isMixHeaders = true) {
         let { apiInfo, headers, body = {}, apiType, fetchType } = this.getFetchOptions(options, isMixHeaders)
         let reqUrl = ''
-        if (ISDEV && body.mock) {// mock数据
+        if (ISDEV && !!body.mock) {// mock数据
             url = url.replace(/^\/+/, '')
             reqUrl = `${mockUrl}/${url}`
             return this['toPost'](reqUrl, { headers, body })// Currently, noly support the post method
             // return this[method](reqUrl, { headers, body })
-        }
-
-        if (isEmpty(apiInfo)) {
+        }else if (isEmpty(apiInfo)) {
             return fetchApiInfo().then(async res => {
                 const { serverOrigin, serverPath } = res;
                 // console.log('【fetchApiInfo】',res, serverPath)
