@@ -110,7 +110,7 @@ export default class Match_filter extends Vue {
     async mounted() {
         await this.getFilterMenu();
         await this.changeMatche();
-        // await this.getDatePools();
+        await this.getDatePools();
         // await this.getOriginalData();
     }
     testFetch() {

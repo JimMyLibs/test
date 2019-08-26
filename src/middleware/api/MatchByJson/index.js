@@ -6,7 +6,7 @@ import { fetchData } from './fetchAndCacheData'
 class MatchByJson {
     constructor() {
         this.cache = {
-            datePools: 0,// datePools数据
+            dateLeague: 0,// dateLeague数据
             FB_GetInfo: 0,
         }
     }
@@ -115,44 +115,20 @@ class MatchByJson {
         }
     }
     async filter(params) {// 筛选数据
-        const { pool = '', date = '', league = '' } = params;
+        const { pool = '', date = '', league = '', inPlay = '' } = params;
         if(useCaseCache){
-            if (!this.cache.datePools) {// 读取变量缓存数据
-                this.cache.datePools = await this.datePools();
+            if (!this.cache.dateLeague) {// 读取变量缓存数据
+                this.cache.dateLeague = await this.dateLeague();
             }
         }else{
-            this.cache.datePools = await this.datePools();
+            this.cache.dateLeague = await this.dateLeague();
         }
-        const datePools = JSON.parse(JSON.stringify(this.cache.datePools))
+        const dateLeague = JSON.parse(JSON.stringify(this.cache.dateLeague))
         const filterResult = [];
-        datePools.data.map(item => {
-            if (pool) {
-                const filterPoolData = item[pool].filter((item2, index2) => {
-                    item2.matches.map((item3, index3) => {
-                        if ((index2 + index3) < 3) {
-                            item3.webUrl = 'https://wwww.baidu.com/'
-                        }
-                    })
-                    return league ? item2.league == league : true;// league为空时取全部
-                })
-                // console.log(pool, filterPoolData)
-                if (date) {
-                    if (item.date == date) {
-                        filterResult.push({
-                            date: item.date,
-                            coupons: filterPoolData || [],
-                        })
-                    }
-                } else {// date为空时取全部
-                    filterResult.push({
-                        date: item.date,
-                        coupons: filterPoolData || [],
-                    })
-                }
-            } else {
-                return item;
-            }
-        })
+        if(pool){
+            
+        }
+        
         // console.log('过滤', {...params}, {...filterResult})
         return {
             ErrCode: 0,

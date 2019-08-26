@@ -22,12 +22,12 @@
                 <pre contenteditable='true' v-html='listFilter'></pre>
             </div>
             <div class='preBox'>
-                <div class='preTitle' @click='show.dateLeague=!show.dateLeague'>日期-玩法:{{show.dateLeague?'开':'关'}}</div>
+                <div class='preTitle' @click='show.dateLeague=!show.dateLeague'>date-league:{{show.dateLeague?'开':'关'}}</div>
                 <pre contenteditable='true' v-if='show.dateLeague' v-html='dateLeague'></pre>
                 <!-- <loading /> -->
             </div>
             <div class='preBox'>
-                <div class='preTitle' @click='show.leagueDate=!show.leagueDate'>过滤字段:{{show.leagueDate?'开':'关'}}</div>
+                <div class='preTitle' @click='show.leagueDate=!show.leagueDate'>league-date:{{show.leagueDate?'开':'关'}}</div>
                 <pre contenteditable='true' v-if='show.leagueDate' v-html='leagueDate'></pre>
                 <!-- <loading /> -->
             </div>
@@ -100,10 +100,10 @@ export default class Match_filter extends Vue {
     }
     async mounted() {
         await this.getFilterMenu();
-        // await this.changeMatche();
+        await this.changeMatche();
         await this.getdateLeague();
-        await this.getdateLeague(1);
-        await this.getOriginalData();
+        // await this.getdateLeague(1);
+        // await this.getOriginalData();
     }
     async getFilterMenu() {
         const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();;

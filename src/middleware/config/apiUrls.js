@@ -1,12 +1,12 @@
 import getIp from '../utils/evn/getIp';
 
-const locIp = getIp();
+const locIp = 'http://127.0.0.1:8803/';
 const devWifi = 'http://192.168.137.1:8803/';
 
 export default {
     dev:{
-        Txn: `http://${locIp}:8803/`,
-        Info: `http://${locIp}:8803/`,
+        Txn: locIp,
+        Info: locIp,
         mobile: 'https://iosbstxn01.qcew.com:65443/',
         evn: 'dev',
     },

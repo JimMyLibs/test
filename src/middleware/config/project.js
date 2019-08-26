@@ -19,8 +19,8 @@ export const serverOriginUrl = {
 }
 
 export const serverPathUrl = {
-    dev: `http://192.168.137.1:8803/config/GetPara_dev.xml`,// 获取API地址后缀
-    pro: `http://192.168.137.1:8803/config/GetPara_pro.xml`,// 获取API地址后缀
+    dev: `http://127.0.0.1:8803/config/GetPara_dev.xml`,// 获取API地址后缀
+    pro: `http://127.0.0.1:8803/config/GetPara_pro.xml`,// 获取API地址后缀
 }
 
 /********************************** debug **************************** */
