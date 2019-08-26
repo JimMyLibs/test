@@ -19,21 +19,21 @@
                     <option v-for='(item,index) in inPlayList' :key='index' :value='item'>{{item}}</option>
                     <option value>全部</option>
                 </select>
-                <pre contenteditable='true' v-html='listFilter'></pre>
+                <pre contenteditable=false v-html='listFilter'></pre>
             </div>
             <div class='preBox'>
                 <div class='preTitle' @click='show.dateLeague=!show.dateLeague'>date-league:{{show.dateLeague?'开':'关'}}</div>
-                <pre contenteditable='true' v-if='show.dateLeague' v-html='dateLeague'></pre>
+                <pre contenteditable=false v-if='show.dateLeague' v-html='dateLeague'></pre>
                 <!-- <loading /> -->
             </div>
             <div class='preBox'>
                 <div class='preTitle' @click='show.leagueDate=!show.leagueDate'>league-date:{{show.leagueDate?'开':'关'}}</div>
-                <pre contenteditable='true' v-if='show.leagueDate' v-html='leagueDate'></pre>
+                <pre contenteditable=false v-if='show.leagueDate' v-html='leagueDate'></pre>
                 <!-- <loading /> -->
             </div>
             <div class='preBox'>
                 <div class='preTitle' @click='show.CouponInfo=!show.CouponInfo'>原始数据CouponInfo:{{show.CouponInfo?'开':'关'}}</div>
-                <pre contenteditable='true' v-if='show.CouponInfo' v-html='CouponInfo'></pre>
+                <pre contenteditable=false v-if='show.CouponInfo' v-html='CouponInfo'></pre>
                 <!-- <loading /> -->
             </div>
         </div>
@@ -103,7 +103,7 @@ export default class Match_filter extends Vue {
         await this.changeMatche();
         await this.getdateLeague();
         // await this.getdateLeague(1);
-        // await this.getOriginalData();
+        await this.getOriginalData();
     }
     async getFilterMenu() {
         const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();;
@@ -126,8 +126,9 @@ export default class Match_filter extends Vue {
     }
     async getdateLeague(reverse=0) {
         console.time('处理getdateLeague:');
-        const { data } = await Matches.dateLeague(reverse);
-        this.fbGetInfoData[reverse?'leagueDate':'dateLeague'] = data;
+        const dateLeague = await Matches.dateLeague(reverse);
+        this.fbGetInfoData[reverse?'leagueDate':'dateLeague'] = dateLeague;
+        console.log('处理getdateLeague:',dateLeague);
         console.timeEnd('处理getdateLeague:');
 
         const renderTime = new Date(
