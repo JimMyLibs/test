@@ -21,6 +21,11 @@
                 <pre contenteditable="true" v-html="json2html('sell')"></pre>
                 <!-- <loading /> -->
             </div>
+            <div class="preBox">
+                <div class="preTitle">oauth2</div>
+                <pre contenteditable="true" v-html="json2html('oauth2')"></pre>
+                <!-- <loading /> -->
+            </div>
         </div>     
     </div>
 </template>
@@ -41,6 +46,7 @@ export default class User_test extends Vue {
         check: {},
         statement: {},
         sell: {},
+        oauth2:{},
     }
     json2html(name= 'login') {
         return this.syntaxHighlight(this.data[name]);
@@ -50,6 +56,7 @@ export default class User_test extends Vue {
         this.data.check = await api.User.check();
         this.data.statement = await api.User.statement();
         this.data.sell = await api.User.sell();
+        this.data.oauth2 = await api.User.oauth2();
     }
 }
 </script>

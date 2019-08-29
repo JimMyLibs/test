@@ -139,6 +139,84 @@ class MatchByJson {
             }
         }
     }
+    handleOddsInfo (pool,item6) {    
+        let oddsInfo_item = {};// 每种赔率详情
+        oddsInfo_item.odds = item6.Odds;
+        switch(pool){
+            case 'HAD' || 'FHA' || 'HHA':// 主客和 || 上半场主客和 || 让球主客和
+                if (item6.Number == 1) {// Home
+                    oddsInfo_item.name = 'H';
+                } else if (item6.Number == 'X') {// D
+                    oddsInfo_item.name = 'D';
+                } else if (item6.Number == 2) {// Away
+                    oddsInfo_item.name = 'A';
+                }
+                break;
+            case 'HDC':// 投注经让球调整后之赛果
+                if (item6.Number == 1) {
+                    oddsInfo_item.name = 'H';
+                } else if (item6.Number == 'X') {
+                    oddsInfo_item.name = 'D';
+                } else if (item6.Number == 2) {
+                    oddsInfo_item.name = 'C';
+                }
+                break;
+            case 'HFT':// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
+                if (item6.Number.includes('1-')) {// Home
+                    oddsInfo_item.name = 'H';
+                } else if (item6.Number.includes('X-')) {// D
+                    oddsInfo_item.name = 'D';
+                } else if (item6.Number.includes('2-')) {// Away
+                    oddsInfo_item.name = 'A';
+                }
+                break;
+            case 'HIL' || 'FHL' || 'CHL':// High Low : OddsInfo.length==2
+                oddsInfo_item.name = item6.Number;
+                break;
+            case 'PS':// 不包括加时或互射12码后的赛果
+                // no data
+                break;
+            case 'GPW':// 投注分组阶段小组首名出线队伍
+                // 分组
+                break;
+            case 'GPF':// 投注分组阶段小组的顺序首、次出线队伍
+                // 分组
+                break;
+            case 'TPS':// 投注整个锦标赛射入最多入球的球员
+                // 分组
+                break;
+            case 'CP':// 在指定赛事，投注哪队能赢得冠军
+                // no data
+                break;
+            case 'DHCP':// 预测两场球赛中板厂(45分钟)及全场(90分钟)的正式比分
+                // no data
+                break;
+            case '6FH':// 6宝半全场
+                // no data
+                break;
+            default:// 普通类型
+                switch(pool){
+                    case 'TQL':// 在指定赛事，投注哪队能晋级下一场赛事
+                        break;                                        
+                    case 'CRS':// 预测球赛的正式比分
+                        break;                                        
+                    case 'FCS':// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
+                        break;                                        
+                    case 'TTG':// 预测球赛中两队的入球个数
+                        break;                                        
+                    case 'OOE':// 预测球赛中两队的入球个数为单数或双数
+                        break;                                
+                    case 'FGS':// 投注一场球赛中最先射入对方球门得分的球员
+                        break;                                
+                    case 'FTS':// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
+                        break;                                
+                }
+                oddsInfo_item.name = item6.Number;
+                oddsInfo_item.odds = item6.Odds;
+    
+        }
+        return oddsInfo_item;
+    }
     async filter(params) {// 筛选数据
         try {
             const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;

@@ -32,11 +32,11 @@ const handleOddsInfo = (pool,item6)=>{
             }
             break;
         case 'HFT':// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
-            if (item6.Number == '1-1') {// Home
+            if (item6.Number.includes('1-')) {// Home
                 oddsInfo_item.name = 'H';
-            } else if (item6.Number == 'X-1') {// D
+            } else if (item6.Number.includes('X-')) {// D
                 oddsInfo_item.name = 'D';
-            } else if (item6.Number == '2-1') {// Away
+            } else if (item6.Number.includes('2-')) {// Away
                 oddsInfo_item.name = 'A';
             }
             break;

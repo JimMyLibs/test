@@ -26,6 +26,7 @@ declare namespace api {
         function statement(): Promise<any>;
         function sell(): Promise<any>;
         function login(): Promise<any>;
+        function oauth2(): Promise<any>;
     }
     class Video {
         constructor() //构造函数

@@ -33,28 +33,23 @@ export default class Video_Barrage extends Vue {
     data: any = {
         barrage: {
             shoot:'弹幕',
+            data: {},
             list: []
         }
     };
     json2html(name = "barrage") {
-        return this.syntaxHighlight(this.data[name]);
+        return this.syntaxHighlight(this.data[name]['data']);
     }
     async mounted() {
-            // this.brgGet();
-        let count = 0;
-        const timer = setInterval(()=>{
             this.brgGet();
-            count++;
-            if(count>1){
-                clearInterval(timer);
-            }
-        },10)
     }
     async brgGet() {
-        const { data: { data : { list } } } = await api.Video.barrage.get({
+        const result = await api.Video.barrage.get({
             videoId: 100,
             videoTime: 123456789
         });
+        this.data.barrage.data = result; 
+        const { data : { list } } = result;
         this.data.barrage.list = list; 
         this.play();
     }
