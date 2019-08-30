@@ -20,9 +20,7 @@ export const statement = ()=>{
     return {
         ErrCode: 0,
         ErrMsg: '',
-        data: {
-
-        }
+        data: res
     }
 
     // const { serverId, channelId, accountNumber, sequenceNumber, sessionId, statementDetails, transFilter } = account.statement;

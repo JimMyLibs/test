@@ -12,11 +12,11 @@ class MatchByJson {
         }
     }
     async initFB_GetInfo() {
-        if(useCaseCache){
+        if (useCaseCache) {
             if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
                 this.cache.FB_GetInfo = await fetchData('getJSON');
             }
-        }else{
+        } else {
             this.cache.FB_GetInfo = await fetchData('getJSON');
         }
         this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo.data).map(item => {
@@ -53,19 +53,19 @@ class MatchByJson {
             const allLeagueInData = filterKeys.map(item => item.league);
             const leagueList = [...new Set(allLeagueInData)];
             // get the all pool
-            const allPoolInData = filterKeys.reduce((sum,item) => {
+            const allPoolInData = filterKeys.reduce((sum, item) => {
                 sum = sum.concat(item.pool);
                 return sum;
-            },[]);
+            }, []);
             const poolListSet = [...new Set(allPoolInData)];
             let poolList = {};
-            poolListSet.map(item=>{
+            poolListSet.map(item => {
                 poolList[item] = Pools.list[item];
             })
             return {
                 ErrCode: 0,
                 ErrMsg: '',
-                data:{
+                data: {
                     poolList,
                     dateList,
                     leagueList,
@@ -75,42 +75,42 @@ class MatchByJson {
             return {
                 ErrCode: 10001,
                 ErrMsg: error.message,
-                data:{ error }
+                data: { error }
             }
         }
     }
     async getOriginalData() {
         let originData = await this.initFB_GetInfo();
-        console.log('originData',originData)
+        console.log('originData', originData)
         return {
             ErrCode: 0,
             ErrMsg: '',
-            data:{
+            data: {
                 originData,
             }
         };
     }
-    async dateLeague ( reverse = 0 ) {// 2.2.4.7  // 获取并编排所有数据
+    async dateLeague(reverse = 0) {// 2.2.4.7  // 获取并编排所有数据
         try {
             const matchList = await this.initFB_GetInfo();
             const language = await getLanguage();
-            const curLg = language.slice(0,2).toUpperCase();
+            const curLg = language.slice(0, 2).toUpperCase();
             // classify matchList by date
             let dateObj = {};
-            matchList.map(item=>{
+            matchList.map(item => {
                 let matches_item = {};// 每场比赛
 
                 {
                     // let pool = poolType || item3.Pool;
                     matches_item.key = item.matchID;// MatchID
                     matches_item.date = item.date;
-                    matches_item.league = item.league['leagueName'+curLg];
-                    matches_item.home = item.homeTeam['teamName'+curLg];            
-                    matches_item.away = item.awayTeam['teamName'+curLg];
-                    matches_item.score_Home = item.livescore? item.livescore.home : '';
-                    matches_item.score_Away = item.livescore? item.livescore.away : '';
+                    matches_item.league = item.league['leagueName' + curLg];
+                    matches_item.home = item.homeTeam['teamName' + curLg];
+                    matches_item.away = item.awayTeam['teamName' + curLg];
+                    matches_item.score_Home = item.livescore ? item.livescore.home : '';
+                    matches_item.score_Away = item.livescore ? item.livescore.away : '';
                     matches_item.matchDateTime = item.matchTime;
-    
+
                     // matches_item.pool = item.definedPools;// 投注类型
                     // matches_item.poolNum = item.definedPools.length;
                     matches_item.corner = item.cornerresult;
@@ -120,8 +120,8 @@ class MatchByJson {
                     item.matches_item = matches_item;
                 }
 
-                let steps = [item.date,item.matches_item.league];
-                if(reverse){ steps = steps.reverse() }
+                let steps = [item.date, item.matches_item.league];
+                if (reverse) { steps = steps.reverse() }
                 dateObj[steps[0]] = dateObj[steps[0]] || {};
                 dateObj[steps[0]][steps[1]] = dateObj[steps[0]][steps[1]] || [];
                 dateObj[steps[0]][steps[1]].push(item);
@@ -135,14 +135,14 @@ class MatchByJson {
             return {
                 ErrCode: 10001,
                 ErrMsg: error.message,
-                data:{ error }
+                data: { error }
             }
         }
     }
-    handleOddsInfo (pool,item6) {    
+    handleOddsInfo(pool, item6) {
         let oddsInfo_item = {};// 每种赔率详情
         oddsInfo_item.odds = item6.Odds;
-        switch(pool){
+        switch (pool) {
             case 'HAD' || 'FHA' || 'HHA':// 主客和 || 上半场主客和 || 让球主客和
                 if (item6.Number == 1) {// Home
                     oddsInfo_item.name = 'H';
@@ -195,75 +195,96 @@ class MatchByJson {
                 // no data
                 break;
             default:// 普通类型
-                switch(pool){
+                switch (pool) {
                     case 'TQL':// 在指定赛事，投注哪队能晋级下一场赛事
-                        break;                                        
+                        break;
                     case 'CRS':// 预测球赛的正式比分
-                        break;                                        
+                        break;
                     case 'FCS':// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
-                        break;                                        
+                        break;
                     case 'TTG':// 预测球赛中两队的入球个数
-                        break;                                        
+                        break;
                     case 'OOE':// 预测球赛中两队的入球个数为单数或双数
-                        break;                                
+                        break;
                     case 'FGS':// 投注一场球赛中最先射入对方球门得分的球员
-                        break;                                
+                        break;
                     case 'FTS':// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
-                        break;                                
+                        break;
                 }
                 oddsInfo_item.name = item6.Number;
                 oddsInfo_item.odds = item6.Odds;
-    
+
         }
         return oddsInfo_item;
     }
     async filter(params) {// 筛选数据
         try {
             const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
-            if(useCaseCache){
+            if (useCaseCache) {
                 if (!this.cache.dateLeague) {// 读取变量缓存数据
                     this.cache.dateLeague = await this.dateLeague();
                 }
-            }else{
+            } else {
                 this.cache.dateLeague = await this.dateLeague();
             }
             const { data: dateLeague } = JSON.parse(JSON.stringify(this.cache.dateLeague))
             const filterResult = [];
-            Object.keys(dateLeague).map(keyDate=>{
+            Object.keys(dateLeague).map(keyDate => {
                 let date_item = {};
                 date_item.date = keyDate;
                 date_item.coupons = [];
-                Object.keys(dateLeague[keyDate]).map(keyLeague=>{
+                Object.keys(dateLeague[keyDate]).map(keyLeague => {
                     let league_item = {};
                     league_item.league = keyLeague;
                     league_item.oddsNames = pool.split('');
                     league_item.matches = [];
-                    dateLeague[keyDate][keyLeague].map(itemLeague=>{
-                        if(itemLeague.definedPools.includes(pool)){
+                    dateLeague[keyDate][keyLeague].map(itemLeague => {
+                        if (itemLeague.definedPools.includes(pool)) {
                             let matches_item = {};
                             matches_item = itemLeague.matches_item;
                             matches_item.pool = pool;
                             matches_item.poolNum = pool.length;
-                            matches_item.oddsSet = {};
-                            const curOdds = pool.toLowerCase()+'odds';
-                            matches_item.oddsSet.enabled = Number(JSON.parse(itemLeague[curOdds].INPLAY));
-                            matches_item.oddsSet.oddsInfo = [];
-                            Object.keys(itemLeague[curOdds]).map(keyOdds=>{
-                                if(pool.includes(keyOdds)){
-                                    matches_item.oddsSet.oddsInfo.push({
-                                        name: keyOdds,
-                                        value: itemLeague[curOdds][keyOdds],
-                                    })
+
+                            matches_item.oddsSet = [];
+                            const curOddsName = pool.toLowerCase() + 'odds';
+                            const curOdds = itemLeague[curOddsName];
+
+                            let curOddsArr = {};
+                            Object.keys(curOdds).map(setKey => {
+                                switch (pool) {
+                                    case 'CRS':
+                                        const nameKinds = ['^S\\d{4}$', '^SM\\w{3}$'];
+                                        nameKinds.map(item => {
+                                            curOddsArr[item] = curOddsArr[item] || [];
+                                            if (new RegExp(item).test(setKey)) {
+                                                curOddsArr[item].push({
+                                                    name: `${setKey.slice(1, 3)}:${setKey.slice(3)}`,
+                                                    value: curOdds[setKey].slice(4),
+                                                })
+                                            }
+                                        })
+
+                                        break;
+
+                                    default:
+                                        break;
                                 }
                             })
-                            league_item.matches.push(matches_item);                            
+                            matches_item.oddsSet = Object.keys(curOddsArr).map(item => {
+                                return {
+                                    enabled: Number(JSON.parse(curOdds.INPLAY)),
+                                    oddsInfo: curOddsArr[item],
+                                }
+                            })
+
+                            league_item.matches.push(matches_item);
                         }
                     })
                     date_item.coupons.push(league_item);
                 })
                 filterResult.push(date_item);
             })
-            
+
             // console.log('过滤', {...params}, {...filterResult})
             return {
                 ErrCode: 0,
@@ -272,14 +293,14 @@ class MatchByJson {
                     matchList: filterResult
                 },
             };
-            
+
         } catch (error) {
             console.error(error)
             return {
                 ErrCode: 10001,
                 ErrMsg: error.message,
-                data:{ error }
-            }            
+                data: { error }
+            }
         }
     }
 

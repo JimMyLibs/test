@@ -8,6 +8,7 @@ const res = {
     expires_in: 1087,
 }
 
+
 const getBase64 = (str='')=>{
     return Buffer.from(str).toString('base64');
 }
@@ -22,13 +23,19 @@ const account = {
 const grant = `grant_type=password&username=${account.username}&password=${account.password}`
 
 export const oauth2 = ()=>{
-    return $post('https://auth.hkjc.com:9443oauth/token',{
-        hearders:{
-            Authorization: `Basic ${getBase64(OAuth2.key+':'+OAuth2.secret)}`,            
-        },
-        // body: grant,
-        body: {
-            mock: res
-        },
-    })
+    return {
+        ErrCode: 0,
+        ErrMsg: '',
+        data: res
+    }
+
+    // return $post('https://auth.hkjc.com:9443oauth/token',{
+    //     hearders:{
+    //         Authorization: `Basic ${getBase64(OAuth2.key+':'+OAuth2.secret)}`,            
+    //     },
+    //     // body: grant,
+    //     body: {
+    //         mock: res
+    //     },
+    // })
 }

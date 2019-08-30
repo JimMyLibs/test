@@ -11,9 +11,7 @@ export const sell = ()=>{
     return {
         ErrCode: 0,
         ErrMsg: '',
-        data: {
-            
-        }
+        data: res
     }
 
     // const { serverId, channelId, accountNumber, sequenceNumber, sessionId, betDetails, inPlayDelay, flag } = account.sell;

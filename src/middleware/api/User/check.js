@@ -12,9 +12,7 @@ export const check = ()=>{
     return {
         ErrCode: 0,
         ErrMsg: '',
-        data: {
-            
-        }
+        data: res
     }
 
     // const { serverId, channelId, accountNumber, sequenceNumber, sessionId } = account.check;    

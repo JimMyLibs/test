@@ -60,7 +60,7 @@ export default class Match_filter extends Vue {
         CouponInfo: {},
     };
     selected: any = {
-        pool: 'HAD',
+        pool: 'CRS',
         date: '',
         league: '',
         inPlay: '',
@@ -103,7 +103,7 @@ export default class Match_filter extends Vue {
         await this.changeMatche();
         await this.getdateLeague();
         // await this.getdateLeague(1);
-        await this.getOriginalData();
+        // await this.getOriginalData();
     }
     async getFilterMenu() {
         const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();;

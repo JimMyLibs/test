@@ -22,11 +22,11 @@ declare namespace api {
         static dateLeague(reverse: number): Promise<any> // 获取订制数据
     }
     namespace User {
-        function check(): Promise<any>;
-        function statement(): Promise<any>;
-        function sell(): Promise<any>;
-        function login(): Promise<any>;
-        function oauth2(): Promise<any>;
+        function check(): any;
+        function statement(): any;
+        function sell(): any;
+        function login(): any;
+        function oauth2(): any;
     }
     class Video {
         constructor() //构造函数
