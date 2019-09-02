@@ -4,7 +4,7 @@ import { fetchData } from './fetchAndCacheData'
 
 
 const oddsInfoSort = (arr)=> {// 赔率类型排序
-    const rule = {H:50,D:60,A:70,I:80,L:90};
+    const rule = {H:50,D:60,N:60,A:70,I:80,L:90};
     return arr.sort((a,b)=>{
         return rule[a.name] - rule[b.name];
     })
@@ -13,7 +13,9 @@ const handleOddsInfo = (pool,item6)=>{
     let oddsInfo_item = {};// 每种赔率详情
     oddsInfo_item.odds = item6.Odds;
     switch(pool){
-        case 'HAD' || 'FHA' || 'HHA':// 主客和 || 上半场主客和 || 让球主客和
+        case 'HAD':// 主客和
+        case 'FHA':// 上半场主客和
+        case 'HHA':// 让球主客和
             if (item6.Number == 1) {// Home
                 oddsInfo_item.name = 'H';
             } else if (item6.Number == 'X') {// D
@@ -28,7 +30,7 @@ const handleOddsInfo = (pool,item6)=>{
             } else if (item6.Number == 'X') {
                 oddsInfo_item.name = 'D';
             } else if (item6.Number == 2) {
-                oddsInfo_item.name = 'C';
+                oddsInfo_item.name = 'A';
             }
             break;
         case 'HFT':// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
@@ -40,7 +42,9 @@ const handleOddsInfo = (pool,item6)=>{
                 oddsInfo_item.name = 'A';
             }
             break;
-        case 'HIL' || 'FHL' || 'CHL':// High Low : OddsInfo.length==2
+        case 'HIL':// High Low : OddsInfo.length==2
+        case 'FHL':// High Low : OddsInfo.length==2
+        case 'CHL':// High Low : OddsInfo.length==2
             oddsInfo_item.name = item6.Number;
             break;
         case 'PS':// 不包括加时或互射12码后的赛果

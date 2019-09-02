@@ -7,6 +7,12 @@ interface MatchesFilterParams {
 
 declare namespace api {
     function getName(id: number | string): string
+    class Http {
+        constructor() //构造函数
+        static $get(url:string,params?:any): Promise<any> // $get
+        static $post(url:string,params?:any): Promise<any> // $post
+        static $upload(url:string,params?:any): Promise<any> // $upload
+    }
     class Matches {
         constructor() //构造函数
         static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表

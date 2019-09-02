@@ -36,6 +36,7 @@ module.exports = {
         'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,// 禁用 console
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,// 禁用 debugger
         "no-unused-vars": 1,// 禁止出现未使用过的变量
+        'no-case-declarations': 0,
         "linebreak-style": 0,// 强制使用一致的换行风格
         "quotes": [1, "single", { "allowTemplateLiterals": true }],
         // used to ts

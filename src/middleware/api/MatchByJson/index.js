@@ -15,9 +15,13 @@ class MatchByJson {
         if (useCaseCache) {
             if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
                 this.cache.FB_GetInfo = await fetchData('getJSON');
+                const language = await getLanguage();
+                this.curLg = language.slice(0, 2).toUpperCase();
             }
         } else {
             this.cache.FB_GetInfo = await fetchData('getJSON');
+            const language = await getLanguage();
+            this.curLg = language.slice(0, 2).toUpperCase();
         }
         this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo.data).map(item => {
             const matchDate = item.matchDate.split('+')[0].split('-');
@@ -42,7 +46,7 @@ class MatchByJson {
                     matchDate: item.matchDate,
                     matchDay: item.matchDay,
                     date: item.date,
-                    league: item.league.leagueShortName,
+                    league: item.league['leagueName' + this.curLg],
                     pool: item.definedPools,
                 }
             }).sort((a, b) => a.matchDate > b.matchDate);
@@ -93,8 +97,6 @@ class MatchByJson {
     async dateLeague(reverse = 0) {// 2.2.4.7  // 获取并编排所有数据
         try {
             const matchList = await this.initFB_GetInfo();
-            const language = await getLanguage();
-            const curLg = language.slice(0, 2).toUpperCase();
             // classify matchList by date
             let dateObj = {};
             matchList.map(item => {
@@ -104,9 +106,9 @@ class MatchByJson {
                     // let pool = poolType || item3.Pool;
                     matches_item.key = item.matchID;// MatchID
                     matches_item.date = item.date;
-                    matches_item.league = item.league['leagueName' + curLg];
-                    matches_item.home = item.homeTeam['teamName' + curLg];
-                    matches_item.away = item.awayTeam['teamName' + curLg];
+                    matches_item.league = item.league['leagueName' + this.curLg];
+                    matches_item.home = item.homeTeam['teamName' + this.curLg];
+                    matches_item.away = item.awayTeam['teamName' + this.curLg];
                     matches_item.score_Home = item.livescore ? item.livescore.home : '';
                     matches_item.score_Away = item.livescore ? item.livescore.away : '';
                     matches_item.matchDateTime = item.matchTime;
@@ -139,83 +141,123 @@ class MatchByJson {
             }
         }
     }
-    handleOddsInfo(pool, item6) {
-        let oddsInfo_item = {};// 每种赔率详情
-        oddsInfo_item.odds = item6.Odds;
-        switch (pool) {
-            case 'HAD' || 'FHA' || 'HHA':// 主客和 || 上半场主客和 || 让球主客和
-                if (item6.Number == 1) {// Home
-                    oddsInfo_item.name = 'H';
-                } else if (item6.Number == 'X') {// D
-                    oddsInfo_item.name = 'D';
-                } else if (item6.Number == 2) {// Away
-                    oddsInfo_item.name = 'A';
-                }
-                break;
-            case 'HDC':// 投注经让球调整后之赛果
-                if (item6.Number == 1) {
-                    oddsInfo_item.name = 'H';
-                } else if (item6.Number == 'X') {
-                    oddsInfo_item.name = 'D';
-                } else if (item6.Number == 2) {
-                    oddsInfo_item.name = 'C';
-                }
-                break;
-            case 'HFT':// 预测球赛中半场(45分钟)及全场(90分钟)之主客和赛果
-                if (item6.Number.includes('1-')) {// Home
-                    oddsInfo_item.name = 'H';
-                } else if (item6.Number.includes('X-')) {// D
-                    oddsInfo_item.name = 'D';
-                } else if (item6.Number.includes('2-')) {// Away
-                    oddsInfo_item.name = 'A';
-                }
-                break;
-            case 'HIL' || 'FHL' || 'CHL':// High Low : OddsInfo.length==2
-                oddsInfo_item.name = item6.Number;
-                break;
-            case 'PS':// 不包括加时或互射12码后的赛果
-                // no data
-                break;
-            case 'GPW':// 投注分组阶段小组首名出线队伍
-                // 分组
-                break;
-            case 'GPF':// 投注分组阶段小组的顺序首、次出线队伍
-                // 分组
-                break;
-            case 'TPS':// 投注整个锦标赛射入最多入球的球员
-                // 分组
-                break;
-            case 'CP':// 在指定赛事，投注哪队能赢得冠军
-                // no data
-                break;
-            case 'DHCP':// 预测两场球赛中板厂(45分钟)及全场(90分钟)的正式比分
-                // no data
-                break;
-            case '6FH':// 6宝半全场
-                // no data
-                break;
-            default:// 普通类型
-                switch (pool) {
-                    case 'TQL':// 在指定赛事，投注哪队能晋级下一场赛事
-                        break;
-                    case 'CRS':// 预测球赛的正式比分
-                        break;
-                    case 'FCS':// 投注一场球赛法定时间上半场45分钟及上半场补时的比分
-                        break;
-                    case 'TTG':// 预测球赛中两队的入球个数
-                        break;
-                    case 'OOE':// 预测球赛中两队的入球个数为单数或双数
-                        break;
-                    case 'FGS':// 投注一场球赛中最先射入对方球门得分的球员
-                        break;
-                    case 'FTS':// 投注哪队于法定时间(90分钟)获得第一个入球或无入球
-                        break;
-                }
-                oddsInfo_item.name = item6.Number;
-                oddsInfo_item.odds = item6.Odds;
+    handleOddsInfo(pool, curOdds, inPlay) {
+        let curGroup = {};
+        let curOddsObj = {};
+        let curOddsArr = [];
+        const curInplay = JSON.parse(curOdds.INPLAY);
+        if(inPlay == curInplay){
+            if(pool == 'HIL' || pool == 'FHL'){
+                curOddsArr = curOdds.LINELIST.map(item=>{
+                    let infoArr = [];
+                    Object.keys(item).map(key=>{
+                        if(['H','L','LINE'].includes(key)){
+                            infoArr.push({
+                                name: key == 'LINE' ? 'I' : key,
+                                odds: item[key].slice(4),
+                            })
+                        }
+                    })
+                    return {
+                        enabled: Number(curInplay),
+                        oddsInfo: this.oddsInfoSort(infoArr),
+                    }
+                })
+            }else{
+                Object.keys(curOdds).map(setKey => {
+                    switch (pool) {
+                        case 'CRS':
+                        case 'FCS':
+                            curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || [];
+                                if (new RegExp(item).test(setKey)) {
+                                    curOddsObj[item].push({
+                                        name: `${setKey.slice(1, 3)}:${setKey.slice(3)}`,
+                                        value: curOdds[setKey].slice(4),
+                                    })
+                                }
+                            })
+                            break;
 
+                        case 'TTG':
+                            curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || [];
+                                if (new RegExp(item).test(setKey)) {
+                                    curOddsObj[item].push({
+                                        name: `${setKey.slice(1)}`,
+                                        value: curOdds[setKey].slice(4),
+                                    })
+                                }
+                            })
+                            break;
+
+                        case 'HFT':
+                            curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || [];
+                                if (new RegExp(item).test(setKey)) {
+                                    curOddsObj[item].push({
+                                        name: `${setKey.slice(1)}`,
+                                        value: curOdds[setKey].slice(4),
+                                    })
+                                }
+                            })
+                            break;
+                        
+                        case 'HAD':
+                        case 'FHA':
+                        case 'HHA':
+                        case 'FTS':
+                        case 'TQL':
+                        case 'OOE':
+                        case 'HDC':
+                            const hadMap = {
+                                HAD: 'HDA',
+                                FHA: 'HDA',
+                                HHA: 'HDA',
+                                FTS: 'HNA',
+                                TQL: 'HA',
+                                OOE: 'EO',
+                                HDC: 'HA',
+                            }
+                            curGroup[pool] = [hadMap[pool]];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || [];
+                                if (item.includes(setKey)) {
+                                    curOddsObj[item].push({
+                                        name: setKey,
+                                        value: curOdds[setKey].slice(4),
+                                    })
+                                }
+                            })
+                            break;                                             
+
+                        default:
+                            console.log('default')
+                            break;
+                    }
+                })
+                curOddsArr = Object.keys(curOddsObj).map(item => {
+                    return {
+                        enabled: Number(curInplay),
+                        oddsInfo: this.oddsInfoSort(curOddsObj[item]),
+                    }
+                })
+            }
         }
-        return oddsInfo_item;
+        return curOddsArr;
+    }
+    oddsInfoSort (arr)  {// 赔率类型排序
+        const rule = {H:50,D:60,N:60,A:70,I:80,L:90};
+        return arr.sort((a,b)=>{
+            if(a.name){
+                return rule[a.name] - rule[b.name];
+            }else{
+                return rule[a] - rule[b];
+            }
+        })
     }
     async filter(params) {// 筛选数据
         try {
@@ -227,60 +269,51 @@ class MatchByJson {
             } else {
                 this.cache.dateLeague = await this.dateLeague();
             }
-            const { data: dateLeague } = JSON.parse(JSON.stringify(this.cache.dateLeague))
+            let { data: dateLeague } = JSON.parse(JSON.stringify(this.cache.dateLeague))
             const filterResult = [];
+            // filter by date
+            if(date){
+                dateLeague = {
+                    [date] : dateLeague[date]
+                }
+            }
             Object.keys(dateLeague).map(keyDate => {
                 let date_item = {};
                 date_item.date = keyDate;
                 date_item.coupons = [];
                 Object.keys(dateLeague[keyDate]).map(keyLeague => {
+                    console.log('keyLeague',keyDate,keyLeague)
+                    // filter by leaguae
+                    let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
+                    let curDateLeagueData = cueDeteData[keyLeague];
+                    if(league){
+                        curDateLeagueData = cueDeteData[league] || []
+                    }
                     let league_item = {};
-                    league_item.league = keyLeague;
-                    league_item.oddsNames = pool.split('');
+                    league_item.league = league || keyLeague;
+                    league_item.oddsNames = this.oddsInfoSort(pool.split(''));
                     league_item.matches = [];
-                    dateLeague[keyDate][keyLeague].map(itemLeague => {
-                        if (itemLeague.definedPools.includes(pool)) {
-                            let matches_item = {};
-                            matches_item = itemLeague.matches_item;
-                            matches_item.pool = pool;
-                            matches_item.poolNum = pool.length;
-
-                            matches_item.oddsSet = [];
-                            const curOddsName = pool.toLowerCase() + 'odds';
-                            const curOdds = itemLeague[curOddsName];
-
-                            let curOddsArr = {};
-                            Object.keys(curOdds).map(setKey => {
-                                switch (pool) {
-                                    case 'CRS':
-                                        const nameKinds = ['^S\\d{4}$', '^SM\\w{3}$'];
-                                        nameKinds.map(item => {
-                                            curOddsArr[item] = curOddsArr[item] || [];
-                                            if (new RegExp(item).test(setKey)) {
-                                                curOddsArr[item].push({
-                                                    name: `${setKey.slice(1, 3)}:${setKey.slice(3)}`,
-                                                    value: curOdds[setKey].slice(4),
-                                                })
-                                            }
-                                        })
-
-                                        break;
-
-                                    default:
-                                        break;
-                                }
-                            })
-                            matches_item.oddsSet = Object.keys(curOddsArr).map(item => {
-                                return {
-                                    enabled: Number(JSON.parse(curOdds.INPLAY)),
-                                    oddsInfo: curOddsArr[item],
-                                }
-                            })
-
-                            league_item.matches.push(matches_item);
-                        }
-                    })
-                    date_item.coupons.push(league_item);
+                    if(curDateLeagueData.length){
+                        curDateLeagueData.map(itemLeague => {
+                            if (itemLeague.definedPools.includes(pool)) {
+                                let matches_item = {};
+                                matches_item = itemLeague.matches_item;
+                                matches_item.pool = pool;
+                                matches_item.poolNum = pool.length;
+    
+                                matches_item.oddsSet = [];
+                                const curOddsName = pool.toLowerCase() + 'odds';
+                                const curOdds = itemLeague[curOddsName];
+    
+                                matches_item.oddsSet = this.handleOddsInfo(pool,curOdds,inPlay);
+    
+                                league_item.matches.push(matches_item);
+                            }
+                        })
+                        date_item.coupons.push(league_item);
+                    }else{
+                        date_item.coupons = [];
+                    }
                 })
                 filterResult.push(date_item);
             })

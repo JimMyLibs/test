@@ -60,7 +60,7 @@ export default class Match_filter extends Vue {
         CouponInfo: {},
     };
     selected: any = {
-        pool: 'CRS',
+        pool: 'HAD',
         date: '',
         league: '',
         inPlay: '',
@@ -99,6 +99,7 @@ export default class Match_filter extends Vue {
         this.createTime = new Date().getTime();
     }
     async mounted() {
+        this.selected = JSON.parse(localStorage.getItem('selected')) || this.selected;
         await this.getFilterMenu();
         await this.changeMatche();
         await this.getdateLeague();
@@ -112,6 +113,7 @@ export default class Match_filter extends Vue {
         this.dateList = dateList;
     }
     async changeMatche() {
+        localStorage.setItem('selected',JSON.stringify(this.selected));
         console.time('筛选changeMatche:');
         const filterResult = await Matches.filter(this.selected);
         this.fbGetInfoData.listFilter = filterResult;

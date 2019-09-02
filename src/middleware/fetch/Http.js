@@ -32,3 +32,6 @@ export const $upload = (api, data, options) => {
     return $fetch(api, data, 'upload', options)
 }
 
+export default {
+    $get,$post,$upload
+}
