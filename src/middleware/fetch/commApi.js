@@ -40,13 +40,21 @@ export function fetchApiInfo() {
         }
     })
 }
-const getApiOriginPath = async () => {
-    const serverOrigin = serverOriginUrl[curEnv] && await http.toGet(serverOriginUrl[curEnv]) || {};
-    const serverPath = await http.toGet(serverPathUrl[curEnv]);
-    // console.log('【pro-serverInfo】', { serverOrigin, serverPath })
-    const mixInfo = { serverOrigin, serverPath: serverPath.data.TXN_XML };
-    setApiInfo(apiInfoSessionId,mixInfo)
-    return mixInfo;
+const getApiOriginPath = () => {
+    // eslint-disable-next-line no-async-promise-executor
+    return new Promise(async (resole,reject)=>{
+        const serverOrigin = serverOriginUrl[curEnv] && await http.toGet(serverOriginUrl[curEnv]) || {};
+        const serverPath = await http.toGet(serverPathUrl[curEnv]);
+        const { ErrCode, data: { TXN_XML } } = serverPath;
+        if(ErrCode===0){
+            // console.log('【pro-serverInfo】', { serverOrigin, serverPath })
+            const mixInfo = { serverOrigin, serverPath: TXN_XML };
+            // setApiInfo(apiInfoSessionId,mixInfo)
+            resole(mixInfo);    
+        }else{
+            reject(serverPath)
+        }
+    })
 }
 /**
  * [checkResponse fetch请求结果是否正确判断处理]

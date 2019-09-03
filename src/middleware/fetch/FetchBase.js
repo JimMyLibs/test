@@ -326,6 +326,7 @@ export default class Http {
                     data: err,
                 }
                 ISDEBUG && console.warn('—————【 fetch: fail 】—————', { language,url,req:{...reqConf},res:{...result} })
+                // return Error(result);
                 return result;
             }),
             new Promise((resolve, reject) => {

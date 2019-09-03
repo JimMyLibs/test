@@ -282,7 +282,6 @@ class MatchByJson {
                 date_item.date = keyDate;
                 date_item.coupons = [];
                 Object.keys(dateLeague[keyDate]).map(keyLeague => {
-                    console.log('keyLeague',keyDate,keyLeague)
                     // filter by leaguae
                     let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
                     let curDateLeagueData = cueDeteData[keyLeague];

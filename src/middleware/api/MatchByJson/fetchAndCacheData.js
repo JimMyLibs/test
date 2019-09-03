@@ -23,8 +23,8 @@ export const fetchData = async (url) => {
 
     const LSdata = Cache.get(url);
     const getData = async ()=>{
-        const resData = await $get('/json/20190903/getJSON.json');// 300ms
-        // const resData = await $get('/json/20190819/getJSON.json');// 300ms
+        const resData = await $get('/json/20190903/getJSON.tmp.json');// 300ms
+        // const resData = await $get('/json/20190819/getJSON.tmp.json');// 300ms
         if (JSON.stringify(resData) !== '{}') {
             Cache.set(url, resData);
         }
