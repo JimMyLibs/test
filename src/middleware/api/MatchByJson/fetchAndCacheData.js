@@ -10,9 +10,9 @@ export const fetchData = async (url) => {
         const language = await getLanguage();
         let lcJson = null;
         if(language=='Eng'){
-            lcJson = require(`../../xml/json/getJSON.min.json`);
+            lcJson = require(`../../xml/json/20190819/getJSON.min.json`);
         }else{
-            lcJson = require(`../../xml/json/getJSON.min.json`);
+            lcJson = require(`../../xml/json/20190819/getJSON.min.json`);
         }
         return {
             ErrCode: 0,
@@ -23,7 +23,8 @@ export const fetchData = async (url) => {
 
     const LSdata = Cache.get(url);
     const getData = async ()=>{
-        const resData = await $get('/json/getJSON.tmp.json');// 300ms
+        const resData = await $get('/json/20190903/getJSON.json');// 300ms
+        // const resData = await $get('/json/20190819/getJSON.json');// 300ms
         if (JSON.stringify(resData) !== '{}') {
             Cache.set(url, resData);
         }
