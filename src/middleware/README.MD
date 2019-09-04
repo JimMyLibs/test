@@ -55,11 +55,13 @@
 
 11. - [x] - support matches filter by inPlay, and realize no-empty judgment
 
-12. - [ ] - joint debug barrage data width Navi
+12. - [x] - joint debug barrage data width Navi
 
-13. - [ ] - joint debug the API about account width David
+13. - [x] - joint debug the API about account width David
 
-14. - [ ] - fit the getJSON.json
+14. - [x] - fit the getJSON.json
+
+15. - [ ] - result page
 
 
 ---

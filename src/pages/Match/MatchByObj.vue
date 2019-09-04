@@ -1,5 +1,5 @@
 <template>
-    <div class="Page_Match">        
+    <div class="Page_MatchObj">        
         <MatchByObj />
     </div>
 </template>
@@ -13,13 +13,13 @@ import MatchByObj from "../../components/Match/MatchByObj.vue";
         MatchByObj
     }
 })
-export default class Page_Match extends Vue {
-    pageName: string = "Page_Match";
+export default class Page_MatchObj extends Vue {
+    pageName: string = "Page_MatchObj";
 }
 </script>
 
 <style lang='scss'>
-.Page_Match {
+.Page_MatchObj {
     height: 100%;
 }
 </style>

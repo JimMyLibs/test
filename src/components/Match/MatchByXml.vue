@@ -1,5 +1,5 @@
 <template>
-    <div class='Match_filter'>
+    <div class='Match_filterByXml'>
         <!-- <div class='testFetch' @click='testFetch'>高频请求</div> -->
         <div class='preCode flex' v-if='show.all || 1'>
             <div class='preBox' v-if='show.listFilter'>
@@ -55,8 +55,8 @@ import api from '../../middleware/api';
         // loading
     }
 })
-export default class Match_filter extends Vue {
-    pageName: string = 'Match_filter';
+export default class Match_filterByXml extends Vue {
+    pageName: string = 'Match_filterByXml';
     fbGetInfoData: any = {
         listFilter: {},
         datePools: {},
@@ -164,7 +164,7 @@ export default class Match_filter extends Vue {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style lang='scss' scoped>
-.Match_filter {
+.Match_filterByXml {
     height: 98%;
     .preCode {
         height: 100%;

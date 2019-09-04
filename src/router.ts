@@ -14,6 +14,7 @@ export default new Router({
         { path: 'byXml', alias: '', name: 'MatchByXml', component: () => import('./pages/Match/MatchByXml.vue') },
         { path: 'byObj', name: 'MatchByObj', component: () => import('./pages/Match/MatchByObj.vue') },
         { path: 'byJson', name: 'MatchByJson', component: () => import('./pages/Match/MatchByJson.vue') },
+        { path: 'result', name: 'MatchResult', component: () => import('./pages/Match/MatchResult.vue') },
       ],
     },
     {

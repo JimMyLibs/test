@@ -50,6 +50,7 @@ class MatchByJson {
                     pool: item.definedPools,
                 }
             }).sort((a, b) => a.matchDate > b.matchDate);
+            console.log('filterKeys',filterKeys)
             // get the all date
             const allDateInData = filterKeys.map(item => item.date);
             const dateList = [...new Set(allDateInData)];
@@ -305,6 +306,91 @@ class MatchByJson {
                                 const curOdds = itemLeague[curOddsName];
     
                                 matches_item.oddsSet = this.handleOddsInfo(pool,curOdds,inPlay);
+    
+                                league_item.matches.push(matches_item);
+                            }
+                        })
+                        date_item.coupons.push(league_item);
+                    }else{
+                        date_item.coupons = [];
+                    }
+                })
+                filterResult.push(date_item);
+            })
+
+            // console.log('过滤', {...params}, {...filterResult})
+            return {
+                ErrCode: 0,
+                ErrMsg: '',
+                data: {
+                    matchList: filterResult
+                },
+            };
+
+        } catch (error) {
+            console.error(error)
+            return {
+                ErrCode: 10001,
+                ErrMsg: error.message,
+                data: { error }
+            }
+        }
+    }
+    async result(params) {// 筛选数据
+        try {
+            const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
+            if (useCaseCache) {
+                if (!this.cache.dateLeague) {// 读取变量缓存数据
+                    this.cache.dateLeague = await this.dateLeague();
+                }
+            } else {
+                this.cache.dateLeague = await this.dateLeague();
+            }
+            let { data: dateLeague } = JSON.parse(JSON.stringify(this.cache.dateLeague))
+            const filterResult = [];
+            // filter by date
+            if(date){
+                dateLeague = {
+                    [date] : dateLeague[date]
+                }
+            }
+            Object.keys(dateLeague).map(keyDate => {
+                let date_item = {};
+                date_item.date = keyDate;
+                date_item.coupons = [];
+                Object.keys(dateLeague[keyDate]).map(keyLeague => {
+                    // filter by leaguae
+                    let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
+                    let curDateLeagueData = cueDeteData[keyLeague];
+                    if(league){
+                        curDateLeagueData = cueDeteData[league] || []
+                    }
+                    let league_item = {};
+                    league_item.league = league || keyLeague;
+                    league_item.oddsNames = ['HT','FT','ET'];
+                    league_item.matches = [];
+                    if(curDateLeagueData.length){
+                        curDateLeagueData.map(itemLeague => {
+                            if (itemLeague.definedPools.includes(pool)) {
+                                let matches_item = {};
+                                matches_item = itemLeague.matches_item;
+                                matches_item.pool = pool;
+                                matches_item.poolNum = pool.length;
+    
+                                
+                                matches_item.scores = itemLeague.accumulatedscore.map(item=>{
+                                    return {
+                                        name: item.periodvalue == 'FirstHalf' ? 'HT' : 'FT',
+                                        home: item.home,
+                                        away: item.away,
+                                    }
+                                });
+                                itemLeague.livescore&&matches_item.scores.push({
+                                    name: 'ET',
+                                    home: itemLeague.livescore.home,
+                                    away: itemLeague.livescore.away,
+                                })
+                                
     
                                 league_item.matches.push(matches_item);
                             }

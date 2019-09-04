@@ -1,5 +1,5 @@
 <template>
-    <div class="Page_Match">        
+    <div class="Page_MatchJson">        
         <MatchByJson />
     </div>
 </template>
@@ -13,13 +13,13 @@ import MatchByJson from "../../components/Match/MatchByJson.vue";
         MatchByJson
     }
 })
-export default class Page_Match extends Vue {
-    pageName: string = "Page_Match";
+export default class Page_MatchJson extends Vue {
+    pageName: string = "Page_MatchJson";
 }
 </script>
 
 <style lang='scss'>
-.Page_Match {
+.Page_MatchJson {
     height: 100%;
 }
 </style>
