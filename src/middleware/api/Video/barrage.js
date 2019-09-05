@@ -23,6 +23,7 @@ class Barrage {
             };
             
         } catch (error) {
+            console.error(error)
             return {
                 ErrCode: 0,
                 ErrMsg: '',

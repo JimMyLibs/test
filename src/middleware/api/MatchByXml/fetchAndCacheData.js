@@ -33,7 +33,7 @@ export const fetchData = async (url) => {
         return resData;
     }
     if(useFetfchCache){
-        if (!LSdata) {
+        if (LSdata) {
             return LSdata;// 100ms
         } else {
             return getData();

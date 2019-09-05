@@ -134,13 +134,7 @@ class Matches {
     }
     async filter(params) {// 筛选数据
         const { pool = '', date = '', league = '', inPlay = '' } = params;
-        if (useCaseCache) {
-            if (!this.cache.datePools) {// 读取变量缓存数据
-                this.cache.datePools = await this.datePools();
-            }
-        } else {
-            this.cache.datePools = await this.datePools();
-        }
+        this.cache.datePools = await this.datePools();        
         const datePools = JSON.parse(JSON.stringify(this.cache.datePools));
         let filterDate = datePools.data.filter(item => date ? (item.date === date) : true);
 

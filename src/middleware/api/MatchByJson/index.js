@@ -24,16 +24,18 @@ class MatchByJson {
     async initFB_GetInfo() {
         if (useCaseCache) {
             if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
-                this.cache.FB_GetInfo = await fetchData('getJSON');
+                const { data } = await fetchData('getJSON');
+                this.cache.FB_GetInfo = data;
                 const language = await getLanguage();
                 this.curLg = language.slice(0, 2).toUpperCase();
             }
         } else {
-            this.cache.FB_GetInfo = await fetchData('getJSON');
+            const { data } = await fetchData('getJSON');
+            this.cache.FB_GetInfo = data;
             const language = await getLanguage();
             this.curLg = language.slice(0, 2).toUpperCase();
         }
-        this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo.data).map(item => {
+        this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo).map(item => {
             const matchDate = item.matchDate.split('+')[0].split('-');
             const matchMD = matchDate[1] + '/' + matchDate[2];
             item.date = matchMD + '(' + item.matchDay + ')';
@@ -41,9 +43,9 @@ class MatchByJson {
         });
         return this.cache.FB_GetInfo;
     }
-    async getFilterMenu() {
+    async getFilterMenu(initFB_GetInfo = null) {
         try {
-            const resData = await this.initFB_GetInfo();
+            const resData = initFB_GetInfo || await this.initFB_GetInfo();
             const matchList = Object.values(resData).map(item => {
                 const matchDate = item.matchDate.split('+')[0].split('-');
                 const matchMD = matchDate[1] + '/' + matchDate[2];
@@ -60,7 +62,7 @@ class MatchByJson {
                     pool: item.definedPools,
                 }
             }).sort((a, b) => a.matchDate > b.matchDate);
-            console.log('filterKeys',filterKeys)
+            // console.log('filterKeys',filterKeys)
             // get the all date
             const allDateInData = filterKeys.map(item => item.date);
             const dateList = [...new Set(allDateInData)];
@@ -87,6 +89,7 @@ class MatchByJson {
                 }
             }
         } catch (error) {
+            console.error(error)
             return {
                 ErrCode: 10001,
                 ErrMsg: error.message,
@@ -108,6 +111,7 @@ class MatchByJson {
     async dateLeague(reverse = 0) {// 2.2.4.7  // 获取并编排所有数据
         try {
             const matchList = await this.initFB_GetInfo();
+            const { data: filterMenu } = await this.getFilterMenu(matchList);
             // classify matchList by date
             let dateObj = {};
             matchList.map(item => {
@@ -142,9 +146,13 @@ class MatchByJson {
             return {
                 ErrCode: 0,
                 ErrMsg: '',
-                data: dateObj,
+                data: {
+                    filterMenu,
+                    dateLeague: dateObj,
+                },
             };
         } catch (error) {
+            console.error(error)
             return {
                 ErrCode: 10001,
                 ErrMsg: error.message,
@@ -159,26 +167,25 @@ class MatchByJson {
         if(pool == 'NTS'){
             curOddsArr = curOdds.map(item=>{
                 return {
-                    
+
                 }
             })
         }else{
             const curInplay = JSON.parse(curOdds.INPLAY);
             if(inPlay == curInplay){
-                if(pool == 'HIL' || pool == 'FHL'){
+                if(pool == 'HIL' || pool == 'FHL' || pool == 'CHL'){
                     curOddsArr = curOdds.LINELIST.map(item=>{
-                        let infoArr = [];
+                        let obj = {};
                         Object.keys(item).map(key=>{
-                            if(['H','L','LINE'].includes(key)){
-                                infoArr.push({
-                                    name: key == 'LINE' ? 'I' : key,
-                                    odds: item[key].slice(4),
-                                })
+                            if(key == 'LINE'){
+                                obj['I'] = item[key].split('/')[1];
+                            }else if(key == 'H' || key == 'L'){
+                                obj[key] = item[key].split('@')[1];
                             }
                         })
                         return {
                             enabled: Number(curInplay),
-                            oddsInfo: this.oddsInfoSort(infoArr),
+                            ...obj,
                         }
                     })
                 }else{
@@ -188,12 +195,10 @@ class MatchByJson {
                             case 'FCS':
                                 curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
                                 curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    curOddsObj[item] = curOddsObj[item] || {};
                                     if (new RegExp(item).test(setKey)) {
-                                        curOddsObj[item].push({
-                                            name: `${setKey.slice(1, 3)}:${setKey.slice(3)}`,
-                                            value: curOdds[setKey].slice(4),
-                                        })
+                                        const key = `${setKey.slice(1, 3)}:${setKey.slice(3)}`;
+                                        curOddsObj[item][key] = curOdds[setKey].slice(4)
                                     }
                                 })
                                 break;
@@ -201,12 +206,9 @@ class MatchByJson {
                             case 'TTG':
                                 curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
                                 curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    curOddsObj[item] = curOddsObj[item] || {};
                                     if (new RegExp(item).test(setKey)) {
-                                        curOddsObj[item].push({
-                                            name: `${setKey.slice(1)}`,
-                                            value: curOdds[setKey].slice(4),
-                                        })
+                                        curOddsObj[item][`${setKey.slice(1)}`] = curOdds[setKey].slice(4);
                                     }
                                 })
                                 break;
@@ -214,12 +216,9 @@ class MatchByJson {
                             case 'HFT':
                                 curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
                                 curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    curOddsObj[item] = curOddsObj[item] || {};
                                     if (new RegExp(item).test(setKey)) {
-                                        curOddsObj[item].push({
-                                            name: `${setKey.slice(1)}`,
-                                            value: curOdds[setKey].slice(4),
-                                        })
+                                        curOddsObj[item][ `${setKey.slice(1)}`] = curOdds[setKey].slice(4);
                                     }
                                 })
                                 break;
@@ -233,12 +232,9 @@ class MatchByJson {
                             case 'HDC':
                                 curGroup[pool] = [poolMap[pool]];// the count of grouping
                                 curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    curOddsObj[item] = curOddsObj[item] || {};
                                     if (item.includes(setKey)) {
-                                        curOddsObj[item].push({
-                                            name: setKey,
-                                            value: curOdds[setKey].slice(4),
-                                        })
+                                        curOddsObj[item][setKey] = curOdds[setKey].slice(4);
                                     }
                                 })
                                 break;                                             
@@ -251,7 +247,7 @@ class MatchByJson {
                     curOddsArr = Object.keys(curOddsObj).map(item => {
                         return {
                             enabled: Number(curInplay),
-                            oddsInfo: this.oddsInfoSort(curOddsObj[item]),
+                            ...curOddsObj[item],
                         }
                     })
                 }
@@ -272,14 +268,8 @@ class MatchByJson {
     async filter(params) {// 筛选数据
         try {
             const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
-            if (useCaseCache) {
-                if (!this.cache.dateLeague) {// 读取变量缓存数据
-                    this.cache.dateLeague = await this.dateLeague();
-                }
-            } else {
-                this.cache.dateLeague = await this.dateLeague();
-            }
-            let { data: dateLeague } = JSON.parse(JSON.stringify(this.cache.dateLeague))
+            const res_dateLeague = await this.dateLeague();
+            let { data: { dateLeague, filterMenu } } = JSON.parse(JSON.stringify(res_dateLeague))
             const filterResult = [];
             // filter by date
             if(date){
@@ -316,13 +306,21 @@ class MatchByJson {
                                 const curOdds = itemLeague[curOddsName];
     
                                 matches_item.oddsSet = this.handleOddsInfo(pool,curOdds,inPlay);
-    
-                                league_item.matches.push(matches_item);
+                                
+                                if(matches_item.oddsSet.length){
+                                    league_item.matches.push(matches_item);
+                                }else{
+                                    // the oddsSet is empty Array
+                                }
                             }
                         })
-                        date_item.coupons.push(league_item);
+                        if(league_item.matches.length){
+                            date_item.coupons.push(league_item);
+                        }else{
+                            // the matches is empty Array
+                        }
                     }else{
-                        date_item.coupons = [];
+                        // curDateLeagueData has no data
                     }
                 })
                 filterResult.push(date_item);
@@ -333,7 +331,8 @@ class MatchByJson {
                 ErrCode: 0,
                 ErrMsg: '',
                 data: {
-                    matchList: filterResult
+                    matchList: filterResult,
+                    ...filterMenu,
                 },
             };
 
@@ -349,14 +348,8 @@ class MatchByJson {
     async result(params) {// 筛选数据
         try {
             const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
-            if (useCaseCache) {
-                if (!this.cache.dateLeague) {// 读取变量缓存数据
-                    this.cache.dateLeague = await this.dateLeague();
-                }
-            } else {
-                this.cache.dateLeague = await this.dateLeague();
-            }
-            let { data: dateLeague } = JSON.parse(JSON.stringify(this.cache.dateLeague))
+            const res_dateLeague = await this.dateLeague();
+            let { data: dateLeague } = JSON.parse(JSON.stringify(res_dateLeague))
             const filterResult = [];
             // filter by date
             if(date){

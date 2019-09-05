@@ -182,6 +182,7 @@ export const FB_GetInfo = async ()=> {// 2.2.4.7  // 获取并编排所有数据
             // result&&CouponInfo&&TournamentPoolInfo: 初始化FB_GetInfo:: 169ms && 处理数据datePools:: 580ms
         };
     }  catch (error) {
+        console.error(error)
         return {
             ErrCode: 10001,
             ErrMsg: error.message,

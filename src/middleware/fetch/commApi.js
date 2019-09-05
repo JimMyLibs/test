@@ -36,6 +36,7 @@ export function fetchApiInfo() {
                 resolve(ApiOriginPath);
             }            
         } catch (error) {
+            console.error(error)
             reject(error)
         }
     })

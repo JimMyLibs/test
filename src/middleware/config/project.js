@@ -4,8 +4,8 @@ export const projectName = 'szhkjc';
 
 export const fetchType = 'Info';// 决定请求地址origin,多种type在Http实例化时订制
 
-export const useFetfchCache = 0;// 是否启用请求缓存-硬盘
-export const useCaseCache = 0;// 是否启用实例缓存-内存
+export const useFetfchCache = 1;// 是否启用请求缓存-硬盘
+export const useCaseCache = 1;// 是否启用实例缓存-内存
 
 export const ISAPP = isRN();
 

@@ -81,7 +81,7 @@ export default class Match_filterByJson extends Vue {
     @Prop() private msg!: string;
     async getData() {
         const filterMenu = await Matches.filter({ pool: 'HAD' });
-        console.log('filterMenu', filterMenu);
+        // console.log('filterMenu', filterMenu);
     }
     get CouponInfo() {
         return this.syntaxHighlight(this.fbGetInfoData.CouponInfo);
@@ -98,27 +98,29 @@ export default class Match_filterByJson extends Vue {
     beforeCreate() {
         this.createTime = new Date().getTime();
     }
-    async mounted() {
+    async mounted() {        
         this.selected = JSON.parse(localStorage.getItem('selected')) || this.selected;
-        await this.getFilterMenu();
+        // await this.getFilterMenu();
         await this.changeMatche();
         await this.getdateLeague();
         // await this.getdateLeague(1);
         // await this.getOriginalData();
     }
     async getFilterMenu() {
-        const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();;
-        this.poolList = poolList;
-        this.leagueList = leagueList;
-        this.dateList = dateList;
+        const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();
     }
     async changeMatche() {
         localStorage.setItem('selected',JSON.stringify(this.selected));
         console.time('筛选changeMatche:');
         const filterResult = await Matches.filter(this.selected);
         this.fbGetInfoData.listFilter = filterResult;
-        console.log('筛选changeMatche:',filterResult);
+        // console.log('筛选changeMatche:',filterResult);
         console.timeEnd('筛选changeMatche:');
+        
+        const { data: {poolList, leagueList, dateList} } = filterResult;
+        this.poolList = poolList;
+        this.leagueList = leagueList;
+        this.dateList = dateList;
     }
     async getOriginalData() {
         console.time('原始数据getOriginalData:');
@@ -130,13 +132,13 @@ export default class Match_filterByJson extends Vue {
         console.time('处理getdateLeague:');
         const dateLeague = await Matches.dateLeague(reverse);
         this.fbGetInfoData[reverse?'leagueDate':'dateLeague'] = dateLeague;
-        console.log('处理getdateLeague:',dateLeague);
+        // console.log('处理getdateLeague:',dateLeague);
         console.timeEnd('处理getdateLeague:');
 
         const renderTime = new Date(
             new Date().getTime() - this.createTime
         ).getMilliseconds();
-        console.log('渲染时间', renderTime, 'ms');
+        // console.log('渲染时间', renderTime, 'ms');
     }
 }
 </script>
