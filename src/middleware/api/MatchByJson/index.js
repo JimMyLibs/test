@@ -4,6 +4,16 @@ import { useCaseCache } from '../../config/project'
 import { fetchData } from './fetchAndCacheData'
 import { getLanguage } from '../../config/env'
 
+const poolMap = {
+    HAD: 'HDA',
+    FHA: 'HDA',
+    HHA: 'HDA',
+    FTS: 'HNA',
+    TQL: 'HA',
+    OOE: 'EO',
+    HDC: 'HA',
+}
+
 class MatchByJson {
     constructor() {
         this.cache = {
@@ -146,106 +156,105 @@ class MatchByJson {
         let curGroup = {};
         let curOddsObj = {};
         let curOddsArr = [];
-        const curInplay = JSON.parse(curOdds.INPLAY);
-        if(inPlay == curInplay){
-            if(pool == 'HIL' || pool == 'FHL'){
-                curOddsArr = curOdds.LINELIST.map(item=>{
-                    let infoArr = [];
-                    Object.keys(item).map(key=>{
-                        if(['H','L','LINE'].includes(key)){
-                            infoArr.push({
-                                name: key == 'LINE' ? 'I' : key,
-                                odds: item[key].slice(4),
-                            })
+        if(pool == 'NTS'){
+            curOddsArr = curOdds.map(item=>{
+                return {
+                    
+                }
+            })
+        }else{
+            const curInplay = JSON.parse(curOdds.INPLAY);
+            if(inPlay == curInplay){
+                if(pool == 'HIL' || pool == 'FHL'){
+                    curOddsArr = curOdds.LINELIST.map(item=>{
+                        let infoArr = [];
+                        Object.keys(item).map(key=>{
+                            if(['H','L','LINE'].includes(key)){
+                                infoArr.push({
+                                    name: key == 'LINE' ? 'I' : key,
+                                    odds: item[key].slice(4),
+                                })
+                            }
+                        })
+                        return {
+                            enabled: Number(curInplay),
+                            oddsInfo: this.oddsInfoSort(infoArr),
                         }
                     })
-                    return {
-                        enabled: Number(curInplay),
-                        oddsInfo: this.oddsInfoSort(infoArr),
-                    }
-                })
-            }else{
-                Object.keys(curOdds).map(setKey => {
-                    switch (pool) {
-                        case 'CRS':
-                        case 'FCS':
-                            curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
-                            curGroup[pool].map(item => {
-                                curOddsObj[item] = curOddsObj[item] || [];
-                                if (new RegExp(item).test(setKey)) {
-                                    curOddsObj[item].push({
-                                        name: `${setKey.slice(1, 3)}:${setKey.slice(3)}`,
-                                        value: curOdds[setKey].slice(4),
-                                    })
-                                }
-                            })
-                            break;
-
-                        case 'TTG':
-                            curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
-                            curGroup[pool].map(item => {
-                                curOddsObj[item] = curOddsObj[item] || [];
-                                if (new RegExp(item).test(setKey)) {
-                                    curOddsObj[item].push({
-                                        name: `${setKey.slice(1)}`,
-                                        value: curOdds[setKey].slice(4),
-                                    })
-                                }
-                            })
-                            break;
-
-                        case 'HFT':
-                            curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
-                            curGroup[pool].map(item => {
-                                curOddsObj[item] = curOddsObj[item] || [];
-                                if (new RegExp(item).test(setKey)) {
-                                    curOddsObj[item].push({
-                                        name: `${setKey.slice(1)}`,
-                                        value: curOdds[setKey].slice(4),
-                                    })
-                                }
-                            })
-                            break;
-                        
-                        case 'HAD':
-                        case 'FHA':
-                        case 'HHA':
-                        case 'FTS':
-                        case 'TQL':
-                        case 'OOE':
-                        case 'HDC':
-                            const hadMap = {
-                                HAD: 'HDA',
-                                FHA: 'HDA',
-                                HHA: 'HDA',
-                                FTS: 'HNA',
-                                TQL: 'HA',
-                                OOE: 'EO',
-                                HDC: 'HA',
-                            }
-                            curGroup[pool] = [hadMap[pool]];// the count of grouping
-                            curGroup[pool].map(item => {
-                                curOddsObj[item] = curOddsObj[item] || [];
-                                if (item.includes(setKey)) {
-                                    curOddsObj[item].push({
-                                        name: setKey,
-                                        value: curOdds[setKey].slice(4),
-                                    })
-                                }
-                            })
-                            break;                                             
-
-                        default:
-                            console.log('default')
-                            break;
-                    }
-                })
-                curOddsArr = Object.keys(curOddsObj).map(item => {
-                    return {
-                        enabled: Number(curInplay),
-                        oddsInfo: this.oddsInfoSort(curOddsObj[item]),
-                    }
-                })
+                }else{
+                    Object.keys(curOdds).map(setKey => {
+                        switch (pool) {
+                            case 'CRS':
+                            case 'FCS':
+                                curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
+                                curGroup[pool].map(item => {
+                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    if (new RegExp(item).test(setKey)) {
+                                        curOddsObj[item].push({
+                                            name: `${setKey.slice(1, 3)}:${setKey.slice(3)}`,
+                                            value: curOdds[setKey].slice(4),
+                                        })
+                                    }
+                                })
+                                break;
+    
+                            case 'TTG':
+                                curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
+                                curGroup[pool].map(item => {
+                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    if (new RegExp(item).test(setKey)) {
+                                        curOddsObj[item].push({
+                                            name: `${setKey.slice(1)}`,
+                                            value: curOdds[setKey].slice(4),
+                                        })
+                                    }
+                                })
+                                break;
+    
+                            case 'HFT':
+                                curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
+                                curGroup[pool].map(item => {
+                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    if (new RegExp(item).test(setKey)) {
+                                        curOddsObj[item].push({
+                                            name: `${setKey.slice(1)}`,
+                                            value: curOdds[setKey].slice(4),
+                                        })
+                                    }
+                                })
+                                break;
+                            
+                            case 'HAD':
+                            case 'FHA':
+                            case 'HHA':
+                            case 'FTS':
+                            case 'TQL':
+                            case 'OOE':
+                            case 'HDC':
+                                curGroup[pool] = [poolMap[pool]];// the count of grouping
+                                curGroup[pool].map(item => {
+                                    curOddsObj[item] = curOddsObj[item] || [];
+                                    if (item.includes(setKey)) {
+                                        curOddsObj[item].push({
+                                            name: setKey,
+                                            value: curOdds[setKey].slice(4),
+                                        })
+                                    }
+                                })
+                                break;                                             
+    
+                            default:
+                                console.log('default')
+                                break;
+                        }
+                    })
+                    curOddsArr = Object.keys(curOddsObj).map(item => {
+                        return {
+                            enabled: Number(curInplay),
+                            oddsInfo: this.oddsInfoSort(curOddsObj[item]),
+                        }
+                    })
+                }
             }
         }
         return curOddsArr;
@@ -290,8 +299,9 @@ class MatchByJson {
                         curDateLeagueData = cueDeteData[league] || []
                     }
                     let league_item = {};
-                    league_item.league = league || keyLeague;
-                    league_item.oddsNames = this.oddsInfoSort(pool.split(''));
+                    league_item.league = league || keyLeague;                 
+                    const finalPool = poolMap[pool] || pool;
+                    league_item.oddsNames = this.oddsInfoSort(finalPool.split(''));
                     league_item.matches = [];
                     if(curDateLeagueData.length){
                         curDateLeagueData.map(itemLeague => {
