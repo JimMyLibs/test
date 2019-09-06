@@ -263,14 +263,12 @@ class MatchByJson {
             if(inPlay){// inPlay == '0' || inPlay == '1'
                 inPlay = inPlay ? JSON.parse(inPlay) : inPlay;// '0'→0,'1'→1,''→'',
                 if(inPlay === curOddsInplay){// filter by inPlay
-                    console.log('inplay',inPlay, curOddsInplay)
                     curOddsArr = this.handleOddsInfo(pool, curOdds, curOddsInplay)
                 }else{// inPlay !== curOddsInplay
 
                 }
 
             }else if(!inPlay || inPlay == 'undefined'){// return all inPlay, inPlay == '' || inPlay == 'undefined'
-                console.log('全部',inPlay, curOddsInplay)
                 curOddsArr = this.handleOddsInfo(pool, curOdds, inPlay)
             }
         }
@@ -409,7 +407,7 @@ class MatchByJson {
         try {
             const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
             const res_dateLeague = await this.dateLeague();
-            let { data: dateLeague } = JSON.parse(JSON.stringify(res_dateLeague))
+            let { data: { dateLeague } } = JSON.parse(JSON.stringify(res_dateLeague))
             const filterResult = [];
             // filter by date
             if(date){
@@ -438,10 +436,9 @@ class MatchByJson {
                                 let matches_item = {};
                                 matches_item = itemLeague.matches_item;
                                 matches_item.pool = pool;
-                                matches_item.poolNum = pool.length;
-    
-                                
-                                matches_item.scores = itemLeague.accumulatedscore.map(item=>{
+                                matches_item.poolNum = pool.length;    
+                                console.log('itemLeague.accumulatedscore',itemLeague.accumulatedscore)
+                                matches_item.scores = itemLeague.accumulatedscore&&itemLeague.accumulatedscore.map(item=>{
                                     return {
                                         name: item.periodvalue == 'FirstHalf' ? 'HT' : 'FT',
                                         home: item.home,
