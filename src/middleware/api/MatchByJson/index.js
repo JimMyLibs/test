@@ -65,16 +65,21 @@ class MatchByJson {
             // console.log('filterKeys',filterKeys)
             // get the all date
             const allDateInData = filterKeys.map(item => item.date);
-            const dateList = [...new Set(allDateInData)];
+            const dateList = [...new Set(allDateInData)].sort((a,b)=>{
+                const getDate = (date)=>{
+                    return new Date(date.split('(')[0]+'/'+new Date().getFullYear())
+                }
+                return getDate(a) - getDate(b);
+            });
             // get the all league
             const allLeagueInData = filterKeys.map(item => item.league);
-            const leagueList = [...new Set(allLeagueInData)];
+            const leagueList = [...new Set(allLeagueInData)].sort();
             // get the all pool
             const allPoolInData = filterKeys.reduce((sum, item) => {
                 sum = sum.concat(item.pool);
                 return sum;
             }, []);
-            const poolListSet = [...new Set(allPoolInData)];
+            const poolListSet = [...new Set(allPoolInData)].sort();
             let poolList = {};
             poolListSet.map(item => {
                 poolList[item] = Pools.list[item];
@@ -377,7 +382,7 @@ class MatchByJson {
             }else{// return every pools
                 Object.keys(poolList).map(item=>{
                     const params = { pool: item, date: args.date || '', league: args.league || '', inPlay: String(args.inPlay) || '' };
-                    console.log('args',{...args},'params',params)
+                    // console.log('args',{...args},'params',params)
                     allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
                 }) 
             }        
