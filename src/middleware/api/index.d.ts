@@ -22,6 +22,7 @@ declare namespace api {
     }
     class MatchByJson {
         constructor() //构造函数
+        static getAllPoolsData(params: MatchesFilterParams): Promise<any> // 获取赛事列表
         static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表
         static getFilterMenu(): Promise<any> // 获取筛选菜单
         static getOriginalData(): Promise<any> // 获取原始数据

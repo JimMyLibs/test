@@ -2,6 +2,25 @@
     <div class='Match_filterByJson'>
         <!-- <div class='testFetch' @click='testFetch'>高频请求</div> -->
         <div class='preCode flex' v-if='show.all || 1'>
+            <div class='preBox' v-if='show.allPoolsData'>
+                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.pool'>
+                    <option v-for='(item,index) in poolList' :key='item' :value='index'>{{index}}={{item}}</option>
+                    <option value>全部</option>
+                </select>
+                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.league'>
+                    <option v-for='(item,index) in leagueList' :key='index' :value='item'>{{item}}</option>
+                    <option value>全部</option>
+                </select>
+                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.date'>
+                    <option v-for='(item,index) in dateList' :key='index' :value='item'>{{item}}</option>
+                    <option value>全部</option>
+                </select>
+                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.inPlay'>
+                    <option v-for='(item,index) in inPlayList' :key='index' :value='item'>{{item}}</option>
+                    <option value>全部</option>
+                </select>
+                <pre contenteditable=false v-html='allPoolsData'></pre>
+            </div>
             <div class='preBox' v-if='show.listFilter'>
                 <select class='changeMatche' @change='changeMatche' v-model='selected.pool'>
                     <option v-for='(item,index) in poolList' :key='item' :value='index'>{{index}}={{item}}</option>
@@ -54,10 +73,17 @@ const Matches = api.MatchByJson;
 export default class Match_filterByJson extends Vue {
     pageName: string = 'Match_filterByJson';
     fbGetInfoData: any = {
+        allPoolsData: {},
         listFilter: {},
         dateLeague: {},
         leagueDate: {},
         CouponInfo: {},
+    };
+    selectedForAllPoolsData: any = {
+        pool: '',
+        date: '',
+        league: '',
+        inPlay: '',
     };
     selected: any = {
         pool: 'HAD',
@@ -67,6 +93,7 @@ export default class Match_filterByJson extends Vue {
     };
     show: any = {
         all: location.hostname === '169.254.222.170',
+        allPoolsData: 1,
         listFilter: 1,
         dateLeague: 1,
         leagueDate: 1,
@@ -95,19 +122,37 @@ export default class Match_filterByJson extends Vue {
     get listFilter() {
         return this.syntaxHighlight(this.fbGetInfoData.listFilter);
     }
+    get allPoolsData() {
+        return this.syntaxHighlight(this.fbGetInfoData.allPoolsData);
+    }
     beforeCreate() {
         this.createTime = new Date().getTime();
     }
     async mounted() {        
         this.selected = JSON.parse(localStorage.getItem('selected')) || this.selected;
+        this.selectedForAllPoolsData = JSON.parse(localStorage.getItem('selectedForAllPoolsData')) || this.selectedForAllPoolsData;
         // await this.getFilterMenu();
-        await this.changeMatche();
-        await this.getdateLeague();
+        await this.changeMatcheByAllPoolsData();
+        // await this.changeMatche();
+        // await this.getdateLeague();
         // await this.getdateLeague(1);
         // await this.getOriginalData();
     }
     async getFilterMenu() {
         const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();
+    }
+    async changeMatcheByAllPoolsData() {
+        localStorage.setItem('selectedForAllPoolsData',JSON.stringify(this.selectedForAllPoolsData));
+        console.time('筛选changeMatcheByAllPoolsData:');
+        const filterResult = await Matches.getAllPoolsData(this.selectedForAllPoolsData);
+        this.fbGetInfoData.allPoolsData = filterResult;
+        // console.log('筛选changeMatcheByAllPoolsData:',filterResult);
+        console.timeEnd('筛选changeMatcheByAllPoolsData:');
+        
+        const { data: {poolList, leagueList, dateList} } = filterResult;
+        this.poolList = poolList;
+        this.leagueList = leagueList;
+        this.dateList = dateList;
     }
     async changeMatche() {
         localStorage.setItem('selected',JSON.stringify(this.selected));

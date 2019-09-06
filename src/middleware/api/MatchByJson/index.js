@@ -147,8 +147,8 @@ class MatchByJson {
                 ErrCode: 0,
                 ErrMsg: '',
                 data: {
-                    filterMenu,
                     dateLeague: dateObj,
+                    filterMenu,
                 },
             };
         } catch (error) {
@@ -265,66 +265,70 @@ class MatchByJson {
             }
         })
     }
+    dateCouponsMatches(params,dateLeague){
+        const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
+        // filter by date
+        if(date){
+            dateLeague = {
+                [date] : dateLeague[date]
+            }
+        }
+        const filterResult = Object.keys(dateLeague).map(keyDate => {
+            let date_item = {};
+            date_item.date = keyDate;
+            date_item.coupons = [];
+            Object.keys(dateLeague[keyDate]).map(keyLeague => {
+                // filter by leaguae
+                let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
+                let curDateLeagueData = cueDeteData[keyLeague];
+                if(league){
+                    curDateLeagueData = cueDeteData[league] || []
+                }
+                let league_item = {};
+                league_item.league = league || keyLeague;                 
+                const finalPool = poolMap[pool] || pool;
+                league_item.oddsNames = this.oddsInfoSort(finalPool.split(''));
+                league_item.matches = [];
+                if(curDateLeagueData.length){
+                    curDateLeagueData.map(itemLeague => {
+                        if (itemLeague.definedPools.includes(pool)) {
+                            let matches_item = {};
+                            matches_item = itemLeague.matches_item;
+                            matches_item.pool = pool;
+                            matches_item.poolNum = pool.length;
+
+                            matches_item.oddsSet = [];
+                            const curOddsName = pool.toLowerCase() + 'odds';
+                            const curOdds = itemLeague[curOddsName];
+
+                            matches_item.oddsSet = this.handleOddsInfo(pool,curOdds,inPlay);
+                            
+                            if(matches_item.oddsSet.length){
+                                league_item.matches.push(matches_item);
+                            }else{
+                                // the oddsSet is empty Array
+                            }
+                        }
+                    })
+                    if(league_item.matches.length){
+                        date_item.coupons.push(league_item);
+                    }else{
+                        // the matches is empty Array
+                    }
+                }else{
+                    // curDateLeagueData has no data
+                }
+            })
+            return date_item;
+        })
+        return filterResult;
+    }
     async filter(params) {// 筛选数据
         try {
-            const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
             const res_dateLeague = await this.dateLeague();
             let { data: { dateLeague, filterMenu } } = JSON.parse(JSON.stringify(res_dateLeague))
-            const filterResult = [];
-            // filter by date
-            if(date){
-                dateLeague = {
-                    [date] : dateLeague[date]
-                }
-            }
-            Object.keys(dateLeague).map(keyDate => {
-                let date_item = {};
-                date_item.date = keyDate;
-                date_item.coupons = [];
-                Object.keys(dateLeague[keyDate]).map(keyLeague => {
-                    // filter by leaguae
-                    let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
-                    let curDateLeagueData = cueDeteData[keyLeague];
-                    if(league){
-                        curDateLeagueData = cueDeteData[league] || []
-                    }
-                    let league_item = {};
-                    league_item.league = league || keyLeague;                 
-                    const finalPool = poolMap[pool] || pool;
-                    league_item.oddsNames = this.oddsInfoSort(finalPool.split(''));
-                    league_item.matches = [];
-                    if(curDateLeagueData.length){
-                        curDateLeagueData.map(itemLeague => {
-                            if (itemLeague.definedPools.includes(pool)) {
-                                let matches_item = {};
-                                matches_item = itemLeague.matches_item;
-                                matches_item.pool = pool;
-                                matches_item.poolNum = pool.length;
-    
-                                matches_item.oddsSet = [];
-                                const curOddsName = pool.toLowerCase() + 'odds';
-                                const curOdds = itemLeague[curOddsName];
-    
-                                matches_item.oddsSet = this.handleOddsInfo(pool,curOdds,inPlay);
-                                
-                                if(matches_item.oddsSet.length){
-                                    league_item.matches.push(matches_item);
-                                }else{
-                                    // the oddsSet is empty Array
-                                }
-                            }
-                        })
-                        if(league_item.matches.length){
-                            date_item.coupons.push(league_item);
-                        }else{
-                            // the matches is empty Array
-                        }
-                    }else{
-                        // curDateLeagueData has no data
-                    }
-                })
-                filterResult.push(date_item);
-            })
+            
+            const filterResult = this.dateCouponsMatches(params,dateLeague);
 
             // console.log('过滤', {...params}, {...filterResult})
             return {
@@ -345,7 +349,35 @@ class MatchByJson {
             }
         }
     }
-    async result(params) {// 筛选数据
+    async getAllPoolsData(params) {// 筛选数据
+        try {
+            const res_dateLeague = await this.dateLeague();
+            let { data: { dateLeague, filterMenu, filterMenu: { poolList } } } = JSON.parse(JSON.stringify(res_dateLeague))
+            let allPoolsData = {};
+            Object.keys(poolList).map(item=>{         
+                const params = { pool: item, date: '', league: '', inPlay: '' };
+                allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
+            })         
+            // console.log('过滤', {...params}, {...filterResult})
+            return {
+                ErrCode: 0,
+                ErrMsg: '',
+                data: {
+                    ...allPoolsData,
+                    ...filterMenu,
+                },
+            };
+
+        } catch (error) {
+            console.error(error)
+            return {
+                ErrCode: 10001,
+                ErrMsg: error.message,
+                data: { error }
+            }
+        }
+    }
+    async result(params) {// for result page
         try {
             const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
             const res_dateLeague = await this.dateLeague();
