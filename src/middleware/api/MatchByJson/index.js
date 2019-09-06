@@ -160,9 +160,92 @@ class MatchByJson {
             }
         }
     }
-    handleOddsInfo(pool, curOdds, inPlay) {
+    handleOddsInfo(pool, curOdds, curOddsInplay){
         let curGroup = {};
         let curOddsObj = {};
+        let curOddsArr = [];
+        if(pool == 'HIL' || pool == 'FHL' || pool == 'CHL'){
+            curOddsArr = curOdds.LINELIST.map(item=>{
+                let obj = {};
+                Object.keys(item).map(key=>{
+                    if(key == 'LINE'){
+                        obj['I'] = item[key].split('/')[1];
+                    }else if(key == 'H' || key == 'L'){
+                        obj[key] = item[key].split('@')[1];
+                    }
+                })
+                return {
+                    enabled: Number(curOddsInplay),
+                    ...obj,
+                }
+            })
+        }else{
+            Object.keys(curOdds).map(setKey => {
+                switch (pool) {
+                    case 'CRS':
+                    case 'FCS':
+                        curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
+                        curGroup[pool].map(item => {
+                            curOddsObj[item] = curOddsObj[item] || {};
+                            if (new RegExp(item).test(setKey)) {
+                                const key = `${setKey.slice(1, 3)}:${setKey.slice(3)}`;
+                                curOddsObj[item][key] = curOdds[setKey].slice(4)
+                            }
+                        })
+                        break;
+
+                    case 'TTG':
+                        curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
+                        curGroup[pool].map(item => {
+                            curOddsObj[item] = curOddsObj[item] || {};
+                            if (new RegExp(item).test(setKey)) {
+                                curOddsObj[item][`${setKey.slice(1)}`] = curOdds[setKey].slice(4);
+                            }
+                        })
+                        break;
+
+                    case 'HFT':
+                        curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
+                        curGroup[pool].map(item => {
+                            curOddsObj[item] = curOddsObj[item] || {};
+                            if (new RegExp(item).test(setKey)) {
+                                curOddsObj[item][ `${setKey.slice(1)}`] = curOdds[setKey].slice(4);
+                            }
+                        })
+                        break;
+                    
+                    case 'HAD':
+                    case 'FHA':
+                    case 'HHA':
+                    case 'FTS':
+                    case 'TQL':
+                    case 'OOE':
+                    case 'HDC':
+                        curGroup[pool] = [poolMap[pool]];// the count of grouping
+                        curGroup[pool].map(item => {
+                            // console.log(item,inPlay,curOddsInplay,curOddsObj)
+                            curOddsObj[item] = curOddsObj[item] || {};
+                            if (item.includes(setKey)) {
+                                curOddsObj[item][setKey] = curOdds[setKey].slice(4);
+                            }
+                        })
+                        break;                                             
+
+                    default:
+                        console.log('default')
+                        break;
+                }
+            })
+            curOddsArr = Object.keys(curOddsObj).map(item => {
+                return {
+                    enabled: Number(curOddsInplay),
+                    ...curOddsObj[item],
+                }
+            })
+        }
+        return curOddsArr;
+    }
+    handleByInPlay(pool, curOdds, inPlay) {
         let curOddsArr = [];
         if(pool == 'NTS'){
             curOddsArr = curOdds.map(item=>{
@@ -171,86 +254,19 @@ class MatchByJson {
                 }
             })
         }else{
-            const curInplay = JSON.parse(curOdds.INPLAY);
-            if(inPlay == curInplay){
-                if(pool == 'HIL' || pool == 'FHL' || pool == 'CHL'){
-                    curOddsArr = curOdds.LINELIST.map(item=>{
-                        let obj = {};
-                        Object.keys(item).map(key=>{
-                            if(key == 'LINE'){
-                                obj['I'] = item[key].split('/')[1];
-                            }else if(key == 'H' || key == 'L'){
-                                obj[key] = item[key].split('@')[1];
-                            }
-                        })
-                        return {
-                            enabled: Number(curInplay),
-                            ...obj,
-                        }
-                    })
-                }else{
-                    Object.keys(curOdds).map(setKey => {
-                        switch (pool) {
-                            case 'CRS':
-                            case 'FCS':
-                                curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
-                                curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || {};
-                                    if (new RegExp(item).test(setKey)) {
-                                        const key = `${setKey.slice(1, 3)}:${setKey.slice(3)}`;
-                                        curOddsObj[item][key] = curOdds[setKey].slice(4)
-                                    }
-                                })
-                                break;
-    
-                            case 'TTG':
-                                curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
-                                curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || {};
-                                    if (new RegExp(item).test(setKey)) {
-                                        curOddsObj[item][`${setKey.slice(1)}`] = curOdds[setKey].slice(4);
-                                    }
-                                })
-                                break;
-    
-                            case 'HFT':
-                                curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
-                                curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || {};
-                                    if (new RegExp(item).test(setKey)) {
-                                        curOddsObj[item][ `${setKey.slice(1)}`] = curOdds[setKey].slice(4);
-                                    }
-                                })
-                                break;
-                            
-                            case 'HAD':
-                            case 'FHA':
-                            case 'HHA':
-                            case 'FTS':
-                            case 'TQL':
-                            case 'OOE':
-                            case 'HDC':
-                                curGroup[pool] = [poolMap[pool]];// the count of grouping
-                                curGroup[pool].map(item => {
-                                    curOddsObj[item] = curOddsObj[item] || {};
-                                    if (item.includes(setKey)) {
-                                        curOddsObj[item][setKey] = curOdds[setKey].slice(4);
-                                    }
-                                })
-                                break;                                             
-    
-                            default:
-                                console.log('default')
-                                break;
-                        }
-                    })
-                    curOddsArr = Object.keys(curOddsObj).map(item => {
-                        return {
-                            enabled: Number(curInplay),
-                            ...curOddsObj[item],
-                        }
-                    })
+            const curOddsInplay = Number(JSON.parse(curOdds.INPLAY));// 'false'→0,'true'→1,
+            if(inPlay){// inPlay == '0' || inPlay == '1'
+                inPlay = inPlay ? JSON.parse(inPlay) : inPlay;// '0'→0,'1'→1,''→'',
+                if(inPlay === curOddsInplay){// filter by inPlay
+                    console.log('inplay',inPlay, curOddsInplay)
+                    curOddsArr = this.handleOddsInfo(pool, curOdds, curOddsInplay)
+                }else{// inPlay !== curOddsInplay
+
                 }
+
+            }else if(!inPlay || inPlay == 'undefined'){// return all inPlay, inPlay == '' || inPlay == 'undefined'
+                console.log('全部',inPlay, curOddsInplay)
+                curOddsArr = this.handleOddsInfo(pool, curOdds, inPlay)
             }
         }
         return curOddsArr;
@@ -267,6 +283,7 @@ class MatchByJson {
     }
     dateCouponsMatches(params,dateLeague){
         const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
+        // console.log('filter',pool,date,league,inPlay,params)
         // filter by date
         if(date){
             dateLeague = {
@@ -301,7 +318,7 @@ class MatchByJson {
                             const curOddsName = pool.toLowerCase() + 'odds';
                             const curOdds = itemLeague[curOddsName];
 
-                            matches_item.oddsSet = this.handleOddsInfo(pool,curOdds,inPlay);
+                            matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);
                             
                             if(matches_item.oddsSet.length){
                                 league_item.matches.push(matches_item);
@@ -349,15 +366,21 @@ class MatchByJson {
             }
         }
     }
-    async getAllPoolsData(params) {// 筛选数据
+    async getAllPoolsData(args) {// 筛选数据
         try {
             const res_dateLeague = await this.dateLeague();
             let { data: { dateLeague, filterMenu, filterMenu: { poolList } } } = JSON.parse(JSON.stringify(res_dateLeague))
             let allPoolsData = {};
-            Object.keys(poolList).map(item=>{         
-                const params = { pool: item, date: '', league: '', inPlay: '' };
-                allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
-            })         
+            if(args.pool){
+                const params = { pool: args.pool, date: args.date || '', league: args.league || '', inPlay: String(args.inPlay) || '' };
+                allPoolsData[args.pool] = this.dateCouponsMatches(params,dateLeague)
+            }else{// return every pools
+                Object.keys(poolList).map(item=>{
+                    const params = { pool: item, date: args.date || '', league: args.league || '', inPlay: String(args.inPlay) || '' };
+                    console.log('args',{...args},'params',params)
+                    allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
+                }) 
+            }        
             // console.log('过滤', {...params}, {...filterResult})
             return {
                 ErrCode: 0,

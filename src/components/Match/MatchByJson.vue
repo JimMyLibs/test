@@ -3,19 +3,19 @@
         <!-- <div class='testFetch' @click='testFetch'>高频请求</div> -->
         <div class='preCode flex' v-if='show.all || 1'>
             <div class='preBox' v-if='show.allPoolsData'>
-                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.pool'>
+                <select class='changeMatche' @change='changeMatcheByAllPoolsData' v-model='selectedForAllPoolsData.pool'>
                     <option v-for='(item,index) in poolList' :key='item' :value='index'>{{index}}={{item}}</option>
                     <option value>全部</option>
                 </select>
-                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.league'>
+                <select class='changeMatche' @change='changeMatcheByAllPoolsData' v-model='selectedForAllPoolsData.league'>
                     <option v-for='(item,index) in leagueList' :key='index' :value='item'>{{item}}</option>
                     <option value>全部</option>
                 </select>
-                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.date'>
+                <select class='changeMatche' @change='changeMatcheByAllPoolsData' v-model='selectedForAllPoolsData.date'>
                     <option v-for='(item,index) in dateList' :key='index' :value='item'>{{item}}</option>
                     <option value>全部</option>
                 </select>
-                <select class='changeMatche' @change='changeMatche' v-model='selectedForAllPoolsData.inPlay'>
+                <select class='changeMatche' @change='changeMatcheByAllPoolsData' v-model='selectedForAllPoolsData.inPlay'>
                     <option v-for='(item,index) in inPlayList' :key='index' :value='item'>{{item}}</option>
                     <option value>全部</option>
                 </select>
@@ -134,7 +134,7 @@ export default class Match_filterByJson extends Vue {
         // await this.getFilterMenu();
         await this.changeMatcheByAllPoolsData();
         // await this.changeMatche();
-        // await this.getdateLeague();
+        await this.getdateLeague();
         // await this.getdateLeague(1);
         // await this.getOriginalData();
     }
