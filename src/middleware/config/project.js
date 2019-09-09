@@ -27,7 +27,7 @@ export const serverPathUrl = {
 
 export const ISDEBUG = 1;// 是否显示打印信息
 
-export const useJson = 0;
+export const useJson = 1;
 
 export const mockUrl = 'http://mock.91525.net:35001/';
 // export const mockUrl = 'http://127.0.0.1:3001/';

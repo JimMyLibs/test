@@ -131,7 +131,7 @@ class MatchByJson {
                     matches_item.away = item.awayTeam['teamName' + this.curLg];
                     matches_item.score_Home = item.livescore ? item.livescore.home : '';
                     matches_item.score_Away = item.livescore ? item.livescore.away : '';
-                    matches_item.matchDateTime = item.matchTime;
+                    matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.date;
 
                     // matches_item.pool = item.definedPools;// 投注类型
                     // matches_item.poolNum = item.definedPools.length;
@@ -166,113 +166,130 @@ class MatchByJson {
         }
     }
     handleOddsInfo(pool, curOdds, curOddsInplay){
-        let curGroup = {};
-        let curOddsObj = {};
-        let curOddsArr = [];
-        if(pool == 'HIL' || pool == 'FHL' || pool == 'CHL'){
-            curOddsArr = curOdds.LINELIST.map(item=>{
-                let obj = {};
-                Object.keys(item).map(key=>{
-                    if(key == 'LINE'){
-                        obj['I'] = item[key].split('/')[1];
-                    }else if(key == 'H' || key == 'L'){
-                        obj[key] = item[key].split('@')[1];
+        try {
+            let curGroup = {};
+            let curOddsObj = {};
+            let curOddsArr = [];
+            if(pool == 'HIL' || pool == 'FHL' || pool == 'CHL'){
+                curOddsArr = curOdds.LINELIST.map(item=>{
+                    let obj = {};
+                    Object.keys(item).map(key=>{
+                        if(key == 'LINE'){
+                            obj['I'] = item[key].split('/')[1];
+                        }else if(key == 'H' || key == 'L'){
+                            obj[key] = item[key].split('@')[1];
+                        }
+                    })
+                    return {
+                        enabled: Number(curOddsInplay),
+                        ...obj,
                     }
                 })
-                return {
-                    enabled: Number(curOddsInplay),
-                    ...obj,
-                }
-            })
-        }else{
-            Object.keys(curOdds).map(setKey => {
-                switch (pool) {
-                    case 'CRS':
-                    case 'FCS':
-                        curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
-                        curGroup[pool].map(item => {
-                            curOddsObj[item] = curOddsObj[item] || {};
-                            if (new RegExp(item).test(setKey)) {
-                                const key = `${setKey.slice(1, 3)}:${setKey.slice(3)}`;
-                                curOddsObj[item][key] = curOdds[setKey].slice(4)
-                            }
-                        })
-                        break;
-
-                    case 'TTG':
-                        curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
-                        curGroup[pool].map(item => {
-                            curOddsObj[item] = curOddsObj[item] || {};
-                            if (new RegExp(item).test(setKey)) {
-                                curOddsObj[item][`${setKey.slice(1)}`] = curOdds[setKey].slice(4);
-                            }
-                        })
-                        break;
-
-                    case 'HFT':
-                        curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
-                        curGroup[pool].map(item => {
-                            curOddsObj[item] = curOddsObj[item] || {};
-                            if (new RegExp(item).test(setKey)) {
-                                curOddsObj[item][ `${setKey.slice(1)}`] = curOdds[setKey].slice(4);
-                            }
-                        })
-                        break;
-                    
-                    case 'HAD':
-                    case 'FHA':
-                    case 'HHA':
-                    case 'FTS':
-                    case 'TQL':
-                    case 'OOE':
-                    case 'HDC':
-                        curGroup[pool] = [poolMap[pool]];// the count of grouping
-                        curGroup[pool].map(item => {
-                            // console.log(item,inPlay,curOddsInplay,curOddsObj)
-                            curOddsObj[item] = curOddsObj[item] || {};
-                            if (item.includes(setKey)) {
-                                curOddsObj[item][setKey] = curOdds[setKey].slice(4);
-                            }
-                        })
-                        break;                                             
-
-                    default:
-                        console.log('default')
-                        break;
-                }
-            })
-            curOddsArr = Object.keys(curOddsObj).map(item => {
-                return {
-                    enabled: Number(curOddsInplay),
-                    ...curOddsObj[item],
-                }
-            })
+            }else{
+                Object.keys(curOdds).map(setKey => {
+                    switch (pool) {
+                        case 'CRS':
+                        case 'FCS':
+                            curGroup[pool] = ['^S\\d{4}$', '^SM\\w{3}$'];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || {};
+                                if (new RegExp(item).test(setKey)) {
+                                    const key = `${setKey.slice(1, 3)}:${setKey.slice(3)}`;
+                                    curOddsObj[item][key] = curOdds[setKey].slice(4)
+                                }
+                            })
+                            break;
+    
+                        case 'TTG':
+                            curGroup[pool] = ['^[A-Z]\\d$'];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || {};
+                                if (new RegExp(item).test(setKey)) {
+                                    curOddsObj[item][`${setKey.slice(1)}`] = curOdds[setKey].slice(4);
+                                }
+                            })
+                            break;
+    
+                        case 'HFT':
+                            curGroup[pool] = ['^H[A-Z]$','^D[A-Z]$','^A[A-Z]$'];// the count of grouping
+                            curGroup[pool].map(item => {
+                                curOddsObj[item] = curOddsObj[item] || {};
+                                if (new RegExp(item).test(setKey)) {
+                                    curOddsObj[item][ `${setKey.slice(1)}`] = curOdds[setKey].slice(4);
+                                }
+                            })
+                            break;
+                        
+                        case 'HAD':
+                        case 'FHA':
+                        case 'HHA':
+                        case 'FTS':
+                        case 'TQL':
+                        case 'OOE':
+                        case 'HDC':
+                            curGroup[pool] = [poolMap[pool]];// the count of grouping
+                            curGroup[pool].map(item => {
+                                // console.log(item,inPlay,curOddsInplay,curOddsObj)
+                                curOddsObj[item] = curOddsObj[item] || {};
+                                if (item.includes(setKey)) {
+                                    curOddsObj[item][setKey] = curOdds[setKey].slice(4);
+                                }
+                            })
+                            break;                                             
+    
+                        default:
+                            console.log('default',pool)
+                            break;
+                    }
+                })
+                curOddsArr = Object.keys(curOddsObj).map(item => {
+                    return {
+                        enabled: Number(curOddsInplay),
+                        ...curOddsObj[item],
+                    }
+                })
+            }
+            return curOddsArr;            
+        } catch (error) {
+            console.error(error)
+            return {
+                ErrCode: 10001,
+                ErrMsg: error.message,
+                data: { error }
+            }                
         }
-        return curOddsArr;
     }
     handleByInPlay(pool, curOdds, inPlay) {
-        let curOddsArr = [];
-        if(pool == 'NTS'){
-            curOddsArr = curOdds.map(item=>{
-                return {
-
+        try {
+            let curOddsArr = [];
+            if(pool == 'NTS'){
+                curOddsArr = curOdds.map(item=>{
+                    return {
+    
+                    }
+                })
+            }else{
+                const curOddsInplay = Number(JSON.parse(curOdds.INPLAY));// 'false'→0,'true'→1,
+                if(inPlay){// inPlay == '0' || inPlay == '1'
+                    inPlay = inPlay ? JSON.parse(inPlay) : inPlay;// '0'→0,'1'→1,''→'',
+                    if(inPlay === curOddsInplay){// filter by inPlay
+                        curOddsArr = this.handleOddsInfo(pool, curOdds, curOddsInplay)
+                    }else{// inPlay !== curOddsInplay
+    
+                    }    
+                }else if(!inPlay || inPlay == 'undefined'){// return all inPlay, inPlay == '' || inPlay == 'undefined'
+                    curOddsArr = this.handleOddsInfo(pool, curOdds, inPlay)
                 }
-            })
-        }else{
-            const curOddsInplay = Number(JSON.parse(curOdds.INPLAY));// 'false'→0,'true'→1,
-            if(inPlay){// inPlay == '0' || inPlay == '1'
-                inPlay = inPlay ? JSON.parse(inPlay) : inPlay;// '0'→0,'1'→1,''→'',
-                if(inPlay === curOddsInplay){// filter by inPlay
-                    curOddsArr = this.handleOddsInfo(pool, curOdds, curOddsInplay)
-                }else{// inPlay !== curOddsInplay
-
-                }
-
-            }else if(!inPlay || inPlay == 'undefined'){// return all inPlay, inPlay == '' || inPlay == 'undefined'
-                curOddsArr = this.handleOddsInfo(pool, curOdds, inPlay)
             }
+            return curOddsArr;            
+        } catch (error) {
+            console.error(error)
+            return {
+                ErrCode: 10001,
+                ErrMsg: error.message,
+                data: { error }
+            }               
         }
-        return curOddsArr;
     }
     oddsInfoSort (arr)  {// 赔率类型排序
         const rule = {H:50,D:60,N:60,A:70,I:80,L:90};
@@ -285,63 +302,74 @@ class MatchByJson {
         })
     }
     dateCouponsMatches(params,dateLeague){
-        const { pool = 'HAD', date = '', league = '', inPlay = '' } = params;
-        // console.log('filter',pool,date,league,inPlay,params)
-        // filter by date
-        if(date){
-            dateLeague = {
-                [date] : dateLeague[date]
+        try {
+            const { pool = '', date = '', league = '', inPlay = '' } = params;
+            // console.log('filter',pool,date,league,inPlay,params)
+            // filter by date
+            if(date){
+                dateLeague = {
+                    [date] : dateLeague[date]
+                }
             }
-        }
-        const filterResult = Object.keys(dateLeague).map(keyDate => {
-            let date_item = {};
-            date_item.date = keyDate;
-            date_item.coupons = [];
-            Object.keys(dateLeague[keyDate]).map(keyLeague => {
-                // filter by leaguae
-                let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
-                let curDateLeagueData = cueDeteData[keyLeague];
-                if(league){
-                    curDateLeagueData = cueDeteData[league] || []
-                }
-                let league_item = {};
-                league_item.league = league || keyLeague;                 
-                const finalPool = poolMap[pool] || pool;
-                league_item.oddsNames = this.oddsInfoSort(finalPool.split(''));
-                league_item.matches = [];
-                if(curDateLeagueData.length){
-                    curDateLeagueData.map(itemLeague => {
-                        if (itemLeague.definedPools.includes(pool)) {
-                            let matches_item = {};
-                            matches_item = itemLeague.matches_item;
-                            matches_item.pool = pool;
-                            matches_item.poolNum = pool.length;
-
-                            matches_item.oddsSet = [];
-                            const curOddsName = pool.toLowerCase() + 'odds';
-                            const curOdds = itemLeague[curOddsName];
-
-                            matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);
-                            
-                            if(matches_item.oddsSet.length){
-                                league_item.matches.push(matches_item);
-                            }else{
-                                // the oddsSet is empty Array
-                            }
-                        }
-                    })
-                    if(league_item.matches.length){
-                        date_item.coupons.push(league_item);
-                    }else{
-                        // the matches is empty Array
+            const filterResult = Object.keys(dateLeague).map(keyDate => {
+                let date_item = {};
+                date_item.date = keyDate;
+                date_item.coupons = [];
+                Object.keys(dateLeague[keyDate]).map(keyLeague => {
+                    // filter by leaguae
+                    let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
+                    let curDateLeagueData = cueDeteData[keyLeague];
+                    if(league){
+                        curDateLeagueData = cueDeteData[league] || []
                     }
-                }else{
-                    // curDateLeagueData has no data
-                }
+                    let league_item = {};
+                    league_item.league = league || keyLeague;                 
+                    const finalPool = poolMap[pool] || pool;
+                    league_item.oddsNames = this.oddsInfoSort(finalPool.split(''));
+                    league_item.matches = [];
+                    if(curDateLeagueData.length){
+                        curDateLeagueData.map(itemLeague => {
+                            if (itemLeague.definedPools.includes(pool)) {
+                                let matches_item = {};
+                                matches_item = itemLeague.matches_item;
+                                matches_item.pool = pool;
+                                matches_item.poolNum = pool.length;
+    
+                                matches_item.oddsSet = [];
+                                const curOddsName = pool.toLowerCase() + 'odds';
+                                const curOdds = itemLeague[curOddsName];
+    
+                                matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);          
+                                if(matches_item.oddsSet.length){
+                                    league_item.matches.push(JSON.parse(JSON.stringify(matches_item)));
+                                }else{
+                                    // the oddsSet is empty Array
+                                }
+                            }
+                        })
+                        if(league_item.matches.length){
+                            date_item.coupons.push(league_item);
+                        }else{
+                            // the matches is empty Array
+                        }
+                    }else{
+                        // curDateLeagueData has no data
+                    }
+                })
+                // console.log('date_item',...date_item.coupons.map(item=>item.matches.map(item2=>item2.pool)))
+                return date_item;
             })
-            return date_item;
-        })
-        return filterResult;
+            return filterResult.sort((a,b)=>{
+                return new Date(a.date) - new Date(b.date);
+            });            
+        } catch (error) {
+            console.error(error)
+            return {
+                ErrCode: 10001,
+                ErrMsg: error.message,
+                data: { error }
+            }            
+        }
     }
     async filter(params) {// 筛选数据
         try {
@@ -369,17 +397,18 @@ class MatchByJson {
             }
         }
     }
-    async getAllPoolsData(args) {// 筛选数据
+    async getAllPoolsData(args = {pool: ''}) {// 筛选数据
         try {
             const res_dateLeague = await this.dateLeague();
             let { data: { dateLeague, filterMenu, filterMenu: { poolList } } } = JSON.parse(JSON.stringify(res_dateLeague))
             let allPoolsData = {};
+            args.inPlay = args.inPlay ? String(args.inPlay) : '';
             if(args.pool){
-                const params = { pool: args.pool, date: args.date || '', league: args.league || '', inPlay: String(args.inPlay) || '' };
+                const params = { pool: args.pool, date: args.date || '', league: args.league || '', inPlay: args.inPlay };
                 allPoolsData[args.pool] = this.dateCouponsMatches(params,dateLeague)
             }else{// return every pools
                 Object.keys(poolList).map(item=>{
-                    const params = { pool: item, date: args.date || '', league: args.league || '', inPlay: String(args.inPlay) || '' };
+                    const params = { pool: item, date: args.date || '', league: args.league || '', inPlay: args.inPlay };
                     // console.log('args',{...args},'params',params)
                     allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
                 }) 
@@ -437,7 +466,6 @@ class MatchByJson {
                                 matches_item = itemLeague.matches_item;
                                 matches_item.pool = pool;
                                 matches_item.poolNum = pool.length;    
-                                console.log('itemLeague.accumulatedscore',itemLeague.accumulatedscore)
                                 matches_item.scores = itemLeague.accumulatedscore&&itemLeague.accumulatedscore.map(item=>{
                                     return {
                                         name: item.periodvalue == 'FirstHalf' ? 'HT' : 'FT',

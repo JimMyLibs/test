@@ -61,7 +61,11 @@
 
 14. - [x] - fit the getJSON.json
 
-15. - [ ] - result page
+15. - [x] - result page
+
+16. - [x] - time data
+
+17. - [x] - pool - oddsSet
 
 
 ---
