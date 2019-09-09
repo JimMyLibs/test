@@ -125,13 +125,13 @@ class MatchByJson {
                 {
                     // let pool = poolType || item3.Pool;
                     matches_item.key = item.matchID;// MatchID
-                    matches_item.title = item.date;
+                    matches_item.date = item.date;
                     matches_item.league = item.league['leagueName' + this.curLg];
                     matches_item.home = item.homeTeam['teamName' + this.curLg];
                     matches_item.away = item.awayTeam['teamName' + this.curLg];
                     matches_item.score_Home = item.livescore ? item.livescore.home : '';
                     matches_item.score_Away = item.livescore ? item.livescore.away : '';
-                    matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.title;
+                    matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.date;
 
                     // matches_item.pool = item.definedPools;// 投注类型
                     // matches_item.poolNum = item.definedPools.length;
@@ -311,11 +311,10 @@ class MatchByJson {
                     [date] : dateLeague[date]
                 }
             }
-            let filterResult = [];
-            Object.keys(dateLeague).map(keyDate => {
+            const filterResult = Object.keys(dateLeague).map(keyDate => {
                 let date_item = {};
-                date_item.title = keyDate;
-                date_item.data = [];
+                date_item.date = keyDate;
+                date_item.coupons = [];
                 Object.keys(dateLeague[keyDate]).map(keyLeague => {
                     // filter by leaguae
                     let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
@@ -323,11 +322,11 @@ class MatchByJson {
                     if(league){
                         curDateLeagueData = cueDeteData[league] || []
                     }
-                    let league_item = { title: {} };
-                    league_item.title.league = league || keyLeague;                 
+                    let league_item = {};
+                    league_item.league = league || keyLeague;                 
                     const finalPool = poolMap[pool] || pool;
-                    league_item.title.oddsNames = this.oddsInfoSort(finalPool.split(''));
-                    league_item.data = [];
+                    league_item.oddsNames = this.oddsInfoSort(finalPool.split(''));
+                    league_item.matches = [];
                     if(curDateLeagueData.length){
                         curDateLeagueData.map(itemLeague => {
                             if (itemLeague.definedPools.includes(pool)) {
@@ -342,29 +341,26 @@ class MatchByJson {
     
                                 matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);          
                                 if(matches_item.oddsSet.length){
-                                    league_item.data.push(JSON.parse(JSON.stringify(matches_item)));
+                                    league_item.matches.push(JSON.parse(JSON.stringify(matches_item)));
                                 }else{
                                     // the oddsSet is empty Array
                                 }
                             }
                         })
-                        if(league_item.data.length){
-                            date_item.data.push(league_item);
+                        if(league_item.matches.length){
+                            date_item.coupons.push(league_item);
                         }else{
-                            // the data is empty Array
+                            // the matches is empty Array
                         }
                     }else{
                         // curDateLeagueData has no data
                     }
                 })
-                if(date_item.data.length){
-                    filterResult.push(date_item);
-                }else{
-                    // this data(coupons) has no data
-                }
+                // console.log('date_item',...date_item.coupons.map(item=>item.matches.map(item2=>item2.pool)))
+                return date_item;
             })
             return filterResult.sort((a,b)=>{
-                return new Date(a.title) - new Date(b.title);
+                return new Date(a.date) - new Date(b.date);
             });            
         } catch (error) {
             console.error(error)
@@ -450,8 +446,8 @@ class MatchByJson {
             }
             Object.keys(dateLeague).map(keyDate => {
                 let date_item = {};
-                date_item.title = keyDate;
-                date_item.data = [];
+                date_item.date = keyDate;
+                date_item.coupons = [];
                 Object.keys(dateLeague[keyDate]).map(keyLeague => {
                     // filter by leaguae
                     let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
@@ -462,7 +458,7 @@ class MatchByJson {
                     let league_item = {};
                     league_item.league = league || keyLeague;
                     league_item.oddsNames = ['HT','FT','ET'];
-                    league_item.data = [];
+                    league_item.matches = [];
                     if(curDateLeagueData.length){
                         curDateLeagueData.map(itemLeague => {
                             if (itemLeague.definedPools.includes(pool)) {
@@ -484,21 +480,15 @@ class MatchByJson {
                                 })
                                 
     
-                                league_item.data.push(matches_item);
+                                league_item.matches.push(matches_item);
                             }
                         })
-                        date_item.data.push(league_item);
+                        date_item.coupons.push(league_item);
                     }else{
-                        date_item.data = [];
+                        date_item.coupons = [];
                     }
                 })
-                if(date_item.data.length){
-                    console.log(date_item.title,date_item.data.length)
-                    filterResult.push(date_item);
-                }else{
-                    console.log(2,date_item.title,date_item.data.length)
-                    // this data(coupons) has no data
-                }
+                filterResult.push(date_item);
             })
 
             // console.log('过滤', {...params}, {...filterResult})
