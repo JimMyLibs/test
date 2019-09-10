@@ -63,23 +63,26 @@ class MatchByJson {
                 }
             }).sort((a, b) => a.matchDate > b.matchDate);
             // console.log('filterKeys',filterKeys)
+            
             // get the all date
-            const allDateInData = filterKeys.map(item => item.date);
-            const dateList = [...new Set(allDateInData)].sort((a,b)=>{
-                const getDate = (date)=>{
-                    return new Date(date.split('(')[0]+'/'+new Date().getFullYear())
-                }
-                return getDate(a) - getDate(b);
-            });
+            // const allDateInData = filterKeys.map(item => item.date);
+            // const dateList = [...new Set(allDateInData)].sort((a,b)=>{
+            //     const getDate = (date)=>{
+            //         return new Date(date.split('(')[0]+'/'+new Date().getFullYear())
+            //     }
+            //     return getDate(a) - getDate(b);
+            // });
+
             // get the all league
-            const allLeagueInData = filterKeys.map(item => item.league);
-            const leagueList = [...new Set(allLeagueInData)].sort();
-            // get the all pool
+            // const allLeagueInData = filterKeys.map(item => item.league);
+            // const leagueList = [...new Set(allLeagueInData)].sort();
+
+            // // get the all pool
             const allPoolInData = filterKeys.reduce((sum, item) => {
                 sum = sum.concat(item.pool);
                 return sum;
             }, []);
-            const poolListSet = [...new Set(allPoolInData)].sort();
+            const poolListSet = [...new Set(allPoolInData)];
             let poolList = {};
             poolListSet.map(item => {
                 poolList[item] = Pools.list[item];
@@ -89,8 +92,8 @@ class MatchByJson {
                 ErrMsg: '',
                 data: {
                     poolList,
-                    dateList,
-                    leagueList,
+                    // dateList,
+                    // leagueList,
                 }
             }
         } catch (error) {
@@ -131,7 +134,7 @@ class MatchByJson {
                     matches_item.away = item.awayTeam['teamName' + this.curLg];
                     matches_item.score_Home = item.livescore ? item.livescore.home : '';
                     matches_item.score_Away = item.livescore ? item.livescore.away : '';
-                    matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.title;
+                    matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.date;
 
                     // matches_item.pool = item.definedPools;// 投注类型
                     // matches_item.poolNum = item.definedPools.length;
@@ -181,7 +184,7 @@ class MatchByJson {
                         }
                     })
                     return {
-                        enabled: Number(curOddsInplay),
+                        // enabled: Number(curOddsInplay),
                         ...obj,
                     }
                 })
@@ -244,7 +247,7 @@ class MatchByJson {
                 })
                 curOddsArr = Object.keys(curOddsObj).map(item => {
                     return {
-                        enabled: Number(curOddsInplay),
+                        // enabled: Number(curOddsInplay),
                         ...curOddsObj[item],
                     }
                 })
@@ -317,7 +320,7 @@ class MatchByJson {
                 date_item.title = keyDate;
                 date_item.data = [];
                 Object.keys(dateLeague[keyDate]).map(keyLeague => {
-                    // filter by leaguae
+                    // filter by leagua
                     let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
                     let curDateLeagueData = cueDeteData[keyLeague];
                     if(league){
@@ -363,9 +366,18 @@ class MatchByJson {
                     // this data(coupons) has no data
                 }
             })
-            return filterResult.sort((a,b)=>{
-                return new Date(a.title) - new Date(b.title);
-            });            
+            const leaguaAllList = filterResult.map(item=>item.data.map(item2=>item2.title.league)).reduce((sum,item)=>{
+                sum = [...sum,...item]
+                return sum;
+            },[]);
+            const leagueList = [...new Set(leaguaAllList)].sort();
+            return {
+                leagueList,
+                dateList: filterResult.map(item=>item.title),
+                matchList: filterResult.sort((a,b)=>{
+                    return new Date(a.title) - new Date(b.title);
+                })
+            }            
         } catch (error) {
             console.error(error)
             return {
@@ -453,7 +465,7 @@ class MatchByJson {
                 date_item.title = keyDate;
                 date_item.data = [];
                 Object.keys(dateLeague[keyDate]).map(keyLeague => {
-                    // filter by leaguae
+                    // filter by leagua
                     let cueDeteData = dateLeague[keyDate] || { [keyLeague]: [] };
                     let curDateLeagueData = cueDeteData[keyLeague];
                     if(league){

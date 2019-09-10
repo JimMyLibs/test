@@ -12,6 +12,7 @@ const oddsInfoSort = (arr)=> {// 赔率类型排序
 const handleOddsInfo = (pool,item6)=>{    
     let oddsInfo_item = {};// 每种赔率详情
     oddsInfo_item.odds = item6.Odds;
+    oddsInfo_item.enabled = item6.Enabled;
     switch(pool){
         case 'HAD':// 主客和
         case 'FHA':// 上半场主客和

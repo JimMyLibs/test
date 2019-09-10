@@ -67,6 +67,11 @@
 
 17. - [x] - pool - oddsSet
 
+18. - [x] - put dateList and leaguaList in each item of pool
+
+19. - [ ] - request inPlay instead of filtering by inPlay
+
+19. - [ ] - what is the enable about each odd ?
 
 ---
 
