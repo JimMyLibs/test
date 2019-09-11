@@ -19,22 +19,24 @@ class MatchByJson {
         this.cache = {
             dateLeague: 0,// dateLeague数据
             FB_GetInfo: 0,
+            params: { pool: '', date: '', leagua: '', inPlay: '' },
         }
     }
     async initFB_GetInfo() {
         if (useCaseCache) {
             if (!this.cache.FB_GetInfo) {// 读取变量缓存数据
-                const { data } = await fetchData('getJSON');
+                const { data } = await fetchData(this.cache.params);
                 this.cache.FB_GetInfo = data;
                 const language = await getLanguage();
                 this.curLg = language.slice(0, 2).toUpperCase();
             }
         } else {
-            const { data } = await fetchData('getJSON');
+            const { data } = await fetchData(this.cache.params);
             this.cache.FB_GetInfo = data;
             const language = await getLanguage();
             this.curLg = language.slice(0, 2).toUpperCase();
         }
+        console.log('matchList',this.cache.FB_GetInfo)
         this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo).map(item => {
             const matchDate = item.matchDate.split('+')[0].split('-');
             const matchMD = matchDate[1] + '/' + matchDate[2];
@@ -273,14 +275,13 @@ class MatchByJson {
                 })
             }else{
                 const curOddsInplay = Number(JSON.parse(curOdds.INPLAY));// 'false'→0,'true'→1,
-                if(inPlay){// inPlay == '0' || inPlay == '1'
-                    inPlay = inPlay ? JSON.parse(inPlay) : inPlay;// '0'→0,'1'→1,''→'',
+                if(inPlay === 0 || inPlay === 1){// inPlay == 0 || inPlay == 1
                     if(inPlay === curOddsInplay){// filter by inPlay
                         curOddsArr = this.handleOddsInfo(pool, curOdds, curOddsInplay)
                     }else{// inPlay !== curOddsInplay
     
                     }    
-                }else if(!inPlay || inPlay == 'undefined'){// return all inPlay, inPlay == '' || inPlay == 'undefined'
+                }else{// return all inPlay, inPlay == '' || inPlay == undefined
                     curOddsArr = this.handleOddsInfo(pool, curOdds, inPlay)
                 }
             }
@@ -339,11 +340,16 @@ class MatchByJson {
                                 matches_item.pool = pool;
                                 matches_item.poolNum = pool.length;
     
-                                matches_item.oddsSet = [];
                                 const curOddsName = pool.toLowerCase() + 'odds';
-                                const curOdds = itemLeague[curOddsName];
-    
-                                matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);          
+                                const curOdds = itemLeague[curOddsName];    
+                                matches_item.inPlay = inPlay;   
+
+                                matches_item.oddsSet = [];
+                                if(curOdds){
+                                    matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);  
+                                }else{
+                                    console.log(curOddsName,"doesn't exist, which from",matches_item.key)
+                                }
                                 if(matches_item.oddsSet.length){
                                     league_item.data.push(JSON.parse(JSON.stringify(matches_item)));
                                 }else{
@@ -413,18 +419,17 @@ class MatchByJson {
             }
         }
     }
-    async getAllPoolsData(args = {pool: ''}) {// 筛选数据
+    async getAllPoolsData(args = { pool: '', date: '', leagua: '', inPlay: '' }) {// get all data of each pool
+        this.cache.params = args;// used to select the origin for requesting
         try {
-            const res_dateLeague = await this.dateLeague();
+            const res_dateLeague = await this.dateLeague(args);
             let { data: { dateLeague, filterMenu, filterMenu: { poolList } } } = JSON.parse(JSON.stringify(res_dateLeague))
             let allPoolsData = {};
-            args.inPlay = args.inPlay ? String(args.inPlay) : '';
             if(args.pool){
-                const params = { pool: args.pool, date: args.date || '', league: args.league || '', inPlay: args.inPlay };
-                allPoolsData[args.pool] = this.dateCouponsMatches(params,dateLeague)
+                allPoolsData[args.pool] = this.dateCouponsMatches(args,dateLeague)
             }else{// return every pools
                 Object.keys(poolList).map(item=>{
-                    const params = { pool: item, date: args.date || '', league: args.league || '', inPlay: args.inPlay };
+                    const params = { ...args, pool: item };
                     // console.log('args',{...args},'params',params)
                     allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
                 }) 

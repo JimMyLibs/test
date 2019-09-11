@@ -29,13 +29,10 @@ export const oauth2 = ()=>{
         data: res
     }
 
-    // return $post('https://auth.hkjc.com:9443oauth/token',{
+    // return $post('https://auth.hkjc.com:9443/oauth/token',{
     //     hearders:{
     //         Authorization: `Basic ${getBase64(OAuth2.key+':'+OAuth2.secret)}`,            
     //     },
     //     // body: grant,
-    //     body: {
-    //         mock: res
-    //     },
     // })
 }

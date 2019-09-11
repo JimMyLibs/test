@@ -73,8 +73,8 @@ export default class Match_filterByXml extends Vue {
     show: any = {
         all: location.hostname === '169.254.222.170',
         listFilter: 1,
-        datePools: 1,
-        FB_GetInfo: 1,
+        datePools: 0,
+        FB_GetInfo: 0,
         CouponInfo: 0,
         TournamentPoolInfo: 0
     };

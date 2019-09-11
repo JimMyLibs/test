@@ -142,6 +142,7 @@ export default class Match_filterByJson extends Vue {
         const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();
     }
     async changeMatcheByAllPoolsData() {
+        const {  pool = 'HAD', date = '', league = '', inPlay = '' } = this.selectedForAllPoolsData;
         localStorage.setItem('selectedForAllPoolsData',JSON.stringify(this.selectedForAllPoolsData));
         console.time('筛选changeMatcheByAllPoolsData:');
         const filterResult = await Matches.getAllPoolsData(this.selectedForAllPoolsData);
@@ -151,8 +152,8 @@ export default class Match_filterByJson extends Vue {
         
         const { data: {poolList, leagueList, dateList} } = filterResult;
         this.poolList = poolList;
-        this.leagueList = leagueList;
-        this.dateList = dateList;
+        this.leagueList = pool ? filterResult.data[pool].leagueList : leagueList;
+        this.dateList = pool ? filterResult.data[pool].dateList : dateList;
     }
     async changeMatche() {
         localStorage.setItem('selected',JSON.stringify(this.selected));
