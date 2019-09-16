@@ -134,7 +134,7 @@ export default class Match_filterByJson extends Vue {
         // await this.getFilterMenu();
         await this.changeMatcheByAllPoolsData();
         // await this.changeMatche();
-        // await this.getdateLeague();
+        await this.getdateLeague();
         // await this.getdateLeague(1);
         // await this.getOriginalData();
     }

@@ -69,9 +69,9 @@
 
 18. - [x] - put dateList and leaguaList in each item of pool
 
-19. - [ ] - request inPlay instead of filtering by inPlay
+19. - [x] - request inPlay instead of filtering by inPlay
 
-19. - [ ] - what is the enable about each odd ?
+20. - [ ] - what is the enable about each odd ?
 
 ---
 

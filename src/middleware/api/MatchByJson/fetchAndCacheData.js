@@ -6,7 +6,7 @@ import { getLanguage } from '../../config/env'
 
 export const fetchData = async (args) => {
 
-    const url = args.inPlay == 1 ? '/json/20190903/getJSON_inplay.json' : '/json/20190903/getJSON.tmp.json';
+    const url = `/json/20190913/${args.inPlay == 1 ? 'getJSON_inplay.json' : 'getJSON.json'}`;
     if(useJson){// use location data
         const language = await getLanguage();
         let lcJson = null;
@@ -19,13 +19,12 @@ export const fetchData = async (args) => {
             ErrCode: 0,
             ErrMsg: '',
             data: lcJson,
-        };
+        };``
     }    
 
     const LSdata = Cache.get(url);
     const getData = async ()=>{
-        const resData = await $get(`${url}`);// 300ms
-        // const resData = await $get('/json/20190819/getJSON.tmp.json');// 300ms
+        const resData = await $get(`http://127.0.0.1:8803/${url}`);// 300ms
         if (JSON.stringify(resData) !== '{}') {
             Cache.set(url, resData);
         }

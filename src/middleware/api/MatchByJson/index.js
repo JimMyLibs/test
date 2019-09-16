@@ -36,7 +36,6 @@ class MatchByJson {
             const language = await getLanguage();
             this.curLg = language.slice(0, 2).toUpperCase();
         }
-        console.log('matchList',this.cache.FB_GetInfo)
         this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo).map(item => {
             const matchDate = item.matchDate.split('+')[0].split('-');
             const matchMD = matchDate[1] + '/' + matchDate[2];
@@ -67,17 +66,17 @@ class MatchByJson {
             // console.log('filterKeys',filterKeys)
             
             // get the all date
-            // const allDateInData = filterKeys.map(item => item.date);
-            // const dateList = [...new Set(allDateInData)].sort((a,b)=>{
-            //     const getDate = (date)=>{
-            //         return new Date(date.split('(')[0]+'/'+new Date().getFullYear())
-            //     }
-            //     return getDate(a) - getDate(b);
-            // });
+            const allDateInData = filterKeys.map(item => item.date);
+            const dateList = [...new Set(allDateInData)].sort((a,b)=>{
+                const getDate = (date)=>{
+                    return new Date(date.split('(')[0]+'/'+new Date().getFullYear())
+                }
+                return getDate(a) - getDate(b);
+            });
 
             // get the all league
-            // const allLeagueInData = filterKeys.map(item => item.league);
-            // const leagueList = [...new Set(allLeagueInData)].sort();
+            const allLeagueInData = filterKeys.map(item => item.league);
+            const leagueList = [...new Set(allLeagueInData)].sort();
 
             // // get the all pool
             const allPoolInData = filterKeys.reduce((sum, item) => {
@@ -94,8 +93,8 @@ class MatchByJson {
                 ErrMsg: '',
                 data: {
                     poolList,
-                    // dateList,
-                    // leagueList,
+                    dateList,
+                    leagueList,
                 }
             }
         } catch (error) {
@@ -311,9 +310,11 @@ class MatchByJson {
             // console.log('filter',pool,date,league,inPlay,params)
             // filter by date
             if(date){
+                console.log('dateLeague1',dateLeague)
                 dateLeague = {
                     [date] : dateLeague[date]
                 }
+                console.log('dateLeague2',dateLeague)
             }
             let filterResult = [];
             Object.keys(dateLeague).map(keyDate => {
@@ -348,7 +349,7 @@ class MatchByJson {
                                 if(curOdds){
                                     matches_item.oddsSet = this.handleByInPlay(pool,curOdds,inPlay);  
                                 }else{
-                                    console.log(curOddsName,"doesn't exist, which from",matches_item.key)
+                                    // console.log(curOddsName,"doesn't exist, which from",matches_item.key)
                                 }
                                 if(matches_item.oddsSet.length){
                                     league_item.data.push(JSON.parse(JSON.stringify(matches_item)));
@@ -422,7 +423,7 @@ class MatchByJson {
     async getAllPoolsData(args = { pool: '', date: '', leagua: '', inPlay: '' }) {// get all data of each pool
         this.cache.params = args;// used to select the origin for requesting
         try {
-            const res_dateLeague = await this.dateLeague(args);
+            const res_dateLeague = await this.dateLeague();
             let { data: { dateLeague, filterMenu, filterMenu: { poolList } } } = JSON.parse(JSON.stringify(res_dateLeague))
             let allPoolsData = {};
             if(args.pool){

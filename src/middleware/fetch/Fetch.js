@@ -200,7 +200,8 @@ export default class Http extends FetchBase {
         if (!isHadContentType) {
             headers = {
                 ...headers,
-                'Content-type': 'application/json; charset=UTF-8'
+                'Accept': 'application/json; charset=UTF-8',
+                'Content-type': 'application/json; charset=UTF-8',
             }
         }
         if (token) {

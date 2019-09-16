@@ -4,11 +4,8 @@ export const projectName = 'szhkjc';
 
 export const fetchType = 'Info';// 决定请求地址origin,多种type在Http实例化时订制
 
-export const useFetfchCache = 0;// 是否启用请求缓存-硬盘
-export const useCaseCache = 0;// 是否启用实例缓存-内存
 
 export const ISAPP = isRN();
-
 export const ISDEV = isDev();// 决定请求地址环境分类
 
 
@@ -24,10 +21,12 @@ export const serverPathUrl = {
 }
 
 /********************************** debug **************************** */
+export const useJson = 0;
+export const useFetfchCache = 0;// 是否启用请求缓存-硬盘
+export const useCaseCache = 0;// 是否启用实例缓存-内存
 
 export const ISDEBUG = 1;// 是否显示打印信息
 
-export const useJson = 0;
 
 export const mockUrl = 'http://mock.91525.net:35001/';
 // export const mockUrl = 'http://127.0.0.1:3001/';
