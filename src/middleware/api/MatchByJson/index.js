@@ -41,18 +41,12 @@ class MatchByJson {
             const matchMD = matchDate[1] + '/' + matchDate[2];
             item.date = matchMD + '(' + item.matchDay + ')';
             return item;
-        });
+        }).filter(item=>item.matchStatus !== 'ResultIn');
         return this.cache.FB_GetInfo;
     }
-    async getFilterMenu(initFB_GetInfo = null) {
+    async getFilterMenu() {
         try {
-            const resData = initFB_GetInfo || await this.initFB_GetInfo();
-            const matchList = Object.values(resData).map(item => {
-                const matchDate = item.matchDate.split('+')[0].split('-');
-                const matchMD = matchDate[1] + '/' + matchDate[2];
-                item.date = matchMD + '(' + item.matchDay + ')';
-                return item;
-            });
+            const matchList = this.cache.FB_GetInfo;
             // get the conditions for filtering
             const filterKeys = matchList.map(item => {
                 return {
@@ -120,7 +114,7 @@ class MatchByJson {
     async dateLeague(reverse = 0) {// 2.2.4.7  // 获取并编排所有数据
         try {
             const matchList = await this.initFB_GetInfo();
-            const { data: filterMenu } = await this.getFilterMenu(matchList);
+            const { data: filterMenu } = await this.getFilterMenu();
             // classify matchList by date
             let dateObj = {};
             matchList.map(item => {
@@ -133,8 +127,8 @@ class MatchByJson {
                     matches_item.league = item.league['leagueName' + this.curLg];
                     matches_item.home = item.homeTeam['teamName' + this.curLg];
                     matches_item.away = item.awayTeam['teamName' + this.curLg];
-                    matches_item.score_Home = item.livescore ? item.livescore.home : '';
-                    matches_item.score_Away = item.livescore ? item.livescore.away : '';
+                    matches_item.score_Home = item.livescore ? item.livescore.home : 0;
+                    matches_item.score_Away = item.livescore ? item.livescore.away : 0;
                     matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.date;
 
                     // matches_item.pool = item.definedPools;// 投注类型
