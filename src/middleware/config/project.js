@@ -21,7 +21,7 @@ export const serverPathUrl = {
 }
 
 /********************************** debug **************************** */
-export const useJson = 0;
+export const useJson = 1;
 export const useFetfchCache = 0;// 是否启用请求缓存-硬盘
 export const useCaseCache = 0;// 是否启用实例缓存-内存
 

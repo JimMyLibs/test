@@ -41,7 +41,7 @@ class MatchByJson {
             const matchMD = matchDate[1] + '/' + matchDate[2];
             item.date = matchMD + '(' + item.matchDay + ')';
             return item;
-        }).filter(item=>item.matchStatus !== 'ResultIn');
+        }).filter(item=>item.matchStatus !== 'ResultIn').sort((a,b)=>new Date(a.date)-new Date(b.date));
         return this.cache.FB_GetInfo;
     }
     async getFilterMenu() {
@@ -56,21 +56,16 @@ class MatchByJson {
                     league: item.league['leagueName' + this.curLg],
                     pool: item.definedPools,
                 }
-            }).sort((a, b) => a.matchDate > b.matchDate);
+            })
             // console.log('filterKeys',filterKeys)
             
             // get the all date
-            const allDateInData = filterKeys.map(item => item.date);
-            const dateList = [...new Set(allDateInData)].sort((a,b)=>{
-                const getDate = (date)=>{
-                    return new Date(date.split('(')[0]+'/'+new Date().getFullYear())
-                }
-                return getDate(a) - getDate(b);
-            });
+            // const allDateInData = filterKeys.map(item => item.date);
+            // const dateList = [...new Set(allDateInData)].sort((a,b)=>new Date(a.date)-new Date(b.date));
 
             // get the all league
-            const allLeagueInData = filterKeys.map(item => item.league);
-            const leagueList = [...new Set(allLeagueInData)].sort();
+            // const allLeagueInData = filterKeys.map(item => item.league);
+            // const leagueList = [...new Set(allLeagueInData)].sort();
 
             // // get the all pool
             const allPoolInData = filterKeys.reduce((sum, item) => {
@@ -86,9 +81,9 @@ class MatchByJson {
                 ErrCode: 0,
                 ErrMsg: '',
                 data: {
+                    // dateList,
+                    // leagueList,
                     poolList,
-                    dateList,
-                    leagueList,
                 }
             }
         } catch (error) {
@@ -163,7 +158,7 @@ class MatchByJson {
             }
         }
     }
-    handleOddsInfo(pool, curOdds, curOddsInplay){
+    handleOddsInfo(pool, curOdds){
         try {
             let curGroup = {};
             let curOddsObj = {};
@@ -179,7 +174,6 @@ class MatchByJson {
                         }
                     })
                     return {
-                        // enabled: Number(curOddsInplay),
                         ...obj,
                     }
                 })
@@ -227,7 +221,7 @@ class MatchByJson {
                         case 'HDC':
                             curGroup[pool] = [poolMap[pool]];// the count of grouping
                             curGroup[pool].map(item => {
-                                // console.log(item,inPlay,curOddsInplay,curOddsObj)
+                                // console.log(item,inPlay,curOddsObj)
                                 curOddsObj[item] = curOddsObj[item] || {};
                                 if (item.includes(setKey)) {
                                     curOddsObj[item][setKey] = curOdds[setKey].slice(4);
@@ -242,7 +236,6 @@ class MatchByJson {
                 })
                 curOddsArr = Object.keys(curOddsObj).map(item => {
                     return {
-                        // enabled: Number(curOddsInplay),
                         ...curOddsObj[item],
                     }
                 })
@@ -270,12 +263,12 @@ class MatchByJson {
                 const curOddsInplay = Number(JSON.parse(curOdds.INPLAY));// 'false'→0,'true'→1,
                 if(inPlay === 0 || inPlay === 1){// inPlay == 0 || inPlay == 1
                     if(inPlay === curOddsInplay){// filter by inPlay
-                        curOddsArr = this.handleOddsInfo(pool, curOdds, curOddsInplay)
+                        curOddsArr = this.handleOddsInfo(pool, curOdds)
                     }else{// inPlay !== curOddsInplay
     
                     }    
                 }else{// return all inPlay, inPlay == '' || inPlay == undefined
-                    curOddsArr = this.handleOddsInfo(pool, curOdds, inPlay)
+                    curOddsArr = this.handleOddsInfo(pool, curOdds)
                 }
             }
             return curOddsArr;            
@@ -374,7 +367,9 @@ class MatchByJson {
             const leagueList = [...new Set(leaguaAllList)].sort();
             return {
                 leagueList,
-                dateList: filterResult.map(item=>item.title),
+                dateList: filterResult.map(item=>item.title).sort((a,b)=>{
+                    return new Date(a) - new Date(b);
+                }),
                 matchList: filterResult.sort((a,b)=>{
                     return new Date(a.title) - new Date(b.title);
                 })
