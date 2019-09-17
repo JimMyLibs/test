@@ -367,7 +367,9 @@ class MatchByJson {
                 leagueList = [...new Set(leaguaAllList)].sort();
             }
             // search
-            filterResult = this.search(search, filterResult);
+            if(search){
+                filterResult = this.search(search, filterResult);
+            }
             return {
                 leagueList,
                 dateList,
@@ -391,7 +393,10 @@ class MatchByJson {
                     });
                     return item_league
                 }).length;
-            }).map(item_date=>item_date.data.filter(item_league=>item_league.data.length));
+            }).map(item_date=>{
+                item_date.data = item_date.data.filter(item_league=>item_league.data.length)
+                return item_date;
+            }).filter(item_date=>item_date.data.length);
         } catch (error) {
             console.error(error)
             return matchList;

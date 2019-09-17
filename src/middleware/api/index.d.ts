@@ -9,8 +9,6 @@ interface MatchByJsonFilterParams {
     date?: string,
     league?: string,
     inPlay?: number,
-    search?: string,
-    matchList?: any[] 
 }
 interface MatchByJsonSearchParams {
     search: string,
