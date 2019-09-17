@@ -19,6 +19,7 @@
                     <option v-for='(item,index) in inPlayList' :key='index' :value='item'>{{item}}</option>
                     <option value>全部</option>
                 </select>
+                <input type="text" @blur='changeMatcheByAllPoolsData' v-model="selectedForAllPoolsData.search">
                 <pre contenteditable=false v-html='allPoolsData'></pre>
             </div>
             <div class='preBox' v-if='show.listFilter'>
@@ -84,6 +85,7 @@ export default class Match_filterByJson extends Vue {
         date: '',
         league: '',
         inPlay: '',
+        search: '',
     };
     selected: any = {
         pool: 'HAD',
@@ -142,7 +144,7 @@ export default class Match_filterByJson extends Vue {
         const { data: {poolList, leagueList, dateList} } = await Matches.getFilterMenu();
     }
     async changeMatcheByAllPoolsData() {
-        const {  pool = 'HAD', date = '', league = '', inPlay = '' } = this.selectedForAllPoolsData;
+        const {  pool = 'HAD', date = '', league = '', inPlay = '', search = '' } = this.selectedForAllPoolsData;
         localStorage.setItem('selectedForAllPoolsData',JSON.stringify(this.selectedForAllPoolsData));
         console.time('筛选changeMatcheByAllPoolsData:');
         const filterResult = await Matches.getAllPoolsData(this.selectedForAllPoolsData);

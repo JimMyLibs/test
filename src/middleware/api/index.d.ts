@@ -8,7 +8,13 @@ interface MatchByJsonFilterParams {
     pool?: string,
     date?: string,
     league?: string,
-    inPlay?: number
+    inPlay?: number,
+    search?: string,
+    matchList?: any[] 
+}
+interface MatchByJsonSearchParams {
+    search: string,
+    matchList: any[] 
 }
 
 declare namespace api {
@@ -19,14 +25,7 @@ declare namespace api {
         static $post(url:string,params?:any): Promise<any> // $post
         static $upload(url:string,params?:any): Promise<any> // $upload
     }
-    class Matches {
-        constructor() //构造函数
-        static getAllPoolsData(params?: MatchByJsonFilterParams): Promise<any> // 获取赛事列表
-        static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表
-        static getFilterMenu(): Promise<any> // 获取筛选菜单
-        static getOriginalData(): Promise<any> // 获取原始数据
-        static datePools(): Promise<any> // 获取订制数据
-    }
+    class Matches extends MatchByXml{}
     class MatchByXml {
         constructor() //构造函数
         static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表
@@ -36,6 +35,7 @@ declare namespace api {
     }
     class MatchByJson {
         constructor() //构造函数
+        static search(search: string, matchList: any[]): Promise<any> // 获取赛事列表
         static getAllPoolsData(params?: MatchByJsonFilterParams): Promise<any> // 获取赛事列表
         static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表
         static getFilterMenu(): Promise<any> // 获取筛选菜单

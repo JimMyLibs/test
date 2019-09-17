@@ -17,8 +17,8 @@ const poolMap = {
 class MatchByJson {
     constructor() {
         this.cache = {
-            dateLeague: 0,// dateLeague数据
             FB_GetInfo: 0,
+            filterMenu: {},
             params: { pool: '', date: '', leagua: '', inPlay: '' },
         }
     }
@@ -37,11 +37,12 @@ class MatchByJson {
             this.curLg = language.slice(0, 2).toUpperCase();
         }
         this.cache.FB_GetInfo = Object.values(this.cache.FB_GetInfo).map(item => {
-            const matchDate = item.matchDate.split('+')[0].split('-');
-            const matchMD = matchDate[1] + '/' + matchDate[2];
+            const ymd = new Date(item.matchDate.split('+')[0]);
+            const matchMD = ymd.getMonth()+1 + '/' + ymd.getDate();
             item.date = matchMD + '(' + item.matchDay + ')';
             return item;
-        }).filter(item=>item.matchStatus !== 'ResultIn').sort((a,b)=>new Date(a.date)-new Date(b.date));
+        }).filter(item=>item.matchStatus !== 'ResultIn').sort((a,b)=>new Date(a.matchTime)-new Date(b.matchTime));
+        this.cache.filterMenu = await this.getFilterMenu();
         return this.cache.FB_GetInfo;
     }
     async getFilterMenu() {
@@ -50,8 +51,7 @@ class MatchByJson {
             // get the conditions for filtering
             const filterKeys = matchList.map(item => {
                 return {
-                    matchDate: item.matchDate,
-                    matchDay: item.matchDay,
+                    matchTime: item.matchTime,
                     date: item.date,
                     league: item.league['leagueName' + this.curLg],
                     pool: item.definedPools,
@@ -60,12 +60,12 @@ class MatchByJson {
             // console.log('filterKeys',filterKeys)
             
             // get the all date
-            // const allDateInData = filterKeys.map(item => item.date);
-            // const dateList = [...new Set(allDateInData)].sort((a,b)=>new Date(a.date)-new Date(b.date));
+            const allDateInData = filterKeys.map(item => item.date);
+            const dateList = [...new Set(allDateInData)];
 
             // get the all league
-            // const allLeagueInData = filterKeys.map(item => item.league);
-            // const leagueList = [...new Set(allLeagueInData)].sort();
+            const allLeagueInData = filterKeys.map(item => item.league);
+            const leagueList = [...new Set(allLeagueInData)].sort();
 
             // // get the all pool
             const allPoolInData = filterKeys.reduce((sum, item) => {
@@ -77,15 +77,7 @@ class MatchByJson {
             poolListSet.map(item => {
                 poolList[item] = Pools.list[item];
             })
-            return {
-                ErrCode: 0,
-                ErrMsg: '',
-                data: {
-                    // dateList,
-                    // leagueList,
-                    poolList,
-                }
-            }
+            return { dateList, leagueList, poolList };
         } catch (error) {
             console.error(error)
             return {
@@ -97,7 +89,7 @@ class MatchByJson {
     }
     async getOriginalData() {
         let originData = await this.initFB_GetInfo();
-        console.log('originData', originData)
+        // console.log('originData', originData)
         return {
             ErrCode: 0,
             ErrMsg: '',
@@ -109,7 +101,6 @@ class MatchByJson {
     async dateLeague(reverse = 0) {// 2.2.4.7  // 获取并编排所有数据
         try {
             const matchList = await this.initFB_GetInfo();
-            const { data: filterMenu } = await this.getFilterMenu();
             // classify matchList by date
             let dateObj = {};
             matchList.map(item => {
@@ -124,6 +115,7 @@ class MatchByJson {
                     matches_item.away = item.awayTeam['teamName' + this.curLg];
                     matches_item.score_Home = item.livescore ? item.livescore.home : 0;
                     matches_item.score_Away = item.livescore ? item.livescore.away : 0;
+                    // matches_item.matchYMD = item.matchTime.split('+')[0];
                     matches_item.matchDateTime = item.matchTime.split('T')[1].split('+')[0] + ' ' + item.date;
 
                     // matches_item.pool = item.definedPools;// 投注类型
@@ -146,7 +138,7 @@ class MatchByJson {
                 ErrMsg: '',
                 data: {
                     dateLeague: dateObj,
-                    filterMenu,
+                    filterMenu: this.cache.filterMenu,
                 },
             };
         } catch (error) {
@@ -293,17 +285,17 @@ class MatchByJson {
     }
     dateCouponsMatches(params,dateLeague){
         try {
-            const { pool = '', date = '', league = '', inPlay = '' } = params;
-            // console.log('filter',pool,date,league,inPlay,params)
+            const { pool, date, league, inPlay, search } = params;
+            // console.log('filter',pool,date,league,inPlay,search,params)
             // filter by date
             if(date){
-                console.log('dateLeague1',dateLeague)
                 dateLeague = {
                     [date] : dateLeague[date]
                 }
-                console.log('dateLeague2',dateLeague)
             }
             let filterResult = [];
+            let dateList = [];
+            let leagueList = [];
             Object.keys(dateLeague).map(keyDate => {
                 let date_item = {};
                 date_item.title = keyDate;
@@ -360,19 +352,26 @@ class MatchByJson {
                     // this data(coupons) has no data
                 }
             })
-            const leaguaAllList = filterResult.map(item=>item.data.map(item2=>item2.title.league)).reduce((sum,item)=>{
-                sum = [...sum,...item]
-                return sum;
-            },[]);
-            const leagueList = [...new Set(leaguaAllList)].sort();
+            if(date){// filter by date, return all dateList
+                dateList = this.cache.filterMenu.dateList;
+            }else{
+                dateList = filterResult.map(item=>item.title);
+            }            
+            if(league){// filter by league, return all leagueList
+                leagueList = this.cache.filterMenu.leagueList;
+            }else{
+                const leaguaAllList = filterResult.map(item=>item.data.map(item2=>item2.title.league)).reduce((sum,item)=>{
+                    sum = [...sum,...item]
+                    return sum;
+                },[]);
+                leagueList = [...new Set(leaguaAllList)].sort();
+            }
+            // search
+            filterResult = this.search(search, filterResult);
             return {
                 leagueList,
-                dateList: filterResult.map(item=>item.title).sort((a,b)=>{
-                    return new Date(a) - new Date(b);
-                }),
-                matchList: filterResult.sort((a,b)=>{
-                    return new Date(a.title) - new Date(b.title);
-                })
+                dateList,
+                matchList: filterResult,
             }            
         } catch (error) {
             console.error(error)
@@ -383,54 +382,49 @@ class MatchByJson {
             }            
         }
     }
-    async filter(params) {// 筛选数据
+    search(keyWords, matchList) {// seach from matchList
         try {
-            const res_dateLeague = await this.dateLeague();
-            let { data: { dateLeague, filterMenu } } = JSON.parse(JSON.stringify(res_dateLeague))
-            
-            const filterResult = this.dateCouponsMatches(params,dateLeague);
-
-            // console.log('过滤', {...params}, {...filterResult})
-            return {
-                ErrCode: 0,
-                ErrMsg: '',
-                data: {
-                    matchList: filterResult,
-                    ...filterMenu,
-                },
-            };
-
+            return matchList.filter(item_date=>{
+                return item_date.data.map(item_league=>{
+                    item_league.data = item_league.data.filter(item_match=>{
+                        return JSON.stringify(Object.values(item_match)).includes(keyWords);
+                    });
+                    return item_league
+                }).length;
+            }).map(item_date=>item_date.data.filter(item_league=>item_league.data.length));
         } catch (error) {
             console.error(error)
-            return {
-                ErrCode: 10001,
-                ErrMsg: error.message,
-                data: { error }
-            }
+            return matchList;
         }
     }
-    async getAllPoolsData(args = { pool: '', date: '', leagua: '', inPlay: '' }) {// get all data of each pool
+    async getAllPoolsData(args = { pool: '', date: '', leagua: '', inPlay: '', search: '', matchList: '' }) {// get all data of each pool
         this.cache.params = args;// used to select the origin for requesting
+        let allPoolsData = {};
         try {
             const res_dateLeague = await this.dateLeague();
             let { data: { dateLeague, filterMenu, filterMenu: { poolList } } } = JSON.parse(JSON.stringify(res_dateLeague))
-            let allPoolsData = {};
-            if(args.pool){
-                allPoolsData[args.pool] = this.dateCouponsMatches(args,dateLeague)
-            }else{// return every pools
-                Object.keys(poolList).map(item=>{
-                    const params = { ...args, pool: item };
-                    // console.log('args',{...args},'params',params)
-                    allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
-                }) 
-            }        
-            // console.log('过滤', {...params}, {...filterResult})
+
+            if(args.search&&args.matchList){// only serch
+                allPoolsData[args.pool] = this.search(args.search, args.matchList);
+            }else{// others
+                if(args.pool){// only current pool data
+                    allPoolsData[args.pool] = this.dateCouponsMatches(args,dateLeague)
+                }else{// return every pools
+                    Object.keys(poolList).map(item=>{
+                        const params = { ...args, pool: item };
+                        // console.log('args',{...args},'params',params)
+                        allPoolsData[item] = this.dateCouponsMatches(params,dateLeague)
+                    }) 
+                }        
+                // console.log('过滤', {...params}, {...filterResult})
+            }
             return {
                 ErrCode: 0,
                 ErrMsg: '',
                 data: {
                     ...allPoolsData,
-                    ...filterMenu,
+                    // ...filterMenu,
+                    poolList,
                 },
             };
 
