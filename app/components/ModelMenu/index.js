@@ -26,6 +26,23 @@ class ModelMenu extends Component {
             this.props.setPool();
         })
     }
+    testMulti() {
+        AsyncStorage.setItem('str1',JSON.stringify({k1:'k1'}))
+        AsyncStorage.setItem('str2',JSON.stringify({k2:'k2'}))
+
+        AsyncStorage.multiGet(['str1','str2'],(err,get)=>{
+            let data = {};
+            get = get.map(item=>{
+                data[item[0]] = JSON.parse(item[1])
+            })
+            console.warn('get',data)
+        })
+
+    }
+
+    componentDidMount() {  
+        
+    }
 
     render() {
         const page_menu = ['Chi', 'Eng', 'HAD', 'TQL', 'FHA', 'HHA']

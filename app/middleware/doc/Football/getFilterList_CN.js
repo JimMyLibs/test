@@ -1,13 +1,13 @@
 
 /**
- * @api {get} /getFilterList 获取筛选菜单
+ * @api {get} /filter 获取筛选菜单
  * @apiGroup Home
  * @apiVersion 0.0.1
  * @apiDescription 包括 玩法列表、联赛列表、日期列表
  * 
  * @apiParamExample {json} 使用方法:
  * {
- *     const { data: filterList } = await api.Matches.getFilterList();
+ *     const { data: filterList } = await api.Matches.filter();
  *     const { poolList, leagueList, dateList } = filterList;
  * }
  * 

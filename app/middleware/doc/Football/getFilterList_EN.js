@@ -1,13 +1,13 @@
 
 /**
- * @api {get} /getFilterList getFilterList
+ * @api {get} /filter getFilterList
  * @apiGroup Home
  * @apiVersion 0.0.2
  * @apiDescription include Game list、League list、Date list
  * 
  * @apiParamExample {json} Instructions:
  * {
- *     const { data: filterList } = await api.Matches.getFilterList();
+ *     const { data: filterList } = await api.Matches.filter();
  *     const { poolList, leagueList, dateList } = filterList;
  * }
  * 

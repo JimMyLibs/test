@@ -1,17 +1,21 @@
-
+import { ISAPP } from '../../config/project'
 class Cache {
     constructor() {
 
     }
     get(key) {
-        if (window) {// web端
+        if (ISAPP) {
+
+        }else{// web端
             if (window.localStorage) {
                 return this.webGet('__'+key+'__');
             }
         }
     }
     set(key, info) {
-        if (window) {// web端
+        if (ISAPP) {
+
+        }else{// web端
             if (window.localStorage) {
                 return this.webSet('__'+key+'__', info);
             }

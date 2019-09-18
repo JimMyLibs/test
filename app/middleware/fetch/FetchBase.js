@@ -291,29 +291,31 @@ export default class Http {
         let { conf } = this
         let { timeout = 60000 } = conf
         const language = (url.includes('_eng') || url.includes('en-US'))?'English':'中文';
-        ISDEBUG && console.warn('—————【 fetch 】—————', { language,url, ...reqConf })
+        // ISDEBUG && console.warn('—————【 fetch 】—————', { language,url, ...reqConf })
         return Promise.race([
             fetch(url, reqConf).then(async data => {
                 // in some SAMSUNG mobile data.ok is undefined so add data.status
                 if (data.ok || data.status === 200) {
                     let result = await data.text()
                     result = this.repairXml(result);
-                    if (fxp.validate(result)) {// XML
+                    if (fxp.validate(result) === true) {// XML
                         return fxp.parse(result, fxpOpt);
                     } else {// JSON
-                        return data.json();
+                        // return data.json(); // because throw "body used already for url" by jest at VM when response a json;
+                        return JSON.parse(result);
                     }
                 } else {
-                    // 未正常返回数据，则抛出异常
-                    throw new Error(`响应数据异常，错误码：${data.status}`)
+                    throw new Error(`response data abnormal.error code: ${data.status}`)
                 }
-            }).then(data => {
-                let result = {
-                    ErrCode: 0,
-                    ErrMsg: '',
-                    data,
+            }).then(res => {
+                let result = {ErrCode: 0,ErrMsg: '',data: {} }
+                if(res.hasOwnProperty('result')){// used for account
+                    result = {ErrCode: res.result, ErrMsg: res.message, data: res.data || {} }
+                }else{
+                    const { ErrCode, ErrMsg, ...others } = res;
+                    result = {ErrCode: res.ErrCode, ErrMsg: res.ErrMsg, data: others || {} }
                 }
-                // ISDEBUG && console.warn('—————【 fetch: success 】—————', { ...result })
+                ISDEBUG && console.warn('—————【 fetch: success 】—————', { ...result })
                 return result;
             }).catch(err => {
                 let result = {
@@ -321,7 +323,7 @@ export default class Http {
                     ErrMsg: err.message,
                     data: err,
                 }
-                // ISDEBUG && console.warn('—————【 fetch: fail 】—————', { ...result })
+                ISDEBUG && console.warn('—————【 fetch: fail 】—————', { ...result })
                 return result;
             }),
             new Promise((resolve, reject) => {

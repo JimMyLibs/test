@@ -15,6 +15,8 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',// 禁用 debugger
         "no-unused-vars": 0,// 禁止出现未使用过的变量
         "linebreak-style": 0,// 强制使用一致的换行风格
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"],
     },
     parserOptions: {// JavaScript 语言选项
         parser: 'babel-eslint'

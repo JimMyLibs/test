@@ -1,9 +1,9 @@
 
 /**
- * @api {get} index/FB_GetInfo.json 获取比赛列表
+ * @api {get} index/FB_GetInfo.json 筛选比赛列表
  * @apiGroup Home
  * @apiVersion 0.0.1
- * @apiDescription 获取比赛列表
+ * @apiDescription 筛选比赛列表
  * 
  * @apiParam {String} pool='HAD' 投注类型
  * @apiParam {String} date='' 日期
