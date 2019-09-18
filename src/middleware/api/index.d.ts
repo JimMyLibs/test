@@ -11,7 +11,7 @@ interface MatchByJsonFilterParams {
     inPlay?: number,
 }
 interface MatchByJsonSearchParams {
-    search: string,
+    keyWords: string,
     matchList: any[] 
 }
 
@@ -33,7 +33,7 @@ declare namespace api {
     }
     class MatchByJson {
         constructor() //构造函数
-        static search(search: string, matchList: any[]): Promise<any> // 获取赛事列表
+        static search(keyWords: string, matchList: any[]): Promise<any> // 获取赛事列表
         static getAllPoolsData(params?: MatchByJsonFilterParams): Promise<any> // 获取赛事列表
         static filter(params: MatchesFilterParams): Promise<any> // 获取赛事列表
         static getFilterMenu(): Promise<any> // 获取筛选菜单

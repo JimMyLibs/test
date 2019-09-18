@@ -1,0 +1,2868 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="ProgId" content="Excel.Sheet"/>
+  <meta name="Generator" content="WPS Office ET"/>
+  <!--[if gte mso 9]>
+   <xml>
+    <o:DocumentProperties>
+     <o:Created>2019-09-16T18:58:45</o:Created>
+     <o:LastAuthor>Jim✅认证</o:LastAuthor>
+     <o:LastSaved>2019-09-17T09:23:37</o:LastSaved>
+    </o:DocumentProperties>
+    <o:CustomDocumentProperties>
+     <o:KSOProductBuildVer dt:dt="string">2052-11.3.0.8742</o:KSOProductBuildVer>
+    </o:CustomDocumentProperties>
+   </xml>
+  <![endif]-->
+  <style>
+<!-- @page
+	{margin:1.00in 0.75in 1.00in 0.75in;
+	mso-header-margin:0.50in;
+	mso-footer-margin:0.50in;}
+tr
+	{mso-height-source:auto;
+	mso-ruby-visibility:none;}
+col
+	{mso-width-source:auto;
+	mso-ruby-visibility:none;}
+br
+	{mso-data-placement:same-cell;}
+.font0
+	{color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font1
+	{color:#000000;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"Arial Unicode MS";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font2
+	{color:#FF0000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font3
+	{color:#44546A;
+	font-size:15.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font4
+	{color:#44546A;
+	font-size:18.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font5
+	{color:#0000FF;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:underline;
+	text-underline-style:single;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font6
+	{color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font7
+	{color:#44546A;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font8
+	{color:#9C0006;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font9
+	{color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font10
+	{color:#9C6500;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font11
+	{color:#3F3F76;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font12
+	{color:#006100;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font13
+	{color:#7F7F7F;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font14
+	{color:#800080;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:underline;
+	text-underline-style:single;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font15
+	{color:#FA7D00;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font16
+	{color:#FFFFFF;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font17
+	{color:#44546A;
+	font-size:13.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font18
+	{color:#000000;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font19
+	{color:#3F3F3F;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.font20
+	{color:#FA7D00;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"宋体";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;}
+.style0
+	{mso-number-format:"General";
+	text-align:general;
+	vertical-align:middle;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-pattern:auto;
+	mso-background-source:auto;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:"常规";
+	mso-style-id:0;}
+.style16
+	{mso-number-format:"_ \0022\00A5\0022* \#\,\#\#0_ \;_ \0022\00A5\0022* \\-\#\,\#\#0_ \;_ \0022\00A5\0022* \0022-\0022_ \;_ \@_ ";
+	mso-style-name:"货币[0]";
+	mso-style-id:7;}
+.style17
+	{mso-pattern:auto none;
+	background:#EDEDED;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"20% - 强调文字颜色 3";}
+.style18
+	{mso-pattern:auto none;
+	background:#FFCC99;
+	color:#3F3F76;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:.5pt solid #7F7F7F;
+	mso-style-name:"输入";}
+.style19
+	{mso-number-format:"_ \0022\00A5\0022* \#\,\#\#0\.00_ \;_ \0022\00A5\0022* \\-\#\,\#\#0\.00_ \;_ \0022\00A5\0022* \0022-\0022??_ \;_ \@_ ";
+	mso-style-name:"货币";
+	mso-style-id:4;}
+.style20
+	{mso-number-format:"_ * \#\,\#\#0_ \;_ * \\-\#\,\#\#0_ \;_ * \0022-\0022_ \;_ \@_ ";
+	mso-style-name:"千位分隔[0]";
+	mso-style-id:6;}
+.style21
+	{mso-pattern:auto none;
+	background:#DBDBDB;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"40% - 强调文字颜色 3";}
+.style22
+	{mso-pattern:auto none;
+	background:#FFC7CE;
+	color:#9C0006;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"差";}
+.style23
+	{mso-number-format:"_ * \#\,\#\#0\.00_ \;_ * \\-\#\,\#\#0\.00_ \;_ * \0022-\0022??_ \;_ \@_ ";
+	mso-style-name:"千位分隔";
+	mso-style-id:3;}
+.style24
+	{mso-pattern:auto none;
+	background:#C9C9C9;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"60% - 强调文字颜色 3";}
+.style25
+	{color:#0000FF;
+	font-size:11.0pt;
+	text-decoration:underline;
+	text-underline-style:single;
+	font-family:宋体;
+	mso-style-name:"超链接";
+	mso-style-id:8;}
+.style26
+	{mso-number-format:"0%";
+	mso-style-name:"百分比";
+	mso-style-id:5;}
+.style27
+	{color:#800080;
+	font-size:11.0pt;
+	text-decoration:underline;
+	text-underline-style:single;
+	font-family:宋体;
+	mso-style-name:"已访问的超链接";
+	mso-style-id:9;}
+.style28
+	{mso-pattern:auto none;
+	background:#FFFFCC;
+	border:.5pt solid #B2B2B2;
+	mso-style-name:"注释";}
+.style29
+	{mso-pattern:auto none;
+	background:#F4B084;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"60% - 强调文字颜色 2";}
+.style30
+	{color:#44546A;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-style-name:"标题 4";}
+.style31
+	{color:#FF0000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"警告文本";}
+.style32
+	{color:#44546A;
+	font-size:18.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-style-name:"标题";}
+.style33
+	{color:#7F7F7F;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"解释性文本";}
+.style34
+	{color:#44546A;
+	font-size:15.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border-bottom:1.0pt solid #5B9BD5;
+	mso-style-name:"标题 1";}
+.style35
+	{color:#44546A;
+	font-size:13.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border-bottom:1.0pt solid #5B9BD5;
+	mso-style-name:"标题 2";}
+.style36
+	{mso-pattern:auto none;
+	background:#9BC2E6;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"60% - 强调文字颜色 1";}
+.style37
+	{color:#44546A;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border-bottom:1.0pt solid #ACCCEA;
+	mso-style-name:"标题 3";}
+.style38
+	{mso-pattern:auto none;
+	background:#FFD966;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"60% - 强调文字颜色 4";}
+.style39
+	{mso-pattern:auto none;
+	background:#F2F2F2;
+	color:#3F3F3F;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:.5pt solid #3F3F3F;
+	mso-style-name:"输出";}
+.style40
+	{mso-pattern:auto none;
+	background:#F2F2F2;
+	color:#FA7D00;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:.5pt solid #7F7F7F;
+	mso-style-name:"计算";}
+.style41
+	{mso-pattern:auto none;
+	background:#A5A5A5;
+	color:#FFFFFF;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:2.0pt double #3F3F3F;
+	mso-style-name:"检查单元格";}
+.style42
+	{mso-pattern:auto none;
+	background:#E2EFDA;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"20% - 强调文字颜色 6";}
+.style43
+	{mso-pattern:auto none;
+	background:#ED7D31;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"强调文字颜色 2";}
+.style44
+	{color:#FA7D00;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-bottom:2.0pt double #FF8001;
+	mso-style-name:"链接单元格";}
+.style45
+	{color:#000000;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border-top:.5pt solid #5B9BD5;
+	border-bottom:2.0pt double #5B9BD5;
+	mso-style-name:"汇总";}
+.style46
+	{mso-pattern:auto none;
+	background:#C6EFCE;
+	color:#006100;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"好";}
+.style47
+	{mso-pattern:auto none;
+	background:#FFEB9C;
+	color:#9C6500;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"适中";}
+.style48
+	{mso-pattern:auto none;
+	background:#D9E1F2;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"20% - 强调文字颜色 5";}
+.style49
+	{mso-pattern:auto none;
+	background:#5B9BD5;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"强调文字颜色 1";}
+.style50
+	{mso-pattern:auto none;
+	background:#DDEBF7;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"20% - 强调文字颜色 1";}
+.style51
+	{mso-pattern:auto none;
+	background:#BDD7EE;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"40% - 强调文字颜色 1";}
+.style52
+	{mso-pattern:auto none;
+	background:#FCE4D6;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"20% - 强调文字颜色 2";}
+.style53
+	{mso-pattern:auto none;
+	background:#F8CBAD;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"40% - 强调文字颜色 2";}
+.style54
+	{mso-pattern:auto none;
+	background:#A5A5A5;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"强调文字颜色 3";}
+.style55
+	{mso-pattern:auto none;
+	background:#FFC000;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"强调文字颜色 4";}
+.style56
+	{mso-pattern:auto none;
+	background:#FFF2CC;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"20% - 强调文字颜色 4";}
+.style57
+	{mso-pattern:auto none;
+	background:#FFE699;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"40% - 强调文字颜色 4";}
+.style58
+	{mso-pattern:auto none;
+	background:#4472C4;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"强调文字颜色 5";}
+.style59
+	{mso-pattern:auto none;
+	background:#B4C6E7;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"40% - 强调文字颜色 5";}
+.style60
+	{mso-pattern:auto none;
+	background:#8EA9DB;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"60% - 强调文字颜色 5";}
+.style61
+	{mso-pattern:auto none;
+	background:#70AD47;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"强调文字颜色 6";}
+.style62
+	{mso-pattern:auto none;
+	background:#C6E0B4;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"40% - 强调文字颜色 6";}
+.style63
+	{mso-pattern:auto none;
+	background:#A9D08E;
+	color:#C7EDCC;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-style-name:"60% - 强调文字颜色 6";}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	mso-number-format:"General";
+	text-align:general;
+	vertical-align:middle;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-pattern:auto;
+	mso-background-source:auto;
+	color:#000000;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border:none;
+	mso-protection:locked visible;}
+.xl65
+	{mso-style-parent:style0;
+	white-space:normal;
+	font-size:10.0pt;
+	font-family:Arial Unicode MS;
+	mso-font-charset:134;
+	border:.5pt solid windowtext;}
+.xl66
+	{mso-style-parent:style0;
+	white-space:normal;
+	font-size:10.0pt;
+	font-family:Arial Unicode MS;
+	mso-font-charset:134;
+	border-left:.5pt solid windowtext;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;}
+.xl67
+	{mso-style-parent:style0;
+	white-space:normal;
+	font-size:10.0pt;
+	font-family:Arial Unicode MS;
+	mso-font-charset:134;
+	border-left:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;}
+.xl68
+	{mso-style-parent:style0;
+	white-space:normal;
+	mso-font-charset:134;
+	border:.5pt solid windowtext;}
+.xl69
+	{mso-style-parent:style0;
+	white-space:normal;
+	font-size:10.0pt;
+	font-family:Arial Unicode MS;
+	mso-font-charset:134;
+	border-left:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;}
+ -->  </style>
+  <!--[if gte mso 9]>
+   <xml>
+    <x:ExcelWorkbook>
+     <x:ExcelWorksheets>
+      <x:ExcelWorksheet>
+       <x:Name>system</x:Name>
+       <x:WorksheetOptions>
+        <x:DefaultRowHeight>270</x:DefaultRowHeight>
+        <x:Selected/>
+        <x:Panes>
+         <x:Pane>
+          <x:Number>3</x:Number>
+          <x:ActiveCol>3</x:ActiveCol>
+          <x:ActiveRow>5</x:ActiveRow>
+          <x:RangeSelection>D6</x:RangeSelection>
+         </x:Pane>
+        </x:Panes>
+        <x:DoNotDisplayGridlines/>
+        <x:ProtectContents>False</x:ProtectContents>
+        <x:ProtectObjects>False</x:ProtectObjects>
+        <x:ProtectScenarios>False</x:ProtectScenarios>
+        <x:Print>
+         <x:PaperSizeIndex>9</x:PaperSizeIndex>
+        </x:Print>
+       </x:WorksheetOptions>
+      </x:ExcelWorksheet>
+     </x:ExcelWorksheets>
+     <x:ProtectStructure>False</x:ProtectStructure>
+     <x:ProtectWindows>False</x:ProtectWindows>
+     <x:WindowHeight>12135</x:WindowHeight>
+     <x:WindowWidth>14175</x:WindowWidth>
+    </x:ExcelWorkbook>
+   </xml>
+  <![endif]-->
+ </head>
+ <body link="blue" vlink="purple">
+  <table width="762" border="0" cellpadding="0" cellspacing="0" style='width:571.50pt;border-collapse:collapse;table-layout:fixed;'>
+   <col width="37" style='mso-width-source:userset;mso-width-alt:1184;'/>
+   <col width="128" style='mso-width-source:userset;mso-width-alt:4096;'/>
+   <col width="88" style='mso-width-source:userset;mso-width-alt:2816;'/>
+   <col width="288" style='mso-width-source:userset;mso-width-alt:9216;'/>
+   <col width="70" style='mso-width-source:userset;mso-width-alt:2240;'/>
+   <col width="151" style='mso-width-source:userset;mso-width-alt:4832;'/>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" width="37" style='height:13.50pt;width:27.75pt;' x:str>序号</td>
+    <td class="xl65" width="128" style='width:96.00pt;' x:str>原文</td>
+    <td class="xl65" width="88" style='width:66.00pt;' x:str>译文</td>
+    <td class="xl65" width="288" style='width:216.00pt;' x:str>词典</td>
+    <td class="xl65" width="70" style='width:52.50pt;' x:str>语言方向</td>
+    <td class="xl65" width="151" style='width:113.25pt;' x:str>时间</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>1</td>
+    <td class="xl65" x:str>Confucius</td>
+    <td class="xl65" x:str>孔子</td>
+    <td class="xl65" x:str>n. 孔子</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:24:38</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>2</td>
+    <td class="xl65" x:str>Do more exercises</td>
+    <td class="xl65" x:str>多做些练习</td>
+    <td class="xl65" x:str>多做练习; 做更多练习</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 15:05:47</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>3</td>
+    <td class="xl65" x:str>Not at all</td>
+    <td class="xl65" x:str>一点也不</td>
+    <td class="xl65" x:str>一点也不，根本不</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:51:42</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>4</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>Redundant</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>冗余</td>
+    <td class="xl66" x:str>redundant 英 [rɪˈdʌndənt] 美 [rɪˈdʌndənt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-16 14:52:09</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 被裁减的;多余的;不需要的</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>5</td>
+    <td class="xl65" x:str>War and Peace</td>
+    <td class="xl65" x:str>战争与和平</td>
+    <td class="xl65" x:str>戰爭與和平; 和平与战争; 战争与和平; 战争与和平·下; 列夫·托尔斯泰</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:20:25</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>6</td>
+    <td class="xl65" x:str>Yours sincerely</td>
+    <td class="xl65" x:str>谨上</td>
+    <td class="xl65" x:str>（用于正式信函末尾署名前，在信的开头用了收信人的名字时）你真诚的，敬上，谨启</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 09:44:15</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>7</td>
+    <td class="xl65" x:str>a majority</td>
+    <td class="xl65" x:str>多数</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-27 18:58:32</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="52" rowspan="2" style='height:39.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>8</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>a majority of</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>大多数</td>
+    <td class="xl66" x:str>a majority of 英 [ə məˈdʒɒrəti ɒv] 美 [ə məˈdʒɔːrəti əv]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:58:35</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>大部分;大多数;大多数的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>9</td>
+    <td class="xl65" x:str>a school of</td>
+    <td class="xl65" x:str>一群</td>
+    <td class="xl65" x:str>一群</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:47:08</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>10</td>
+    <td class="xl65" x:str>abundance</td>
+    <td class="xl65" x:str>丰度</td>
+    <td class="xl65" x:str>n.大量; 丰盛; 充裕</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 09:48:42</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>11</td>
+    <td class="xl65" x:str>accustomed</td>
+    <td class="xl65" x:str>习惯的</td>
+    <td class="xl65" x:str>adj.习惯于; 通常的; 惯常的 v.使习惯(于); 使适应 accustom的过去分词和过去式</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:36:29</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>12</td>
+    <td class="xl65" x:str>accustomed to</td>
+    <td class="xl65" x:str>习惯于</td>
+    <td class="xl65" x:str>习惯于; 适应于; 对…习以为常</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:36:41</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>13</td>
+    <td class="xl65" x:str>acknowledge</td>
+    <td class="xl65" x:str>承认</td>
+    <td class="xl65" x:str>v.承认(属实); 承认(权威、地位); 告知收悉</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:24:20</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>14</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>act</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>行为</td>
+    <td class="xl66" x:str>act 英 [ækt] 美 [ækt]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:31:11</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>n. 行为;行动;所为;(议会通过的)法案，法令;假装</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 做事;行动;行为;举止;假装</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>15</td>
+    <td class="xl65" x:str>adapt</td>
+    <td class="xl65" x:str>适应</td>
+    <td class="xl65" x:str>v.使适应，使适合(新用途、新情况); 适应(新情况); 改编; 改写</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:48:02</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>16</td>
+    <td class="xl65" x:str>adventure</td>
+    <td class="xl65" x:str>冒险</td>
+    <td class="xl65" x:str>n.冒险; 冒险经历; 奇遇; 冒险的刺激; 大胆开拓 v.&lt;旧&gt;探险; &lt;旧&gt;冒险; 大胆说出</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-15 13:03:32</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>17</td>
+    <td class="xl65" x:str>affordable housing</td>
+    <td class="xl65" x:str>经济适用房</td>
+    <td class="xl65" x:str>经济适用房; 可承受住房; 经适房; 保障性住房; 经济房</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 20:26:16</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>18</td>
+    <td class="xl65" x:str>all parts of</td>
+    <td class="xl65" x:str>的所有部分</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-27 19:27:35</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>19</td>
+    <td class="xl65" x:str>alleviation</td>
+    <td class="xl65" x:str>缓和</td>
+    <td class="xl65" x:str>n.减轻；缓解；缓和；镇痛物</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:55:37</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>20</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>although</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>虽然</td>
+    <td class="xl66" x:str>although 英 [ɔːlˈðəʊ] 美 [ɔːlˈðoʊ]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:44:30</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>conj. 虽然;尽管;即使;不过;然而</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="54" rowspan="3" style='height:40.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>21</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>anti</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>反对的</td>
+    <td class="xl66" x:str>anti 英 [ˈænti] 美 [ˈænti]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:48:31</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>prep. 反对</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 反对者</td>
+   </tr>
+   <tr height="64" style='height:48.00pt;'>
+    <td class="xl65" height="64" style='height:48.00pt;' x:str>22</td>
+    <td class="xl65" x:str>appeal</td>
+    <td class="xl65" x:str>上诉</td>
+    <td class="xl65" x:str>n.上诉; 申诉; 吸引力; 感染力; 魅力; (尤指慈善机构或警方的)呼吁，吁请，恳求 v.上诉; 申诉; 有吸引力; 有感染力; 引起兴趣; 呼吁; 吁请; 恳求</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:41:48</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>23</td>
+    <td class="xl65" x:str>appeal to someone</td>
+    <td class="xl65" x:str>吸引某人</td>
+    <td class="xl65" x:str>呼吁某人; 对某人的呼吁; 对某人有吸引力</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:42:11</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>24</td>
+    <td class="xl65" x:str>apply make-up</td>
+    <td class="xl65" x:str>化妆</td>
+    <td class="xl65" x:str>上妆</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:48:41</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>25</td>
+    <td class="xl65" x:str>apply to</td>
+    <td class="xl65" x:str>适用于</td>
+    <td class="xl65" x:str>适用于; 运用; 涂抹，贴</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:48:25</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>26</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>appreciate</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>欣赏</td>
+    <td class="xl66" x:str>appreciate 英 [əˈpriːʃieɪt] 美 [əˈpriːʃieɪt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-25 16:40:01</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>v. 欣赏;赏识;重视;感激;感谢;欢迎;理解;意识到;领会</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="52" rowspan="2" style='height:39.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>27</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>appreciation</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>欣赏</td>
+    <td class="xl66" x:str>appreciation 英 [əˌpriːʃiˈeɪʃn] 美 [əˌpriːʃiˈeɪʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-25 16:40:05</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 欣赏;理解;体谅;同情;感激;感谢</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>28</td>
+    <td class="xl65" x:str>appreciative</td>
+    <td class="xl65" x:str>有鉴赏力的</td>
+    <td class="xl65" x:str>adj. 感激的; 感谢的; 欣赏的; 赏识的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 16:39:47</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>29</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>as well as</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>以及</td>
+    <td class="xl66" x:str>as well as 英 [æz wel æz] 美 [æz wel æz]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-03 19:37:49</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>既…又…;除…之外（也）;此外</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>30</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>attract</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>吸引</td>
+    <td class="xl66" x:str>attract 英 [əˈtrækt] 美 [əˈtrækt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-02 09:15:33</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>v. 吸引;使喜爱;引起…的好感(或爱慕);招引;引起(反应)</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>31</td>
+    <td class="xl65" x:str>attractive</td>
+    <td class="xl65" x:str>有吸引力的</td>
+    <td class="xl65" x:str>adj.性感的; 妩媚的; 英俊的; 诱人的; 吸引人的; 令人愉快的; (事物)有吸引力的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:38:22</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="70" rowspan="3" style='height:52.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>32</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>automatically</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>自动</td>
+    <td class="xl66" x:str>automatically 英 [ˌɔːtəˈmætɪkli] 美 [ˌɔtəˈmætɪkli]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:00:26</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>adv. 自动地；机械地；无意识地</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 不经思索的</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>33</td>
+    <td class="xl65" x:str>bankrupt</td>
+    <td class="xl65" x:str>破产</td>
+    <td class="xl65" x:str>adj.破产; 倒闭; 完全缺乏(有价值的东西) n.(经法院判决的)破产者 v.使破产</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:28:53</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>34</td>
+    <td class="xl65" x:str>be likely to</td>
+    <td class="xl65" x:str>有可能</td>
+    <td class="xl65" x:str>可能; 很可能; 很有可能</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:59:57</td>
+   </tr>
+   <tr height="33" style='height:24.75pt;mso-height-source:userset;mso-height-alt:495;'>
+    <td class="xl65" height="51" rowspan="2" style='height:38.25pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>35</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>be limited to</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>仅限于</td>
+    <td class="xl66" x:str>be limited to 英 [bi ˈlɪmɪtɪd tu] 美 [bi ˈlɪmɪtɪd tu]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:44:00</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>限于;被限制在…上</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>36</td>
+    <td class="xl65" x:str>brain drain</td>
+    <td class="xl65" x:str>人才流失</td>
+    <td class="xl65" x:str>n. (国家的)人才流失</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:25:36</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>37</td>
+    <td class="xl65" x:str>career</td>
+    <td class="xl65" x:str>职业</td>
+    <td class="xl65" x:str>n.生涯; 职业; 经历; 事业 v.(尤指失控地)猛冲，疾驰，飞奔</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-15 13:04:59</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>38</td>
+    <td class="xl65" x:str>cent</td>
+    <td class="xl65" x:str>分</td>
+    <td class="xl65" x:str>n.分(辅币单位，相当于许多国家主币面值的1%，如美元或欧元的1%); 分币</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:37:55</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>39</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>century</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>世纪</td>
+    <td class="xl66" x:str>century 英 [ˈsentʃəri] 美 [ˈsentʃəri]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:54:54</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 100年;百年;世纪;(一个运动员所得的)100分</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>40</td>
+    <td class="xl65" x:str>cherish</td>
+    <td class="xl65" x:str>珍惜</td>
+    <td class="xl65" x:str>v. 珍爱; 钟爱; 爱护; 抱有(信念、希望); 怀有(好感); 怀念</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:51:21</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>41</td>
+    <td class="xl65" x:str>compensation</td>
+    <td class="xl65" x:str>补偿</td>
+    <td class="xl65" x:str>n.补偿(或赔偿)物; (尤指)赔偿金，补偿金; 赔偿; 使坏的情况变好的事物; (对不利局面的)补偿</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 18:53:25</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>42</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>comprehension</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>理解</td>
+    <td class="xl66" x:str>comprehension 英 [ˌkɒmprɪˈhenʃn] 美 [ˌkɑːmprɪˈhenʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-04 09:19:04</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 理解力;领悟能力;(语言学习中的)理解练习(或训练)</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="86" rowspan="4" style='height:64.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>43</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>concrete</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>混凝土</td>
+    <td class="xl66" x:str>concrete 英 [ˈkɒŋkriːt] 美 [ˈkɑːŋkriːt]</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:39:23</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>adj. 混凝土制的;确实的，具体的(而非想象或猜测的);有形的;实在的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>n. 混凝土</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 用混凝土覆盖</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>44</td>
+    <td class="xl65" x:str>confidence</td>
+    <td class="xl65" x:str>信心</td>
+    <td class="xl65" x:str>n.信心; 信任; 信赖; 自信心; 把握; 肯定</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:13:20</td>
+   </tr>
+   <tr height="33" style='height:24.75pt;mso-height-source:userset;mso-height-alt:495;'>
+    <td class="xl65" height="51" rowspan="2" style='height:38.25pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>45</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>conform to</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>符合</td>
+    <td class="xl66" x:str>conform to 英 [kənˈfɔːm tu] 美 [kənˈfɔːrm tu]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:24:37</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>遵照;顺应;遵守</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>46</td>
+    <td class="xl65" x:str>confuse</td>
+    <td class="xl65" x:str>混淆</td>
+    <td class="xl65" x:str>v.使糊涂; 使迷惑; (将…)混淆，混同; 使更难于理解</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:36:17</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>47</td>
+    <td class="xl65" x:str>conserve</td>
+    <td class="xl65" x:str>保存</td>
+    <td class="xl65" x:str>v.节省; 节约; 保护; 保存; 保藏 n.(含有大块或整块水果的)果酱，蜜饯</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:26:41</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="52" rowspan="2" style='height:39.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>48</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>constitution</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>宪法</td>
+    <td class="xl66" x:str>constitution 英 [ˌkɒnstɪˈtjuːʃn] 美 [ˌkɑːnstɪˈtuːʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:19:13</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 宪法;章程;身体素质;体质;体格;构成;构造</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>49</td>
+    <td class="xl65" x:str>contemporary</td>
+    <td class="xl65" x:str>当代的</td>
+    <td class="xl65" x:str>adj.属同时期的; 同一时代的; 当代的; 现代的 n.同代人; 同辈人; 同龄人</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:12:33</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>50</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>convenient</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>方便的</td>
+    <td class="xl66" x:str>convenient 英 [kənˈviːniənt] 美 [kənˈviːniənt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:47:43</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>adj. 实用的;便利的;方便的;省事的;附近的;近便的;容易到达的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>51</td>
+    <td class="xl65" x:str>corporation</td>
+    <td class="xl65" x:str>公司</td>
+    <td class="xl65" x:str>n.(大)公司; 法人; 法人团体; 市政委员会</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:52:08</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>52</td>
+    <td class="xl65" x:str>couple</td>
+    <td class="xl65" x:str>夫妇</td>
+    <td class="xl65" x:str>n.两人; 两件事物; 几个人; 几件事物; (人)一对; (尤指)夫妻，情侣 v.(把车辆或设备等)连接，结合; 性交; 交配</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 20:02:10</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="98" rowspan="3" style='height:73.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>53</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>court</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>法院</td>
+    <td class="xl66" x:str>court 英 [kɔːt] 美 [kɔːrt]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:25:08</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>n. 法院;法庭;审判庭;全体出庭人员;(尤指)全体审判人员;(网球等的)球场</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl67" x:str>v. (为有所求，尤指寻求支持而)试图取悦，讨好，争取;试图获得;博得;招致，酿成，导致(不愉快的事)</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>54</td>
+    <td class="xl65" x:str>crack down on</td>
+    <td class="xl65" x:str>打击</td>
+    <td class="xl65" x:str>处罚，制裁</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:25:29</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>55</td>
+    <td class="xl65" x:str>crisis</td>
+    <td class="xl65" x:str>危机</td>
+    <td class="xl65" x:str>n.危机; 危急关头; 危难时刻; 病危期</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:43:50</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>56</td>
+    <td class="xl65" x:str>critical</td>
+    <td class="xl65" x:str>批评的</td>
+    <td class="xl65" x:str>adj.批评的; 批判性的; 挑剔的; 极重要的; 关键的; 至关紧要的; 严重的; 不稳定的; 可能有危险的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:24:20</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>57</td>
+    <td class="xl65" x:str>criticism</td>
+    <td class="xl65" x:str>批评</td>
+    <td class="xl65" x:str>n.批评; 批判; 责备; 指责; (尤指对书、音乐等的)评论文章，评论</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:04:10</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>58</td>
+    <td class="xl65" x:str>current</td>
+    <td class="xl65" x:str>现在的</td>
+    <td class="xl65" x:str>adj.现时发生的; 当前的; 现在的; 通用的; 流通的; 流行的 n.(海洋或江河的)水流; 气流; 电流; 思潮; 潮流; 趋向</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:56:00</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="84" rowspan="3" style='height:63.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>59</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>debate</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>辩论</td>
+    <td class="xl66" x:str>debate 英 [dɪˈbeɪt] 美 [dɪˈbeɪt]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-25 14:25:40</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl69" x:str>n. (在公共集会上或议会里就某问题进行的、常以表决结束的)辩论;(各自发表不同意见的)争论，辩论，讨论</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. (尤指正式)讨论，辩论;仔细考虑;思考;盘算</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="70" rowspan="3" style='height:52.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>60</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>decrease</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>减少</td>
+    <td class="xl66" x:str>decrease 英 [dɪˈkriːs , ˈdiːkriːs] 美 [dɪˈkriːs , ˈdiːkriːs]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-14 10:16:15</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>v. (使大小、数量等)减少，减小，降低</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 减少;降低;减少量</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>61</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>defendant</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>被告</td>
+    <td class="xl66" x:str>defendant 英 [dɪˈfendənt] 美 [dɪˈfendənt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:01:26</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 被告人;被告</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>62</td>
+    <td class="xl65" x:str>deliver</td>
+    <td class="xl65" x:str>传送</td>
+    <td class="xl65" x:str>v.递送; 传送; 交付; 运载; 发表; 宣布; 发布; 履行诺言; 不负所望; 兑现</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:41:07</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>63</td>
+    <td class="xl65" x:str>demand</td>
+    <td class="xl65" x:str>需要</td>
+    <td class="xl65" x:str>n.(坚决的)要求; 所需之物; (尤指困难、使人劳累、令人烦恼等的)要求; (顾客的)需求，需要 v.强烈要求; 需要</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:54:11</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>64</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>democracy</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>民主</td>
+    <td class="xl66" x:str>democracy 英 [dɪˈmɒkrəsi] 美 [dɪˈmɑːkrəsi]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:03:24</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 民主政体;民主制度;民主国家;民主精神;民主权利;民主</td>
+   </tr>
+   <tr height="33" style='height:24.75pt;mso-height-source:userset;mso-height-alt:495;'>
+    <td class="xl65" height="65" rowspan="2" style='height:48.75pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>65</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>democratic</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>民主的</td>
+    <td class="xl66" x:str>democratic 英 [ˌdeməˈkrætɪk] 美 [ˌdeməˈkrætɪk]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:14:23</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>adj. 民主的;民主政体的;民主制度的;民主管理的;有民主精神的;平等的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>66</td>
+    <td class="xl65" x:str>demote</td>
+    <td class="xl65" x:str>降级</td>
+    <td class="xl65" x:str>v.使降级，使降职，使降低地位(常作为惩罚)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:40:18</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>67</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>deny</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>否认</td>
+    <td class="xl66" x:str>deny 英 [dɪˈnaɪ] 美 [dɪˈnaɪ]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:55:45</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>v. 否认;否定;拒绝承认;拒绝接受;拒绝;拒绝给予</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>68</td>
+    <td class="xl65" x:str>depart</td>
+    <td class="xl65" x:str>离开</td>
+    <td class="xl65" x:str>v.离开; 离去; 起程; 出发; 离职</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 09:28:45</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>69</td>
+    <td class="xl65" x:str>departure</td>
+    <td class="xl65" x:str>离开</td>
+    <td class="xl65" x:str>n.离开; 起程; 出发; (在特定时间)离开的飞机(或火车等); 背离; 违反; 逾越</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 17:43:36</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>70</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>deserve</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>应得的</td>
+    <td class="xl66" x:str>deserve 英 [dɪˈzɜːv] 美 [dɪˈzɜːrv]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-14 10:27:27</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 值得;应得;应受</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>71</td>
+    <td class="xl65" x:str>destroy</td>
+    <td class="xl65" x:str>破坏</td>
+    <td class="xl65" x:str>v. 摧毁; 毁灭; 破坏; (因动物有病或不再需要而)杀死，消灭，人道毁灭</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:52:32</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>72</td>
+    <td class="xl65" x:str>develop</td>
+    <td class="xl65" x:str>发展</td>
+    <td class="xl65" x:str>v.(使)成长，发展，壮大; 开发; 研制; 患(病); 出现(问题); (疾病)开始侵袭; (问题)开始影响</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:34:55</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>73</td>
+    <td class="xl65" x:str>dip</td>
+    <td class="xl65" x:str>浸</td>
+    <td class="xl65" x:str>v.蘸; 浸; (使)下降，下沉; 把(汽车前灯的)远光调为近光 n.游一游; 泡一泡; (通常指暂时的)减少，下降，衰退; 凹陷处; 低洼处</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:57:20</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>74</td>
+    <td class="xl65" x:str>dip in</td>
+    <td class="xl65" x:str>蘸</td>
+    <td class="xl65" x:str>将（某物）在液体中浸一下; 分享</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:46:33</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>75</td>
+    <td class="xl65" x:str>director</td>
+    <td class="xl65" x:str>主任</td>
+    <td class="xl65" x:str>n.董事; 理事; 经理; (某一活动的)负责人; (公司部门的)主任; (学院的)院长; (电影、戏剧等的)导演</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 09:28:11</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>76</td>
+    <td class="xl65" x:str>disappointed</td>
+    <td class="xl65" x:str>失望的</td>
+    <td class="xl65" x:str>adj.失望的; 沮丧的; 失意的 v.使失望; 使破灭; 使落空 disappoint的过去分词和过去式</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:23:00</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>77</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>discrimination</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>歧视</td>
+    <td class="xl66" x:str>discrimination 英 [dɪˌskrɪmɪˈneɪʃn] 美 [dɪˌskrɪmɪˈneɪʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:46:08</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 区别对待;歧视;偏袒;识别力;辨别力;鉴赏力;区别;识别;辨别</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>78</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>domestic</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>国内的</td>
+    <td class="xl66" x:str>domestic 英 [dəˈmestɪk] 美 [dəˈmestɪk]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:08:23</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>adj. 本国的;国内的;家用的;家庭的;家务的;喜爱家庭生活的;享受家庭乐趣的;乐于操持家务的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 家佣;佣人;家庭纠纷;家庭矛盾</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>79</td>
+    <td class="xl65" x:str>doom</td>
+    <td class="xl65" x:str>厄运</td>
+    <td class="xl65" x:str>n.死亡; 毁灭; 厄运; 劫数 v.使…注定失败(或遭殃、死亡等)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:56:52</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>80</td>
+    <td class="xl65" x:str>dramatically</td>
+    <td class="xl65" x:str>戏剧性地</td>
+    <td class="xl65" x:str>adv.戏剧地; 显著地</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:11:46</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>81</td>
+    <td class="xl65" x:str>drastic</td>
+    <td class="xl65" x:str>激烈的</td>
+    <td class="xl65" x:str>adj.极端的; 急剧的; 严厉的; 猛烈的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:15:06</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>82</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>duty</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>责任</td>
+    <td class="xl66" x:str>duty 英 [ˈdjuːti] 美 [ˈduːti]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:42:16</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 责任;义务;本分;上班;值班;职责;任务</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="82" rowspan="3" style='height:61.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>83</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>eligible</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>合格</td>
+    <td class="xl66" x:str>eligible 英 [ˈelɪdʒəbl] 美 [ˈelɪdʒəbl]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:59:04</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>adj. 有资格的;合格的;具备条件的;(指认为可做夫妻的男女)合意的，合适的，中意的</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 合格者;合适者;称心如意的人;合乎条件的人（或东西）</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>84</td>
+    <td class="xl65" x:str>emit</td>
+    <td class="xl65" x:str>发出</td>
+    <td class="xl65" x:str>v. 发出，射出，散发(光、热、声音、气等)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:24:53</td>
+   </tr>
+   <tr height="33" style='height:24.75pt;mso-height-source:userset;mso-height-alt:495;'>
+    <td class="xl65" height="65" rowspan="2" style='height:48.75pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>85</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>engagement</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>订婚</td>
+    <td class="xl66" x:str>engagement 英 [ɪnˈɡeɪdʒmənt] 美 [ɪnˈɡeɪdʒmənt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:11:33</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 订婚;订婚期间;(尤指正式的或与工作有关的)约定，约会，预约;战斗;交战</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>86</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>entire</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>整个的</td>
+    <td class="xl66" x:str>entire 英 [ɪnˈtaɪə(r)] 美 [ɪnˈtaɪər]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:24:12</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 全部的;整个的;完全的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>87</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>entitle</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>赋予权利</td>
+    <td class="xl66" x:str>entitle 英 [ɪnˈtaɪtl] 美 [ɪnˈtaɪtl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:01:47</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 使享有权利;使符合资格;给…命名(或题名)</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>88</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>equally</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>同样地</td>
+    <td class="xl66" x:str>equally 英 [ˈiːkwəli] 美 [ˈiːkwəli]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:59:38</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>adv. 平等地;同样地;平均地;相等地;均等地;(引出同样重要的内容)同样，此外，也</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>89</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>era</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>时代</td>
+    <td class="xl66" x:str>era 英 [ˈɪərə] 美 [ˈɪrə]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:14:58</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 时代;年代;纪元;代(地质年代，宙下分代)</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>90</td>
+    <td class="xl65" x:str>essay</td>
+    <td class="xl65" x:str>散文</td>
+    <td class="xl65" x:str>n.(作为课程作业，学生写的)文章，短文; (用来刊登的)论说文; 小品文; 企图; 尝试 v.企图; 试图</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:48:46</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>91</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>even then</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>即使那样</td>
+    <td class="xl66" x:str>even then 英 [ˈiːvn ðen] 美 [ˈiːvn ðen]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:59:31</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>尽管那样;即使那样</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>92</td>
+    <td class="xl65" x:str>excellent</td>
+    <td class="xl65" x:str>杰出的</td>
+    <td class="xl65" x:str>adj. 优秀的; 杰出的; 极好的; (用以表示愉快或赞同)好极了，妙极了</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 15:02:07</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>93</td>
+    <td class="xl65" x:str>excellent employee</td>
+    <td class="xl65" x:str>优秀员工</td>
+    <td class="xl65" x:str>优秀员工</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:44:29</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>94</td>
+    <td class="xl65" x:str>excellent staff</td>
+    <td class="xl65" x:str>优秀的员工</td>
+    <td class="xl65" x:str>优秀员工</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:44:18</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="54" rowspan="3" style='height:40.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>95</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>exempt</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>豁免</td>
+    <td class="xl66" x:str>exempt 英 [ɪɡˈzempt] 美 [ɪɡˈzempt]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:00:43</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>adj. 免除(责任、付款等);获豁免</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 免除;豁免</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>96</td>
+    <td class="xl65" x:str>expose</td>
+    <td class="xl65" x:str>暴露</td>
+    <td class="xl65" x:str>n.(尤指对令人震惊或故意保密的事实的)陈述，阐述，揭露 v.暴露; 显露; 露出; 揭露; 揭穿; 使面临，使遭受(危险或不快)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:32:10</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>97</td>
+    <td class="xl65" x:str>extinction</td>
+    <td class="xl65" x:str>灭绝</td>
+    <td class="xl65" x:str>n.(植物、动物、生活方式等的)灭绝，绝种，消亡</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:07:30</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>98</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>federal</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>联邦的</td>
+    <td class="xl66" x:str>federal 英 [ˈfedərəl] 美 [ˈfedərəl]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:15:51</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>adj. 联邦制的;(在美国、加拿大等联邦制下)联邦政府的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 联邦主义者;同盟盟友</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>99</td>
+    <td class="xl65" x:str>festival</td>
+    <td class="xl65" x:str>节日</td>
+    <td class="xl65" x:str>n.(音乐、戏剧、电影等的)会演，节; 节日; 节期; 喜庆日</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:23:35</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>100</td>
+    <td class="xl65" x:str>formula</td>
+    <td class="xl65" x:str>公式</td>
+    <td class="xl65" x:str>n. 公式; 方程式; 计算式; 分子式; 方案; 方法</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 15:04:30</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>101</td>
+    <td class="xl65" x:str>gear</td>
+    <td class="xl65" x:str>齿轮</td>
+    <td class="xl65" x:str>n.排挡; 齿轮; 传动装置; 挡; (某种活动的)设备，用具，衣服 v.换挡; （使）搭配; （使）适合; 使兴奋起来; 使准备好</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:44:21</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>102</td>
+    <td class="xl65" x:str>graduate</td>
+    <td class="xl65" x:str>毕业</td>
+    <td class="xl65" x:str>n.大学毕业生; 学士学位获得者; 毕业生 v.获得学位(尤指学士); 大学毕业; 毕业(尤指中学); 授予(某人)学位(或毕业文凭等)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:07:34</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>103</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>grant</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>授予</td>
+    <td class="xl66" x:str>grant 英 [ɡrɑːnt] 美 [ɡrænt]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-25 14:45:27</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>v. (尤指正式地或法律上)同意，准予，允许;(勉强)承认，同意</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. (政府、机构的)拨款</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>104</td>
+    <td class="xl65" x:str>hobby</td>
+    <td class="xl65" x:str>爱好</td>
+    <td class="xl65" x:str>n.业余爱好</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 18:12:00</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>105</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>identify</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>识别</td>
+    <td class="xl66" x:str>identify 英 [aɪˈdentɪfaɪ] 美 [aɪˈdentɪfaɪ]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-03 19:38:53</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 确认;认出;鉴定;找到;发现;显示;说明身份</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>106</td>
+    <td class="xl65" x:str>illustrate</td>
+    <td class="xl65" x:str>说明</td>
+    <td class="xl65" x:str>v.加插图于; 给(书等)做图表; (用示例、图画等)说明，解释; 表明…真实; 显示…存在</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:44:13</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>107</td>
+    <td class="xl65" x:str>immersive</td>
+    <td class="xl65" x:str>沉浸式</td>
+    <td class="xl65" x:str>adj.(计算机系统或图像)沉浸式虚拟现实的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:44:12</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>108</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>immigrant</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>移民</td>
+    <td class="xl66" x:str>immigrant 英 [ˈɪmɪɡrənt] 美 [ˈɪmɪɡrənt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-04 09:07:27</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. (外来)移民;外侨</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>109</td>
+    <td class="xl65" x:str>in some state</td>
+    <td class="xl65" x:str>在某种状态下</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-27 18:41:57</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>110</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>inadequacy</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>不足</td>
+    <td class="xl66" x:str>inadequacy 英 [ɪnˈædɪkwəsi] 美 [ɪnˈædɪkwəsi]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:50:50</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 不充分;不足;不够;不胜任;缺乏信心;弱点;缺陷;某事物的缺乏</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>111</td>
+    <td class="xl65" x:str>incentive</td>
+    <td class="xl65" x:str>激励</td>
+    <td class="xl65" x:str>n.激励; 刺激; 鼓励</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:37:26</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>112</td>
+    <td class="xl65" x:str>increase</td>
+    <td class="xl65" x:str>增加</td>
+    <td class="xl65" x:str>v. (使)增长，增多; 增加 n. 增长; 增多; 增加</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:16:12</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>113</td>
+    <td class="xl65" x:str>infinite</td>
+    <td class="xl65" x:str>无限的</td>
+    <td class="xl65" x:str>adj.极大的; 无法衡量的; 无限的; 无穷尽的 n.无限的事物; 无穷尽的事物; 上帝</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:23:13</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>114</td>
+    <td class="xl65" x:str>influence</td>
+    <td class="xl65" x:str>影响</td>
+    <td class="xl65" x:str>n. 影响; 作用; 支配力; 控制力; 影响力; 有影响的人(或事物) v. 影响; 对…起作用; 支配; 左右</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 09:28:05</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>115</td>
+    <td class="xl65" x:str>innovation</td>
+    <td class="xl65" x:str>创新</td>
+    <td class="xl65" x:str>n.(新事物、思想或方法的)创造; 创新; 改革; 新思想; 新方法</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:53:32</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>116</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>intelligence</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>智力</td>
+    <td class="xl66" x:str>intelligence 英 [ɪnˈtelɪdʒəns] 美 [ɪnˈtelɪdʒəns]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:43:36</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 智力;才智;智慧;(尤指关于敌对国家的)情报;情报人员</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>117</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>intention</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>意图</td>
+    <td class="xl66" x:str>intention 英 [ɪnˈtenʃn] 美 [ɪnˈtenʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:45:27</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 打算;计划;意图;目的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>118</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>intentional</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>故意的</td>
+    <td class="xl66" x:str>intentional 英 [ɪnˈtenʃənl] 美 [ɪnˈtenʃənl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-14 18:08:25</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 故意的;有意的;存心的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>119</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>interval</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>间隔</td>
+    <td class="xl66" x:str>interval 英 [ˈɪntəvl] 美 [ˈɪntərvl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-03 09:18:35</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl67" x:str>n. (时间上的)间隔，间隙，间歇;(戏剧、电影或音乐会的)幕间休息，休息时间;(其他事情)穿插出现的间隙</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>120</td>
+    <td class="xl65" x:str>involve in</td>
+    <td class="xl65" x:str>涉及</td>
+    <td class="xl65" x:str>使参与，陷入或牵扯到</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:49:38</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>121</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>jury</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>陪审团</td>
+    <td class="xl66" x:str>jury 英 [ˈdʒʊəri] 美 [ˈdʒʊri]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:52:53</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 陪审团;(比赛的)评判委员会，裁判委员会</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>122</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>justify</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>证明正当</td>
+    <td class="xl66" x:str>justify 英 [ˈdʒʌstɪfaɪ] 美 [ˈdʒʌstɪfaɪ]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:01:44</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl67" x:str>v. 证明…正确(或正当、有理);对…作出解释;为…辩解(或辩护);调整使全行排满;使每行排齐;使齐行</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>123</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>literacy</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>读写能力</td>
+    <td class="xl66" x:str>literacy 英 [ˈlɪtərəsi] 美 [ˈlɪtərəsi]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:59:12</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 读写能力</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="54" rowspan="3" style='height:40.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>124</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>literate</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>有读写能力的</td>
+    <td class="xl66" x:str>literate 英 [ˈlɪtərət] 美 [ˈlɪtərət]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:04:05</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>adj. 有读写能力的;有文化的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 识字的人;有学问的人</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>125</td>
+    <td class="xl65" x:str>loyal</td>
+    <td class="xl65" x:str>忠诚的</td>
+    <td class="xl65" x:str>adj.忠诚的; 忠实的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:55:14</td>
+   </tr>
+   <tr height="80" style='height:60.00pt;'>
+    <td class="xl65" height="80" style='height:60.00pt;' x:str>126</td>
+    <td class="xl65" x:str>master</td>
+    <td class="xl65" x:str>主人</td>
+    <td class="xl65" x:str>n. (男)主人，雇主; 主宰; 主人; 有控制力的人; 能手; 擅长…者 v. 精通; 掌握; 控制(情绪); 控制(动物或人) adj. (描述精于某职业的人)熟练的，灵巧的，有技能的; 最大的; 最重要的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 15:06:17</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="54" rowspan="3" style='height:40.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>127</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>mill</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>磨坊</td>
+    <td class="xl66" x:str>mill 英 [mɪl] 美 [mɪl]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-04 08:49:24</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>n. 磨坊;面粉厂;工厂;制造厂;磨粉机;磨面机</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. (用磨粉机)碾碎，磨成粉</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>128</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>minimal</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>最小</td>
+    <td class="xl66" x:str>minimal 英 [ˈmɪnɪməl] 美 [ˈmɪnɪməl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:58:41</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 极小的;极少的;最小的</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>129</td>
+    <td class="xl65" x:str>mortgage</td>
+    <td class="xl65" x:str>抵押贷款</td>
+    <td class="xl65" x:str>n.按揭(由银行等提供房产抵押借款); 按揭贷款 v.(向银行等)抵押(房产)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:08:01</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>130</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>not until</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>直到</td>
+    <td class="xl66" x:str>not until 英 [nɒt ənˈtɪl] 美 [nɑːt ənˈtɪl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:56:45</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>直到……才;引导的句子要倒装;引起倒装</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>131</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>opinion</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>意见</td>
+    <td class="xl66" x:str>opinion 英 [əˈpɪnjən] 美 [əˈpɪnjən]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:38:26</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 意见;想法;看法;(群体的)观点，信仰;专家意见</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>132</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>order to</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>订单至</td>
+    <td class="xl66" x:str>order to 英 [ˈɔːdə(r) tu] 美 [ˈɔːrdər tu]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:29:20</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>命令，要求</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>133</td>
+    <td class="xl65" x:str>organic food</td>
+    <td class="xl65" x:str>有机食品</td>
+    <td class="xl65" x:str>生态食品; 有机产品; 无机食品; 纯天然食品; 自然食品</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:51:18</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>134</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>ought to</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>应该</td>
+    <td class="xl66" x:str>ought to 英 [ˈɔːt tə] 美 [ˈɔːt tə]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:23:28</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>modal 应该;应当;(表示期望或可能发生的事)应该;(表示劝告或建议)应该</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>135</td>
+    <td class="xl65" x:str>overall</td>
+    <td class="xl65" x:str>总体的</td>
+    <td class="xl65" x:str>adj.全面的; 综合的; 总体的 adv.全部; 总计; 一般来说; 大致上; 总体上 n.外套; 罩衣; 工装连衣裤; 工装服</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:01:35</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>136</td>
+    <td class="xl65" x:str>paralysis</td>
+    <td class="xl65" x:str>麻痹</td>
+    <td class="xl65" x:str>n.麻痹; 瘫痪; (活动、工作等)能力的完全丧失</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:47:26</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>137</td>
+    <td class="xl65" x:str>particular</td>
+    <td class="xl65" x:str>特定的</td>
+    <td class="xl65" x:str>adj.专指的，特指的(与泛指相对); 不寻常的; 格外的; 特别的; 讲究; 挑剔 n.(正式记下的)细节，详情; 详细资料; 详细介绍材料</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:05:38</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>138</td>
+    <td class="xl65" x:str>particularly</td>
+    <td class="xl65" x:str>尤其</td>
+    <td class="xl65" x:str>adv.特别; 尤其</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:06:09</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>139</td>
+    <td class="xl65" x:str>pattern</td>
+    <td class="xl65" x:str>模式</td>
+    <td class="xl65" x:str>n.模式; 方式; 范例; 典范; 榜样; 样板; 图案; 花样; 式样 v.构成图案(或花样); 使形成，促成(某行为模式)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 20:15:44</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>140</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>peer</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>同龄人</td>
+    <td class="xl66" x:str>peer 英 [pɪə(r)] 美 [pɪr]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:02:11</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>n. 身份(或地位)相同的人;同龄人;同辈;(英国)贵族成员</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 仔细看;端详</td>
+   </tr>
+   <tr height="33" style='height:24.75pt;mso-height-source:userset;mso-height-alt:495;'>
+    <td class="xl65" height="65" rowspan="2" style='height:48.75pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>141</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>performance</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>性能</td>
+    <td class="xl66" x:str>performance 英 [pəˈfɔːməns] 美 [pərˈfɔːrməns]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:08:09</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 表演;演出;艺术上的表现;演技;表现;性能;业绩;工作情况</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>142</td>
+    <td class="xl65" x:str>persuade</td>
+    <td class="xl65" x:str>说服</td>
+    <td class="xl65" x:str>v.劝说; 说服; 使信服; 使相信</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:30:47</td>
+   </tr>
+   <tr height="144" style='height:108.00pt;'>
+    <td class="xl65" height="144" style='height:108.00pt;' x:str>143</td>
+    <td class="xl65" x:str>pick up</td>
+    <td class="xl65" x:str>拿起</td>
+    <td class="xl65" x:str>拿起; 提起; 拾起; 捡起; （跌倒或被击倒后）使（自己）慢慢站起（或爬起）; （通常指开车）接载，取走; 逮捕; 拘捕; （不费力地）获得，学会; （以发生性关系为目的）与…搭讪; 得（病）; 染上（疾病）; 接收到（信号或声音）; 发现，找到，识别（特点或模式）; 重提，接过（观点或话题）; （贸易或经济）好转，改善; 指出…的错误; 纠正; 收拾残局; 努力恢复正常; 加速</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 19:35:20</td>
+   </tr>
+   <tr height="33" style='height:24.75pt;mso-height-source:userset;mso-height-alt:495;'>
+    <td class="xl65" height="65" rowspan="2" style='height:48.75pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>144</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>playground</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>操场</td>
+    <td class="xl66" x:str>playground 英 [ˈpleɪɡraʊnd] 美 [ˈpleɪɡraʊnd]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-20 14:05:39</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. (尤指学校或公园中的)游戏场，游乐场;操场;(某些集体聚会游乐的)园地，天地，活动场所</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>145</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>policy</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>政策</td>
+    <td class="xl66" x:str>policy 英 [ˈpɒləsi] 美 [ˈpɑːləsi]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-02 08:51:08</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 政策;方针;原则;为人之道;保险单</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>146</td>
+    <td class="xl65" x:str>politic</td>
+    <td class="xl65" x:str>政治的</td>
+    <td class="xl65" x:str>adj.谨慎的; 得当的; 明智的 v.(贬)从事政治活动</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:44:04</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>147</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>practice</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>实践</td>
+    <td class="xl66" x:str>practice 英 [ˈpræktɪs] 美 [ˈpræktɪs]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:40:35</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>n. 实践;实际行动;通常的做法;惯例;常规;惯常做的事;习惯;习俗</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>v. 练习;实习;实行</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>148</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>prevalent</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>流行</td>
+    <td class="xl66" x:str>prevalent 英 [ˈprevələnt] 美 [ˈprevələnt]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:51:03</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 流行的;普遍存在的;盛行的</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>149</td>
+    <td class="xl65" x:str>primary</td>
+    <td class="xl65" x:str>初级的</td>
+    <td class="xl65" x:str>adj.主要的; 最重要的; 基本的; 最初的; 最早的; 初等教育的; 小学教育的 n.(美国)初选</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:50:12</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>150</td>
+    <td class="xl65" x:str>priority</td>
+    <td class="xl65" x:str>优先</td>
+    <td class="xl65" x:str>n.优先事项; 最重要的事; 首要事情; 优先; 优先权; 重点; (车辆的)优先通行权</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 20:00:27</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>151</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>procedure</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>程序</td>
+    <td class="xl66" x:str>procedure 英 [prəˈsiːdʒə(r)] 美 [prəˈsiːdʒər]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:06:31</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. (正常)程序，手续，步骤;(商业、法律或政治上的)程序;手术</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>152</td>
+    <td class="xl65" x:str>provided that</td>
+    <td class="xl65" x:str>前提是</td>
+    <td class="xl65" x:str>假如，设若</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 15:10:15</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>153</td>
+    <td class="xl65" x:str>public company</td>
+    <td class="xl65" x:str>上市公司</td>
+    <td class="xl65" x:str>n. 公开招股公司</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 16:04:43</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="66" rowspan="2" style='height:49.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>154</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>qualification</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>资格</td>
+    <td class="xl66" x:str>qualification 英 [ˌkwɒlɪfɪˈkeɪʃn] 美 [ˌkwɑːlɪfɪˈkeɪʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:54:45</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. (通过考试或学习课程取得的)资格;学历;(通过经验或具备技能而取得的)资格;资历;限定条件</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>155</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>racial</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>种族的</td>
+    <td class="xl66" x:str>racial 英 [ˈreɪʃl] 美 [ˈreɪʃl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:45:54</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 种族的;种族间的;人种的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>156</td>
+    <td class="xl65" x:str>recent</td>
+    <td class="xl65" x:str>最近的</td>
+    <td class="xl65" x:str>adj.近来的; 新近的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:55:56</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>157</td>
+    <td class="xl65" x:str>recessing</td>
+    <td class="xl65" x:str>凹陷</td>
+    <td class="xl65" x:str>v.休会; 暂停; 宣布暂停; 把…放进壁龛(或壁橱); 将…嵌入墙壁 recess的现在分词</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:52:31</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>158</td>
+    <td class="xl65" x:str>recession</td>
+    <td class="xl65" x:str>经济衰退</td>
+    <td class="xl65" x:str>n.经济衰退; 经济萎缩; 退后; 撤回</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:52:58</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>159</td>
+    <td class="xl65" x:str>recognize</td>
+    <td class="xl65" x:str>认出</td>
+    <td class="xl65" x:str>v.认识; 认出; 辨别出; 承认; 意识到; (正式)认可，接受，赞成</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:49:10</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>160</td>
+    <td class="xl65" x:str>red packet</td>
+    <td class="xl65" x:str>红包</td>
+    <td class="xl65" x:str>n. 红包</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:24:05</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>161</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>religion</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>宗教</td>
+    <td class="xl66" x:str>religion 英 [rɪˈlɪdʒən] 美 [rɪˈlɪdʒən]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 09:00:59</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 宗教;宗教信仰;教派;特别的兴趣;重大的影响</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>162</td>
+    <td class="xl65" x:str>remote</td>
+    <td class="xl65" x:str>遥远的</td>
+    <td class="xl65" x:str>adj.偏远的; 偏僻的; 遥远的; 久远的; 关系较远的; 远亲的 n.远程</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:41:02</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>163</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>represent</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>代表</td>
+    <td class="xl66" x:str>represent 英 [ˌreprɪˈzent] 美 [ˌreprɪˈzent]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:03:11</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>v. 代表;作为…的代言人;维护…的利益;等于;相当于;意味着</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>164</td>
+    <td class="xl65" x:str>representa</td>
+    <td class="xl65" x:str>代表</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-27 08:57:11</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="84" rowspan="3" style='height:63.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>165</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>representative</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>代表</td>
+    <td class="xl66" x:str>representative 英 [ˌreprɪˈzentətɪv] 美 [ˌreprɪˈzentətɪv]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 08:57:13</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>n. 代表;销售代表;销售代理;代销人;代表他人者</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>adj. 典型的;有代表性的;代表各类人(或事物)的;可作为典型(或示例)的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>166</td>
+    <td class="xl65" x:str>reputation</td>
+    <td class="xl65" x:str>名声</td>
+    <td class="xl65" x:str>n.名誉; 名声</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:42:07</td>
+   </tr>
+   <tr height="64" style='height:48.00pt;'>
+    <td class="xl65" height="64" style='height:48.00pt;' x:str>167</td>
+    <td class="xl65" x:str>reverse</td>
+    <td class="xl65" x:str>颠倒</td>
+    <td class="xl65" x:str>v.颠倒; 彻底转变; 使完全相反; 撤销，废除(决定、法律等); 使反转; 使次序颠倒 n.相反的情况(或事物); 后面; 背面; 反面; 倒挡 adj.相反的; 反面的; 反向的; 背面的; 后面的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:16:11</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>168</td>
+    <td class="xl65" x:str>ritual</td>
+    <td class="xl65" x:str>仪式</td>
+    <td class="xl65" x:str>n.程序; 仪规; 礼节; (尤指)宗教仪式; 习惯; 老规矩 adj.仪式上的; 庆典的; 习惯的; 老套的; 例行公事的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 10:04:50</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="68" rowspan="3" style='height:51.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>169</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>section</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>部分</td>
+    <td class="xl66" x:str>section 英 [ˈsekʃn] 美 [ˈsekʃn]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:17:55</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>n. 部分;部门;部件;散件;节;款;项;段</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>v. 切开;切断;做(动物或植物组织)切片;(依法令精神病人)强制入院治疗</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>170</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>seldom</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>很少</td>
+    <td class="xl66" x:str>seldom 英 [ˈseldəm] 美 [ˈseldəm]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:53:19</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adv. 不常;很少;难得</td>
+   </tr>
+   <tr height="64" style='height:48.00pt;'>
+    <td class="xl65" height="64" style='height:48.00pt;' x:str>171</td>
+    <td class="xl65" x:str>senior</td>
+    <td class="xl65" x:str>级别高的</td>
+    <td class="xl65" x:str>adj. 级别(或地位)高的; 成人的; 高级水平的; (父子同名时，加在父亲的名字前)老，大 n. 较…年长的人; 级别(或地位)较高者; 上级; 上司; 资深成人运动员; 高水平运动员</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 19:01:08</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>172</td>
+    <td class="xl65" x:str>set aside</td>
+    <td class="xl65" x:str>留出</td>
+    <td class="xl65" x:str>留作…之用; 留出…用于; 放弃（信仰、原则或情感）; 置…于不顾</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 18:57:12</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="54" rowspan="3" style='height:40.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>173</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>several</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>几个</td>
+    <td class="xl66" x:str>several 英 [ˈsevrəl] 美 [ˈsevrəl]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:59:49</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl69" x:str>det./pron. 几个;数个;一些</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>adj. 各自的;分别的</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>174</td>
+    <td class="xl65" x:str>silicon valley</td>
+    <td class="xl65" x:str>硅谷</td>
+    <td class="xl65" x:str>硅谷; 硅谷黑历史; 矽谷; 美国硅谷; 加州硅谷</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:10:29</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>175</td>
+    <td class="xl65" x:str>smoke free</td>
+    <td class="xl65" x:str>无烟</td>
+    <td class="xl65" x:str>禁烟</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 19:01:10</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>176</td>
+    <td class="xl65" x:str>social sciences and humanities</td>
+    <td class="xl65" x:str>社会科学与人文</td>
+    <td class="xl65" x:str>社会科学和人文科学; 人文社会科学; 社会科学; 社会和人文学科</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:31:06</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>177</td>
+    <td class="xl65" x:str>solution</td>
+    <td class="xl65" x:str>解决方案</td>
+    <td class="xl65" x:str>n. 解决办法; 处理手段; 答案; 解; 谜底; 溶液</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-27 19:35:20</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>178</td>
+    <td class="xl65" x:str>specific</td>
+    <td class="xl65" x:str>具体的</td>
+    <td class="xl65" x:str>adj. 明确的; 具体的; 特定的; 特有的; 独特的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 14:26:29</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="52" rowspan="2" style='height:39.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>179</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>state level</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>国家级</td>
+    <td class="xl66" x:str>state level 英 [steɪt ˈlevl] 美 [steɪt ˈlevl]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:23:00</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>国家层次;州级;状态水平;状态层</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>180</td>
+    <td class="xl65" x:str>state-owned enterprise</td>
+    <td class="xl65" x:str>国有企业</td>
+    <td class="xl65" x:str>国有企业; 国企; 国营企业; 國有企業; 国有</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 16:04:23</td>
+   </tr>
+   <tr height="96" style='height:72.00pt;'>
+    <td class="xl65" height="96" style='height:72.00pt;' x:str>181</td>
+    <td class="xl65" x:str>steady</td>
+    <td class="xl65" x:str>稳定的</td>
+    <td class="xl65" x:str>adj.(发展、增长等)稳步的，持续的，匀速的; 稳定的; 恒定的; 稳的; 平稳的; 稳固的 v.使稳; 使平稳; 稳住; 恢复平稳; 稳定下来; 使平静; 使冷静; 使镇定 adv.稳定地; 持续地; 稳固地 int.(要求对方注意言行)哎，注意点; (提醒对方小心)注意，当心，小心</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:07:13</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>182</td>
+    <td class="xl65" x:str>stress</td>
+    <td class="xl65" x:str>强调</td>
+    <td class="xl65" x:str>n.精神压力; 心理负担; 紧张; 压力; 应力; 强调; 重要性 v.强调; 着重; 重读; 用重音读; (使)焦虑不安，疲惫不堪</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:43:02</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>183</td>
+    <td class="xl65" x:str>succession</td>
+    <td class="xl65" x:str>继承人</td>
+    <td class="xl65" x:str>n.一连串; 一系列; 连续的人(或事物); 交替; 更迭; 继承; 继任; (尤指王位的)继承权</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:20:40</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>184</td>
+    <td class="xl65" x:str>sufficient</td>
+    <td class="xl65" x:str>足够的</td>
+    <td class="xl65" x:str>adj.足够的; 充足的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:14:25</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>185</td>
+    <td class="xl65" x:str>suitable</td>
+    <td class="xl65" x:str>合适的</td>
+    <td class="xl65" x:str>adj.合适的; 适宜的; 适当; 适用</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 18:58:23</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="98" rowspan="3" style='height:73.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>186</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>superior</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>优越的</td>
+    <td class="xl66" x:str>superior 英 [suːˈpɪəriə(r)] 美 [suːˈpɪriər]</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="3" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:43:11</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl69" x:str>adj. (在品质上)更好的;占优势;更胜一筹;(在级别、重要性或职位上)更高的;有优越感的;高傲的</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>n. 级别(或地位、职位)更高的人;上级;上司;用作宗教团体领导的头衔</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="50" rowspan="2" style='height:37.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>187</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>suppose</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>假设</td>
+    <td class="xl66" x:str>suppose 英 [səˈpəʊz] 美 [səˈpoʊz]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 18:42:47</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>v. (根据所知)认为，推断，料想;假定;假设;设想;(婉转表达)我看，要我说，要不</td>
+   </tr>
+   <tr height="64" style='height:48.00pt;'>
+    <td class="xl65" height="64" style='height:48.00pt;' x:str>188</td>
+    <td class="xl65" x:str>surface</td>
+    <td class="xl65" x:str>表面</td>
+    <td class="xl65" x:str>n.表面; 表层; 面; 水面; 地面; 液面; (家具的)顶面，操作台 v.升到水面; 浮出水面; (隐藏或被掩盖一段时间后)露面，重新出现，显露，被披露; 醒来; 起床</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:48:56</td>
+   </tr>
+   <tr height="64" style='height:48.00pt;'>
+    <td class="xl65" height="64" style='height:48.00pt;' x:str>189</td>
+    <td class="xl65" x:str>surprise</td>
+    <td class="xl65" x:str>惊喜</td>
+    <td class="xl65" x:str>n.意想不到(或突然)的事; 令人惊奇的事(或消息等); 惊奇; 惊讶; 意外; 出人意表的做事方式; 出奇制胜的策略 v.使惊奇; 使诧异; 使感到意外; 出其不意地攻击; 使措手不及; 无意中发现</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 09:28:29</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>190</td>
+    <td class="xl65" x:str>surround</td>
+    <td class="xl65" x:str>环绕</td>
+    <td class="xl65" x:str>v.围绕; 环绕; (使)包围，围住; 与…紧密相关 n.(物品的)边，饰边; 周围</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 16:52:34</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>191</td>
+    <td class="xl65" x:str>sustainability</td>
+    <td class="xl65" x:str>持续性</td>
+    <td class="xl65" x:str>n. 耐久性</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 18:24:09</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>192</td>
+    <td class="xl65" x:str>take advantage of something</td>
+    <td class="xl65" x:str>利用某些东西</td>
+    <td class="xl65" x:str>利用某事物</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:21:24</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>193</td>
+    <td class="xl65" x:str>technical</td>
+    <td class="xl65" x:str>技术的</td>
+    <td class="xl65" x:str>adj.技术的; 技能的; 工艺的; 专门技术的; 技巧的; 技艺的; 专科的; 专业的</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 15:01:22</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>194</td>
+    <td class="xl65" x:str>technician</td>
+    <td class="xl65" x:str>技术员</td>
+    <td class="xl65" x:str>n.技术员; 技师; (艺术、体育等的)技巧精湛者，精于技巧者</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:58:54</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>195</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>technique</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>技术</td>
+    <td class="xl66" x:str>technique 英 [tekˈniːk] 美 [tekˈniːk]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-09-14 14:58:34</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 技巧;技艺;工艺;技术;技能</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>196</td>
+    <td class="xl65" x:str>technology</td>
+    <td class="xl65" x:str>技术</td>
+    <td class="xl65" x:str>n.科技; 工艺; 工程技术; 技术学; 工艺学; 技术性机器(或设备)</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:58:24</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>197</td>
+    <td class="xl65" x:str>textile</td>
+    <td class="xl65" x:str>纺织品</td>
+    <td class="xl65" x:str>n.纺织品; 纺织业</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:48:23</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="114" rowspan="4" style='height:85.50pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>198</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>through</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>通过</td>
+    <td class="xl66" x:str>through 英 [θruː] 美 [θruː]</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="4" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:03:31</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>prep. 从…一端至另一端;穿过;贯穿;透过…看到;隔着…听到;自始至终;从头到尾</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl69" x:str>adv. 从一端到另一端;通过;自始至终;从头至尾;通过(障碍、阶段或测试)</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl67" x:str>adj. (交通旅行)直达的，直通的，联运的，全程的;(火车)直达的;(道路或路线)直通的</td>
+   </tr>
+   <tr height="64" style='height:48.00pt;'>
+    <td class="xl65" height="64" style='height:48.00pt;' x:str>199</td>
+    <td class="xl65" x:str>tough</td>
+    <td class="xl65" x:str>艰难的</td>
+    <td class="xl65" x:str>adj.艰苦的; 艰难的; 棘手的; 严厉的; 强硬的; 无情的; 坚强的; 健壮的; 能吃苦耐劳的; 坚韧不拔的 n.粗暴的人; 暴徒; 恶棍 v.坚持; 忍受，忍耐 adv.强硬地; 顽强地</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 14:39:44</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;mso-height-source:userset;mso-height-alt:270;'>
+    <td class="xl65" height="36" rowspan="2" style='height:27.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>200</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>tradition</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>传统</td>
+    <td class="xl66" x:str>tradition 英 [trəˈdɪʃn] 美 [trəˈdɪʃn]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-27 19:35:33</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>n. 传统;传统的信仰(或风俗)</td>
+   </tr>
+   <tr height="34" style='height:25.50pt;mso-height-source:userset;mso-height-alt:510;'>
+    <td class="xl65" height="52" rowspan="2" style='height:39.00pt;border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>201</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>turn out to be</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>结果是</td>
+    <td class="xl66" x:str>turn out to be 英 [tɜːn aʊt tu bi] 美 [tɜːrn aʊt tu bi]</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>英语-中文</td>
+    <td class="xl65" rowspan="2" style='border-right:.5pt solid windowtext;border-bottom:.5pt solid windowtext;' x:str>2019-08-30 12:31:42</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl67" x:str>证明是;结果是;原来是</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>202</td>
+    <td class="xl65" x:str>turn the corner</td>
+    <td class="xl65" x:str>转弯</td>
+    <td class="xl65" x:str>转危为安; 转弯; 出现转机; 度过难关; 拐弯</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-07 19:21:25</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>203</td>
+    <td class="xl65" x:str>usual</td>
+    <td class="xl65" x:str>通常的</td>
+    <td class="xl65" x:str>adj.通常的; 寻常的; 惯常的; 惯常的事物; (尤指)常喝的饮料</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 19:13:58</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>204</td>
+    <td class="xl65" x:str>victory</td>
+    <td class="xl65" x:str>胜利</td>
+    <td class="xl65" x:str>n.胜利; 成功</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-14 11:21:21</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>205</td>
+    <td class="xl65" x:str>vocation</td>
+    <td class="xl65" x:str>职业</td>
+    <td class="xl65" x:str>n.(认为特别适合自己的)工作，职业，生活方式; (认为某种工作或生活方式特别适合自己的)信心，使命感; 圣召; 神召</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-09-15 13:05:47</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>206</td>
+    <td class="xl65" x:str>waste bin</td>
+    <td class="xl65" x:str>垃圾桶</td>
+    <td class="xl65" x:str>n.垃圾箱; 垃圾桶</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 16:31:17</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>207</td>
+    <td class="xl65" x:str>waste recovery</td>
+    <td class="xl65" x:str>废物回收</td>
+    <td class="xl65" x:str>废物回用（再生）</td>
+    <td class="xl65" x:str>英语-中文</td>
+    <td class="xl65" x:str>2019-08-25 16:23:34</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>208</td>
+    <td class="xl65" x:str>你知道怎么回事吗？</td>
+    <td class="xl65" x:str>Do you know what's going on?</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>中文-英语</td>
+    <td class="xl65" x:str>2019-08-21 16:29:47</td>
+   </tr>
+   <tr height="48" style='height:36.00pt;'>
+    <td class="xl65" height="48" style='height:36.00pt;' x:str>209</td>
+    <td class="xl65" x:str>在VM里面可能发生很多不可预知的问题，并且我还不能联调</td>
+    <td class="xl65" x:str>There may be a lot of unpredictable problems in VM, and I can't debug them yet.</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>中文-英语</td>
+    <td class="xl65" x:str>2019-08-21 11:08:12</td>
+   </tr>
+   <tr height="32" style='height:24.00pt;'>
+    <td class="xl65" height="32" style='height:24.00pt;' x:str>210</td>
+    <td class="xl65" x:str>废品回收</td>
+    <td class="xl65" x:str>Waste recovery</td>
+    <td class="xl65" x:str>名. waste recovery; salvage of waste material</td>
+    <td class="xl65" x:str>中文-英语</td>
+    <td class="xl65" x:str>2019-08-25 16:23:31</td>
+   </tr>
+   <tr height="18" style='height:13.50pt;'>
+    <td class="xl65" height="18" style='height:13.50pt;' x:str>211</td>
+    <td class="xl65" x:str>提高我的管理能力</td>
+    <td class="xl65" x:str>Improve my management skills</td>
+    <td class="xl68"></td>
+    <td class="xl65" x:str>中文-英语</td>
+    <td class="xl65" x:str>2019-08-25 18:18:41</td>
+   </tr>
+   <![if supportMisalignedColumns]>
+    <tr width="0" style='display:none;'>
+     <td width="37" style='width:28;'></td>
+     <td width="128" style='width:96;'></td>
+     <td width="88" style='width:66;'></td>
+     <td width="288" style='width:216;'></td>
+     <td width="70" style='width:53;'></td>
+     <td width="151" style='width:113;'></td>
+    </tr>
+   <![endif]>
+  </table>
+ </body>
+</html>

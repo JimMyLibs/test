@@ -1,0 +1,49 @@
+{
+	"name": "node-version",
+	"displayName": "Node Version",
+	"description": "Display currently used Node.js version in the status bar",
+	"version": "0.0.1",
+	"publisher": "fivepointseven",
+	"engines": {
+		"vscode": "^1.13.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {},
+	"commands": [
+		{
+			"command": "extension.getWord",
+			"title": "getWord"
+		}
+	],
+	"keybindings": [
+		{
+			"command": "extension.getWord",
+			"key": "ctrl+alt+f11",
+			"mac": "cmd+alt+f11",
+			"when": "editorTextFocus"
+		}
+	],
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"eslint": "^3.6.0",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"__metadata": {
+		"id": "26f86c03-580c-4a6f-bdf2-8589fc055965",
+		"publisherId": "9106205b-1ca2-48a8-826b-ce2a23edb517",
+		"publisherDisplayName": "fivepointseven"
+	}
+}

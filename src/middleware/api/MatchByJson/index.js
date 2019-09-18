@@ -352,23 +352,25 @@ class MatchByJson {
                     // this data(coupons) has no data
                 }
             })
-            if(date){// filter by date, return all dateList
-                dateList = this.cache.filterMenu.dateList;
-            }else{
+            // search
+            if(search){
+                filterResult = this.search(search, filterResult);
+            }
+            // filter by date
+            if(search && !date){// filter by date, return all dateList
                 dateList = filterResult.map(item=>item.title);
-            }            
-            if(league){// filter by league, return all leagueList
-                leagueList = this.cache.filterMenu.leagueList;
             }else{
+                dateList = this.cache.filterMenu.dateList;
+            }         
+            // filter by league   
+            if(search && !league){// filter by league, return all leagueList
                 const leaguaAllList = filterResult.map(item=>item.data.map(item2=>item2.title.league)).reduce((sum,item)=>{
                     sum = [...sum,...item]
                     return sum;
                 },[]);
                 leagueList = [...new Set(leaguaAllList)].sort();
-            }
-            // search
-            if(search){
-                filterResult = this.search(search, filterResult);
+            }else{
+                leagueList = this.cache.filterMenu.leagueList;
             }
             return {
                 leagueList,
@@ -384,19 +386,23 @@ class MatchByJson {
             }            
         }
     }
-    search(keyWords, matchList) {// seach from matchList
+    search(keyWords, matchList) {// seach from matchList, only return matchlist
         try {
-            return matchList.filter(item_date=>{
-                return item_date.data.map(item_league=>{
-                    item_league.data = item_league.data.filter(item_match=>{
-                        return JSON.stringify(Object.values(item_match)).includes(keyWords);
-                    });
-                    return item_league
-                }).length;
-            }).map(item_date=>{
-                item_date.data = item_date.data.filter(item_league=>item_league.data.length)
-                return item_date;
-            }).filter(item_date=>item_date.data.length);
+            if(keyWords){
+                return matchList.filter(item_date=>{
+                    return item_date.data.map(item_league=>{
+                        item_league.data = item_league.data.filter(item_match=>{
+                            return JSON.stringify(Object.values(item_match)).includes(keyWords);
+                        });
+                        return item_league;
+                    }).length;
+                }).map(item_date=>{
+                    item_date.data = item_date.data.filter(item_league=>item_league.data.length)
+                    return item_date;
+                }).filter(item_date=>item_date.data.length);
+            }else{
+                return matchList;
+            }
         } catch (error) {
             console.error(error)
             return matchList;

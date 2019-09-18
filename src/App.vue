@@ -9,6 +9,9 @@
                 </template>
                 <template v-else>{{item.name}} | </template>                
             </router-link>
+            <select class='changeLanguage' @change='changeLanguage' v-model='language'>
+                <option v-for='(item,index) in ["Eng","Chi"]' :key='index' :value='item'>{{item}}</option>
+            </select>
         </div>
         <router-view />
     </div>
@@ -23,10 +26,15 @@ import { Component, Vue } from "vue-property-decorator";
 })
 export default class Page_app extends Vue {
     pageName: string = "Page_app";
+    language: string = 'Eng';
     get routers(): object[] {
         return (this as any).$router.options.routes;
     }
+    changeLanguage() {
+        localStorage.setItem('language',this.language);
+    }
     mounted() {
+        this.language = (window as any).getLanguage();
         // console.log('routers',this.routers)
     }
 }
@@ -34,7 +42,7 @@ export default class Page_app extends Vue {
 
 
 <style lang='scss'>
-#nav * {
+#nav a {
     color: #fff;
 }
 /*********************** reset ***********************/

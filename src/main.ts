@@ -9,7 +9,8 @@ vueMixin();
 
 Vue.config.productionTip = false;
 (window as any).getLanguage = (): string => {
-  return 'Eng';
+  const LS_language = localStorage.getItem('language');
+  return LS_language || 'Eng';
 };
 
 new Vue({
